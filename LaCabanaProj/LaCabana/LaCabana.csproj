@@ -1117,6 +1117,7 @@
     <AndroidResource Include="Resources\layout\log_in_layout.axml" />
     <AndroidResource Include="Resources\layout\drawer_layout.axml" />
     <AndroidResource Include="Resources\layout\home.axml" />
+    <AndroidResource Include="Resources\layout\devices.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

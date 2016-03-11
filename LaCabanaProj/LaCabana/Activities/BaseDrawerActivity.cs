@@ -19,7 +19,7 @@ using Android.Support.V7.App;
 
 namespace LaCabana
 {
-	[Activity (Label = "BaseDrawerActivity")]			
+	[Activity (Label = "BaseDrawerActivity", Theme = "@style/MyTheme")]			
 	public class BaseDrawerActivity : BaseActivity
 	{
 		protected DrawerLayout drawerLayout;

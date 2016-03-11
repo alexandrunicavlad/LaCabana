@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace LaCabana
 {
-	[Activity (ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
+	[Activity (ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, Theme = "@style/MyTheme")]			
 	public class SignUpActivity : BaseDrawerActivity
 	{
 		protected override void OnCreate (Bundle savedInstanceState)

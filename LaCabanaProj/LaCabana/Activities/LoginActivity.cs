@@ -15,7 +15,7 @@ using Android.Support.V4.Widget;
 
 namespace LaCabana
 {
-	[Activity (ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, Theme = "@style/NoActionBar")]
+	[Activity (ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, Theme = "@style/MyTheme")]
 	public class LoginActivity : BaseDrawerActivity
 	{
 		private const int NormalLogin = 0;
@@ -29,26 +29,27 @@ namespace LaCabana
 			base.OnCreate (bundle);
 
 			SetContentView (Resource.Layout.log_in_layout);
-
-			SetTitleActionBar ("Sign In");
-			var signUp = FindViewById<TextView> (Resource.Id.signUpButtonDetails);
-			signUp.Click += delegate {
-				StartActivityForResult (typeof(SignUpActivity), 0);    
-			};
-
-			var loginBtn = FindViewById<TextView> (Resource.Id.signInButton);
-			loginBtn.Click += delegate {
-				HideKeyboard (loginBtn);
-				ThreadPool.QueueUserWorkItem (o => LoginVerify ());
-			};
-
-			var forgotPasswordBtn = FindViewById<TextView> (Resource.Id.forgotPassword);
-
-			forgotPasswordBtn.Click += delegate {
-				//StartActivity (typeof(RecoverPasswordActivity));  
-			};
-
 			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
+			SetTitleActionBar ("Sign In");
+
+//			var signUp = FindViewById<TextView> (Resource.Id.signUpButtonDetails);
+//			signUp.Click += delegate {
+//				StartActivityForResult (typeof(SignUpActivity), 0);    
+//			};
+//
+//			var loginBtn = FindViewById<TextView> (Resource.Id.signInButton);
+//			loginBtn.Click += delegate {
+//				HideKeyboard (loginBtn);
+//				ThreadPool.QueueUserWorkItem (o => LoginVerify ());
+//			};
+//
+//			var forgotPasswordBtn = FindViewById<TextView> (Resource.Id.forgotPassword);
+//
+//			forgotPasswordBtn.Click += delegate {
+//				//StartActivity (typeof(RecoverPasswordActivity));  
+//			};
+
+
 
 		}
 

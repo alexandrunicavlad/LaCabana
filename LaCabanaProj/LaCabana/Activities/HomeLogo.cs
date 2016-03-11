@@ -18,7 +18,7 @@ using System.Threading;
 
 namespace LaCabana
 {
-	[Activity (MainLauncher = true, Theme = "@style/NoActionBar", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
+	[Activity (MainLauncher = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class HomeLogo : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
