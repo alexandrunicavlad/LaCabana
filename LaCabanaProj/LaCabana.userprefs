@@ -1,0 +1,20 @@
+﻿<Properties StartupItem="LaCabana\LaCabana.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Xamarin_Android_API_15" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LaCabana\Activities\BaseDrawerActivity.cs">
+    <Files>
+      <File FileName="LaCabana\Activities\LoginActivity.cs" Line="1" Column="1" />
+      <File FileName="LaCabana\Activities\BaseDrawerActivity.cs" Line="40" Column="4" />
+      <File FileName="LaCabana\Activities\BaseActivity.cs" Line="1" Column="1" />
+      <File FileName="LaCabana\Activities\BaseActionActivity.cs" Line="1" Column="1" />
+      <File FileName="c:\Users\Nica\Documents\Projects\LaCabana\LaCabana\Activities\SignUpActivity.cs" Line="1" Column="1" />
+      <File FileName="LaCabana\Resources\values\styles.xml" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\Nica\Documents\Projects\LaCabana\LaCabana\Activities\BaseActionActivity.cs" line="78" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.LaCabana AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="NoActionBar" />
+</Properties>

@@ -1,0 +1,13 @@
+C:\Users\Nica\Documents\Projects\LaCabana\Components\googleplayservices-maps-27.0.0.0\samples\MapsSample\MapsSample\obj\Debug\assemblies\MapsSample.dll
+C:\Users\Nica\Documents\Projects\LaCabana\Components\googleplayservices-maps-27.0.0.0\samples\MapsSample\MapsSample\obj\Debug\assemblies\Mono.Android.dll
+C:\Users\Nica\Documents\Projects\LaCabana\Components\googleplayservices-maps-27.0.0.0\samples\MapsSample\MapsSample\obj\Debug\assemblies\Mono.Android.Export.dll
+C:\Users\Nica\Documents\Projects\LaCabana\Components\googleplayservices-maps-27.0.0.0\samples\MapsSample\MapsSample\obj\Debug\assemblies\mscorlib.dll
+C:\Users\Nica\Documents\Projects\LaCabana\Components\googleplayservices-maps-27.0.0.0\samples\MapsSample\MapsSample\obj\Debug\assemblies\System.Core.dll
+C:\Users\Nica\Documents\Projects\LaCabana\Components\googleplayservices-maps-27.0.0.0\samples\MapsSample\MapsSample\obj\Debug\assemblies\System.dll
+C:\Users\Nica\Documents\Projects\LaCabana\Components\googleplayservices-maps-27.0.0.0\samples\MapsSample\MapsSample\obj\Debug\assemblies\System.Xml.dll
+C:\Users\Nica\Documents\Projects\LaCabana\Components\googleplayservices-maps-27.0.0.0\samples\MapsSample\MapsSample\obj\Debug\assemblies\Xamarin.Android.Support.v4.dll
+C:\Users\Nica\Documents\Projects\LaCabana\Components\googleplayservices-maps-27.0.0.0\samples\MapsSample\MapsSample\obj\Debug\assemblies\Xamarin.GooglePlayServices.Base.dll
+C:\Users\Nica\Documents\Projects\LaCabana\Components\googleplayservices-maps-27.0.0.0\samples\MapsSample\MapsSample\obj\Debug\assemblies\Xamarin.GooglePlayServices.Basement.dll
+C:\Users\Nica\Documents\Projects\LaCabana\Components\googleplayservices-maps-27.0.0.0\samples\MapsSample\MapsSample\obj\Debug\assemblies\Xamarin.GooglePlayServices.Maps.dll
+C:\Users\Nica\Documents\Projects\LaCabana\Components\googleplayservices-maps-27.0.0.0\samples\MapsSample\MapsSample\obj\Debug\assemblies\System.Runtime.Serialization.dll
+C:\Users\Nica\Documents\Projects\LaCabana\Components\googleplayservices-maps-27.0.0.0\samples\MapsSample\MapsSample\obj\Debug\assemblies\System.ServiceModel.Internals.dll

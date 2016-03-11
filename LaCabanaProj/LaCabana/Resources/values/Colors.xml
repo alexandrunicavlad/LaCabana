@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<color name="green">#51be51</color>
+	<color name="green_transparent">#8051be51</color>
+	<color name="dark_green">#49862e</color>
+	<color name="facebook">#3b5998</color>
+	<color name="facebook_transparent">#803b5998</color>
+	<color name="google">#d34836</color>
+	<color name="google_transparent">#80d34836</color>
+	<color name="transparent">#00ffffff</color>
+	<color name="text_pressed">#e1e1e1</color>
+	<color name="dashboard_background">#474747</color>
+	<color name="unselected_element">#e1e1e1</color>
+	<color name="unselected_element_dark">#b7b7b7</color>
+	<color name="selected_dot">#80ffffff</color>
+	<color name="unselected_dot">#4dffffff</color>
+	<color name="light_grey">#eeeeee</color>
+	<!--<color name=""></color>
+	<color name=""></color>
+	<color name=""></color>-->
+	<color name="white">#ffffff</color>
+</resources>

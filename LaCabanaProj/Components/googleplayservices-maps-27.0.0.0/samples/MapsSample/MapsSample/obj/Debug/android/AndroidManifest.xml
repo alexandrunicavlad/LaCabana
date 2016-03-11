@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.xamarin.googleplayservices.maps.sample">
+  <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="21" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+  <application android:label="MapsSample" android:icon="@drawable/ic_launcher" android:name="mono.android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCe9FlFLkAo34iMnxnR23X3g_irRh7ir5E" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <activity android:icon="@drawable/ic_launcher" android:label="Maps Sample" android:name="md53fd388ed257ece170a8fa9579f8e80c8.MainActivity" />
+    <activity android:label="Basic Demo" android:name="md53fd388ed257ece170a8fa9579f8e80c8.BasicMapDemoActivity" />
+    <activity android:label="Camera Demo" android:name="md53fd388ed257ece170a8fa9579f8e80c8.CameraDemoActivity" />
+    <activity android:label="Events Demo" android:name="md53fd388ed257ece170a8fa9579f8e80c8.EventsDemoActivity" />
+    <activity android:label="Ground Overlay Demo" android:name="md53fd388ed257ece170a8fa9579f8e80c8.GroundOverlayDemoActivity" />
+    <activity android:label="Indoor Demo" android:name="md53fd388ed257ece170a8fa9579f8e80c8.IndoorDemoActivity" />
+    <activity android:label="Layers Demo" android:name="md53fd388ed257ece170a8fa9579f8e80c8.LayersDemoActivity" />
+    <activity android:label="Lite Demo" android:name="md53fd388ed257ece170a8fa9579f8e80c8.LiteDemoActivity" />
+    <activity android:label="Lite List Demo" android:name="md53fd388ed257ece170a8fa9579f8e80c8.LiteListDemoActivity" />
+    <activity android:label="My Location Demo" android:name="md53fd388ed257ece170a8fa9579f8e80c8.MyLocationDemoActivity" />
+    <activity android:label="Options Demo" android:name="md53fd388ed257ece170a8fa9579f8e80c8.OptionsDemoActivity" />
+    <activity android:label="Raw MapView Demo" android:name="md53fd388ed257ece170a8fa9579f8e80c8.RawMapViewDemoActivity" />
+    <activity android:label="Programmatic Demo" android:name="md53fd388ed257ece170a8fa9579f8e80c8.ProgrammaticDemoActivity" />
+    <activity android:label="Retain Map Demo" android:name="md53fd388ed257ece170a8fa9579f8e80c8.RetainMapDemoActivity" />
+    <activity android:label="SnapshotDemoActivity" android:name="md53fd388ed257ece170a8fa9579f8e80c8.SnapshotDemoActivity" />
+    <activity android:label="Split StreetView Panorama And Map Demo" android:name="md53fd388ed257ece170a8fa9579f8e80c8.SplitStreetViewPanoramaAndMapDemoActivity" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.xamarin.googleplayservices.maps.sample.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.com.xamarin.googleplayservices.maps.sample" />
+      </intent-filter>
+    </receiver>
+    <activity android:icon="@drawable/ic_launcher" android:label="Maps Sample" android:name="com.xamarin.googleplayservices.maps.sample.TrialSplashScreen" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+  </application>
+</manifest>

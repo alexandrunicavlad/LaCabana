@@ -1,0 +1,7 @@
+<android.support.v4.widget.DrawerLayout android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/drawer_layout" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"><LinearLayout android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical"><include layout="@layout/tool_bar" android:id="@+id/toolbar" /><include layout="@layout/loading" android:id="@+id/loading" android:visibility="visible" /><LinearLayout android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical" android:id="@+id/page_body" /></LinearLayout><!--    <android.support.design.widget.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/nav_view"
+        app:menu="@menu/left_menu"
+        app:headerLayout="@layout/menu_header" />--></android.support.v4.widget.DrawerLayout>

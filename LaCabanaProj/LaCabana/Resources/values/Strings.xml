@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, Click Me!</string>
+	<string name="app_name">LaCabana</string>
+	<string name="facebook_app_id">1645301662412257</string>
+	<string name="app_name">GreenSwitch</string>
+	<!--Menu-->
+	<string name="map">Map</string>
+	<string name="cabinsNear">Cabins near</string>
+	<string name="favorites">Favorites</string>
+	<string name="compare">Compare</string>
+	<string name="addNewLocation">Add new location</string>
+	<string name="myAccount">My Account</string>
+	<string name="settings">Settings</string>
+	<string name="logout">Log out</string>
+	<!--Common-->
+	<string name="email_hint">Email</string>
+	<string name="username_hint">Username</string>
+	<string name="password_hint">Password</string>
+	<string name="name_hint">Name</string>
+	<string name="phone_hint">Phone</string>
+	<string name="repeat_password_hint">Repeat Password</string>
+	<string name="wait">Please wait...</string>
+	<!--Login-->
+	<string name="login_btn">Log in</string>
+	<string name="facebook_btn">FACEBOOK</string>
+	<string name="google_btn">GOOGLE +</string>
+	<string name="forgot_password">
+		<u>You forgot your password?</u>
+	</string>
+	<string name="register">
+		<u>Register now</u>
+	</string>
+	<!--Register-->
+	<string name="register_terms_conditions">I agree with  </string>
+	<string name="register_terms_conditions_link">Terms &amp; Conditions</string>
+	<string name="register_btn_Up">SIGN UP</string>
+	<string name="register_btn">SIGN IN</string>
+	<string name="has_account">
+		<u>Already have an account</u>
+	</string>
+	<string name="register_toast_message">Successful registration.</string>
+	<!--  Terms and Conditions-->
+	<string name="terms_title">Terms &amp; Conditions</string>
+	<string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+	 Sed accumsan purus non condimentum condimentum. Nunc tristique cursus venenatis. 
+	 Curabitur rutrum ultrices eros ut tincidunt. Mauris tellus magna, elementum eu ullamcorper 
+	 vel, lobortis vel enim. Pellentesque id accumsan velit. Vestibulum luctus, neque et cursus
+	 venenatis, erat metus luctus risus, ut pulvinar est metus vitae nibh. Phasellus sed 
+	 tortor nec tellus aliquam bibendum eu non purus. Donec maximus porta enim nec molestie. 
+	 Sed venenatis mattis libero eu finibus. Proin eu sollicitudin erat.
+	 Donec diam ante, suscipit et risus ut, mattis consectetur diam. In hac habitasse platea 
+	 dictumst. Donec tincidunt est non enim sagittis facilisis. Maecenas iaculis sagittis augue.
+	 Donec bibendum auctor porttitor. Curabitur enim ex, dignissim dapibus ultricies sit amet, 
+	 consectetur convallis nibh. Etiam magna diam, euismod et ligula nec, blandit euismod tellus.
+	 Praesent leo turpis, dictum eu laoreet sed, facilisis quis nunc. Donec ligula felis, 
+	 blandit non erat ut, dignissim bibendum mi. Sed in nulla ut sem interdum ullamcorper.
+	 Nullam bibendum scelerisque dui, non placerat mi dapibus quis. Sed dapibus semper dictum.
+	 Aenean eu nunc sit amet odio auctor ornare a sit amet dui. Praesent sollicitudin nibh vel
+	 purus tincidunt maximus. Mauris consequat cursus tortor, nec auctor enim molestie et.
+	 Praesent lacinia dui non leo iaculis fringilla. Aliquam consequat dignissim ante nec rutrum. 
+	 Suspendisse aliquet diam a libero euismod porta. Praesent placerat elementum quam. Ut blandit 
+     quam sit amet luctus faucibus. Vestibulum a ex at dui faucibus tincidunt et ut erat. Cras in
+	 massa in lectus luctus volutpat. Fusce elementum maximus lorem.
+	 Vivamus sodales odio felis, finibus pulvinar dui vulputate in. Fusce eget condimentum elit,
+	 et congue turpis. Vestibulum aliquet pulvinar arcu, vel elementum purus tempor in.
+	 Praesent commodo fermentum urna at finibus. Donec viverra placerat elit id mollis.
+	 Nam nec sodales quam, vel malesuada diam. Nullam consequat lacus ac odio dapibus,
+	 quis dictum leo fringilla. In id mi nunc. In in blandit dolor. Phasellus nec aliquet ligula.
+	 Nulla facilisi. Morbi lectus enim, tristique sed luctus tincidunt, vulputate vel lacus. Phasellus
+	 bibendum, orci vel pulvinar vulputate, nisl tellus rhoncus lacus, interdum bibendum massa arcu auctor ipsum.
+	 Sed quis mattis orci. Nam aliquam, lorem vel semper gravida, quam est tristique ligula, condimentum 
+	 pellentesque sapien justo molestie neque. Nunc commodo blandit nibh efficitur suscipit. 
+	 Maecenas a lectus ut lacus vehicula iaculis vitae et erat. Aliquam bibendum, lorem ac varius ultricies, 
+	 ante erat varius urna, ut fermentum est dolor nec diam. Praesent rutrum vestibulum scelerisque. Nunc eget 
+	 semper nisi. Morbi mollis mi et suscipit mollis. Mauris vel tempor metus, nec mattis eros. Duis eget interdum nunc,
+	 eu consequat neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus
+	 </string>
+	<!--	Recover Password-->
+	<string name="recover_title">Recover Password</string>
+	<string name="recover_message">Please enter your email address and we\'ll send you an email to reset your password</string>
+	<string name="recover_btn">Reset Password</string>
+	<string name="recover_send_email">Your email was send.</string>
+	<!--User Profile-->
+	<string name="profile_title">User Profile</string>
+	<string name="profile_address">Address</string>
+	<string name="profile_country">Country</string>
+	<string name="profile_state">State</string>
+	<string name="profile_city">City</string>
+	<string name="profile_toast">Profile successfully saved.</string>
+	<!--Change password-->
+	<string name="change_password_title">Update your password</string>
+	<string name="old_password">Old password</string>
+	<string name="new_password">New password</string>
+	<string name="confirm_password">Confirm new password</string>
+	<string name="change_password_btn">Update</string>
+	<!--	Left Menu-->
+	<string name="menu_device">Dashboard</string>
+	<string name="menu_location">Add new location</string>
+	<string name="menu_profile">Update user profile</string>
+	<string name="menu_password">Update password</string>
+	<string name="menu_contact">Contact us</string>
+	<string name="menu_logout">Log out</string>
+	<!--	Validation message-->
+	<string name="ValidationInternetConnection">No internet connection, please try again.</string>
+	<string name="invalid_email_or_password">Invalid email or password.</string>
+	<string name="invalid_email">Please enter a valid email address.</string>
+	<string name="invalid_password">Plase enter a valid password.</string>
+	<string name="empty_confirm_password">Please confirm your password.</string>
+	<string name="invalid_confirm_password">Password and cofirm password don\'t match.</string>
+	<string name="invalid_name">Please enter a valid full name.</string>
+	<string name="invalid_phone">Please enter a valid phone number.</string>
+	<string name="unchecked_terms">Please confirm the Terms &amp; Conditions field.</string>
+	<string name="invalid_address">Please enter a valid address.</string>
+	<string name="invalid_city">Please enter a valid city.</string>
+	<string name="invalid_location_name">Please enter a valid location name.</string>
+	<string name="invalid_generic_message">Please enter a valid {0}.</string>
+	<!--   Location Settings-->
+	<string name="location_settings_title">Location Settings</string>
+	<string name="notification_email">Notification Email</string>
+	<string name="location_settings_btn">Add device</string>
+	<string name="settings_saved">Settings successfully saved.</string>
+	<!--	Add Location-->
+	<string name="add_location_title">Add Location</string>
+	<string name="add_location_btn">Next</string>
+	<string name="add_location_name">Location Name</string>
+	<!--	Detecting devices-->
+	<string name="detecting_device_title">Detecting devices</string>
+	<string name="detecting_device_btn">Enter manualy</string>
+	<string name="detecting_retry_btn">Retry</string>
+	<string name="detecting_device_search_text">We are searching Green Switch devices on your network, also you can manualy add UUID.</string>
+	<string name="detecting_device_text">Detecting Green Switch devices</string>
+	<!--	Manualy setup-->
+	<string name="manualy_setup_title">Manualy setup</string>
+	<string name="manualy_setup_btn">Add device</string>
+	<string name="manualy_setup_text">UUID</string>
+	<string name="manualy_setup_hint">888-213-231-132</string>
+	<!--Contact Us-->
+	<string name="contact_title">Contact Us</string>
+	<string name="contact_email">email@greenswitch.com</string>
+	<string name="contact_telephone">1-800-433-9013</string>
+	<!-- Dashboard-->
+	<string name="humidity">Humidity:</string>
+	<string name="add_location">Add location</string>
+	<string name="no_location_message">You don\'t have any location set.</string>
+	<string name="device_not_connected">No connection available.</string>
+	<string name="switch_message_off">Turning your switch to off will instantly turn off all your devices.</string>
+	<string name="switch_message_on">Turning your switch to on will instantly turn on all your devices.</string>
+</resources>

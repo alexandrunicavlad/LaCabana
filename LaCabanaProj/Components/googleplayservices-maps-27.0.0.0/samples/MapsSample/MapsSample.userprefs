@@ -1,0 +1,17 @@
+﻿<Properties StartupItem="MapsSample\MapsSample.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.3230d8078d16305b" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MapsSample\RetainMapDemoActivity.cs">
+    <Files>
+      <File FileName="MapsSample\MainActivity.cs" Line="80" Column="34" />
+      <File FileName="MapsSample\BasicMapDemoActivity.cs" Line="34" Column="4" />
+      <File FileName="MapsSample\ProgrammaticDemoActivity.cs" Line="50" Column="4" />
+      <File FileName="MapsSample\RawMapViewDemoActivity.cs" Line="42" Column="17" />
+      <File FileName="MapsSample\RetainMapDemoActivity.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.MapsSample AndroidDesignerPreferredDevice="Nexus 4" />
+</Properties>
