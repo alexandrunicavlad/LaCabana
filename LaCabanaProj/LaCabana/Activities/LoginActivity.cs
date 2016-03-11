@@ -32,22 +32,22 @@ namespace LaCabana
 			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
 			SetTitleActionBar ("Sign In");
 
-//			var signUp = FindViewById<TextView> (Resource.Id.signUpButtonDetails);
-//			signUp.Click += delegate {
-//				StartActivityForResult (typeof(SignUpActivity), 0);    
-//			};
-//
-//			var loginBtn = FindViewById<TextView> (Resource.Id.signInButton);
-//			loginBtn.Click += delegate {
-//				HideKeyboard (loginBtn);
-//				ThreadPool.QueueUserWorkItem (o => LoginVerify ());
-//			};
-//
-//			var forgotPasswordBtn = FindViewById<TextView> (Resource.Id.forgotPassword);
-//
-//			forgotPasswordBtn.Click += delegate {
-//				//StartActivity (typeof(RecoverPasswordActivity));  
-//			};
+			var signUp = FindViewById<TextView> (Resource.Id.signUpButtonDetails);
+			signUp.Click += delegate {
+				StartActivityForResult (typeof(SignUpActivity), 0);    
+			};
+
+			var loginBtn = FindViewById<TextView> (Resource.Id.signInButton);
+			loginBtn.Click += delegate {
+				HideKeyboard (loginBtn);
+				ThreadPool.QueueUserWorkItem (o => LoginVerify ());
+			};
+
+			var forgotPasswordBtn = FindViewById<TextView> (Resource.Id.forgotPassword);
+
+			forgotPasswordBtn.Click += delegate {
+				//StartActivity (typeof(RecoverPasswordActivity));  
+			};
 
 
 
