@@ -2,11 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.06157df668b6b42e" />
   <MonoDevelop.Ide.Workbench ActiveDocument="LaCabana\Activities\SignUpActivity.cs">
     <Files>
-      <File FileName="LaCabana\Activities\BaseDrawerActivity.cs" Line="64" Column="1" />
+      <File FileName="LaCabana\Activities\BaseDrawerActivity.cs" Line="1" Column="1" />
       <File FileName="LaCabana\Activities\BaseActivity.cs" Line="1" Column="1" />
-      <File FileName="LaCabana\Activities\LoginActivity.cs" Line="74" Column="38" />
-      <File FileName="LaCabana\Activities\MapActivity.cs" Line="21" Column="43" />
-      <File FileName="LaCabana\Activities\BaseActionActivity.cs" Line="8" Column="23" />
       <File FileName="LaCabana\Activities\SignUpActivity.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

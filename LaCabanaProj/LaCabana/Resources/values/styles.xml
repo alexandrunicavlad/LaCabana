@@ -11,11 +11,11 @@
 	<style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
 		<item name="android:background">
 
-      @color/menu_background
+      @color/blue_dark_btn
     </item>
 		<item name="android:showDividers">none</item>
 		<item name="background">
-      @color/menu_background
+      @color/blue_dark_btn
     </item>
 	</style>
 </resources>

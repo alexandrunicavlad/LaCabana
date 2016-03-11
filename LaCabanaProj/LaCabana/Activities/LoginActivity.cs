@@ -75,7 +75,7 @@ namespace LaCabana
 				Finish ();
 			});
 
-			Dialog.Cancel ();
+			//Dialog.Cancel ();
 
 		}
 

@@ -36,6 +36,7 @@ namespace LaCabana
 			SupportActionBar.SetDisplayHomeAsUpEnabled (false);
 			SupportActionBar.SetDisplayShowTitleEnabled (false);
 			SupportActionBar.SetDisplayShowCustomEnabled (true);
+
 			FindViewById<ImageButton> (Resource.Id.action_bar_menuBtn).Visibility = ViewStates.Visible;
 
 			var backButton = FindViewById<Button> (Resource.Id.action_bar_back);
