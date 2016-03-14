@@ -2075,3 +2075,9 @@ C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\home
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\R.cs.flag
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\uploadflags.txt
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\devices.xml
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-hdpi\ic_citybackground.png
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-mdpi\ic_citybackground.png
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xhdpi\ic_citybackground.png
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxhdpi\ic_citybackground.png
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxxhdpi\ic_citybackground.png
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable\avatarplaceholder.png

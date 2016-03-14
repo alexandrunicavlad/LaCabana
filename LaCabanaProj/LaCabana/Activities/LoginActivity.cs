@@ -31,7 +31,7 @@ namespace LaCabana
 			SetContentView (Resource.Layout.log_in_layout);
 			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
 			SetTitleActionBar ("Sign In");
-
+			PictureProfile (FindViewById<LinearLayout> (Resource.Id.FlyMenu));
 			var signUp = FindViewById<TextView> (Resource.Id.signUpButtonDetails);
 			signUp.Click += delegate {
 				StartActivityForResult (typeof(SignUpActivity), 0);    

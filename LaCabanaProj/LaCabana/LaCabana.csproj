@@ -99,6 +99,7 @@
     <Compile Include="Activities\HomeLogo.cs" />
     <Compile Include="Activities\MapActivity.cs" />
     <Compile Include="Activities\BaseActionActivity.cs" />
+    <Compile Include="Helpers\RoundedImage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -1118,11 +1119,18 @@
     <AndroidResource Include="Resources\layout\drawer_layout.axml" />
     <AndroidResource Include="Resources\layout\home.axml" />
     <AndroidResource Include="Resources\layout\devices.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_citybackground.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_citybackground.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_citybackground.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_citybackground.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_citybackground.png" />
+    <AndroidResource Include="Resources\drawable\avatarplaceholder.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="Activities\" />
     <Folder Include="Resources\menu\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Insights.1.10.6\build\MonoAndroid10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.10.6\build\MonoAndroid10\Xamarin.Insights.targets')" />

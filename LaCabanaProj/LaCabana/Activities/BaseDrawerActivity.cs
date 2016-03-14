@@ -26,7 +26,7 @@ namespace LaCabana
 		protected NavigationView navigationView;
 		protected RelativeLayout loading;
 		private bool _shouldGoInvisible = true;
-
+		private BitmapFactory.Options _placeHolderOptions;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -91,6 +91,23 @@ namespace LaCabana
 		{
 			for (var i = 0; i < menu.Size (); i++)
 				menu.GetItem (i).SetVisible (visible);
+		}
+
+		public void PictureProfile (LinearLayout menu)
+		{
+			_placeHolderOptions = new BitmapFactory.Options ();
+			_placeHolderOptions.InSampleSize = 3;
+			_placeHolderOptions.InDither = false;
+			_placeHolderOptions.InPurgeable = true;
+
+			try {
+				var pic = BitmapFactory.DecodeResource (Resources, Resource.Drawable.avatarplaceholder, _placeHolderOptions);
+				FindViewById<ImageView> (Resource.Id.account_info_profile_image).SetImageDrawable (new RoundedImage (pic, this));
+				_placeHolderOptions.InSampleSize = 3;
+
+			} catch (Exception e) {
+				HandleErrors (e);
+			}
 		}
 
 

@@ -1,15 +1,15 @@
 ﻿<Properties StartupItem="LaCabana\LaCabana.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.06157df668b6b42e" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LaCabana\Activities\SignUpActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LaCabana\Activities\BaseDrawerActivity.cs">
     <Files>
-      <File FileName="LaCabana\Activities\BaseDrawerActivity.cs" Line="1" Column="1" />
-      <File FileName="LaCabana\Activities\BaseActivity.cs" Line="1" Column="1" />
-      <File FileName="LaCabana\Activities\SignUpActivity.cs" Line="1" Column="1" />
+      <File FileName="LaCabana\Activities\BaseDrawerActivity.cs" Line="105" Column="1" />
+      <File FileName="LaCabana\Activities\LoginActivity.cs" Line="38" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="C:\Users\Nica\Documents\Projects\LaCabana\LaCabana\Activities\BaseActionActivity.cs" line="78" column="1" />
+      <Breakpoint file="C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\Activities\BaseDrawerActivity.cs" line="105" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
