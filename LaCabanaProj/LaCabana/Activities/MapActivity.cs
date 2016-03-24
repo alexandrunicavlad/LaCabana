@@ -14,6 +14,7 @@ using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using Android.Locations;
 using Android.Util;
+using Android.Support.V4.Widget;
 
 namespace LaCabana
 {
@@ -30,13 +31,16 @@ namespace LaCabana
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
 			SetContentView (Resource.Layout.Main);
+
 			SetTitleActionBar ("Map");
+			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
+			ClickHandler ();
+			SetProfilePicture ();
 			var mapFragment = (SupportMapFragment)SupportFragmentManager.FindFragmentById (Resource.Id.map);
 			mapFragment.GetMapAsync (this);
-			SearchButton.Visibility = ViewStates.Visible;
-			MenuButton.Visibility = ViewStates.Gone;
+			//SearchButton.Visibility = ViewStates.Visible;
+			//MenuButton.Visibility = ViewStates.Gone;
 
 
 		}

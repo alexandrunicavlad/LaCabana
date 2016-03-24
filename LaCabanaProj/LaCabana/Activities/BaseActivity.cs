@@ -22,17 +22,10 @@ namespace LaCabana
 		//protected ValidationHelper ValidationHelper;
 		public static string Token;
 		protected static String UserName;
-		protected ImageButton MenuButton;
-		protected ImageButton AddButton;
-		protected ImageButton DeleteButton;
-		protected ImageButton SearchButton;
-		protected ImageButton EditButton;
-
 
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
-
 
 //			if (ValidationHelper == null)
 //				ValidationHelper = new ValidationHelper(ApplicationContext);

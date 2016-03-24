@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Widget;
 using System.Threading;
 using Android.Support.V4.Widget;
+using LaCabana.Services;
 
 namespace LaCabana
 {
@@ -31,7 +32,11 @@ namespace LaCabana
 			SetContentView (Resource.Layout.log_in_layout);
 			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
 			SetTitleActionBar ("Sign In");
-			PictureProfile (FindViewById<LinearLayout> (Resource.Id.FlyMenu));
+
+
+			DatabaseServices = new DatabaseServices (this);
+			var allUsers = DatabaseServices.GetAllUsers ();
+
 			var signUp = FindViewById<TextView> (Resource.Id.signUpButtonDetails);
 			signUp.Click += delegate {
 				StartActivityForResult (typeof(SignUpActivity), 0);    
@@ -40,7 +45,7 @@ namespace LaCabana
 			var loginBtn = FindViewById<TextView> (Resource.Id.signInButton);
 			loginBtn.Click += delegate {
 				HideKeyboard (loginBtn);
-				ThreadPool.QueueUserWorkItem (o => LoginVerify ());
+				ThreadPool.QueueUserWorkItem (o => LoginVerify (allUsers));
 			};
 
 			var forgotPasswordBtn = FindViewById<TextView> (Resource.Id.forgotPassword);
@@ -49,31 +54,30 @@ namespace LaCabana
 				//StartActivity (typeof(RecoverPasswordActivity));  
 			};
 
-
-
 		}
 
-		private void LoginVerify ()
+		private void LoginVerify (List<UsersModel> user)
 		{
 			var email = FindViewById<EditText> (Resource.Id.login_email).Text;
 			var password = FindViewById<EditText> (Resource.Id.login_password).Text;
 
 			RunOnUiThread (() => CreateDialog (Resources.GetString (Resource.String.wait), false, true));
-
-			if (email == "" || email != "nica") {
-				CreateDialog (Resources.GetString (Resource.String.invalid_email));
-				return;
+			foreach (var item in user) {
+				if (email == "" || email != item.Username) {
+					CreateDialog (Resources.GetString (Resource.String.invalid_email));
+					return;
+				} else if (password == "" || password != item.Password) {
+					CreateDialog (Resources.GetString (Resource.String.invalid_password));
+					return;
+				} else {
+					ThreadPool.QueueUserWorkItem (o => {
+						StartActivity (typeof(BasicMapDemoActivity));
+						Finish ();
+					});
+				}
 			}
 
-			if (password == "" || password != "nica") {
-				CreateDialog (Resources.GetString (Resource.String.invalid_password));
-				return;
-			}
 
-			ThreadPool.QueueUserWorkItem (o => {
-				StartActivity (typeof(BasicMapDemoActivity));
-				Finish ();
-			});
 
 			//Dialog.Cancel ();
 
@@ -81,9 +85,11 @@ namespace LaCabana
 
 		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
 		{
-			if (resultCode == Result.Ok)
-				Finish ();
-		}
+			if (resultCode == Result.Ok) {
 
+				//Finish ();
+		
+			}
+		}
 	}
 }

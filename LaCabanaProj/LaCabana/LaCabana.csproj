@@ -87,6 +87,10 @@
     <Reference Include="Xamarin.GooglePlayServices.Maps">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Maps.27.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Maps.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Data.Sqlite" />
+    <Reference Include="SQLite-net">
+      <HintPath>..\packages\sqlite-net-pcl.1.1.1\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -100,6 +104,9 @@
     <Compile Include="Activities\MapActivity.cs" />
     <Compile Include="Activities\BaseActionActivity.cs" />
     <Compile Include="Helpers\RoundedImage.cs" />
+    <Compile Include="Services\DataBaseServices.cs" />
+    <Compile Include="Services\IDataBaseServices.cs" />
+    <Compile Include="Models\UsersModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -1125,20 +1132,27 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_citybackground.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_citybackground.png" />
     <AndroidResource Include="Resources\drawable\avatarplaceholder.png" />
+    <AndroidResource Include="Resources\drawable\profilebackground.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="Activities\" />
     <Folder Include="Resources\menu\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Services\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Insights.1.10.6\build\MonoAndroid10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.10.6\build\MonoAndroid10\Xamarin.Insights.targets')" />
   <Import Project="..\packages\Xamarin.Forms.2.0.0.6490\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.0.0.6490\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Import Project="..\packages\SQLitePCL.raw.0.8.6\build\MonoAndroid\SQLitePCL.raw.targets" Condition="Exists('..\packages\SQLitePCL.raw.0.8.6\build\MonoAndroid\SQLitePCL.raw.targets')" />
   <ItemGroup>
     <XamarinComponentReference Include="googleplayservices-maps">
       <Version>27.0.0.0</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\LaCabanaDb" />
   </ItemGroup>
 </Project>

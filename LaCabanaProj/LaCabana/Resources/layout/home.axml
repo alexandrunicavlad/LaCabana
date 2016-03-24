@@ -17,19 +17,21 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:background="@color/rect_back">
+                android:background="@drawable/profilebackground"
+                android:id="@+id/profile_layout">
                 <ImageView
                     android:id="@+id/account_info_profile_image"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:scaleType="centerInside"
-                    android:layout_centerVertical="true" />
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="alexandrunicavlad@yahoo.com"
                     android:layout_gravity="center_vertical"
-                    android:textSize="12sp"
+                    android:textSize="14sp"
                     android:id="@+id/emailText"
                     android:textColor="@color/white"
                     android:layout_alignParentBottom="true"

@@ -15,6 +15,8 @@ using Android.Support.V7.Widget;
 using Android.Graphics;
 using Android.Views.InputMethods;
 using Android.Support.V7.App;
+using LaCabana.Services;
+using Android.Graphics.Drawables;
 
 
 namespace LaCabana
@@ -27,37 +29,38 @@ namespace LaCabana
 		protected RelativeLayout loading;
 		private bool _shouldGoInvisible = true;
 		private BitmapFactory.Options _placeHolderOptions;
+		protected static IDatabaseServices DatabaseServices;
 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-			SupportActionBar.SetCustomView (Resource.Layout.action_bar_back);
+
 			SupportActionBar.SetDisplayShowHomeEnabled (false);
-			SupportActionBar.SetDisplayHomeAsUpEnabled (false);
-			SupportActionBar.SetDisplayShowTitleEnabled (false);
-			SupportActionBar.SetDisplayShowCustomEnabled (true);
+			SupportActionBar.SetDisplayHomeAsUpEnabled (true);
+			SupportActionBar.SetDisplayShowTitleEnabled (true);
+			SupportActionBar.SetDisplayShowCustomEnabled (false);
+			SupportActionBar.SetBackgroundDrawable (new ColorDrawable (Resources.GetColor (Resource.Color.yellow)));
+			SupportActionBar.SetHomeAsUpIndicator (Resource.Drawable.ic_action_previous_white_item);
 
-			FindViewById<ImageButton> (Resource.Id.action_bar_menuBtn).Visibility = ViewStates.Visible;
+//			MenuButton = FindViewById<ImageButton> (Resource.Id.action_bar_menuBtn);
+//			AddButton = FindViewById<ImageButton> (Resource.Id.action_bar_addBtn);
+//			DeleteButton = FindViewById<ImageButton> (Resource.Id.action_bar_deleteBtn);
+//			SearchButton = FindViewById<ImageButton> (Resource.Id.action_bar_searchBtn);
+//			EditButton = FindViewById<ImageButton> (Resource.Id.action_bar_editBtn);
 
-			var backButton = FindViewById<Button> (Resource.Id.action_bar_back);
+		}
 
-			backButton.Click += delegate {
-				//OnBackPressed ();
-			};
-
-			// DatabaseServices = new DatabaseServices(this);
-
-			MenuButton = FindViewById<ImageButton> (Resource.Id.action_bar_menuBtn);
-			AddButton = FindViewById<ImageButton> (Resource.Id.action_bar_addBtn);
-			DeleteButton = FindViewById<ImageButton> (Resource.Id.action_bar_deleteBtn);
-			SearchButton = FindViewById<ImageButton> (Resource.Id.action_bar_searchBtn);
-			EditButton = FindViewById<ImageButton> (Resource.Id.action_bar_editBtn);
-
+		public override bool OnOptionsItemSelected (IMenuItem item)
+		{
+			if (item.ItemId == Android.Resource.Id.Home) {	
+				OnBackPressed ();
+			}
+			return base.OnOptionsItemSelected (item);
 		}
 
 		public void SetTitleActionBar (string title)
 		{
-			FindViewById<TextView> (Resource.Id.action_bar_back).Text = title;
+			SupportActionBar.Title = title;
 		}
 
 		protected void OpenMenu (object sender, EventArgs e)
@@ -74,11 +77,45 @@ namespace LaCabana
 		{
 
 			drawerLayout = drawer;
-			FindViewById<Button> (Resource.Id.action_bar_back).Click += OpenMenu;
+			//FindViewById<Button> (Resource.Id.action_bar_back).Click += OpenMenu;
 			//FindViewById<ImageButton> (Resource.Id.drawer_back).Click += CloseMenu;
 			//drawerLayout.DrawerSlide += DrawerLayoutDrawerSlide;
 			//			var userName = ActiveUser;
 			//			FindViewById<TextView> (Resource.Id.drawer_profile_name).Text = userName;
+		}
+
+		protected void ClickHandler ()
+		{
+			
+			var mapButton = FindViewById<LinearLayout> (Resource.Id.map_item);
+			mapButton.Click += delegate {
+				mapButton.Clickable = false;
+
+				if (this is BasicMapDemoActivity) {
+					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
+				} else {
+					//RefreshMenu = true;
+					StartActivityForResult (typeof(BasicMapDemoActivity), 2);
+					Finish ();
+				}
+
+				mapButton.Clickable = true;
+			};
+
+			var myAccountButton = FindViewById<LinearLayout> (Resource.Id.myaccountItem);
+			myAccountButton.Click += delegate {
+				myAccountButton.Clickable = false;
+
+				if (this is LoginActivity) {
+					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
+				} else {
+					//RefreshMenu = true;
+					StartActivityForResult (typeof(BasicMapDemoActivity), 2);
+					Finish ();
+				}
+
+				mapButton.Clickable = true;
+			};
 		}
 
 		public override bool OnPrepareOptionsMenu (IMenu menu)
@@ -93,23 +130,12 @@ namespace LaCabana
 				menu.GetItem (i).SetVisible (visible);
 		}
 
-		public void PictureProfile (LinearLayout menu)
+		public void SetProfilePicture ()
 		{
-			_placeHolderOptions = new BitmapFactory.Options ();
-			_placeHolderOptions.InSampleSize = 3;
-			_placeHolderOptions.InDither = false;
-			_placeHolderOptions.InPurgeable = true;
-
-			try {
-				var pic = BitmapFactory.DecodeResource (Resources, Resource.Drawable.avatarplaceholder, _placeHolderOptions);
-				FindViewById<ImageView> (Resource.Id.account_info_profile_image).SetImageDrawable (new RoundedImage (pic, this));
-				_placeHolderOptions.InSampleSize = 3;
-
-			} catch (Exception e) {
-				HandleErrors (e);
-			}
+			var imagecenterLayout = FindViewById<RelativeLayout> (Resource.Id.profile_layout);
+			var imagecenter = imagecenterLayout.FindViewById<ImageView> (Resource.Id.account_info_profile_image);
+			imagecenter.SetImageDrawable (new RoundedImage (BitmapFactory.DecodeResource (Resources, Resource.Drawable.avatarplaceholder), this, ""));
 		}
-
 
 	}
 }

@@ -82,6 +82,8 @@ class MonoPackageManager_Resources {
 		"LaCabana.dll",
 		"FormsViewGroup.dll",
 		"NineOldAndroids.dll",
+		"SQLite-net.dll",
+		"SQLitePCL.raw.dll",
 		"Xamarin.Android.Support.Design.dll",
 		"Xamarin.Android.Support.v4.dll",
 		"Xamarin.Android.Support.v7.AppCompat.dll",

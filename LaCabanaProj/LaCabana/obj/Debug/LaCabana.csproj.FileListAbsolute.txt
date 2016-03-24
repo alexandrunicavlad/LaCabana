@@ -1042,6 +1042,8 @@ C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\com.alexandruni
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\com.alexandrunica.lacabana-Signed.apk
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\FormsViewGroup.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\NineOldAndroids.dll
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\SQLite-net.dll
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\SQLitePCL.raw.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Android.Support.Design.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Android.Support.v4.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
@@ -1058,7 +1060,7 @@ C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Insight
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Insights.xml
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Forms.Core.xml
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.csprojResolveAssemblyReference.cache
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\SQLite-net.dll.mdb
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.pdb
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\android\bin\com.alexandrunica.lacabana.apk
@@ -2072,8 +2074,6 @@ C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\menu\main_m
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\log_in_layout.xml
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\drawer_layout.xml
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\home.xml
-C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\R.cs.flag
-C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\uploadflags.txt
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\devices.xml
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-hdpi\ic_citybackground.png
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-mdpi\ic_citybackground.png
@@ -2081,3 +2081,6 @@ C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xh
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxhdpi\ic_citybackground.png
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxxhdpi\ic_citybackground.png
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable\avatarplaceholder.png
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable\profilebackground.png
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\R.cs.flag
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\uploadflags.txt

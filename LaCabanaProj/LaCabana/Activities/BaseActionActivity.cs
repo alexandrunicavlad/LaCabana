@@ -13,6 +13,8 @@ using Android.Widget;
 using Android.Support.V4.App;
 using Android.Support.V4.Widget;
 using Android.Support.Design.Widget;
+using Android.Graphics.Drawables;
+using Android.Graphics;
 
 namespace LaCabana
 {
@@ -27,38 +29,77 @@ namespace LaCabana
 		protected DrawerLayout drawerLayout;
 		protected NavigationView navigationView;
 		protected RelativeLayout loading;
+		private bool _shouldGoInvisible = true;
+		private BitmapFactory.Options _placeHolderOptions;
 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-			ActionBar.SetCustomView (Resource.Layout.action_bar_home);
+
+//			var view = LayoutInflater.Inflate (Resource.Layout.action_bar_home, null);
+//			Android.App.ActionBar.LayoutParams layoutParams = new Android.App.ActionBar.LayoutParams (Android.App.ActionBar.LayoutParams.MatchParent,
+//				                                                  Android.App.ActionBar.LayoutParams.MatchParent);
+//			ActionBar.SetCustomView (view, layoutParams);
 			ActionBar.SetDisplayShowHomeEnabled (false);
-			ActionBar.SetDisplayHomeAsUpEnabled (false);
-			ActionBar.SetDisplayShowTitleEnabled (false);
-			ActionBar.SetDisplayShowCustomEnabled (true);
-			FindViewById<ImageButton> (Resource.Id.action_bar_menuBtn).Visibility = ViewStates.Visible;
+			ActionBar.SetDisplayHomeAsUpEnabled (true);
+			ActionBar.SetDisplayShowTitleEnabled (true);
+			ActionBar.SetDisplayShowCustomEnabled (false);
+			ActionBar.SetBackgroundDrawable (new ColorDrawable (Resources.GetColor (Resource.Color.yellow)));
+			ActionBar.SetHomeAsUpIndicator (Resource.Drawable.ic_sandwich);
+		}
 
-//			var backButton = FindViewById<Button> (Resource.Id.action_bar_menu);
-//
-//			backButton.Click += delegate {
-//				OnBackPressed ();
-//			};
+		public void SetProfilePicture ()
+		{
+			var imagecenterLayout = FindViewById<RelativeLayout> (Resource.Id.profile_layout);
+			var imagecenter = imagecenterLayout.FindViewById<ImageView> (Resource.Id.account_info_profile_image);
+			imagecenter.SetImageDrawable (new RoundedImage (BitmapFactory.DecodeResource (Resources, Resource.Drawable.avatarplaceholder), this, ""));
+		}
 
+		public override bool OnOptionsItemSelected (IMenuItem item)
+		{
+			if (item.ItemId == Android.Resource.Id.Home) {	
+				if (drawerLayout.IsDrawerOpen ((int)GravityFlags.Start)) {
+					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
+				} else {
+					drawerLayout.OpenDrawer ((int)GravityFlags.Start);
+				}
+			}
+			return base.OnOptionsItemSelected (item);
+		}
 
+		protected void ClickHandler ()
+		{		
 
-			// DatabaseServices = new DatabaseServices(this);
+			var mapButton = FindViewById<LinearLayout> (Resource.Id.map_item);
+			mapButton.Click += delegate {
+				mapButton.Clickable = false;
 
-			MenuButton = FindViewById<ImageButton> (Resource.Id.action_bar_menuBtn);
-			AddButton = FindViewById<ImageButton> (Resource.Id.action_bar_addBtn);
-			DeleteButton = FindViewById<ImageButton> (Resource.Id.action_bar_deleteBtn);
-			SearchButton = FindViewById<ImageButton> (Resource.Id.action_bar_searchBtn);
-			EditButton = FindViewById<ImageButton> (Resource.Id.action_bar_editBtn);
+				if (this is BasicMapDemoActivity) {
+					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
+				} else {					
+					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
+					StartActivityForResult (typeof(BasicMapDemoActivity), 2);
+				}
 
+				mapButton.Clickable = true;
+			};
+
+			var myAccountButton = FindViewById<LinearLayout> (Resource.Id.myaccountItem);
+			myAccountButton.Click += delegate {
+				myAccountButton.Clickable = false;
+				if (this is LoginActivity) {
+					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
+				} else {					
+					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
+					StartActivityForResult (typeof(LoginActivity), 2);
+				}
+				myAccountButton.Clickable = true;
+			};
 		}
 
 		public void SetTitleActionBar (string title)
 		{
-			FindViewById<TextView> (Resource.Id.action_bar_menu).Text = title;
+			ActionBar.Title = title;
 		}
 
 		protected void OpenMenu (object sender, EventArgs e)
@@ -73,39 +114,26 @@ namespace LaCabana
 
 		protected void SetupDrawer (DrawerLayout drawer)
 		{
-
 			drawerLayout = drawer;
-			FindViewById<Button> (Resource.Id.action_bar_menu).Click += OpenMenu;
-			//FindViewById<ImageButton> (Resource.Id.drawer_back).Click += CloseMenu;
-			//drawerLayout.DrawerSlide += DrawerLayoutDrawerSlide;
-//			var userName = ActiveUser;
-//			FindViewById<TextView> (Resource.Id.drawer_profile_name).Text = userName;
+
 		}
 
-		//		private void DrawerLayoutDrawerSlide (object sender, DrawerLayout.DrawerSlideEventArgs e)
-		//		{
-		//			if (e.SlideOffset > 0.1) {
-		//				if (_shouldGoInvisible) {
-		//					_shouldGoInvisible = false;
-		//					FindViewById<Button> (Resource.Id.action_bar_menu).Visibility = ViewStates.Gone;
-		////					FindViewById<LinearLayout> (Resource.Id.drawer_profile_button).Visibility = ViewStates.Visible;
-		////					FindViewById<ImageView> (Resource.Id.drawer_back).Visibility = ViewStates.Visible;
-		//					SupportInvalidateOptionsMenu ();
-		//				}
-		//			} else {
-		//				if (!_shouldGoInvisible) {
-		//					_shouldGoInvisible = true;
-		//					FindViewById<Button> (Resource.Id.action_bar_menu).Visibility = ViewStates.Visible;
-		////					FindViewById<LinearLayout> (Resource.Id.drawer_profile_button).Visibility = ViewStates.Gone;
-		////					FindViewById<ImageView> (Resource.Id.drawer_back).Visibility = ViewStates.Gone;
-		////					FindViewById<LinearLayout> (Resource.Id.accountsLayout).Visibility = ViewStates.Gone;
-		//					SupportInvalidateOptionsMenu ();
-		//				}
-		//			}
-		//		}
+		public void PictureProfile ()
+		{
+			_placeHolderOptions = new BitmapFactory.Options ();
+			_placeHolderOptions.InSampleSize = 3;
+			_placeHolderOptions.InDither = false;
+			_placeHolderOptions.InPurgeable = true;
 
+			try {
+				var pic = BitmapFactory.DecodeResource (Resources, Resource.Drawable.avatarplaceholder, _placeHolderOptions);
+				FindViewById<ImageView> (Resource.Id.account_info_profile_image).SetImageDrawable (new RoundedImage (pic, this));
+				_placeHolderOptions.InSampleSize = 3;
 
-
+			} catch (Exception e) {
+				//HandleErrors (e);
+			}
+		}
 
 	}
 }
