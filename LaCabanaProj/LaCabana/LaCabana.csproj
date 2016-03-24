@@ -107,6 +107,7 @@
     <Compile Include="Services\DataBaseServices.cs" />
     <Compile Include="Services\IDataBaseServices.cs" />
     <Compile Include="Models\UsersModel.cs" />
+    <Compile Include="Helpers\InfoWindowAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -1133,6 +1134,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_citybackground.png" />
     <AndroidResource Include="Resources\drawable\avatarplaceholder.png" />
     <AndroidResource Include="Resources\drawable\profilebackground.png" />
+    <AndroidResource Include="Resources\layout\infoWindow_layout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

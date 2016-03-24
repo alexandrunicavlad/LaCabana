@@ -21,12 +21,13 @@ namespace LaCabana
 	[Activity (ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class BasicMapDemoActivity : BaseActionActivity, IOnMapReadyCallback,ILocationListener
 	{
-		private GoogleMap googleMap;
+		private GoogleMap _googleMap;
 		private string tag = "MainActivity";
 		private double _latitude;
 		private double _longitude;
 		private string _provider;
 		LocationManager locManager;
+		Marker homeMarker;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -39,6 +40,8 @@ namespace LaCabana
 			SetProfilePicture ();
 			var mapFragment = (SupportMapFragment)SupportFragmentManager.FindFragmentById (Resource.Id.map);
 			mapFragment.GetMapAsync (this);
+
+
 			//SearchButton.Visibility = ViewStates.Visible;
 			//MenuButton.Visibility = ViewStates.Gone;
 
@@ -48,15 +51,49 @@ namespace LaCabana
 		public void OnMapReady (GoogleMap googleMap)
 		{
 			var myHome = new LatLng (_latitude, _longitude);
-			var currentPosition = googleMap;
-
 			googleMap.MyLocationEnabled = true;
-			googleMap.MoveCamera (CameraUpdateFactory.NewLatLngZoom (myHome, 16));
+			_googleMap = googleMap;
+			PutAllMarker ();
+
+			var isCurent = false;
+			googleMap.MyLocationChange += (object sender, GoogleMap.MyLocationChangeEventArgs e) => {
+				if (isCurent)
+					return;
+				isCurent = true;
+				homeMarker = googleMap.AddMarker (new MarkerOptions ().SetPosition (new LatLng (e.Location.Latitude, e.Location.Longitude)));
+				homeMarker.Title = "myLocation";
+				googleMap.MoveCamera (CameraUpdateFactory.NewLatLngZoom (new LatLng (e.Location.Latitude, e.Location.Longitude), 16));
+			};
+
+			googleMap.MapLongClick += (object sender, GoogleMap.MapLongClickEventArgs e) => {
+				var latitude = e.Point.Latitude;
+				var longitude = e.Point.Longitude;
+			};
+			googleMap.MarkerClick += (object sender, GoogleMap.MarkerClickEventArgs e) => {
+				var makerTitle = e.Marker.Title;
+			};
 			//	googleMap.AddMarker (new MarkerOptions ().SetPosition (myHome).SetTitle ("My Home").SetSnippet ("My sweet home"));
+				
 			locManager = GetSystemService (Context.LocationService) as LocationManager;
 			locManager.RequestLocationUpdates (LocationManager.NetworkProvider, 2000, 1, this);
 
 		}
+
+		public void PutAllMarker ()
+		{
+			var Marker1 = _googleMap.AddMarker (new MarkerOptions ().SetPosition (new LatLng (46.7805880242047, 23.6384522169828)));
+			WindowAdapter (Marker1);
+		}
+
+		public void WindowAdapter (Marker marker)
+		{
+			var adapter = new InfoWindowAdapter (marker, this);
+			_googleMap.SetInfoWindowAdapter (adapter);
+			marker.ShowInfoWindow ();
+
+		}
+
+
 
 		public void OnLocationChanged (Android.Locations.Location location)
 		{
@@ -82,5 +119,8 @@ namespace LaCabana
 		}
 
 	}
+
+
+
 }
 
