@@ -1,9 +1,11 @@
 ﻿<Properties StartupItem="LaCabana\LaCabana.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.06157df668b6b42e" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LaCabana\Activities\BaseDrawerActivity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.TA92917UH0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LaCabana\Activities\MapActivity.cs">
     <Files>
       <File FileName="LaCabana\Activities\BaseDrawerActivity.cs" Line="105" Column="1" />
       <File FileName="LaCabana\Activities\LoginActivity.cs" Line="38" Column="6" />
+      <File FileName="LaCabana\Activities\MapActivity.cs" Line="65" Column="120" />
+      <File FileName="LaCabana\Helpers\InfoWindowAdapter.cs" Line="26" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

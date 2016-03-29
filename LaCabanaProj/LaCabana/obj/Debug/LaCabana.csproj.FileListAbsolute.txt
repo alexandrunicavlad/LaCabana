@@ -2086,3 +2086,4 @@ C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\R.cs.flag
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\uploadflags.txt
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.csprojResolveAssemblyReference.cache
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\infowindow_layout.xml
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\add_new_location.xml

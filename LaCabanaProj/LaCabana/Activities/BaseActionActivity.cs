@@ -62,6 +62,8 @@ namespace LaCabana
 					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
 				} else {
 					drawerLayout.OpenDrawer ((int)GravityFlags.Start);
+
+
 				}
 			}
 			return base.OnOptionsItemSelected (item);
@@ -95,6 +97,18 @@ namespace LaCabana
 				}
 				myAccountButton.Clickable = true;
 			};
+			var addNewLocationButton = FindViewById<LinearLayout> (Resource.Id.addnewlocationItem);
+			addNewLocationButton.Click += delegate {
+				addNewLocationButton.Clickable = false;
+				if (this is AddNewLocation) {
+					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
+				} else {					
+					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
+					StartActivityForResult (typeof(AddNewLocation), 2);
+				}
+				addNewLocationButton.Clickable = true;
+			};
+
 		}
 
 		public void SetTitleActionBar (string title)
@@ -105,11 +119,13 @@ namespace LaCabana
 		protected void OpenMenu (object sender, EventArgs e)
 		{
 			drawerLayout.OpenDrawer ((int)GravityFlags.Start);
+			ActionBar.Hide ();
 		}
 
 		protected void CloseMenu (object sender, EventArgs e)
 		{
 			drawerLayout.CloseDrawer ((int)GravityFlags.Start);
+			ActionBar.Show ();
 		}
 
 		protected void SetupDrawer (DrawerLayout drawer)

@@ -38,6 +38,10 @@ LaCabana.InfoWindowAdapter, LaCabana;md5dbce641a4b5bf99921cca81d5bb55bcc.InfoWin
 LaCabana.InfoWindowAdapter, LaCabana, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5dbce641a4b5bf99921cca81d5bb55bcc.InfoWindowAdapter
 LaCabana.InfoWindowAdapter;md5dbce641a4b5bf99921cca81d5bb55bcc.InfoWindowAdapter
 lacabana.InfoWindowAdapter;md5dbce641a4b5bf99921cca81d5bb55bcc.InfoWindowAdapter
+LaCabana.AddNewLocation, LaCabana;md5dbce641a4b5bf99921cca81d5bb55bcc.AddNewLocation
+LaCabana.AddNewLocation, LaCabana, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5dbce641a4b5bf99921cca81d5bb55bcc.AddNewLocation
+LaCabana.AddNewLocation;md5dbce641a4b5bf99921cca81d5bb55bcc.AddNewLocation
+lacabana.AddNewLocation;md5dbce641a4b5bf99921cca81d5bb55bcc.AddNewLocation
 LaCabana.Services.DatabaseServices, LaCabana;md53903658ccfc6634dd7c2692b197ee44b.DatabaseServices
 LaCabana.Services.DatabaseServices, LaCabana, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md53903658ccfc6634dd7c2692b197ee44b.DatabaseServices
 LaCabana.Services.DatabaseServices;md53903658ccfc6634dd7c2692b197ee44b.DatabaseServices

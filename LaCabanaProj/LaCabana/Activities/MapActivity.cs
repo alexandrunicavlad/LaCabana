@@ -14,6 +14,8 @@ using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using Android.Locations;
 using Android.Util;
+using Android.Support.V7.Widget;
+using LaCabana.Services;
 using Android.Support.V4.Widget;
 
 namespace LaCabana
@@ -28,6 +30,8 @@ namespace LaCabana
 		private string _provider;
 		LocationManager locManager;
 		Marker homeMarker;
+		IDatabaseServices DatabaseServices;
+		private List<CabinModel> allCabins;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -35,16 +39,16 @@ namespace LaCabana
 			SetContentView (Resource.Layout.Main);
 
 			SetTitleActionBar ("Map");
-			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
 			ClickHandler ();
 			SetProfilePicture ();
 			var mapFragment = (SupportMapFragment)SupportFragmentManager.FindFragmentById (Resource.Id.map);
 			mapFragment.GetMapAsync (this);
-
+			DatabaseServices = new DatabaseServices (this);
 
 			//SearchButton.Visibility = ViewStates.Visible;
 			//MenuButton.Visibility = ViewStates.Gone;
-
+			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
+			allCabins = DatabaseServices.GetAllCabins ();
 
 		}
 
@@ -54,7 +58,6 @@ namespace LaCabana
 			googleMap.MyLocationEnabled = true;
 			_googleMap = googleMap;
 			PutAllMarker ();
-
 			var isCurent = false;
 			googleMap.MyLocationChange += (object sender, GoogleMap.MyLocationChangeEventArgs e) => {
 				if (isCurent)
@@ -62,18 +65,28 @@ namespace LaCabana
 				isCurent = true;
 				homeMarker = googleMap.AddMarker (new MarkerOptions ().SetPosition (new LatLng (e.Location.Latitude, e.Location.Longitude)));
 				homeMarker.Title = "myLocation";
-				googleMap.MoveCamera (CameraUpdateFactory.NewLatLngZoom (new LatLng (e.Location.Latitude, e.Location.Longitude), 16));
+				googleMap.MoveCamera (CameraUpdateFactory.NewLatLngZoom (new LatLng (e.Location.Latitude, e.Location.Longitude), 15));
 			};
 
+
+
+//			googleMap.MarkerClick += (object sender, GoogleMap.MarkerClickEventArgs e) => {
+//				WindowAdapter (e.Marker, allCabins);	//				
+//			};
+
 			googleMap.MapLongClick += (object sender, GoogleMap.MapLongClickEventArgs e) => {
-				var latitude = e.Point.Latitude;
-				var longitude = e.Point.Longitude;
-			};
-			googleMap.MarkerClick += (object sender, GoogleMap.MarkerClickEventArgs e) => {
-				var makerTitle = e.Marker.Title;
-			};
-			//	googleMap.AddMarker (new MarkerOptions ().SetPosition (myHome).SetTitle ("My Home").SetSnippet ("My sweet home"));
-				
+				var cabin = new CabinModel ();
+				cabin.Name = "Pensunea";
+				cabin.Latitude = e.Point.Latitude;
+				cabin.Longitude = e.Point.Longitude;
+				cabin.Phone = 0753437;
+				cabin.Email = "da@gmal.com";
+				cabin.Price = 100f;
+				cabin.Rating = 4;
+				DatabaseServices.InsertCabin (cabin);
+				allCabins = DatabaseServices.GetAllCabins ();
+				PutAllMarker ();
+			};				
 			locManager = GetSystemService (Context.LocationService) as LocationManager;
 			locManager.RequestLocationUpdates (LocationManager.NetworkProvider, 2000, 1, this);
 
@@ -81,19 +94,15 @@ namespace LaCabana
 
 		public void PutAllMarker ()
 		{
-			var Marker1 = _googleMap.AddMarker (new MarkerOptions ().SetPosition (new LatLng (46.7805880242047, 23.6384522169828)));
-			WindowAdapter (Marker1);
-		}
-
-		public void WindowAdapter (Marker marker)
-		{
-			var adapter = new InfoWindowAdapter (marker, this);
-			_googleMap.SetInfoWindowAdapter (adapter);
-			marker.ShowInfoWindow ();
+			foreach (var cab in allCabins) {
+				var marker = (new MarkerOptions ().SetPosition (new LatLng (cab.Latitude, cab.Longitude)));
+				marker.SetTitle (cab.Name);
+				_googleMap.AddMarker (marker);
+				var adapter = new InfoWindowAdapter (marker, this, allCabins);
+				_googleMap.SetInfoWindowAdapter (adapter);
+			}	
 
 		}
-
-
 
 		public void OnLocationChanged (Android.Locations.Location location)
 		{
@@ -117,6 +126,8 @@ namespace LaCabana
 		{
 			Log.Debug (tag, provider + " availability has changed to " + status.ToString ());
 		}
+
+
 
 	}
 

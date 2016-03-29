@@ -12,7 +12,11 @@ namespace LaCabana.Services
 
 		List<UsersModel>GetAllUsers ();
 
+		List<CabinModel>GetAllCabins ();
+
 		void CloseDatabase ();
+
+		void InsertCabin (CabinModel cabin);
 
 	}
 }

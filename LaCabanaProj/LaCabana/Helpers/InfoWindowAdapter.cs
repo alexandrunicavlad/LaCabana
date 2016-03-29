@@ -4,18 +4,22 @@ using Android.Gms.Maps.Model;
 using Android.Views;
 using Android.Content;
 using Android.App;
+using Android.Widget;
+using System.Collections.Generic;
 
 namespace LaCabana
 {
 	public class InfoWindowAdapter : Java.Lang.Object, GoogleMap.IInfoWindowAdapter
 	{
-		private Marker _marker;
+		private MarkerOptions _marker;
 		private Activity _context;
+		private List<CabinModel> _cabins;
 
-		public InfoWindowAdapter (Marker marker, Activity context)
+		public InfoWindowAdapter (MarkerOptions marker, Activity context, List<CabinModel> cabins)
 		{
 			_marker = marker;
 			_context = context;
+			_cabins = cabins;
 		}
 
 		public View GetInfoContents (Marker p0)
@@ -24,6 +28,16 @@ namespace LaCabana
 			inflater = (LayoutInflater)_context.GetSystemService (Context.LayoutInflaterService);
 			var itemLayout = inflater.Inflate (Resource.Layout.infoWindow_layout, null);
 			LatLng latLng = _marker.Position;
+			var name = itemLayout.FindViewById<TextView> (Resource.Id.infoName);
+			var price = itemLayout.FindViewById<TextView> (Resource.Id.infoPrice);
+			var rank = itemLayout.FindViewById<RatingBar> (Resource.Id.infoRank);
+			foreach (var cabin in _cabins)
+				if (p0.Title == cabin.Name) {
+					name.Text = cabin.Name;
+					price.Text = string.Format ("Price: {0}", cabin.Price);
+					rank.Progress = cabin.Rating;
+				}
+			
 			return itemLayout;
 		}
 

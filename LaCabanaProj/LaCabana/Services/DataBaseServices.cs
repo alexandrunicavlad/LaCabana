@@ -60,7 +60,52 @@ namespace LaCabana.Services
 			_db.Close ();
 		}
 
+		public void InsertCabin (CabinModel cabin)
+		{
+			var db = GetDatabase ();
+			var values = new ContentValues ();
+			values.Put ("Name", cabin.Name);
+			values.Put ("latitude", cabin.Latitude);
+			values.Put ("longitude", cabin.Longitude);
+			values.Put ("phone", cabin.Phone);
+			values.Put ("email", cabin.Email);
+			values.Put ("price", cabin.Price);
+			values.Put ("rating", cabin.Rating);
+			db.Insert ("cabins", null, values);
+		}
 
+		public List<CabinModel> GetAllCabins ()
+		{
+			var db = GetDatabase ();
+
+			var cabins = new List<CabinModel> ();
+			const string query = "Select * from cabins";
+			try {
+				var cursor = db.RawQuery (query, null);
+				if (cursor.MoveToFirst ()) {
+					do {
+						var account = new CabinModel () {
+							Name = cursor.GetString (0),
+							Latitude = cursor.GetDouble (1),
+							Longitude = cursor.GetDouble (2),
+							Phone = cursor.GetInt (3),
+							Email = cursor.GetString (4),
+							Price = cursor.GetFloat (5),
+							Rating = cursor.GetInt (6)
+								
+						};
+						cabins.Add (account);
+					} while (cursor.MoveToNext ());
+				}
+
+				cursor.Close ();
+			} catch (SQLException s) {
+				var abc = 0;
+			}
+			////db.Close();
+			return cabins;
+		
+		}
 
 		public List<UsersModel> GetAllUsers ()
 		{

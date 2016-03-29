@@ -108,6 +108,8 @@
     <Compile Include="Services\IDataBaseServices.cs" />
     <Compile Include="Models\UsersModel.cs" />
     <Compile Include="Helpers\InfoWindowAdapter.cs" />
+    <Compile Include="Models\CabinModel.cs" />
+    <Compile Include="Activities\AddNewLocation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -1135,6 +1137,7 @@
     <AndroidResource Include="Resources\drawable\avatarplaceholder.png" />
     <AndroidResource Include="Resources\drawable\profilebackground.png" />
     <AndroidResource Include="Resources\layout\infoWindow_layout.axml" />
+    <AndroidResource Include="Resources\layout\add_new_location.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

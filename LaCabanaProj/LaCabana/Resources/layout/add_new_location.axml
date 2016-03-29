@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:id="@+id/drawerLayout"
+    android:background="#ffffffff">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/FlyContent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="40dp">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:id="@+id/accountImage"
+                    android:src="@drawable/ic_action_person"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/accountImage"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Account name"
+                        android:id="@+id/accountName"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/accountText"
+                        android:textColor="@color/black"
+                        style="@android:style/TextAppearance.Holo.Widget.EditText"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/accountName"
+                        android:textSize="12sp"
+                        android:inputType="textEmailAddress"
+                        android:textColorHint="@color/gray" />
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:src="@drawable/ic_profile"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center_vertical" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:hint="Name of cabin"
+                    android:id="@+id/CabinEditText"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    style="@android:style/TextAppearance.Holo.Widget.EditText"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:src="@drawable/ic_action_edit"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center_vertical" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:hint="Location"
+                    android:id="@+id/locationEditText"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    style="@android:style/TextAppearance.Holo.Widget.EditText"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_gravity="clip_vertical" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/FlyMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="100dp"
+        android:background="#000">
+        <include
+            layout="@layout/home" />
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
