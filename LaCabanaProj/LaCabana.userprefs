@@ -1,19 +1,20 @@
 ﻿<Properties StartupItem="LaCabana\LaCabana.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.TA92917UH0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LaCabana\Activities\MapActivity.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="LaCabana\Activities\BaseDrawerActivity.cs" Line="105" Column="1" />
-      <File FileName="LaCabana\Activities\LoginActivity.cs" Line="38" Column="6" />
-      <File FileName="LaCabana\Activities\MapActivity.cs" Line="65" Column="120" />
-      <File FileName="LaCabana\Helpers\InfoWindowAdapter.cs" Line="26" Column="1" />
+      <File FileName="LaCabana\Activities\BaseDrawerActivity.cs" Line="122" Column="4" />
+      <File FileName="LaCabana\Activities\LoginActivity.cs" Line="1" Column="1" />
+      <File FileName="LaCabana\Activities\MapActivity.cs" Line="1" Column="1" />
+      <File FileName="LaCabana\Helpers\InfoWindowAdapter.cs" Line="1" Column="1" />
+      <File FileName="LaCabana\Helpers\FontArrayAdapter.cs" Line="1" Column="1" />
+      <File FileName="LaCabana\Activities\AddNewLocation.cs" Line="27" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="C:\Users\Nica\Documents\Projects\LaCabana\LaCabana\Activities\BaseActionActivity.cs" line="78" column="1" />
-      <Breakpoint file="C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\Activities\BaseDrawerActivity.cs" line="105" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.LaCabana AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="NoActionBar" />
+  <MonoDevelop.Ide.ItemProperties.LaCabana AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
 </Properties>

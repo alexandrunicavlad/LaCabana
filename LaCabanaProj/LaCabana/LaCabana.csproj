@@ -110,6 +110,7 @@
     <Compile Include="Helpers\InfoWindowAdapter.cs" />
     <Compile Include="Models\CabinModel.cs" />
     <Compile Include="Activities\AddNewLocation.cs" />
+    <Compile Include="Helpers\FontArrayAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
