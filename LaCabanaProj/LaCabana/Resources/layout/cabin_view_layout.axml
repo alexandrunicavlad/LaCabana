@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#ffff0000"
+            android:id="@+id/cabinImage" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Cabana trei"
+                android:textSize="20sp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/cabinName" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="12 km"
+                android:textSize="14sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@drawable/ic_save"
+                android:gravity="center_vertical"
+                android:id="@+id/cabinDistance" />
+        </RelativeLayout>
+        <RatingBar
+            android:layout_height="wrap_content"
+            style="?android:attr/ratingBarStyleSmall"
+            android:max="5"
+            android:id="@+id/cabinRating"
+            android:layout_width="wrap_content"
+            android:progress="2"
+            android:progressTint="@color/yellow"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Price from"
+                android:textSize="16sp"
+                android:layout_marginLeft="15dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="20$"
+                android:textSize="16sp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/cabinPrice" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_health_text"
+            android:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. "
+            android:textSize="12sp"
+            android:maxLines="3"
+            android:lines="3"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/cabinDetails" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="DETAILS"
+                android:textSize="16sp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/detailsButton" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/card_blue_light"
+                android:text="GET DIRECTIONS"
+                android:textSize="16sp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/destinationButton" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp" />
+    </LinearLayout>
+</LinearLayout>

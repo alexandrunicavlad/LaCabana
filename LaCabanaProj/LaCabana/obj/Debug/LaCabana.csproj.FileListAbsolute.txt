@@ -2087,3 +2087,11 @@ C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\info
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\add_new_location.xml
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\R.cs.flag
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\uploadflags.txt
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable\main_picture.png
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-hdpi\ic_logo.png
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-mdpi\ic_logo.png
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xhdpi\ic_logo.png
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxhdpi\ic_logo.png
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxxhdpi\ic_logo.png
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\cabins_near_layout.xml
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\cabin_view_layout.xml

@@ -111,6 +111,7 @@
     <Compile Include="Models\CabinModel.cs" />
     <Compile Include="Activities\AddNewLocation.cs" />
     <Compile Include="Helpers\FontArrayAdapter.cs" />
+    <Compile Include="Activities\CabinsNear.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -1139,6 +1140,14 @@
     <AndroidResource Include="Resources\drawable\profilebackground.png" />
     <AndroidResource Include="Resources\layout\infoWindow_layout.axml" />
     <AndroidResource Include="Resources\layout\add_new_location.axml" />
+    <AndroidResource Include="Resources\drawable\main_picture.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_logo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_logo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_logo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_logo.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_logo.png" />
+    <AndroidResource Include="Resources\layout\cabins_near_layout.axml" />
+    <AndroidResource Include="Resources\layout\cabin_view_layout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

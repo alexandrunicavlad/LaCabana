@@ -108,6 +108,17 @@ namespace LaCabana
 				}
 				addNewLocationButton.Clickable = true;
 			};
+			var cabinsNear = FindViewById<LinearLayout> (Resource.Id.cabinesItem);
+			cabinsNear.Click += delegate {
+				cabinsNear.Clickable = false;
+				if (this is CabinsNear) {
+					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
+				} else {					
+					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
+					StartActivityForResult (typeof(CabinsNear), 2);
+				}
+				cabinsNear.Clickable = true;
+			};
 
 		}
 
