@@ -13,7 +13,7 @@
             android:id="@+id/action_bar_menu"
             android:layout_alignParentLeft="true"
             android:textColor="@color/white"
-            android:src="@drawable/ic_sandwich" />
+            android:src="@drawable/ic_menu" />
         <TextView
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
                 android:layout_marginRight="5dp"
                 android:src="#00FFFFFF"
                 android:id="@+id/action_bar_searchBtn"
-                android:background="@drawable/ic_search"
+                android:background="@drawable/ic_magnify"
                 android:visibility="gone" />
             <ImageButton
                 android:layout_height="30dp"
@@ -44,7 +44,7 @@
                 android:layout_marginRight="5dp"
                 android:src="#00FFFFFF"
                 android:id="@+id/action_bar_addBtn"
-                android:background="@drawable/ic_add"
+                android:background="@drawable/ic_magnify"
                 android:visibility="gone" />
             <ImageButton
                 android:layout_height="30dp"
@@ -52,7 +52,7 @@
                 android:layout_marginRight="5dp"
                 android:src="#00FFFFFF"
                 android:id="@+id/action_bar_deleteBtn"
-                android:background="@drawable/ic_trash"
+                android:background="@drawable/ic_magnify"
                 android:visibility="gone" />
             <ImageButton
                 android:layout_height="30dp"
@@ -60,14 +60,14 @@
                 android:layout_marginRight="5dp"
                 android:id="@+id/action_bar_editBtn"
                 android:src="#00FFFFFF"
-                android:background="@drawable/ic_health_edit"
+                android:background="@drawable/ic_magnify"
                 android:visibility="gone" />
             <ImageButton
                 android:layout_height="30dp"
                 android:layout_width="30dp"
                 android:id="@+id/action_bar_menuBtn"
                 android:src="#00FFFFFF"
-                android:background="@drawable/ic_menu"
+                android:background="@drawable/ic_magnify"
                 android:visibility="gone" />
         </LinearLayout>
         <EditText
@@ -75,7 +75,7 @@
             android:layout_height="match_parent"
             android:id="@+id/health_search"
             android:background="#00FFFFFF"
-            android:drawableRight="@drawable/ic_close"
+            android:drawableRight="@drawable/ic_settings"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:singleLine="true"

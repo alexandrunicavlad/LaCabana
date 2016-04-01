@@ -6,6 +6,8 @@ using Android.Database;
 using Android.Database.Sqlite;
 using Android.Text;
 using Org.Apache.Http.Protocol;
+using Android.Graphics;
+
 
 
 namespace LaCabana.Services

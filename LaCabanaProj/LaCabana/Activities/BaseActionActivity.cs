@@ -15,6 +15,7 @@ using Android.Support.V4.Widget;
 using Android.Support.Design.Widget;
 using Android.Graphics.Drawables;
 using Android.Graphics;
+using Android.Views.InputMethods;
 
 namespace LaCabana
 {
@@ -45,7 +46,7 @@ namespace LaCabana
 			ActionBar.SetDisplayShowTitleEnabled (true);
 			ActionBar.SetDisplayShowCustomEnabled (false);
 			ActionBar.SetBackgroundDrawable (new ColorDrawable (Resources.GetColor (Resource.Color.yellow)));
-			ActionBar.SetHomeAsUpIndicator (Resource.Drawable.ic_sandwich);
+			ActionBar.SetHomeAsUpIndicator (Resource.Drawable.ic_menu);
 		}
 
 		public void SetProfilePicture ()
@@ -159,6 +160,14 @@ namespace LaCabana
 
 			} catch (Exception e) {
 				//HandleErrors (e);
+			}
+		}
+
+		protected void HideKeyboard (Activity activity)
+		{
+			var inputMethodManager = (InputMethodManager)GetSystemService ((Context.InputMethodService));
+			if (activity != null && activity.CurrentFocus != null) {
+				inputMethodManager.HideSoftInputFromWindow (activity.CurrentFocus.WindowToken, 0);
 			}
 		}
 

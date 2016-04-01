@@ -26,7 +26,7 @@ namespace LaCabana
 			base.OnCreate (bundle);
 
 			SetContentView (Resource.Layout.cabins_near_layout);
-			//SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
+			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
 			DatabaseServices = new DatabaseServices (this);
 
 			//SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));

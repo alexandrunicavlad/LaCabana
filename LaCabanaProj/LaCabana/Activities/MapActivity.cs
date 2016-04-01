@@ -32,6 +32,8 @@ namespace LaCabana
 		Marker homeMarker;
 		IDatabaseServices DatabaseServices;
 		private List<CabinModel> allCabins;
+		public double _clickLatitude;
+		public double _clickLongitude;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -68,25 +70,17 @@ namespace LaCabana
 				googleMap.MoveCamera (CameraUpdateFactory.NewLatLngZoom (new LatLng (e.Location.Latitude, e.Location.Longitude), 15));
 			};
 
-
-
+			googleMap.MapLongClick += (object sender, GoogleMap.MapLongClickEventArgs e) => {
+				var intent = new Intent (this, typeof(AddNewLocation));
+				intent.PutExtra ("latitude", e.Point.Latitude);
+				intent.PutExtra ("longitude", e.Point.Longitude);
+				StartActivity (intent);
+			};
 //			googleMap.MarkerClick += (object sender, GoogleMap.MarkerClickEventArgs e) => {
 //				WindowAdapter (e.Marker, allCabins);	//				
 //			};
 
-			googleMap.MapLongClick += (object sender, GoogleMap.MapLongClickEventArgs e) => {
-				var cabin = new CabinModel ();
-				cabin.Name = "Pensunea";
-				cabin.Latitude = e.Point.Latitude;
-				cabin.Longitude = e.Point.Longitude;
-				cabin.Phone = 0753437;
-				cabin.Email = "da@gmal.com";
-				cabin.Price = 100f;
-				cabin.Rating = 4;
-				DatabaseServices.InsertCabin (cabin);
-				allCabins = DatabaseServices.GetAllCabins ();
-				PutAllMarker ();
-			};				
+
 			locManager = GetSystemService (Context.LocationService) as LocationManager;
 			locManager.RequestLocationUpdates (LocationManager.NetworkProvider, 2000, 1, this);
 
@@ -102,6 +96,13 @@ namespace LaCabana
 				_googleMap.SetInfoWindowAdapter (adapter);
 			}	
 
+		}
+
+		public void MapLongClick ()
+		{
+			_googleMap.MapLongClick += (object sender, GoogleMap.MapLongClickEventArgs e) => {
+				
+			};
 		}
 
 		public void OnLocationChanged (Android.Locations.Location location)

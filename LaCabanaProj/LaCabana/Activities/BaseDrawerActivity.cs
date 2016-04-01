@@ -40,7 +40,7 @@ namespace LaCabana
 			SupportActionBar.SetDisplayShowTitleEnabled (true);
 			SupportActionBar.SetDisplayShowCustomEnabled (false);
 			SupportActionBar.SetBackgroundDrawable (new ColorDrawable (Resources.GetColor (Resource.Color.yellow)));
-			SupportActionBar.SetHomeAsUpIndicator (Resource.Drawable.ic_action_previous_white_item);
+			SupportActionBar.SetHomeAsUpIndicator (Resource.Drawable.ic_keyboard_backspace);
 
 //			MenuButton = FindViewById<ImageButton> (Resource.Id.action_bar_menuBtn);
 //			AddButton = FindViewById<ImageButton> (Resource.Id.action_bar_addBtn);
@@ -140,3 +140,4 @@ namespace LaCabana
 	}
 }
 
+ 

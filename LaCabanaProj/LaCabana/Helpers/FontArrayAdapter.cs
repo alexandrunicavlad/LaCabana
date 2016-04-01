@@ -57,23 +57,17 @@ namespace LaCabana.Helpers
 			var view = base.GetView (position, convertView, parent);
 			view.SetBackgroundColor (_context.Resources.GetColor (Resource.Color.white));
 			((TextView)view).SetTextSize (ComplexUnitType.Sp, 16);
-			((TextView)view).SetTextColor (_context.Resources.GetColor (Resource.Color.gray));
+			((TextView)view).SetTextColor (_context.Resources.GetColor (Resource.Color.gray_health_text));
 			return view;
 		}
 
 		public override View GetDropDownView (int position, View convertView, ViewGroup parent)
 		{
 			var view = base.GetDropDownView (position, convertView, parent);
-		
-//			((TextView)view).SetTextSize (ComplexUnitType.Sp, 16);
-//			((TextView)view).SetTextColor (_context.Resources.GetColor (Resource.Color.gray));
-			/*if(position==base.Count)
-            {
-                ((TextView) view).Text = "";
-                ((TextView) view).Hint = GetItem(base.Count);
-                ((TextView) view).SetHintTextColor(
-                    _context.Resources.GetColorStateList(Android.Resource.Color.SecondaryTextDark));
-            }*/
+			view.SetBackgroundColor (_context.Resources.GetColor (Resource.Color.white));
+			((TextView)view).SetTextSize (ComplexUnitType.Sp, 16);
+			((TextView)view).SetTextColor (_context.Resources.GetColor (Resource.Color.black));
+
 			return view;
 		}
 
