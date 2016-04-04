@@ -14,14 +14,6 @@ public class StepperRenderer
 	}
 
 
-	public StepperRenderer (android.content.Context p0) throws java.lang.Throwable
-	{
-		super (p0);
-		if (getClass () == StepperRenderer.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.StepperRenderer, Xamarin.Forms.Platform.Android, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065", this, new java.lang.Object[] { p0 });
-	}
-
-
 	public StepperRenderer (android.content.Context p0, android.util.AttributeSet p1, int p2) throws java.lang.Throwable
 	{
 		super (p0, p1, p2);
@@ -35,6 +27,14 @@ public class StepperRenderer
 		super (p0, p1);
 		if (getClass () == StepperRenderer.class)
 			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.StepperRenderer, Xamarin.Forms.Platform.Android, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065:Android.Util.IAttributeSet, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065", this, new java.lang.Object[] { p0, p1 });
+	}
+
+
+	public StepperRenderer (android.content.Context p0) throws java.lang.Throwable
+	{
+		super (p0);
+		if (getClass () == StepperRenderer.class)
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.StepperRenderer, Xamarin.Forms.Platform.Android, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065", this, new java.lang.Object[] { p0 });
 	}
 
 	java.util.ArrayList refList;

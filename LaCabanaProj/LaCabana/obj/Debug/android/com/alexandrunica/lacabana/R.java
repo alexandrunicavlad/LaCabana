@@ -2991,11 +2991,9 @@ containing a value of this type.
         public static final int tool_bar=0x7f03003d;
     }
     public static final class string {
-        public static final int ApplicationName=0x7f050041;
-        public static final int Hello=0x7f050040;
         /** 	Validation message
          */
-        public static final int ValidationInternetConnection=0x7f050076;
+        public static final int ValidationInternetConnection=0x7f050074;
         public static final int abc_action_bar_home_description=0x7f05002d;
         public static final int abc_action_bar_home_description_format=0x7f05002e;
         public static final int abc_action_bar_home_subtitle_description_format=0x7f05002f;
@@ -3013,14 +3011,14 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with=0x7f05003b;
         public static final int abc_shareactionprovider_share_with_application=0x7f05003c;
         public static final int abc_toolbar_collapse_description=0x7f05003d;
-        public static final int addNewLocation=0x7f050049;
-        public static final int add_location=0x7f050097;
-        public static final int add_location_btn=0x7f050088;
-        public static final int add_location_name=0x7f050089;
+        public static final int addNewLocation=0x7f050047;
+        public static final int add_location=0x7f050095;
+        public static final int add_location_btn=0x7f050086;
+        public static final int add_location_name=0x7f050087;
         /** 	Add Location
          */
-        public static final int add_location_title=0x7f050087;
-        public static final int app_name=0x7f050043;
+        public static final int add_location_title=0x7f050085;
+        public static final int app_name=0x7f050041;
         public static final int appbar_scrolling_view_behavior=0x7f05003f;
         /**  Brand name for Facebook [DO NOT TRANSLATE] 
          */
@@ -3028,11 +3026,11 @@ containing a value of this type.
         /**  Brand name for Google [DO NOT TRANSLATE] 
          */
         public static final int auth_google_play_services_client_google_display_name=0x7f050000;
-        public static final int cabinsNear=0x7f050046;
-        public static final int change_password_btn=0x7f05006f;
+        public static final int cabinsNear=0x7f050044;
+        public static final int change_password_btn=0x7f05006d;
         /** Change password
          */
-        public static final int change_password_title=0x7f05006b;
+        public static final int change_password_title=0x7f050069;
         /**   Text for notification shown when the Android Wear apps needs to be updated. Only shown on the wearable. [CHAR LIMIT=NONE] 
          */
         public static final int common_android_wear_notification_needs_update_text=0x7f050004;
@@ -3145,71 +3143,71 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f050021;
-        public static final int compare=0x7f050048;
-        public static final int confirm_password=0x7f05006e;
-        public static final int contact_email=0x7f050094;
-        public static final int contact_telephone=0x7f050095;
+        public static final int compare=0x7f050046;
+        public static final int confirm_password=0x7f05006c;
+        public static final int contact_email=0x7f050092;
+        public static final int contact_telephone=0x7f050093;
         /** Contact Us
          */
-        public static final int contact_title=0x7f050093;
-        public static final int detecting_device_btn=0x7f05008b;
-        public static final int detecting_device_search_text=0x7f05008d;
-        public static final int detecting_device_text=0x7f05008e;
+        public static final int contact_title=0x7f050091;
+        public static final int detecting_device_btn=0x7f050089;
+        public static final int detecting_device_search_text=0x7f05008b;
+        public static final int detecting_device_text=0x7f05008c;
         /** 	Detecting devices
          */
-        public static final int detecting_device_title=0x7f05008a;
-        public static final int detecting_retry_btn=0x7f05008c;
-        public static final int device_not_connected=0x7f050099;
+        public static final int detecting_device_title=0x7f050088;
+        public static final int detecting_retry_btn=0x7f05008a;
+        public static final int device_not_connected=0x7f050097;
         /** Common
          */
-        public static final int email_hint=0x7f05004d;
-        public static final int empty_confirm_password=0x7f05007a;
-        public static final int facebook_app_id=0x7f050044;
-        public static final int facebook_btn=0x7f050055;
-        public static final int favorites=0x7f050047;
-        public static final int forgot_password=0x7f050057;
-        public static final int google_btn=0x7f050056;
-        public static final int has_account=0x7f05005d;
-        public static final int hello=0x7f050042;
+        public static final int email_hint=0x7f05004b;
+        public static final int empty_confirm_password=0x7f050078;
+        public static final int facebook_app_id=0x7f050042;
+        public static final int facebook_btn=0x7f050053;
+        public static final int favorites=0x7f050045;
+        public static final int forgot_password=0x7f050055;
+        public static final int google_btn=0x7f050054;
+        public static final int has_account=0x7f05005b;
+        public static final int hello=0x7f050040;
         /**  Dashboard
          */
-        public static final int humidity=0x7f050096;
-        public static final int invalid_address=0x7f05007f;
-        public static final int invalid_city=0x7f050080;
-        public static final int invalid_confirm_password=0x7f05007b;
-        public static final int invalid_email=0x7f050078;
-        public static final int invalid_email_or_password=0x7f050077;
-        public static final int invalid_generic_message=0x7f050082;
-        public static final int invalid_location_name=0x7f050081;
-        public static final int invalid_name=0x7f05007c;
-        public static final int invalid_password=0x7f050079;
-        public static final int invalid_phone=0x7f05007d;
-        public static final int location_settings_btn=0x7f050085;
+        public static final int humidity=0x7f050094;
+        public static final int invalid_address=0x7f05007d;
+        public static final int invalid_city=0x7f05007e;
+        public static final int invalid_confirm_password=0x7f050079;
+        public static final int invalid_email=0x7f050076;
+        public static final int invalid_email_or_password=0x7f050075;
+        public static final int invalid_generic_message=0x7f050080;
+        public static final int invalid_location_name=0x7f05007f;
+        public static final int invalid_name=0x7f05007a;
+        public static final int invalid_password=0x7f050077;
+        public static final int invalid_phone=0x7f05007b;
+        public static final int location_settings_btn=0x7f050083;
         /**    Location Settings
          */
-        public static final int location_settings_title=0x7f050083;
+        public static final int location_settings_title=0x7f050081;
         /** Login
          */
-        public static final int login_btn=0x7f050054;
-        public static final int logout=0x7f05004c;
-        public static final int lorem_ipsum=0x7f050060;
-        public static final int manualy_setup_btn=0x7f050090;
-        public static final int manualy_setup_hint=0x7f050092;
-        public static final int manualy_setup_text=0x7f050091;
+        public static final int login_btn=0x7f050052;
+        public static final int logout=0x7f05004a;
+        public static final int lorem_ipsum=0x7f05005e;
+        public static final int manualy_setup_btn=0x7f05008e;
+        public static final int manualy_setup_hint=0x7f050090;
+        public static final int manualy_setup_text=0x7f05008f;
         /** 	Manualy setup
          */
-        public static final int manualy_setup_title=0x7f05008f;
+        public static final int manualy_setup_title=0x7f05008d;
         /** Menu
          */
-        public static final int map=0x7f050045;
-        public static final int menu_contact=0x7f050074;
+        public static final int map=0x7f050043;
+        public static final int menu_contact=0x7f050072;
         /** 	Left Menu
          */
-        public static final int menu_device=0x7f050070;
-        public static final int menu_location=0x7f050071;
-        public static final int menu_logout=0x7f050075;
-        public static final int menu_password=0x7f050073;
-        public static final int menu_profile=0x7f050072;
+        public static final int menu_device=0x7f05006e;
+        public static final int menu_location=0x7f05006f;
+        public static final int menu_logout=0x7f050073;
+        public static final int menu_password=0x7f050071;
+        public static final int menu_profile=0x7f050070;
         public static final int mr_media_route_button_content_description=0x7f050022;
         public static final int mr_media_route_chooser_searching=0x7f050023;
         public static final int mr_media_route_chooser_title=0x7f050024;
@@ -3221,48 +3219,48 @@ containing a value of this type.
         public static final int mr_media_route_controller_stop=0x7f05002a;
         public static final int mr_system_route_name=0x7f05002b;
         public static final int mr_user_route_category_name=0x7f05002c;
-        public static final int myAccount=0x7f05004a;
-        public static final int name_hint=0x7f050050;
-        public static final int new_password=0x7f05006d;
-        public static final int no_location_message=0x7f050098;
-        public static final int notification_email=0x7f050084;
-        public static final int old_password=0x7f05006c;
-        public static final int password_hint=0x7f05004f;
-        public static final int phone_hint=0x7f050051;
-        public static final int profile_address=0x7f050066;
-        public static final int profile_city=0x7f050069;
-        public static final int profile_country=0x7f050067;
-        public static final int profile_state=0x7f050068;
+        public static final int myAccount=0x7f050048;
+        public static final int name_hint=0x7f05004e;
+        public static final int new_password=0x7f05006b;
+        public static final int no_location_message=0x7f050096;
+        public static final int notification_email=0x7f050082;
+        public static final int old_password=0x7f05006a;
+        public static final int password_hint=0x7f05004d;
+        public static final int phone_hint=0x7f05004f;
+        public static final int profile_address=0x7f050064;
+        public static final int profile_city=0x7f050067;
+        public static final int profile_country=0x7f050065;
+        public static final int profile_state=0x7f050066;
         /** User Profile
          */
-        public static final int profile_title=0x7f050065;
-        public static final int profile_toast=0x7f05006a;
-        public static final int recover_btn=0x7f050063;
-        public static final int recover_message=0x7f050062;
-        public static final int recover_send_email=0x7f050064;
+        public static final int profile_title=0x7f050063;
+        public static final int profile_toast=0x7f050068;
+        public static final int recover_btn=0x7f050061;
+        public static final int recover_message=0x7f050060;
+        public static final int recover_send_email=0x7f050062;
         /** 	Recover Password
          */
-        public static final int recover_title=0x7f050061;
-        public static final int register=0x7f050058;
-        public static final int register_btn=0x7f05005c;
-        public static final int register_btn_Up=0x7f05005b;
+        public static final int recover_title=0x7f05005f;
+        public static final int register=0x7f050056;
+        public static final int register_btn=0x7f05005a;
+        public static final int register_btn_Up=0x7f050059;
         /** Register
          */
-        public static final int register_terms_conditions=0x7f050059;
-        public static final int register_terms_conditions_link=0x7f05005a;
-        public static final int register_toast_message=0x7f05005e;
-        public static final int repeat_password_hint=0x7f050052;
-        public static final int settings=0x7f05004b;
-        public static final int settings_saved=0x7f050086;
+        public static final int register_terms_conditions=0x7f050057;
+        public static final int register_terms_conditions_link=0x7f050058;
+        public static final int register_toast_message=0x7f05005c;
+        public static final int repeat_password_hint=0x7f050050;
+        public static final int settings=0x7f050049;
+        public static final int settings_saved=0x7f050084;
         public static final int status_bar_notification_info_overflow=0x7f05003e;
-        public static final int switch_message_off=0x7f05009a;
-        public static final int switch_message_on=0x7f05009b;
+        public static final int switch_message_off=0x7f050098;
+        public static final int switch_message_on=0x7f050099;
         /**   Terms and Conditions
          */
-        public static final int terms_title=0x7f05005f;
-        public static final int unchecked_terms=0x7f05007e;
-        public static final int username_hint=0x7f05004e;
-        public static final int wait=0x7f050053;
+        public static final int terms_title=0x7f05005d;
+        public static final int unchecked_terms=0x7f05007c;
+        public static final int username_hint=0x7f05004c;
+        public static final int wait=0x7f050051;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f090081;

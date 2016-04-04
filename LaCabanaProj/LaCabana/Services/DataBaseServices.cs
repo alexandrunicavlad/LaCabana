@@ -35,15 +35,15 @@ namespace LaCabana.Services
 		{
 		}
 
-		public void InsertUsername (string username, string password, int id)
-		{
+		public void InsertUsername (UsersModel user)
+		{	
 			var db = GetDatabase ();
-
-			var SqlCreateUsers =
-				"CREATE TABLE users(" + "Id" + " INTEGER PRIMARY KEY AUTOINCREMENT," + "UserName" + " TEXT NOT NULL UNIQUE," +
-				"UserPassword" + " TEXT NOT NULL" + ")";
-			db.ExecSQL (SqlCreateUsers);
-			
+			var values = new ContentValues ();
+			values.Put ("Id", user.Id);
+			values.Put ("Username", user.Username);
+			values.Put ("Password", user.Password);
+			values.Put ("Email", user.Email);
+			db.Insert ("user", null, values);			
 		}
 
 
@@ -91,9 +91,12 @@ namespace LaCabana.Services
 							Latitude = cursor.GetDouble (1),
 							Longitude = cursor.GetDouble (2),
 							Phone = cursor.GetInt (3),
-							Email = cursor.GetString (4),
-							Price = cursor.GetFloat (5),
-							Rating = cursor.GetInt (6)
+							PhoneType = cursor.GetString (4),
+							Email = cursor.GetString (5),
+							EmailType = cursor.GetString (6),
+							Price = cursor.GetFloat (7),
+							Rating = cursor.GetInt (8)
+
 								
 						};
 						cabins.Add (account);
@@ -109,23 +112,23 @@ namespace LaCabana.Services
 		
 		}
 
-		public List<UsersModel> GetAllUsers ()
+		public UsersModel GetAllUsers ()
 		{
 			var db = GetDatabase ();
 
-			var users = new List<UsersModel> ();
-			const string query = "Select * from users";
+			var users = new UsersModel ();
+			const string query = "Select * from user";
 			try {
 				var cursor = db.RawQuery (query, null);
 				if (cursor.MoveToFirst ()) {
 					do {
 						var account = new UsersModel () {
-							Id = cursor.GetInt (0),
+							Id = cursor.GetString (0),
 							Username = cursor.GetString (1),
 							Password = cursor.GetString (2),
 							Email = cursor.GetString (3)
 						};
-						users.Add (account);
+						users = account;
 					} while (cursor.MoveToNext ());
 				}
 

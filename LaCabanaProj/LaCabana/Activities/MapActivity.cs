@@ -17,6 +17,8 @@ using Android.Util;
 using Android.Support.V7.Widget;
 using LaCabana.Services;
 using Android.Support.V4.Widget;
+using FireSharp.Interfaces;
+using System.Threading;
 
 namespace LaCabana
 {
@@ -31,7 +33,7 @@ namespace LaCabana
 		LocationManager locManager;
 		Marker homeMarker;
 		IDatabaseServices DatabaseServices;
-		private List<CabinModel> allCabins;
+		private Dictionary<string,CabinModel> allCabins;
 		public double _clickLatitude;
 		public double _clickLongitude;
 
@@ -46,12 +48,17 @@ namespace LaCabana
 			var mapFragment = (SupportMapFragment)SupportFragmentManager.FindFragmentById (Resource.Id.map);
 			mapFragment.GetMapAsync (this);
 			DatabaseServices = new DatabaseServices (this);
-
 			//SearchButton.Visibility = ViewStates.Visible;
 			//MenuButton.Visibility = ViewStates.Gone;
 			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
-			allCabins = DatabaseServices.GetAllCabins ();
-
+			//allCabins = DatabaseServices.GetAllCabins ();
+			var baseService = new BaseService<Dictionary<string,CabinModel>> ();
+			allCabins = new Dictionary<string,CabinModel> ();
+			try {
+				allCabins = (baseService.Get ("cabins"));	
+			} catch (Exception e) {
+				var a = 0;
+			}
 		}
 
 		public void OnMapReady (GoogleMap googleMap)
@@ -89,8 +96,8 @@ namespace LaCabana
 		public void PutAllMarker ()
 		{
 			foreach (var cab in allCabins) {
-				var marker = (new MarkerOptions ().SetPosition (new LatLng (cab.Latitude, cab.Longitude)));
-				marker.SetTitle (cab.Name);
+				var marker = (new MarkerOptions ().SetPosition (new LatLng (cab.Value.Latitude, cab.Value.Longitude)));
+				marker.SetTitle (cab.Value.Name);
 				_googleMap.AddMarker (marker);
 				var adapter = new InfoWindowAdapter (marker, this, allCabins);
 				_googleMap.SetInfoWindowAdapter (adapter);

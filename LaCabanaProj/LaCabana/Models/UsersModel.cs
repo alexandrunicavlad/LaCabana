@@ -4,7 +4,8 @@ namespace LaCabana
 {
 	public class UsersModel
 	{
-		public int Id { get; set; }
+		
+		public String Id { get; set; }
 
 		public String Email { get; set; }
 

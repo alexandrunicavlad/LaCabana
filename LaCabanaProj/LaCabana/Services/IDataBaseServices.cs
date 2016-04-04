@@ -8,9 +8,9 @@ namespace LaCabana.Services
 {
 	public interface IDatabaseServices
 	{
-		void InsertUsername (string username, string password, int id);
+		void InsertUsername (UsersModel model);
 
-		List<UsersModel>GetAllUsers ();
+		UsersModel GetAllUsers ();
 
 		List<CabinModel>GetAllCabins ();
 

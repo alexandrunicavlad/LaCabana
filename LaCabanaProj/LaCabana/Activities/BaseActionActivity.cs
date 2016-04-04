@@ -16,6 +16,7 @@ using Android.Support.Design.Widget;
 using Android.Graphics.Drawables;
 using Android.Graphics;
 using Android.Views.InputMethods;
+using LaCabana.Services;
 
 namespace LaCabana
 {
@@ -32,11 +33,12 @@ namespace LaCabana
 		protected RelativeLayout loading;
 		private bool _shouldGoInvisible = true;
 		private BitmapFactory.Options _placeHolderOptions;
+		protected static IDatabaseServices DatabaseServices;
 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
+			DatabaseServices = new DatabaseServices (this);
 //			var view = LayoutInflater.Inflate (Resource.Layout.action_bar_home, null);
 //			Android.App.ActionBar.LayoutParams layoutParams = new Android.App.ActionBar.LayoutParams (Android.App.ActionBar.LayoutParams.MatchParent,
 //				                                                  Android.App.ActionBar.LayoutParams.MatchParent);
@@ -47,6 +49,7 @@ namespace LaCabana
 			ActionBar.SetDisplayShowCustomEnabled (false);
 			ActionBar.SetBackgroundDrawable (new ColorDrawable (Resources.GetColor (Resource.Color.yellow)));
 			ActionBar.SetHomeAsUpIndicator (Resource.Drawable.ic_menu);
+
 		}
 
 		public void SetProfilePicture ()
@@ -54,6 +57,13 @@ namespace LaCabana
 			var imagecenterLayout = FindViewById<RelativeLayout> (Resource.Id.profile_layout);
 			var imagecenter = imagecenterLayout.FindViewById<ImageView> (Resource.Id.account_info_profile_image);
 			imagecenter.SetImageDrawable (new RoundedImage (BitmapFactory.DecodeResource (Resources, Resource.Drawable.avatarplaceholder), this, ""));
+			var user = DatabaseServices.GetAllUsers ();
+			var accountMail = imagecenterLayout.FindViewById<TextView> (Resource.Id.emailText);
+			if (user.Email == null) {
+				accountMail.Text = "enter mail";
+			} else {
+				accountMail.Text = user.Email;
+			}
 		}
 
 		public override bool OnOptionsItemSelected (IMenuItem item)

@@ -13,9 +13,9 @@ namespace LaCabana
 	{
 		private MarkerOptions _marker;
 		private Activity _context;
-		private List<CabinModel> _cabins;
+		private Dictionary<string,CabinModel> _cabins;
 
-		public InfoWindowAdapter (MarkerOptions marker, Activity context, List<CabinModel> cabins)
+		public InfoWindowAdapter (MarkerOptions marker, Activity context, Dictionary<string,CabinModel> cabins)
 		{
 			_marker = marker;
 			_context = context;
@@ -32,10 +32,10 @@ namespace LaCabana
 			var price = itemLayout.FindViewById<TextView> (Resource.Id.infoPrice);
 			var rank = itemLayout.FindViewById<RatingBar> (Resource.Id.infoRank);
 			foreach (var cabin in _cabins)
-				if (p0.Title == cabin.Name) {
-					name.Text = cabin.Name;
-					price.Text = string.Format ("Price: {0}", cabin.Price);
-					rank.Progress = cabin.Rating;
+				if (p0.Title == cabin.Value.Name) {
+					name.Text = cabin.Value.Name;
+					price.Text = string.Format ("Price: {0}", cabin.Value.Price);
+					rank.Progress = cabin.Value.Rating;
 				}
 			
 			return itemLayout;

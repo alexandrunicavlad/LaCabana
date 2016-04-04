@@ -80,7 +80,11 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"LaCabana.dll",
+		"FireSharp.dll",
 		"FormsViewGroup.dll",
+		"Microsoft.Threading.Tasks.dll",
+		"Microsoft.Threading.Tasks.Extensions.dll",
+		"Newtonsoft.Json.dll",
 		"NineOldAndroids.dll",
 		"SQLite-net.dll",
 		"SQLitePCL.raw.dll",

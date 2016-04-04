@@ -20,6 +20,8 @@ using Android.Gms.Maps;
 using Android.Locations;
 using Android.Gms.Maps.Model;
 using Android.Util;
+using Android.Graphics;
+using System.IO;
 
 namespace LaCabana
 {
@@ -45,6 +47,7 @@ namespace LaCabana
 		Marker homeMarker;
 		private LinearLayout mapLayout;
 		private TextView locationEdit;
+		private List<String> photoList;
 
 		protected override void OnCreate (Bundle bundle)
 		{			
@@ -73,7 +76,7 @@ namespace LaCabana
 				HideKeyboard (this);
 			}
 
-
+			photoList = new List<string> ();
 			stringPhone = new List<String> (){ "Select", "Mobile", "Home", "Work" };
 			stringMail = new List<String> (){ "Select", "Custom", "Gmail", "Work" };
 
@@ -100,6 +103,17 @@ namespace LaCabana
 				
 			};
 
+			emailSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
+				cabin.EmailType = stringMail [e.Position];
+			};
+
+			phoneSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
+				cabin.PhoneType = stringPhone [e.Position];
+			};
+
+			FindViewById<Button> (Resource.Id.uploadButton).Click += delegate {
+				cabin.Photo = photoList;
+			};
 
 			FindViewById<EditText> (Resource.Id.CabinEditText).TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
 				cabin.Name = e.Text.ToString ();
@@ -134,39 +148,13 @@ namespace LaCabana
 			if ((requestCode == 0) && (resultCode == Result.Ok) && (data != null)) {
 				_uri = data.Data;
 				photoAdd.SetImageURI (_uri);
-
-				//PerformCrop ();
-//			} else if (requestCode == PicCrop && resultCode == Result.Ok) {
-//				try {
-//					if (data != null) {
-//						var extras = data.Extras;
-//						var pic = (Bitmap)extras.GetParcelable ("data");
-//						_picture = pic;
-//						_roundPicture.SetImageDrawable (new RoundedImage (pic, this));
-//					}
-//
-//					_pictureSet = true;
-//				} catch (Exception e) {
-//					HandleErrors (e);
-//				}
-//
-//			}
-			}
-		}
-
-		private void saveImages ()
-		{
-			try {
-				FileInputStream fis = new FileInputStream (_uri.Path);
-				byte[] image = new byte[fis.Available ()];
-				fis.Read (image);
-
-				ContentValues values = new ContentValues ();
-				values.Put ("image", image);
-				//db.insert ("tb", null, values);
-				fis.Close ();
-			} catch (FileNotFoundException e) {
-				e.PrintStackTrace ();
+				var bitmap = MediaStore.Images.Media.GetBitmap (this.ContentResolver, _uri);
+				MemoryStream stream = new MemoryStream ();
+				bitmap.Compress (Bitmap.CompressFormat.Png, 100, stream);
+				bitmap.Recycle ();
+				byte[] byteArray = stream.ToArray ();
+				String imageFile = Base64.EncodeToString (byteArray, Base64.Default);
+				photoList.Add (imageFile);
 			}
 		}
 
@@ -179,15 +167,21 @@ namespace LaCabana
 			} else if (cabin.Latitude == 0 || cabin.Longitude == 0) {
 				Toast.MakeText (this, "Enter location", ToastLength.Short).Show ();
 			}
-//			if (cabin.PhoneType == null) {
-//				cabin.PhoneType = stringPhone [1];
-//			}
-
-//			if (cabin.EmailType == null) {
-//				cabin.EmailType = stringMail [1];
-//			}
-
-
+			cabin.Price = 120f;
+			cabin.Rating = 4;
+			var baseService = new BaseService<CabinModel> ();
+			try {
+				baseService.Push (cabin, "cabins");
+				Finish ();
+			} catch (Exception e) {
+				var a = 0;
+			}
+			if (cabin.PhoneType == null) {
+				cabin.PhoneType = stringPhone [1];
+			}
+			if (cabin.EmailType == null) {
+				cabin.EmailType = stringMail [1];
+			}
 		}
 
 		public void OnMapReady (GoogleMap googleMap)

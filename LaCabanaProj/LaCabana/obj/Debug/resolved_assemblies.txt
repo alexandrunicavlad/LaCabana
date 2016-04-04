@@ -1,8 +1,12 @@
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\LaCabana.dll
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\FireSharp.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\FormsViewGroup.dll
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Microsoft.Threading.Tasks.dll
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Microsoft.Threading.Tasks.Extensions.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Mono.Android.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Mono.Data.Sqlite.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\mscorlib.dll
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Newtonsoft.Json.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\NineOldAndroids.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\SQLite-net.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\SQLitePCL.raw.dll

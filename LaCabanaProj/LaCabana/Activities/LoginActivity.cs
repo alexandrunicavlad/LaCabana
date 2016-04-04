@@ -35,7 +35,7 @@ namespace LaCabana
 			ClickHandler ();
 
 			DatabaseServices = new DatabaseServices (this);
-			var allUsers = DatabaseServices.GetAllUsers ();
+//			var allUsers = DatabaseServices.GetAllUsers ();
 
 			var signUp = FindViewById<TextView> (Resource.Id.signUpButtonDetails);
 			signUp.Click += delegate {
@@ -45,7 +45,7 @@ namespace LaCabana
 			var loginBtn = FindViewById<TextView> (Resource.Id.signInButton);
 			loginBtn.Click += delegate {
 				HideKeyboard (loginBtn);
-				ThreadPool.QueueUserWorkItem (o => LoginVerify (allUsers));
+				ThreadPool.QueueUserWorkItem (o => LoginVerify ());
 			};
 
 			var forgotPasswordBtn = FindViewById<TextView> (Resource.Id.forgotPassword);
@@ -56,30 +56,43 @@ namespace LaCabana
 
 		}
 
-		private void LoginVerify (List<UsersModel> user)
+		private void LoginVerify ()
 		{
+			var baseService = new BaseService<Dictionary<string,UsersModel>> ();
+			var user = new Dictionary<string,UsersModel> ();
+			try {
+				user = (baseService.Get ("users"));
+			} catch (Exception e) {
+				var a = 0;
+			}
 			var email = FindViewById<EditText> (Resource.Id.login_email).Text;
 			var password = FindViewById<EditText> (Resource.Id.login_password).Text;
 
-			RunOnUiThread (() => CreateDialog (Resources.GetString (Resource.String.wait), false, true));
+
+			//RunOnUiThread (() => CreateDialog (Resources.GetString (Resource.String.wait), false, true));
+
 			foreach (var item in user) {
-				if (email == "" || email != item.Username) {
-					CreateDialog (Resources.GetString (Resource.String.invalid_email));
-					return;
-				} else if (password == "" || password != item.Password) {
-					CreateDialog (Resources.GetString (Resource.String.invalid_password));
-					return;
+				if (email == "" || email != item.Value.Email) {
+					//CreateDialog (Resources.GetString (Resource.String.invalid_email));
+
+				} else if (password == "" || password != item.Value.Password) {
+					//CreateDialog (Resources.GetString (Resource.String.invalid_password));
+
 				} else {
 					ThreadPool.QueueUserWorkItem (o => {
+						UsersModel model = new UsersModel ();
+						model.Email = item.Value.Email;
+						model.Id = item.Value.Id;
+						model.Password = item.Value.Password;
+						model.Username = item.Value.Username;
+						var abc = DatabaseServices.GetAllUsers ();
+						DatabaseServices.InsertUsername (model);
 						StartActivity (typeof(BasicMapDemoActivity));
+
 						Finish ();
 					});
 				}
 			}
-
-
-
-			//Dialog.Cancel ();
 
 		}
 
