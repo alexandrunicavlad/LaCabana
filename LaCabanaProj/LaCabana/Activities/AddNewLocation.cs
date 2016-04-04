@@ -59,6 +59,7 @@ namespace LaCabana
 			SetTitleActionBar ("Add new location");
 			ClickHandler ();
 			cabin = new CabinModel ();
+			cabin.Photo = new List<string> ();
 			var latitude = Intent.GetDoubleExtra ("latitude", 0);
 			var longitude = Intent.GetDoubleExtra ("longitude", 0);
 			HideKeyboard (this);
@@ -162,16 +163,24 @@ namespace LaCabana
 		{			
 			if (cabin.Name == null || cabin.Name.Equals ("")) {
 				Toast.MakeText (this, "Enter a Cabin's name", ToastLength.Short).Show ();
+				return;
 			} else if (cabin.Phone == 0 && cabin.Email == null) {
 				Toast.MakeText (this, "Enter a phone number or an email", ToastLength.Short).Show ();
+				return;
 			} else if (cabin.Latitude == 0 || cabin.Longitude == 0) {
 				Toast.MakeText (this, "Enter location", ToastLength.Short).Show ();
+				return;
+			} else if (photoList.Count != cabin.Photo.Count) {
+				Toast.MakeText (this, "Please upload photo", ToastLength.Short).Show ();
+				return;
 			}
+
 			cabin.Price = 120f;
 			cabin.Rating = 4;
 			var baseService = new BaseService<CabinModel> ();
 			try {
 				baseService.Push (cabin, "cabins");
+				StartActivityForResult (typeof(BasicMapDemoActivity), 2);
 				Finish ();
 			} catch (Exception e) {
 				var a = 0;
