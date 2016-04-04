@@ -43,6 +43,7 @@ namespace LaCabana.Services
 			values.Put ("Username", user.Username);
 			values.Put ("Password", user.Password);
 			values.Put ("Email", user.Email);
+			values.Put ("ProfilePhoto", user.ProfilePhoto);
 			db.Insert ("user", null, values);			
 		}
 
@@ -95,9 +96,7 @@ namespace LaCabana.Services
 							Email = cursor.GetString (5),
 							EmailType = cursor.GetString (6),
 							Price = cursor.GetFloat (7),
-							Rating = cursor.GetInt (8)
-
-								
+							Rating = cursor.GetInt (8)								
 						};
 						cabins.Add (account);
 					} while (cursor.MoveToNext ());
@@ -126,7 +125,8 @@ namespace LaCabana.Services
 							Id = cursor.GetString (0),
 							Username = cursor.GetString (1),
 							Password = cursor.GetString (2),
-							Email = cursor.GetString (3)
+							Email = cursor.GetString (3),
+							ProfilePhoto = cursor.GetString (4)
 						};
 						users = account;
 					} while (cursor.MoveToNext ());
@@ -138,6 +138,17 @@ namespace LaCabana.Services
 			}
 			////db.Close();
 			return users;
+		}
+
+		public void DeleteUser ()
+		{
+			var db = GetDatabase ();
+			const string query = "Delete from user";
+			try {
+				db.ExecSQL (query);
+			} catch (SQLException e) {
+				var abc = 0;
+			}
 		}
 	}
 }

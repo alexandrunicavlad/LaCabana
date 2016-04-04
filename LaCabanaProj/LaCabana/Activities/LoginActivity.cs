@@ -32,7 +32,7 @@ namespace LaCabana
 			SetContentView (Resource.Layout.log_in_layout);
 			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
 			SetTitleActionBar ("Sign In");
-			ClickHandler ();
+
 
 			DatabaseServices = new DatabaseServices (this);
 //			var allUsers = DatabaseServices.GetAllUsers ();

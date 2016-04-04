@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:id="@+id/drawerLayout"
+    android:background="#ffffffff">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/FlyContent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="#ffff0000"
+                        android:id="@+id/cabinImage" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="Cabana trei"
+                        android:textSize="40sp"
+                        android:layout_marginLeft="15dp"
+                        android:id="@+id/cabinName"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="50dp" />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:id="@+id/cabinDirection"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/facebook" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="40dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/ic_phone" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/phoneLayout1">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:text="(080) 123456"
+                                android:id="@+id/phoneText1"
+                                android:textColor="@color/black"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:text="Mobile"
+                                android:id="@+id/phoneType1"
+                                android:textColor="@color/gray_health_text"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="20dp"
+                            android:id="@+id/phoneLayout2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:text="(080) 123456"
+                                android:id="@+id/phoneText2"
+                                android:textColor="@color/black"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:text="Phone"
+                                android:id="@+id/phoneType2"
+                                android:textColor="@color/gray_health_text"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="40dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:id="@+id/emailLayout">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/ic_email" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="tarzan@example.com"
+                            android:id="@+id/emailText"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Other"
+                            android:id="@+id/emailType"
+                            android:textColor="@color/gray_health_text"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="40dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:id="@+id/locationLayout">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/ic_map_marker" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Dunarii 148"
+                            android:id="@+id/streetText"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Romania"
+                            android:id="@+id/countryText"
+                            android:textColor="@color/gray_health_text"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="40dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:id="@+id/priceLayout">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/ic_map_marker" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="120 LEI"
+                            android:id="@+id/priceText"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

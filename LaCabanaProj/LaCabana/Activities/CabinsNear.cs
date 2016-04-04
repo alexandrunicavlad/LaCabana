@@ -58,17 +58,6 @@ namespace LaCabana
 			}
 			cabinsLayout.RequestLayout ();
 		}
-
-		public  Bitmap Decode (string imageData)
-		{
-			try {
-				byte[] encodeByte = Android.Util.Base64.Decode (imageData, Android.Util.Base64Flags.Default);
-				Bitmap bitmap = BitmapFactory.DecodeByteArray (encodeByte, 0, encodeByte.Length);
-				return bitmap;
-			} catch (Exception) {
-				return null;
-			}
-		}
 	}
 }
 

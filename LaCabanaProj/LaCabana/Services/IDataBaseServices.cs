@@ -14,6 +14,8 @@ namespace LaCabana.Services
 
 		List<CabinModel>GetAllCabins ();
 
+		void DeleteUser ();
+
 		void CloseDatabase ();
 
 		void InsertCabin (CabinModel cabin);

@@ -1225,5 +1225,7 @@ C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threa
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.xml
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable\lacabana_text.png
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\cabin_info_layout.xml
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.dll.mdb
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.dll.mdb

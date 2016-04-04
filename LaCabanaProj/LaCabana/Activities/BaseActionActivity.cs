@@ -54,10 +54,16 @@ namespace LaCabana
 
 		public void SetProfilePicture ()
 		{
+			var user = DatabaseServices.GetAllUsers ();
+
 			var imagecenterLayout = FindViewById<RelativeLayout> (Resource.Id.profile_layout);
 			var imagecenter = imagecenterLayout.FindViewById<ImageView> (Resource.Id.account_info_profile_image);
-			imagecenter.SetImageDrawable (new RoundedImage (BitmapFactory.DecodeResource (Resources, Resource.Drawable.avatarplaceholder), this, ""));
-			var user = DatabaseServices.GetAllUsers ();
+			if (user.ProfilePhoto == null) {
+				imagecenter.SetImageDrawable (new RoundedImage (BitmapFactory.DecodeResource (Resources, Resource.Drawable.avatarplaceholder), this, ""));
+			} else {
+				var picture = Decode (user.ProfilePhoto);
+				imagecenter.SetImageDrawable (new RoundedImage (picture, this, ""));
+			}
 			var accountMail = imagecenterLayout.FindViewById<TextView> (Resource.Id.emailText);
 			if (user.Email == null) {
 				accountMail.Text = "enter mail";
@@ -78,6 +84,17 @@ namespace LaCabana
 				}
 			}
 			return base.OnOptionsItemSelected (item);
+		}
+
+		public  Bitmap Decode (string imageData)
+		{
+			try {
+				byte[] encodeByte = Android.Util.Base64.Decode (imageData, Android.Util.Base64Flags.Default);
+				Bitmap bitmap = BitmapFactory.DecodeByteArray (encodeByte, 0, encodeByte.Length);
+				return bitmap;
+			} catch (Exception) {
+				return null;
+			}
 		}
 
 		protected void ClickHandler ()
@@ -130,6 +147,19 @@ namespace LaCabana
 				}
 				cabinsNear.Clickable = true;
 			};
+			var favorites = FindViewById<LinearLayout> (Resource.Id.favoritesItem);
+			favorites.Click += delegate {
+				favorites.Clickable = false;
+				if (this is CabinsNear) {
+					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
+				} else {					
+					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
+					StartActivityForResult (typeof(CabinInfo), 2);
+				}
+				favorites.Clickable = true;
+			};
+			var logOut = FindViewById<LinearLayout> (Resource.Id.logoutItem);
+			logOut.Click += LogOut;
 
 		}
 
@@ -180,6 +210,29 @@ namespace LaCabana
 				inputMethodManager.HideSoftInputFromWindow (activity.CurrentFocus.WindowToken, 0);
 			}
 		}
+
+		private void LogOut (object sender, EventArgs e)
+		{
+			var builder = new AlertDialog.Builder (this).SetTitle ("Log out").SetMessage ("Are you sure you want to log out?").SetPositiveButton ("Ok", (EventHandler<DialogClickEventArgs>)null).SetNegativeButton ("Cancel", (EventHandler<DialogClickEventArgs>)null);
+			var dialog = builder.Create ();
+			dialog.Show ();
+			dialog.CancelEvent += delegate {
+				dialog.Cancel ();
+			};
+			var okBtn = dialog.GetButton ((int)DialogButtonType.Positive);
+			okBtn.Click += delegate {
+				DatabaseServices.DeleteUser ();
+				StartActivityForResult (typeof(BasicMapDemoActivity), 2);
+				Finish ();
+				dialog.Cancel ();
+			};
+			var cancelBtn = dialog.GetButton ((int)DialogButtonType.Negative);
+			cancelBtn.Click += delegate {
+				dialog.Cancel ();	
+			};
+		}
+
+
 
 	}
 }

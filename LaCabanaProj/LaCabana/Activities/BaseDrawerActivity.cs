@@ -83,40 +83,6 @@ namespace LaCabana
 			//			FindViewById<TextView> (Resource.Id.drawer_profile_name).Text = userName;
 		}
 
-		protected void ClickHandler ()
-		{
-			
-			var mapButton = FindViewById<LinearLayout> (Resource.Id.map_item);
-			mapButton.Click += delegate {
-				mapButton.Clickable = false;
-
-				if (this is BasicMapDemoActivity) {
-					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
-				} else {
-					//RefreshMenu = true;
-					StartActivityForResult (typeof(BasicMapDemoActivity), 2);
-					Finish ();
-				}
-
-				mapButton.Clickable = true;
-			};
-
-			var myAccountButton = FindViewById<LinearLayout> (Resource.Id.myaccountItem);
-			myAccountButton.Click += delegate {
-				myAccountButton.Clickable = false;
-
-				if (this is LoginActivity) {
-					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
-				} else {
-					//RefreshMenu = true;
-					StartActivityForResult (typeof(BasicMapDemoActivity), 2);
-					Finish ();
-				}
-
-				mapButton.Clickable = true;
-			};
-		}
-
 		public override bool OnPrepareOptionsMenu (IMenu menu)
 		{
 			HideMenuItems (menu, _shouldGoInvisible);

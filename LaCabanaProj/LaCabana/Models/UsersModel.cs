@@ -12,6 +12,8 @@ namespace LaCabana
 		public String Username { get; set; }
 
 		public String Password { get; set; }
+
+		public String ProfilePhoto { get; set; }
 	}
 }
 
