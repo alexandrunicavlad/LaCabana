@@ -58,6 +58,7 @@ namespace LaCabana
 			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
 			SetTitleActionBar ("Add new location");
 			ClickHandler ();
+			SetProfilePicture ();
 			cabin = new CabinModel ();
 			cabin.Photo = new List<string> ();
 			var latitude = Intent.GetDoubleExtra ("latitude", 0);
@@ -68,15 +69,12 @@ namespace LaCabana
 			var account = FindViewById<EditText> (Resource.Id.accountText);
 			locationEdit = FindViewById<TextView> (Resource.Id.locationEditText);
 			mapLayout = FindViewById<LinearLayout> (Resource.Id.MapContent);
-//			if (latitude != 0 || longitude != 0) {
-//				cabin.Latitude = Convert.ToDouble (latitude);
-//				cabin.Latitude = Convert.ToDouble (longitude);
-//
-//			}
-			if (account.Clickable) {
-				HideKeyboard (this);
-			}
 
+			DatabaseServices = new DatabaseServices (this);
+			var user = DatabaseServices.GetAllUsers ();
+			if (user != null) {
+				account.Text = user.Email;
+			}
 			photoList = new List<string> ();
 			stringPhone = new List<String> (){ "Select", "Mobile", "Home", "Work" };
 			stringMail = new List<String> (){ "Select", "Custom", "Gmail", "Work" };
@@ -151,8 +149,9 @@ namespace LaCabana
 				photoAdd.SetImageURI (_uri);
 				var bitmap = MediaStore.Images.Media.GetBitmap (this.ContentResolver, _uri);
 				MemoryStream stream = new MemoryStream ();
-				bitmap.Compress (Bitmap.CompressFormat.Png, 100, stream);
-				bitmap.Recycle ();
+				var resizebit = Bitmap.CreateScaledBitmap (bitmap, 100, 100, false);
+				resizebit.Compress (Bitmap.CompressFormat.Png, 100, stream);
+				resizebit.Recycle ();
 				byte[] byteArray = stream.ToArray ();
 				String imageFile = Base64.EncodeToString (byteArray, Base64.Default);
 				photoList.Add (imageFile);
@@ -185,10 +184,10 @@ namespace LaCabana
 			} catch (Exception e) {
 				var a = 0;
 			}
-			if (cabin.PhoneType == null) {
+			if (cabin.PhoneType.Equals ("Select")) {
 				cabin.PhoneType = stringPhone [1];
 			}
-			if (cabin.EmailType == null) {
+			if (cabin.EmailType.Equals ("Select")) {
 				cabin.EmailType = stringMail [1];
 			}
 		}

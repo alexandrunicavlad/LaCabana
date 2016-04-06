@@ -35,7 +35,7 @@ namespace LaCabana
 				if (p0.Title == cabin.Value.Name) {
 					name.Text = cabin.Value.Name;
 					price.Text = string.Format ("Price: {0}", cabin.Value.Price);
-					rank.Progress = cabin.Value.Rating;
+					rank.Rating = cabin.Value.Rating;
 				}
 			
 			return itemLayout;

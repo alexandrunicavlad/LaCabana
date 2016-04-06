@@ -17,6 +17,7 @@ using Android.Graphics.Drawables;
 using Android.Graphics;
 using Android.Views.InputMethods;
 using LaCabana.Services;
+using Android.Gms.Maps.Model;
 
 namespace LaCabana
 {
@@ -35,6 +36,8 @@ namespace LaCabana
 		private BitmapFactory.Options _placeHolderOptions;
 		protected static IDatabaseServices DatabaseServices;
 
+		public LatLng myLocation{ get; set; }
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -47,9 +50,14 @@ namespace LaCabana
 			ActionBar.SetDisplayHomeAsUpEnabled (true);
 			ActionBar.SetDisplayShowTitleEnabled (true);
 			ActionBar.SetDisplayShowCustomEnabled (false);
-			ActionBar.SetBackgroundDrawable (new ColorDrawable (Resources.GetColor (Resource.Color.yellow)));
+			ActionBar.SetBackgroundDrawable (new ColorDrawable (Resources.GetColor (Resource.Color.main_blue_green)));
 			ActionBar.SetHomeAsUpIndicator (Resource.Drawable.ic_menu);
 
+		}
+
+		public void MyPosition (LatLng location)
+		{
+			myLocation = location;
 		}
 
 		public void SetProfilePicture ()
@@ -143,7 +151,10 @@ namespace LaCabana
 					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
 				} else {					
 					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
-					StartActivityForResult (typeof(CabinsNear), 2);
+					var intent = new Intent (this, typeof(CabinsNear));
+					intent.PutExtra ("latitude", myLocation.Latitude);
+					intent.PutExtra ("longitude", myLocation.Longitude);
+					StartActivity (intent);
 				}
 				cabinsNear.Clickable = true;
 			};

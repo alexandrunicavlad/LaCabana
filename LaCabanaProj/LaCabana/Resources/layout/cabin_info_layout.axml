@@ -45,13 +45,12 @@
                         android:gravity="center_vertical"
                         android:id="@+id/cabinDirection"
                         android:layout_alignParentBottom="true"
-                        android:src="@drawable/facebook" />
+                        android:src="@drawable/ic_round_directions" />
                 </RelativeLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="40dp"
                     android:paddingTop="10dp"
@@ -79,14 +78,14 @@
                                 android:id="@+id/phoneText1"
                                 android:textColor="@color/black"
                                 android:layout_height="wrap_content"
-                                android:textSize="20sp" />
+                                android:textSize="16sp" />
                             <TextView
                                 android:layout_width="match_parent"
                                 android:text="Mobile"
                                 android:id="@+id/phoneType1"
                                 android:textColor="@color/gray_health_text"
                                 android:layout_height="wrap_content"
-                                android:textSize="18sp" />
+                                android:textSize="14sp" />
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -102,14 +101,14 @@
                                 android:id="@+id/phoneText2"
                                 android:textColor="@color/black"
                                 android:layout_height="wrap_content"
-                                android:textSize="20sp" />
+                                android:textSize="16sp" />
                             <TextView
                                 android:layout_width="match_parent"
                                 android:text="Phone"
                                 android:id="@+id/phoneType2"
                                 android:textColor="@color/gray_health_text"
                                 android:layout_height="wrap_content"
-                                android:textSize="18sp" />
+                                android:textSize="14sp" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -117,8 +116,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:background="@color/gray"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp" />
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="20dp" />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
@@ -144,22 +145,24 @@
                             android:id="@+id/emailText"
                             android:textColor="@color/black"
                             android:layout_height="wrap_content"
-                            android:textSize="20sp" />
+                            android:textSize="16sp" />
                         <TextView
                             android:layout_width="match_parent"
                             android:text="Other"
                             android:id="@+id/emailType"
                             android:textColor="@color/gray_health_text"
                             android:layout_height="wrap_content"
-                            android:textSize="18sp" />
+                            android:textSize="14sp" />
                     </LinearLayout>
                 </LinearLayout>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:background="@color/gray"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp" />
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="20dp" />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
@@ -185,22 +188,17 @@
                             android:id="@+id/streetText"
                             android:textColor="@color/black"
                             android:layout_height="wrap_content"
-                            android:textSize="20sp" />
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:text="Romania"
-                            android:id="@+id/countryText"
-                            android:textColor="@color/gray_health_text"
-                            android:layout_height="wrap_content"
-                            android:textSize="18sp" />
+                            android:textSize="16sp" />
                     </LinearLayout>
                 </LinearLayout>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:background="@color/gray"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp" />
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="20dp" />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
@@ -219,22 +217,26 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:orientation="vertical"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical">
                         <TextView
                             android:layout_width="match_parent"
                             android:text="120 LEI"
                             android:id="@+id/priceText"
                             android:textColor="@color/black"
                             android:layout_height="wrap_content"
-                            android:textSize="20sp" />
+                            android:textSize="16sp"
+                            android:gravity="center_vertical" />
                     </LinearLayout>
                 </LinearLayout>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:background="@color/gray"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp" />
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="60dp" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

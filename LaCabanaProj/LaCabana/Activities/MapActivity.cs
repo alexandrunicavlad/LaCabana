@@ -36,6 +36,7 @@ namespace LaCabana
 		private Dictionary<string,CabinModel> allCabins;
 		public double _clickLatitude;
 		public double _clickLongitude;
+		public LatLng myHome;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -55,7 +56,7 @@ namespace LaCabana
 			var baseService = new BaseService<Dictionary<string,CabinModel>> ();
 			allCabins = new Dictionary<string,CabinModel> ();
 			try {
-				allCabins = (baseService.Get ("cabins"));	
+				allCabins = (baseService.Get ("cabins"));				
 			} catch (Exception e) {
 				var a = 0;
 			}
@@ -63,7 +64,7 @@ namespace LaCabana
 
 		public void OnMapReady (GoogleMap googleMap)
 		{
-			var myHome = new LatLng (_latitude, _longitude);
+			myHome = new LatLng (_latitude, _longitude);
 			googleMap.MyLocationEnabled = true;
 			_googleMap = googleMap;
 			PutAllMarker ();
@@ -72,8 +73,11 @@ namespace LaCabana
 				if (isCurent)
 					return;
 				isCurent = true;
-				homeMarker = googleMap.AddMarker (new MarkerOptions ().SetPosition (new LatLng (e.Location.Latitude, e.Location.Longitude)));
-				homeMarker.Title = "myLocation";
+				//homeMarker = googleMap.AddMarker (new MarkerOptions ().SetPosition (new LatLng (e.Location.Latitude, e.Location.Longitude)));
+				//homeMarker.Title = "myLocation";
+				myHome.Latitude = e.Location.Latitude;
+				myHome.Longitude = e.Location.Longitude;
+				MyPosition (myHome);
 				googleMap.MoveCamera (CameraUpdateFactory.NewLatLngZoom (new LatLng (e.Location.Latitude, e.Location.Longitude), 15));
 			};
 
@@ -86,7 +90,17 @@ namespace LaCabana
 //			googleMap.MarkerClick += (object sender, GoogleMap.MarkerClickEventArgs e) => {
 //				WindowAdapter (e.Marker, allCabins);	//				
 //			};
-
+			googleMap.InfoWindowClick += (object sender, GoogleMap.InfoWindowClickEventArgs e) => {							
+				var intent = new Intent (this, typeof(CabinInfo));	
+				foreach (var item in allCabins) {
+					if (item.Value.Name.Equals (e.Marker.Title)) {
+						intent.PutExtra ("marker", item.Key);
+						intent.PutExtra ("latitude", myHome.Latitude);
+						intent.PutExtra ("longitude", myHome.Longitude);
+						StartActivity (intent);
+					}						
+				}
+			};
 
 			locManager = GetSystemService (Context.LocationService) as LocationManager;
 			locManager.RequestLocationUpdates (LocationManager.NetworkProvider, 2000, 1, this);
@@ -103,13 +117,6 @@ namespace LaCabana
 				_googleMap.SetInfoWindowAdapter (adapter);
 			}	
 
-		}
-
-		public void MapLongClick ()
-		{
-			_googleMap.MapLongClick += (object sender, GoogleMap.MapLongClickEventArgs e) => {
-				
-			};
 		}
 
 		public void OnLocationChanged (Android.Locations.Location location)

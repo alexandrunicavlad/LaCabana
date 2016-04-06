@@ -1034,32 +1034,32 @@ namespace LaCabana
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0600f9
-			public const int abc_background_cache_hint_selector_material_dark = 2131099897;
-			
 			// aapt resource value: 0x7f0600fa
-			public const int abc_background_cache_hint_selector_material_light = 2131099898;
+			public const int abc_background_cache_hint_selector_material_dark = 2131099898;
 			
 			// aapt resource value: 0x7f0600fb
-			public const int abc_color_highlight_material = 2131099899;
+			public const int abc_background_cache_hint_selector_material_light = 2131099899;
+			
+			// aapt resource value: 0x7f0600fc
+			public const int abc_color_highlight_material = 2131099900;
 			
 			// aapt resource value: 0x7f06000e
 			public const int abc_input_method_navigation_guard = 2131099662;
 			
-			// aapt resource value: 0x7f0600fc
-			public const int abc_primary_text_disable_only_material_dark = 2131099900;
-			
 			// aapt resource value: 0x7f0600fd
-			public const int abc_primary_text_disable_only_material_light = 2131099901;
+			public const int abc_primary_text_disable_only_material_dark = 2131099901;
 			
 			// aapt resource value: 0x7f0600fe
-			public const int abc_primary_text_material_dark = 2131099902;
+			public const int abc_primary_text_disable_only_material_light = 2131099902;
 			
 			// aapt resource value: 0x7f0600ff
-			public const int abc_primary_text_material_light = 2131099903;
+			public const int abc_primary_text_material_dark = 2131099903;
 			
 			// aapt resource value: 0x7f060100
-			public const int abc_search_url_text = 2131099904;
+			public const int abc_primary_text_material_light = 2131099904;
+			
+			// aapt resource value: 0x7f060101
+			public const int abc_search_url_text = 2131099905;
 			
 			// aapt resource value: 0x7f06000f
 			public const int abc_search_url_text_normal = 2131099663;
@@ -1070,11 +1070,11 @@ namespace LaCabana
 			// aapt resource value: 0x7f060011
 			public const int abc_search_url_text_selected = 2131099665;
 			
-			// aapt resource value: 0x7f060101
-			public const int abc_secondary_text_material_dark = 2131099905;
-			
 			// aapt resource value: 0x7f060102
-			public const int abc_secondary_text_material_light = 2131099906;
+			public const int abc_secondary_text_material_dark = 2131099906;
+			
+			// aapt resource value: 0x7f060103
+			public const int abc_secondary_text_material_light = 2131099907;
 			
 			// aapt resource value: 0x7f060012
 			public const int accent_material_dark = 2131099666;
@@ -1082,32 +1082,32 @@ namespace LaCabana
 			// aapt resource value: 0x7f060013
 			public const int accent_material_light = 2131099667;
 			
-			// aapt resource value: 0x7f060094
-			public const int accounts_background = 2131099796;
+			// aapt resource value: 0x7f060095
+			public const int accounts_background = 2131099797;
+			
+			// aapt resource value: 0x7f060097
+			public const int accounts_gray = 2131099799;
 			
 			// aapt resource value: 0x7f060096
-			public const int accounts_gray = 2131099798;
+			public const int accounts_red = 2131099798;
 			
-			// aapt resource value: 0x7f060095
-			public const int accounts_red = 2131099797;
-			
-			// aapt resource value: 0x7f060051
-			public const int active_flag = 2131099729;
-			
-			// aapt resource value: 0x7f0600ca
-			public const int back_edit_text_background = 2131099850;
-			
-			// aapt resource value: 0x7f0600c9
-			public const int back_edit_text_border = 2131099849;
-			
-			// aapt resource value: 0x7f0600cc
-			public const int back_rounded_edit_text_background = 2131099852;
+			// aapt resource value: 0x7f060052
+			public const int active_flag = 2131099730;
 			
 			// aapt resource value: 0x7f0600cb
-			public const int back_rounded_edit_text_border = 2131099851;
+			public const int back_edit_text_background = 2131099851;
 			
-			// aapt resource value: 0x7f06007b
-			public const int background = 2131099771;
+			// aapt resource value: 0x7f0600ca
+			public const int back_edit_text_border = 2131099850;
+			
+			// aapt resource value: 0x7f0600cd
+			public const int back_rounded_edit_text_background = 2131099853;
+			
+			// aapt resource value: 0x7f0600cc
+			public const int back_rounded_edit_text_border = 2131099852;
+			
+			// aapt resource value: 0x7f06007c
+			public const int background = 2131099772;
 			
 			// aapt resource value: 0x7f060014
 			public const int background_floating_material_dark = 2131099668;
@@ -1121,32 +1121,32 @@ namespace LaCabana
 			// aapt resource value: 0x7f060017
 			public const int background_material_light = 2131099671;
 			
-			// aapt resource value: 0x7f06007c
-			public const int background_transparent = 2131099772;
-			
-			// aapt resource value: 0x7f060065
-			public const int black = 2131099749;
+			// aapt resource value: 0x7f06007d
+			public const int background_transparent = 2131099773;
 			
 			// aapt resource value: 0x7f060066
-			public const int black_dashboard = 2131099750;
+			public const int black = 2131099750;
 			
 			// aapt resource value: 0x7f060067
-			public const int black_light_dashboard = 2131099751;
-			
-			// aapt resource value: 0x7f06006c
-			public const int blue_dark_btn = 2131099756;
-			
-			// aapt resource value: 0x7f060069
-			public const int blue_device = 2131099753;
+			public const int black_dashboard = 2131099751;
 			
 			// aapt resource value: 0x7f060068
-			public const int blue_light = 2131099752;
+			public const int black_light_dashboard = 2131099752;
+			
+			// aapt resource value: 0x7f06006d
+			public const int blue_dark_btn = 2131099757;
 			
 			// aapt resource value: 0x7f06006a
-			public const int blue_light_btn = 2131099754;
+			public const int blue_device = 2131099754;
+			
+			// aapt resource value: 0x7f060069
+			public const int blue_light = 2131099753;
 			
 			// aapt resource value: 0x7f06006b
-			public const int blue_light_darker_btn = 2131099755;
+			public const int blue_light_btn = 2131099755;
+			
+			// aapt resource value: 0x7f06006c
+			public const int blue_light_darker_btn = 2131099756;
 			
 			// aapt resource value: 0x7f060018
 			public const int bright_foreground_disabled_material_dark = 2131099672;
@@ -1172,38 +1172,38 @@ namespace LaCabana
 			// aapt resource value: 0x7f06001f
 			public const int button_material_light = 2131099679;
 			
-			// aapt resource value: 0x7f0600e0
-			public const int card_blue = 2131099872;
-			
 			// aapt resource value: 0x7f0600e1
-			public const int card_blue_light = 2131099873;
-			
-			// aapt resource value: 0x7f0600de
-			public const int card_green = 2131099870;
+			public const int card_blue = 2131099873;
 			
 			// aapt resource value: 0x7f0600e2
-			public const int card_green_blue = 2131099874;
+			public const int card_blue_light = 2131099874;
 			
 			// aapt resource value: 0x7f0600df
-			public const int card_green_light = 2131099871;
-			
-			// aapt resource value: 0x7f0600e4
-			public const int card_orange = 2131099876;
-			
-			// aapt resource value: 0x7f0600e5
-			public const int card_orange_red = 2131099877;
-			
-			// aapt resource value: 0x7f0600e6
-			public const int card_pink_dark = 2131099878;
-			
-			// aapt resource value: 0x7f0600e7
-			public const int card_pink_light = 2131099879;
-			
-			// aapt resource value: 0x7f0600e8
-			public const int card_purple = 2131099880;
+			public const int card_green = 2131099871;
 			
 			// aapt resource value: 0x7f0600e3
-			public const int card_red = 2131099875;
+			public const int card_green_blue = 2131099875;
+			
+			// aapt resource value: 0x7f0600e0
+			public const int card_green_light = 2131099872;
+			
+			// aapt resource value: 0x7f0600e5
+			public const int card_orange = 2131099877;
+			
+			// aapt resource value: 0x7f0600e6
+			public const int card_orange_red = 2131099878;
+			
+			// aapt resource value: 0x7f0600e7
+			public const int card_pink_dark = 2131099879;
+			
+			// aapt resource value: 0x7f0600e8
+			public const int card_pink_light = 2131099880;
+			
+			// aapt resource value: 0x7f0600e9
+			public const int card_purple = 2131099881;
+			
+			// aapt resource value: 0x7f0600e4
+			public const int card_red = 2131099876;
 			
 			// aapt resource value: 0x7f06000a
 			public const int cardview_dark_background = 2131099658;
@@ -1217,8 +1217,8 @@ namespace LaCabana
 			// aapt resource value: 0x7f06000d
 			public const int cardview_shadow_start_color = 2131099661;
 			
-			// aapt resource value: 0x7f0600dc
-			public const int chart_date = 2131099868;
+			// aapt resource value: 0x7f0600dd
+			public const int chart_date = 2131099869;
 			
 			// aapt resource value: 0x7f060009
 			public const int common_action_bar_splitter = 2131099657;
@@ -1250,56 +1250,56 @@ namespace LaCabana
 			// aapt resource value: 0x7f060005
 			public const int common_signin_btn_light_text_pressed = 2131099653;
 			
-			// aapt resource value: 0x7f060103
-			public const int common_signin_btn_text_dark = 2131099907;
-			
 			// aapt resource value: 0x7f060104
-			public const int common_signin_btn_text_light = 2131099908;
+			public const int common_signin_btn_text_dark = 2131099908;
 			
-			// aapt resource value: 0x7f060085
-			public const int daily_row_description = 2131099781;
-			
-			// aapt resource value: 0x7f060089
-			public const int daily_row_selected_chart_back = 2131099785;
-			
-			// aapt resource value: 0x7f060087
-			public const int daily_row_selected_chart_text = 2131099783;
+			// aapt resource value: 0x7f060105
+			public const int common_signin_btn_text_light = 2131099909;
 			
 			// aapt resource value: 0x7f060086
-			public const int daily_row_selected_text = 2131099782;
+			public const int daily_row_description = 2131099782;
 			
 			// aapt resource value: 0x7f06008a
-			public const int daily_row_selected_update_back = 2131099786;
+			public const int daily_row_selected_chart_back = 2131099786;
 			
 			// aapt resource value: 0x7f060088
-			public const int daily_row_selected_update_text = 2131099784;
+			public const int daily_row_selected_chart_text = 2131099784;
 			
-			// aapt resource value: 0x7f060084
-			public const int daily_row_text = 2131099780;
+			// aapt resource value: 0x7f060087
+			public const int daily_row_selected_text = 2131099783;
 			
 			// aapt resource value: 0x7f06008b
-			public const int daily_trackers_btn = 2131099787;
+			public const int daily_row_selected_update_back = 2131099787;
 			
-			// aapt resource value: 0x7f060080
-			public const int dark_line = 2131099776;
+			// aapt resource value: 0x7f060089
+			public const int daily_row_selected_update_text = 2131099785;
 			
-			// aapt resource value: 0x7f060076
-			public const int dark_silver = 2131099766;
+			// aapt resource value: 0x7f060085
+			public const int daily_row_text = 2131099781;
 			
-			// aapt resource value: 0x7f060057
-			public const int dark_transparent = 2131099735;
+			// aapt resource value: 0x7f06008c
+			public const int daily_trackers_btn = 2131099788;
 			
-			// aapt resource value: 0x7f060059
-			public const int dark_transparent_darker = 2131099737;
+			// aapt resource value: 0x7f060081
+			public const int dark_line = 2131099777;
+			
+			// aapt resource value: 0x7f060077
+			public const int dark_silver = 2131099767;
 			
 			// aapt resource value: 0x7f060058
-			public const int dark_transparent_shadow = 2131099736;
+			public const int dark_transparent = 2131099736;
 			
-			// aapt resource value: 0x7f0600cd
-			public const int dashline = 2131099853;
+			// aapt resource value: 0x7f06005a
+			public const int dark_transparent_darker = 2131099738;
 			
-			// aapt resource value: 0x7f0600e9
-			public const int default_screen_bg = 2131099881;
+			// aapt resource value: 0x7f060059
+			public const int dark_transparent_shadow = 2131099737;
+			
+			// aapt resource value: 0x7f0600ce
+			public const int dashline = 2131099854;
+			
+			// aapt resource value: 0x7f0600ea
+			public const int default_screen_bg = 2131099882;
 			
 			// aapt resource value: 0x7f060048
 			public const int design_fab_shadow_end_color = 2131099720;
@@ -1328,32 +1328,32 @@ namespace LaCabana
 			// aapt resource value: 0x7f060050
 			public const int design_textinput_error_color = 2131099728;
 			
-			// aapt resource value: 0x7f0600d8
-			public const int device_active = 2131099864;
-			
-			// aapt resource value: 0x7f0600f3
-			public const int dialog_button_focused = 2131099891;
-			
-			// aapt resource value: 0x7f0600f1
-			public const int dialog_button_normal = 2131099889;
-			
-			// aapt resource value: 0x7f0600f2
-			public const int dialog_button_pressed = 2131099890;
+			// aapt resource value: 0x7f0600d9
+			public const int device_active = 2131099865;
 			
 			// aapt resource value: 0x7f0600f4
-			public const int dialog_button_separator = 2131099892;
+			public const int dialog_button_focused = 2131099892;
 			
-			// aapt resource value: 0x7f0600f0
-			public const int dialog_button_text = 2131099888;
+			// aapt resource value: 0x7f0600f2
+			public const int dialog_button_normal = 2131099890;
 			
-			// aapt resource value: 0x7f0600ed
-			public const int dialog_message_text = 2131099885;
+			// aapt resource value: 0x7f0600f3
+			public const int dialog_button_pressed = 2131099891;
 			
-			// aapt resource value: 0x7f0600ef
-			public const int dialog_title_separator = 2131099887;
+			// aapt resource value: 0x7f0600f5
+			public const int dialog_button_separator = 2131099893;
+			
+			// aapt resource value: 0x7f0600f1
+			public const int dialog_button_text = 2131099889;
 			
 			// aapt resource value: 0x7f0600ee
-			public const int dialog_title_text = 2131099886;
+			public const int dialog_message_text = 2131099886;
+			
+			// aapt resource value: 0x7f0600f0
+			public const int dialog_title_separator = 2131099888;
+			
+			// aapt resource value: 0x7f0600ef
+			public const int dialog_title_text = 2131099887;
 			
 			// aapt resource value: 0x7f060020
 			public const int dim_foreground_disabled_material_dark = 2131099680;
@@ -1367,20 +1367,20 @@ namespace LaCabana
 			// aapt resource value: 0x7f060023
 			public const int dim_foreground_material_light = 2131099683;
 			
-			// aapt resource value: 0x7f060083
-			public const int down_btn = 2131099779;
+			// aapt resource value: 0x7f060084
+			public const int down_btn = 2131099780;
 			
-			// aapt resource value: 0x7f06007e
-			public const int edit_background = 2131099774;
-			
-			// aapt resource value: 0x7f06008c
-			public const int find_lab_background = 2131099788;
-			
-			// aapt resource value: 0x7f06008e
-			public const int find_lab_btn = 2131099790;
+			// aapt resource value: 0x7f06007f
+			public const int edit_background = 2131099775;
 			
 			// aapt resource value: 0x7f06008d
-			public const int find_lab_search_text = 2131099789;
+			public const int find_lab_background = 2131099789;
+			
+			// aapt resource value: 0x7f06008f
+			public const int find_lab_btn = 2131099791;
+			
+			// aapt resource value: 0x7f06008e
+			public const int find_lab_search_text = 2131099790;
 			
 			// aapt resource value: 0x7f060024
 			public const int foreground_material_dark = 2131099684;
@@ -1388,59 +1388,59 @@ namespace LaCabana
 			// aapt resource value: 0x7f060025
 			public const int foreground_material_light = 2131099685;
 			
-			// aapt resource value: 0x7f060081
-			public const int gray = 2131099777;
+			// aapt resource value: 0x7f060082
+			public const int gray = 2131099778;
 			
-			// aapt resource value: 0x7f060064
-			public const int gray_add_edit_layouts = 2131099748;
-			
-			// aapt resource value: 0x7f06005b
-			public const int gray_background = 2131099739;
-			
-			// aapt resource value: 0x7f06005d
-			public const int gray_background_trackers = 2131099741;
+			// aapt resource value: 0x7f060065
+			public const int gray_add_edit_layouts = 2131099749;
 			
 			// aapt resource value: 0x7f06005c
-			public const int gray_background_transparent = 2131099740;
-			
-			// aapt resource value: 0x7f060061
-			public const int gray_health = 2131099745;
+			public const int gray_background = 2131099740;
 			
 			// aapt resource value: 0x7f06005e
-			public const int gray_health_actionBar = 2131099742;
+			public const int gray_background_trackers = 2131099742;
 			
-			// aapt resource value: 0x7f060060
-			public const int gray_health_light = 2131099744;
+			// aapt resource value: 0x7f06005d
+			public const int gray_background_transparent = 2131099741;
 			
 			// aapt resource value: 0x7f060062
-			public const int gray_health_rounded_item = 2131099746;
+			public const int gray_health = 2131099746;
 			
 			// aapt resource value: 0x7f06005f
-			public const int gray_health_text = 2131099743;
+			public const int gray_health_actionBar = 2131099743;
+			
+			// aapt resource value: 0x7f060061
+			public const int gray_health_light = 2131099745;
 			
 			// aapt resource value: 0x7f060063
-			public const int gray_hidden_icon = 2131099747;
+			public const int gray_health_rounded_item = 2131099747;
 			
-			// aapt resource value: 0x7f06005a
-			public const int gray_lab_test_add = 2131099738;
+			// aapt resource value: 0x7f060060
+			public const int gray_health_text = 2131099744;
 			
-			// aapt resource value: 0x7f06007f
-			public const int gray_line = 2131099775;
+			// aapt resource value: 0x7f060064
+			public const int gray_hidden_icon = 2131099748;
 			
-			// aapt resource value: 0x7f0600dd
-			public const int gray_list_background = 2131099869;
+			// aapt resource value: 0x7f06005b
+			public const int gray_lab_test_add = 2131099739;
 			
-			// aapt resource value: 0x7f060077
-			public const int green = 2131099767;
+			// aapt resource value: 0x7f060080
+			public const int gray_line = 2131099776;
+			
+			// aapt resource value: 0x7f0600de
+			public const int gray_list_background = 2131099870;
 			
 			// aapt resource value: 0x7f060078
-			public const int green_transparent = 2131099768;
+			public const int green = 2131099768;
+			
+			// aapt resource value: 0x7f060079
+			public const int green_transparent = 2131099769;
+			
+			// aapt resource value: 0x7f0600f9
+			public const int health_record_dark_gray = 2131099897;
 			
 			// aapt resource value: 0x7f0600f8
-			public const int health_record_dark_gray = 2131099896;
-			
-			// aapt resource value: 0x7f0600f7
-			public const int health_record_red = 2131099895;
+			public const int health_record_red = 2131099896;
 			
 			// aapt resource value: 0x7f060026
 			public const int highlighted_text_material_dark = 2131099686;
@@ -1454,122 +1454,125 @@ namespace LaCabana
 			// aapt resource value: 0x7f060029
 			public const int hint_foreground_material_light = 2131099689;
 			
-			// aapt resource value: 0x7f060091
-			public const int home_btn_back = 2131099793;
-			
 			// aapt resource value: 0x7f060092
-			public const int home_btn_text = 2131099794;
+			public const int home_btn_back = 2131099794;
 			
 			// aapt resource value: 0x7f060093
-			public const int home_btn_text_hint = 2131099795;
+			public const int home_btn_text = 2131099795;
 			
-			// aapt resource value: 0x7f06008f
-			public const int home_text = 2131099791;
+			// aapt resource value: 0x7f060094
+			public const int home_btn_text_hint = 2131099796;
 			
 			// aapt resource value: 0x7f060090
-			public const int home_text_hint = 2131099792;
+			public const int home_text = 2131099792;
 			
-			// aapt resource value: 0x7f0600d2
-			public const int how_am_i_doing_list_group = 2131099858;
+			// aapt resource value: 0x7f060091
+			public const int home_text_hint = 2131099793;
 			
 			// aapt resource value: 0x7f0600d3
-			public const int how_am_i_doing_list_item = 2131099859;
+			public const int how_am_i_doing_list_group = 2131099859;
 			
-			// aapt resource value: 0x7f060097
-			public const int lab_menu_back = 2131099799;
-			
-			// aapt resource value: 0x7f06009b
-			public const int lab_test_add_another_labadd = 2131099803;
-			
-			// aapt resource value: 0x7f06009c
-			public const int lab_test_add_another_labcategory = 2131099804;
+			// aapt resource value: 0x7f0600d4
+			public const int how_am_i_doing_list_item = 2131099860;
 			
 			// aapt resource value: 0x7f060098
-			public const int lab_test_back = 2131099800;
+			public const int lab_menu_back = 2131099800;
 			
-			// aapt resource value: 0x7f060099
-			public const int lab_test_btn_back = 2131099801;
-			
-			// aapt resource value: 0x7f06009a
-			public const int lab_test_btn_text = 2131099802;
-			
-			// aapt resource value: 0x7f0600b0
-			public const int lab_test_card = 2131099824;
+			// aapt resource value: 0x7f06009c
+			public const int lab_test_add_another_labadd = 2131099804;
 			
 			// aapt resource value: 0x7f06009d
-			public const int lab_test_find_list_item = 2131099805;
+			public const int lab_test_add_another_labcategory = 2131099805;
+			
+			// aapt resource value: 0x7f060099
+			public const int lab_test_back = 2131099801;
+			
+			// aapt resource value: 0x7f06009a
+			public const int lab_test_btn_back = 2131099802;
+			
+			// aapt resource value: 0x7f06009b
+			public const int lab_test_btn_text = 2131099803;
+			
+			// aapt resource value: 0x7f0600b1
+			public const int lab_test_card = 2131099825;
 			
 			// aapt resource value: 0x7f06009e
-			public const int lab_test_list_group = 2131099806;
+			public const int lab_test_find_list_item = 2131099806;
 			
 			// aapt resource value: 0x7f06009f
-			public const int lab_test_list_item = 2131099807;
-			
-			// aapt resource value: 0x7f0600a3
-			public const int lab_test_list_item_selected_chart_back = 2131099811;
-			
-			// aapt resource value: 0x7f0600a1
-			public const int lab_test_list_item_selected_chart_text = 2131099809;
+			public const int lab_test_list_group = 2131099807;
 			
 			// aapt resource value: 0x7f0600a0
-			public const int lab_test_list_item_selected_text = 2131099808;
+			public const int lab_test_list_item = 2131099808;
 			
 			// aapt resource value: 0x7f0600a4
-			public const int lab_test_list_item_selected_update_back = 2131099812;
+			public const int lab_test_list_item_selected_chart_back = 2131099812;
 			
 			// aapt resource value: 0x7f0600a2
-			public const int lab_test_list_item_selected_update_text = 2131099810;
+			public const int lab_test_list_item_selected_chart_text = 2131099810;
+			
+			// aapt resource value: 0x7f0600a1
+			public const int lab_test_list_item_selected_text = 2131099809;
 			
 			// aapt resource value: 0x7f0600a5
-			public const int lab_test_result_background = 2131099813;
+			public const int lab_test_list_item_selected_update_back = 2131099813;
 			
-			// aapt resource value: 0x7f0600ac
-			public const int lab_test_result_btn_back = 2131099820;
-			
-			// aapt resource value: 0x7f0600ad
-			public const int lab_test_result_btn_text = 2131099821;
-			
-			// aapt resource value: 0x7f0600aa
-			public const int lab_test_result_date_text = 2131099818;
-			
-			// aapt resource value: 0x7f0600ab
-			public const int lab_test_result_graph = 2131099819;
-			
-			// aapt resource value: 0x7f0600a8
-			public const int lab_test_result_indicator_background = 2131099816;
-			
-			// aapt resource value: 0x7f0600a9
-			public const int lab_test_result_indicator_text = 2131099817;
+			// aapt resource value: 0x7f0600a3
+			public const int lab_test_list_item_selected_update_text = 2131099811;
 			
 			// aapt resource value: 0x7f0600a6
-			public const int lab_test_result_stroke_text = 2131099814;
+			public const int lab_test_result_background = 2131099814;
 			
-			// aapt resource value: 0x7f0600a7
-			public const int lab_test_result_value_text = 2131099815;
+			// aapt resource value: 0x7f0600ad
+			public const int lab_test_result_btn_back = 2131099821;
 			
 			// aapt resource value: 0x7f0600ae
-			public const int lab_test_update_btn_back = 2131099822;
+			public const int lab_test_result_btn_text = 2131099822;
+			
+			// aapt resource value: 0x7f0600ab
+			public const int lab_test_result_date_text = 2131099819;
+			
+			// aapt resource value: 0x7f0600ac
+			public const int lab_test_result_graph = 2131099820;
+			
+			// aapt resource value: 0x7f0600a9
+			public const int lab_test_result_indicator_background = 2131099817;
+			
+			// aapt resource value: 0x7f0600aa
+			public const int lab_test_result_indicator_text = 2131099818;
+			
+			// aapt resource value: 0x7f0600a7
+			public const int lab_test_result_stroke_text = 2131099815;
+			
+			// aapt resource value: 0x7f0600a8
+			public const int lab_test_result_value_text = 2131099816;
 			
 			// aapt resource value: 0x7f0600af
-			public const int lab_test_update_btn_text = 2131099823;
+			public const int lab_test_update_btn_back = 2131099823;
 			
-			// aapt resource value: 0x7f0600d9
-			public const int legend_background = 2131099865;
+			// aapt resource value: 0x7f0600b0
+			public const int lab_test_update_btn_text = 2131099824;
 			
-			// aapt resource value: 0x7f060073
-			public const int light_brown = 2131099763;
-			
-			// aapt resource value: 0x7f0600ec
-			public const int light_gray_header_color = 2131099884;
+			// aapt resource value: 0x7f0600da
+			public const int legend_background = 2131099866;
 			
 			// aapt resource value: 0x7f060074
-			public const int light_silver = 2131099764;
+			public const int light_brown = 2131099764;
 			
-			// aapt resource value: 0x7f0600d7
-			public const int login_edit_text = 2131099863;
+			// aapt resource value: 0x7f0600ed
+			public const int light_gray_header_color = 2131099885;
 			
-			// aapt resource value: 0x7f060082
-			public const int login_text = 2131099778;
+			// aapt resource value: 0x7f060075
+			public const int light_silver = 2131099765;
+			
+			// aapt resource value: 0x7f0600d8
+			public const int login_edit_text = 2131099864;
+			
+			// aapt resource value: 0x7f060083
+			public const int login_text = 2131099779;
+			
+			// aapt resource value: 0x7f060051
+			public const int main_blue_green = 2131099729;
 			
 			// aapt resource value: 0x7f06002a
 			public const int material_blue_grey_800 = 2131099690;
@@ -1607,41 +1610,41 @@ namespace LaCabana
 			// aapt resource value: 0x7f060035
 			public const int material_grey_900 = 2131099701;
 			
-			// aapt resource value: 0x7f0600b1
-			public const int menu_background = 2131099825;
-			
 			// aapt resource value: 0x7f0600b2
-			public const int menu_text = 2131099826;
-			
-			// aapt resource value: 0x7f0600b4
-			public const int my_daily_row_description = 2131099828;
+			public const int menu_background = 2131099826;
 			
 			// aapt resource value: 0x7f0600b3
-			public const int my_daily_row_name = 2131099827;
+			public const int menu_text = 2131099827;
 			
 			// aapt resource value: 0x7f0600b5
-			public const int my_daily_tracker_background = 2131099829;
+			public const int my_daily_row_description = 2131099829;
+			
+			// aapt resource value: 0x7f0600b4
+			public const int my_daily_row_name = 2131099828;
 			
 			// aapt resource value: 0x7f0600b6
-			public const int my_daily_tracker_cancel_btn_background = 2131099830;
+			public const int my_daily_tracker_background = 2131099830;
 			
 			// aapt resource value: 0x7f0600b7
-			public const int my_daily_tracker_cancel_btn_text = 2131099831;
+			public const int my_daily_tracker_cancel_btn_background = 2131099831;
 			
 			// aapt resource value: 0x7f0600b8
-			public const int my_daily_tracker_save_btn_background = 2131099832;
+			public const int my_daily_tracker_cancel_btn_text = 2131099832;
 			
 			// aapt resource value: 0x7f0600b9
-			public const int my_daily_tracker_save_btn_text = 2131099833;
+			public const int my_daily_tracker_save_btn_background = 2131099833;
 			
-			// aapt resource value: 0x7f060071
-			public const int orange = 2131099761;
+			// aapt resource value: 0x7f0600ba
+			public const int my_daily_tracker_save_btn_text = 2131099834;
+			
+			// aapt resource value: 0x7f060072
+			public const int orange = 2131099762;
+			
+			// aapt resource value: 0x7f0600dc
+			public const int period_blue = 2131099868;
 			
 			// aapt resource value: 0x7f0600db
-			public const int period_blue = 2131099867;
-			
-			// aapt resource value: 0x7f0600da
-			public const int pressed = 2131099866;
+			public const int pressed = 2131099867;
 			
 			// aapt resource value: 0x7f060036
 			public const int primary_dark_material_dark = 2131099702;
@@ -1667,71 +1670,71 @@ namespace LaCabana
 			// aapt resource value: 0x7f06003d
 			public const int primary_text_disabled_material_light = 2131099709;
 			
-			// aapt resource value: 0x7f0600bc
-			public const int profile_cancel_btn_background = 2131099836;
-			
 			// aapt resource value: 0x7f0600bd
-			public const int profile_cancel_btn_text = 2131099837;
-			
-			// aapt resource value: 0x7f0600bb
-			public const int profile_edit_text = 2131099835;
+			public const int profile_cancel_btn_background = 2131099837;
 			
 			// aapt resource value: 0x7f0600be
-			public const int profile_save_btn_background = 2131099838;
+			public const int profile_cancel_btn_text = 2131099838;
+			
+			// aapt resource value: 0x7f0600bc
+			public const int profile_edit_text = 2131099836;
 			
 			// aapt resource value: 0x7f0600bf
-			public const int profile_save_btn_text = 2131099839;
-			
-			// aapt resource value: 0x7f0600ba
-			public const int profile_text = 2131099834;
-			
-			// aapt resource value: 0x7f0600ce
-			public const int rect_back = 2131099854;
-			
-			// aapt resource value: 0x7f06007d
-			public const int recycler_background = 2131099773;
-			
-			// aapt resource value: 0x7f06006d
-			public const int red = 2131099757;
-			
-			// aapt resource value: 0x7f06006e
-			public const int red_btn = 2131099758;
-			
-			// aapt resource value: 0x7f060072
-			public const int red_calendar_add_ddit = 2131099762;
-			
-			// aapt resource value: 0x7f060070
-			public const int red_plus_btn = 2131099760;
-			
-			// aapt resource value: 0x7f06006f
-			public const int red_transparent = 2131099759;
-			
-			// aapt resource value: 0x7f0600c2
-			public const int register_btn_background = 2131099842;
-			
-			// aapt resource value: 0x7f0600c3
-			public const int register_btn_text = 2131099843;
-			
-			// aapt resource value: 0x7f0600c1
-			public const int register_edit_text = 2131099841;
-			
-			// aapt resource value: 0x7f0600c8
-			public const int register_next_btn_background = 2131099848;
-			
-			// aapt resource value: 0x7f0600c7
-			public const int register_next_btn_text = 2131099847;
-			
-			// aapt resource value: 0x7f0600c6
-			public const int register_next_check_term = 2131099846;
-			
-			// aapt resource value: 0x7f0600c5
-			public const int register_next_edit_text = 2131099845;
-			
-			// aapt resource value: 0x7f0600c4
-			public const int register_next_text = 2131099844;
+			public const int profile_save_btn_background = 2131099839;
 			
 			// aapt resource value: 0x7f0600c0
-			public const int register_text = 2131099840;
+			public const int profile_save_btn_text = 2131099840;
+			
+			// aapt resource value: 0x7f0600bb
+			public const int profile_text = 2131099835;
+			
+			// aapt resource value: 0x7f0600cf
+			public const int rect_back = 2131099855;
+			
+			// aapt resource value: 0x7f06007e
+			public const int recycler_background = 2131099774;
+			
+			// aapt resource value: 0x7f06006e
+			public const int red = 2131099758;
+			
+			// aapt resource value: 0x7f06006f
+			public const int red_btn = 2131099759;
+			
+			// aapt resource value: 0x7f060073
+			public const int red_calendar_add_ddit = 2131099763;
+			
+			// aapt resource value: 0x7f060071
+			public const int red_plus_btn = 2131099761;
+			
+			// aapt resource value: 0x7f060070
+			public const int red_transparent = 2131099760;
+			
+			// aapt resource value: 0x7f0600c3
+			public const int register_btn_background = 2131099843;
+			
+			// aapt resource value: 0x7f0600c4
+			public const int register_btn_text = 2131099844;
+			
+			// aapt resource value: 0x7f0600c2
+			public const int register_edit_text = 2131099842;
+			
+			// aapt resource value: 0x7f0600c9
+			public const int register_next_btn_background = 2131099849;
+			
+			// aapt resource value: 0x7f0600c8
+			public const int register_next_btn_text = 2131099848;
+			
+			// aapt resource value: 0x7f0600c7
+			public const int register_next_check_term = 2131099847;
+			
+			// aapt resource value: 0x7f0600c6
+			public const int register_next_edit_text = 2131099846;
+			
+			// aapt resource value: 0x7f0600c5
+			public const int register_next_text = 2131099845;
+			
+			// aapt resource value: 0x7f0600c1
+			public const int register_text = 2131099841;
 			
 			// aapt resource value: 0x7f06003e
 			public const int ripple_material_dark = 2131099710;
@@ -1739,20 +1742,20 @@ namespace LaCabana
 			// aapt resource value: 0x7f06003f
 			public const int ripple_material_light = 2131099711;
 			
-			// aapt resource value: 0x7f0600ea
-			public const int rounded_container_bg = 2131099882;
-			
 			// aapt resource value: 0x7f0600eb
-			public const int rounded_container_border = 2131099883;
+			public const int rounded_container_bg = 2131099883;
+			
+			// aapt resource value: 0x7f0600ec
+			public const int rounded_container_border = 2131099884;
+			
+			// aapt resource value: 0x7f0600d2
+			public const int search_back_edit_text_background = 2131099858;
 			
 			// aapt resource value: 0x7f0600d1
-			public const int search_back_edit_text_background = 2131099857;
+			public const int search_back_edit_text_border = 2131099857;
 			
 			// aapt resource value: 0x7f0600d0
-			public const int search_back_edit_text_border = 2131099856;
-			
-			// aapt resource value: 0x7f0600cf
-			public const int search_back_rectangle = 2131099855;
+			public const int search_back_rectangle = 2131099856;
 			
 			// aapt resource value: 0x7f060040
 			public const int secondary_text_default_material_dark = 2131099712;
@@ -1766,11 +1769,11 @@ namespace LaCabana
 			// aapt resource value: 0x7f060043
 			public const int secondary_text_disabled_material_light = 2131099715;
 			
-			// aapt resource value: 0x7f060075
-			public const int silver = 2131099765;
+			// aapt resource value: 0x7f060076
+			public const int silver = 2131099766;
 			
-			// aapt resource value: 0x7f0600d4
-			public const int splash_text = 2131099860;
+			// aapt resource value: 0x7f0600d5
+			public const int splash_text = 2131099861;
 			
 			// aapt resource value: 0x7f060044
 			public const int switch_thumb_disabled_material_dark = 2131099716;
@@ -1778,11 +1781,11 @@ namespace LaCabana
 			// aapt resource value: 0x7f060045
 			public const int switch_thumb_disabled_material_light = 2131099717;
 			
-			// aapt resource value: 0x7f060105
-			public const int switch_thumb_material_dark = 2131099909;
-			
 			// aapt resource value: 0x7f060106
-			public const int switch_thumb_material_light = 2131099910;
+			public const int switch_thumb_material_dark = 2131099910;
+			
+			// aapt resource value: 0x7f060107
+			public const int switch_thumb_material_light = 2131099911;
 			
 			// aapt resource value: 0x7f060046
 			public const int switch_thumb_normal_material_dark = 2131099718;
@@ -1790,38 +1793,38 @@ namespace LaCabana
 			// aapt resource value: 0x7f060047
 			public const int switch_thumb_normal_material_light = 2131099719;
 			
-			// aapt resource value: 0x7f0600f5
-			public const int tile_gray = 2131099893;
-			
 			// aapt resource value: 0x7f0600f6
-			public const int tile_gray_plus = 2131099894;
+			public const int tile_gray = 2131099894;
 			
-			// aapt resource value: 0x7f060052
-			public const int transparent = 2131099730;
-			
-			// aapt resource value: 0x7f0600d5
-			public const int update_tracker_date_text = 2131099861;
-			
-			// aapt resource value: 0x7f0600d6
-			public const int update_tracker_list_group = 2131099862;
+			// aapt resource value: 0x7f0600f7
+			public const int tile_gray_plus = 2131099895;
 			
 			// aapt resource value: 0x7f060053
-			public const int white = 2131099731;
+			public const int transparent = 2131099731;
+			
+			// aapt resource value: 0x7f0600d6
+			public const int update_tracker_date_text = 2131099862;
+			
+			// aapt resource value: 0x7f0600d7
+			public const int update_tracker_list_group = 2131099863;
 			
 			// aapt resource value: 0x7f060054
-			public const int white_transparent = 2131099732;
-			
-			// aapt resource value: 0x7f060056
-			public const int white_transparent_back = 2131099734;
+			public const int white = 2131099732;
 			
 			// aapt resource value: 0x7f060055
-			public const int white_transparent_brighter = 2131099733;
+			public const int white_transparent = 2131099733;
 			
-			// aapt resource value: 0x7f060079
-			public const int yellow = 2131099769;
+			// aapt resource value: 0x7f060057
+			public const int white_transparent_back = 2131099735;
+			
+			// aapt resource value: 0x7f060056
+			public const int white_transparent_brighter = 2131099734;
 			
 			// aapt resource value: 0x7f06007a
-			public const int yellow_transparent = 2131099770;
+			public const int yellow = 2131099770;
+			
+			// aapt resource value: 0x7f06007b
+			public const int yellow_transparent = 2131099771;
 			
 			static Color()
 			{
@@ -2483,136 +2486,142 @@ namespace LaCabana
 			public const int ic_heart = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int ic_home_variant = 2130837613;
+			public const int ic_heart_outline = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int ic_key_change = 2130837614;
+			public const int ic_home_variant = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int ic_keyboard_backspace = 2130837615;
+			public const int ic_key_change = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int ic_logo = 2130837616;
+			public const int ic_keyboard_backspace = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int ic_logout = 2130837617;
+			public const int ic_logo = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int ic_magnify = 2130837618;
+			public const int ic_logout = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int ic_map = 2130837619;
+			public const int ic_magnify = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int ic_map_marker = 2130837620;
+			public const int ic_map = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int ic_media_pause = 2130837621;
+			public const int ic_map_marker = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int ic_media_play = 2130837622;
+			public const int ic_media_pause = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int ic_media_route_disabled_mono_dark = 2130837623;
+			public const int ic_media_play = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int ic_media_route_off_mono_dark = 2130837624;
+			public const int ic_media_route_disabled_mono_dark = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int ic_media_route_on_0_mono_dark = 2130837625;
+			public const int ic_media_route_off_mono_dark = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int ic_media_route_on_1_mono_dark = 2130837626;
+			public const int ic_media_route_on_0_mono_dark = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int ic_media_route_on_2_mono_dark = 2130837627;
+			public const int ic_media_route_on_1_mono_dark = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int ic_media_route_on_mono_dark = 2130837628;
+			public const int ic_media_route_on_2_mono_dark = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int ic_menu = 2130837629;
+			public const int ic_media_route_on_mono_dark = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int ic_pause_dark = 2130837630;
+			public const int ic_menu = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int ic_pause_light = 2130837631;
+			public const int ic_pause_dark = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int ic_phone = 2130837632;
+			public const int ic_pause_light = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int ic_play_dark = 2130837633;
+			public const int ic_phone = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int ic_play_light = 2130837634;
+			public const int ic_play_dark = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int ic_plus_circle = 2130837635;
+			public const int ic_play_light = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int ic_setting_dark = 2130837636;
+			public const int ic_plus_circle = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int ic_setting_light = 2130837637;
+			public const int ic_round_directions = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int ic_settings = 2130837638;
+			public const int ic_setting_dark = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int lacabana_text = 2130837639;
+			public const int ic_setting_light = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int main_picture = 2130837640;
+			public const int ic_settings = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int mr_ic_cast_dark = 2130837641;
+			public const int lacabana_text = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int mr_ic_cast_light = 2130837642;
+			public const int main_picture = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int mr_ic_media_route_connecting_mono_dark = 2130837643;
+			public const int mr_ic_cast_dark = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int mr_ic_media_route_connecting_mono_light = 2130837644;
+			public const int mr_ic_cast_light = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int mr_ic_media_route_mono_dark = 2130837645;
+			public const int mr_ic_media_route_connecting_mono_dark = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int mr_ic_media_route_mono_light = 2130837646;
+			public const int mr_ic_media_route_connecting_mono_light = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int mr_ic_pause_dark = 2130837647;
+			public const int mr_ic_media_route_mono_dark = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int mr_ic_pause_light = 2130837648;
+			public const int mr_ic_media_route_mono_light = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int mr_ic_play_dark = 2130837649;
+			public const int mr_ic_pause_dark = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int mr_ic_play_light = 2130837650;
+			public const int mr_ic_pause_light = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int mr_ic_settings_dark = 2130837651;
+			public const int mr_ic_play_dark = 2130837651;
 			
 			// aapt resource value: 0x7f020094
-			public const int mr_ic_settings_light = 2130837652;
-			
-			// aapt resource value: 0x7f020098
-			public const int notification_template_icon_bg = 2130837656;
+			public const int mr_ic_play_light = 2130837652;
 			
 			// aapt resource value: 0x7f020095
-			public const int profilebackground = 2130837653;
+			public const int mr_ic_settings_dark = 2130837653;
 			
 			// aapt resource value: 0x7f020096
-			public const int rounded_edittext = 2130837654;
+			public const int mr_ic_settings_light = 2130837654;
+			
+			// aapt resource value: 0x7f02009a
+			public const int notification_template_icon_bg = 2130837658;
 			
 			// aapt resource value: 0x7f020097
-			public const int twetter = 2130837655;
+			public const int profilebackground = 2130837655;
+			
+			// aapt resource value: 0x7f020098
+			public const int rounded_edittext = 2130837656;
+			
+			// aapt resource value: 0x7f020099
+			public const int twetter = 2130837657;
 			
 			static Drawable()
 			{
@@ -2825,9 +2834,6 @@ namespace LaCabana
 			// aapt resource value: 0x7f0b004b
 			public const int contentPanel = 2131427403;
 			
-			// aapt resource value: 0x7f0b0094
-			public const int countryText = 2131427476;
-			
 			// aapt resource value: 0x7f0b004f
 			public const int custom = 2131427407;
 			
@@ -2908,6 +2914,9 @@ namespace LaCabana
 			
 			// aapt resource value: 0x7f0b00c1
 			public const int facebookButton = 2131427521;
+			
+			// aapt resource value: 0x7f0b0096
+			public const int favoriteImage = 2131427478;
 			
 			// aapt resource value: 0x7f0b00a8
 			public const int favoritesItem = 2131427496;
@@ -3116,11 +3125,11 @@ namespace LaCabana
 			// aapt resource value: 0x7f0b00cf
 			public const int play_pause = 2131427535;
 			
-			// aapt resource value: 0x7f0b0095
-			public const int priceLayout = 2131427477;
+			// aapt resource value: 0x7f0b0094
+			public const int priceLayout = 2131427476;
 			
-			// aapt resource value: 0x7f0b0096
-			public const int priceText = 2131427478;
+			// aapt resource value: 0x7f0b0095
+			public const int priceText = 2131427477;
 			
 			// aapt resource value: 0x7f0b00a2
 			public const int profile_layout = 2131427490;

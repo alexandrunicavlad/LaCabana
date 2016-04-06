@@ -38,7 +38,7 @@ namespace LaCabana
 			SupportActionBar.SetDisplayHomeAsUpEnabled (true);
 			SupportActionBar.SetDisplayShowTitleEnabled (true);
 			SupportActionBar.SetDisplayShowCustomEnabled (false);
-			SupportActionBar.SetBackgroundDrawable (new ColorDrawable (Resources.GetColor (Resource.Color.yellow)));
+			SupportActionBar.SetBackgroundDrawable (new ColorDrawable (Resources.GetColor (Resource.Color.main_blue_green)));
 			SupportActionBar.SetHomeAsUpIndicator (Resource.Drawable.ic_keyboard_backspace);
 
 //			MenuButton = FindViewById<ImageButton> (Resource.Id.action_bar_menuBtn);
@@ -81,6 +81,17 @@ namespace LaCabana
 			//drawerLayout.DrawerSlide += DrawerLayoutDrawerSlide;
 			//			var userName = ActiveUser;
 			//			FindViewById<TextView> (Resource.Id.drawer_profile_name).Text = userName;
+		}
+
+		public  Bitmap Decode (string imageData)
+		{
+			try {
+				byte[] encodeByte = Android.Util.Base64.Decode (imageData, Android.Util.Base64Flags.Default);
+				Bitmap bitmap = BitmapFactory.DecodeByteArray (encodeByte, 0, encodeByte.Length);
+				return bitmap;
+			} catch (Exception) {
+				return null;
+			}
 		}
 
 		public override bool OnPrepareOptionsMenu (IMenu menu)

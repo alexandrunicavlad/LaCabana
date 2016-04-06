@@ -134,6 +134,7 @@
     <Compile Include="Activities\CabinsNear.cs" />
     <Compile Include="Services\BaseService.cs" />
     <Compile Include="Activities\CabinInfo.cs" />
+    <Compile Include="Helpers\RouteGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -295,6 +296,13 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_plus_circle.png" />
     <AndroidResource Include="Resources\drawable\lacabana_text.png" />
     <AndroidResource Include="Resources\layout\cabin_info_layout.axml" />
+    <AndroidResource Include="Resources\drawable\ic_round_directions.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_heart_outline.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_heart_outline.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_heart_outline.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_heart_outline.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_heart_outline.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_heart_outline.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\menu\" />
