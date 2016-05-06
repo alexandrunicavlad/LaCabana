@@ -42,6 +42,13 @@ namespace LaCabana
 			return deserializedStreamText;
 		}
 
+		public void Update (string fav, string url)
+		{
+			var URL = string.Format ("{0} {1}", BasePath1, url);
+			TestFixtureSetUpCabana (URL);
+			var response = _client.Push ("", fav);
+		}
+
 
 	}
 }

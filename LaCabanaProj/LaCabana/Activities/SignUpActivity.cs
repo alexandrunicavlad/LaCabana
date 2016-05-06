@@ -46,11 +46,7 @@ namespace LaCabana
 				var requestText = JsonConvert.SerializeObject (user);
 				Push (user);
 				Finish ();
-
 			};
-
-
-
 		}
 
 
@@ -63,6 +59,13 @@ namespace LaCabana
 				var a = 0;
 			}
 		}
+
+		private void Update (UsersModel user)
+		{
+			var baseService = new BaseService<UsersModel> ();
+
+		}
+
 	}
 
 }

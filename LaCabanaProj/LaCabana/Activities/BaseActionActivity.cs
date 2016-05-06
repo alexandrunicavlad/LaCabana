@@ -35,8 +35,11 @@ namespace LaCabana
 		private bool _shouldGoInvisible = true;
 		private BitmapFactory.Options _placeHolderOptions;
 		protected static IDatabaseServices DatabaseServices;
+		public UsersModel user;
 
 		public LatLng myLocation{ get; set; }
+
+		public UsersModel userMod{ get; set; }
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -60,10 +63,15 @@ namespace LaCabana
 			myLocation = location;
 		}
 
+		public void UserData (UsersModel userul)
+		{
+			userMod = userul;
+		}
+
 		public void SetProfilePicture ()
 		{
-			var user = DatabaseServices.GetAllUsers ();
-
+			user = DatabaseServices.GetAllUsers ();
+			UserData (user);
 			var imagecenterLayout = FindViewById<RelativeLayout> (Resource.Id.profile_layout);
 			var imagecenter = imagecenterLayout.FindViewById<ImageView> (Resource.Id.account_info_profile_image);
 			if (user.ProfilePhoto == null) {
@@ -149,23 +157,56 @@ namespace LaCabana
 				cabinsNear.Clickable = false;
 				if (this is CabinsNear) {
 					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
-				} else {					
+				} else {							
+					
 					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
-					var intent = new Intent (this, typeof(CabinsNear));
-					intent.PutExtra ("latitude", myLocation.Latitude);
-					intent.PutExtra ("longitude", myLocation.Longitude);
-					StartActivity (intent);
+					AlertDialog.Builder alert = new AlertDialog.Builder (this);
+					alert.SetTitle ("Select range");
+					var infate = LayoutInflater.Inflate (Resource.Layout.slider_range, null);
+					var seekBar = infate.FindViewById<SeekBar> (Resource.Id.edit_seekBar);
+					var text = infate.FindViewById<TextView> (Resource.Id.seekbar_text);
+					alert.SetView (infate);
+					seekBar.Progress = 10;
+					text.Text = seekBar.Progress.ToString () + "km";
+					seekBar.ProgressChanged += delegate (object sender, SeekBar.ProgressChangedEventArgs args) {
+						if (!args.FromUser)
+							return;
+						text.Text = (seekBar.Progress).ToString () + "km";
+					};
+					alert.SetPositiveButton ("Done", delegate {		
+						var intent = new Intent (this, typeof(CabinsNear));
+						intent.PutExtra ("latitude", myLocation.Latitude);
+						intent.PutExtra ("longitude", myLocation.Longitude);
+						intent.PutExtra ("distance", seekBar.Progress);
+						StartActivity (intent);
+					});
+					alert.SetNegativeButton ("Cancel", delegate {
+
+					});
+					alert.Show ();
+					
 				}
+					
+
 				cabinsNear.Clickable = true;
+				
 			};
 			var favorites = FindViewById<LinearLayout> (Resource.Id.favoritesItem);
 			favorites.Click += delegate {
 				favorites.Clickable = false;
-				if (this is CabinsNear) {
+				if (this is FavoritesActivity) {
 					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
-				} else {					
-					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
-					StartActivityForResult (typeof(CabinInfo), 2);
+				} else {	
+					if (user.Id != null) {
+						drawerLayout.CloseDrawer ((int)GravityFlags.Start);
+						var intent = new Intent (this, typeof(FavoritesActivity));
+						intent.PutExtra ("latitude", myLocation.Latitude);
+						intent.PutExtra ("longitude", myLocation.Longitude);
+						StartActivity (intent);
+					} else {
+						Toast.MakeText (this, "Please login for select this page", ToastLength.Short).Show ();
+						drawerLayout.CloseDrawer ((int)GravityFlags.Start);
+					}
 				}
 				favorites.Clickable = true;
 			};

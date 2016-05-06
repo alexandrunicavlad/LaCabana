@@ -59,6 +59,8 @@ namespace LaCabana
 		private void LoginVerify ()
 		{
 			var baseService = new BaseService<Dictionary<string,UsersModel>> ();
+
+
 			var user = new Dictionary<string,UsersModel> ();
 			try {
 				user = (baseService.Get ("users"));
@@ -82,10 +84,10 @@ namespace LaCabana
 					ThreadPool.QueueUserWorkItem (o => {
 						UsersModel model = new UsersModel ();
 						model.Email = item.Value.Email;
-						model.Id = item.Value.Id;
+						model.Id = item.Key;
 						model.Password = item.Value.Password;
 						model.Username = item.Value.Username;
-						var abc = DatabaseServices.GetAllUsers ();
+						//var abc = DatabaseServices.GetAllUsers ();
 						DatabaseServices.InsertUsername (model);
 						StartActivity (typeof(BasicMapDemoActivity));
 

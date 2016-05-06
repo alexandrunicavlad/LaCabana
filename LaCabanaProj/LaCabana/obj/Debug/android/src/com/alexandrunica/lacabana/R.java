@@ -2786,6 +2786,7 @@ containing a value of this type.
         public static final int drawer_layout=0x7f0b0069;
         public static final int drawer_line_between=0x7f0b00ae;
         public static final int edit_query=0x7f0b005c;
+        public static final int edit_seekBar=0x7f0b00e4;
         public static final int emailEditText=0x7f0b0080;
         public static final int emailLayout=0x7f0b008f;
         public static final int emailSpinner=0x7f0b0081;
@@ -2892,6 +2893,7 @@ containing a value of this type.
         public static final int search_plate=0x7f0b0062;
         public static final int search_src_text=0x7f0b0063;
         public static final int search_voice_btn=0x7f0b0067;
+        public static final int seekbar_text=0x7f0b00e5;
         public static final int select_dialog_listview=0x7f0b0068;
         public static final int settings=0x7f0b00cb;
         public static final int settingsItem=0x7f0b00b1;
@@ -3006,8 +3008,9 @@ containing a value of this type.
         public static final int select_dialog_multichoice_material=0x7f03003a;
         public static final int select_dialog_singlechoice_material=0x7f03003b;
         public static final int sign_up_layout=0x7f03003c;
-        public static final int support_simple_spinner_dropdown_item=0x7f03003d;
-        public static final int tool_bar=0x7f03003e;
+        public static final int slider_range=0x7f03003d;
+        public static final int support_simple_spinner_dropdown_item=0x7f03003e;
+        public static final int tool_bar=0x7f03003f;
     }
     public static final class string {
         /** 	Validation message

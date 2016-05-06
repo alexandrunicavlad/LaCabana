@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace LaCabana
 {
@@ -14,6 +15,8 @@ namespace LaCabana
 		public String Password { get; set; }
 
 		public String ProfilePhoto { get; set; }
+
+		public Dictionary<String, String> FavoriteList { get; set; }
 	}
 }
 

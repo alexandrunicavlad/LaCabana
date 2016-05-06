@@ -135,6 +135,8 @@
     <Compile Include="Services\BaseService.cs" />
     <Compile Include="Activities\CabinInfo.cs" />
     <Compile Include="Helpers\RouteGenerator.cs" />
+    <Compile Include="Activities\FavoritesActivity.cs" />
+    <Compile Include="Models\ImageModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -303,6 +305,7 @@
     <AndroidResource Include="Resources\drawable-xhdpi\ic_heart_outline.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_heart_outline.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_heart_outline.png" />
+    <AndroidResource Include="Resources\layout\slider_range.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\menu\" />

@@ -50,6 +50,10 @@ LaCabana.CabinInfo, LaCabana;md5dbce641a4b5bf99921cca81d5bb55bcc.CabinInfo
 LaCabana.CabinInfo, LaCabana, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5dbce641a4b5bf99921cca81d5bb55bcc.CabinInfo
 LaCabana.CabinInfo;md5dbce641a4b5bf99921cca81d5bb55bcc.CabinInfo
 lacabana.CabinInfo;md5dbce641a4b5bf99921cca81d5bb55bcc.CabinInfo
+LaCabana.FavoritesActivity, LaCabana;md5dbce641a4b5bf99921cca81d5bb55bcc.FavoritesActivity
+LaCabana.FavoritesActivity, LaCabana, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5dbce641a4b5bf99921cca81d5bb55bcc.FavoritesActivity
+LaCabana.FavoritesActivity;md5dbce641a4b5bf99921cca81d5bb55bcc.FavoritesActivity
+lacabana.FavoritesActivity;md5dbce641a4b5bf99921cca81d5bb55bcc.FavoritesActivity
 LaCabana.Helpers.FontArrayAdapter`1, LaCabana;md53d440cff3890614aebd65e0edb5b9f63.FontArrayAdapter_1
 LaCabana.Helpers.FontArrayAdapter`1, LaCabana, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md53d440cff3890614aebd65e0edb5b9f63.FontArrayAdapter_1
 LaCabana.Helpers.FontArrayAdapter`1;md53d440cff3890614aebd65e0edb5b9f63.FontArrayAdapter_1

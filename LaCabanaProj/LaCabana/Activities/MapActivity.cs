@@ -53,13 +53,27 @@ namespace LaCabana
 			//MenuButton.Visibility = ViewStates.Gone;
 			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
 			//allCabins = DatabaseServices.GetAllCabins ();
-			var baseService = new BaseService<Dictionary<string,CabinModel>> ();
+
 			allCabins = new Dictionary<string,CabinModel> ();
-			try {
-				allCabins = (baseService.Get ("cabins"));				
+
+			ThreadPool.QueueUserWorkItem (o => GetData ());
+		}
+
+		public void GetData ()
+		{
+			var baseService = new BaseService<Dictionary<string,CabinModel>> ();
+			try {				
+				allCabins = (baseService.Get ("cabins"));
 			} catch (Exception e) {
-				var a = 0;
+				Toast.MakeText (this, "A dat eroare", ToastLength.Short).Show ();
 			}
+			RunOnUiThread (() => {
+				PutAllMarker ();
+//				foreach (var cabin in allCabins) {
+//					DatabaseServices.InsertCabin (cabin.Value);
+//				}
+//				var abc = DatabaseServices.GetAllCabins ();
+			});
 		}
 
 		public void OnMapReady (GoogleMap googleMap)
@@ -67,7 +81,6 @@ namespace LaCabana
 			myHome = new LatLng (_latitude, _longitude);
 			googleMap.MyLocationEnabled = true;
 			_googleMap = googleMap;
-			PutAllMarker ();
 			var isCurent = false;
 			googleMap.MyLocationChange += (object sender, GoogleMap.MyLocationChangeEventArgs e) => {
 				if (isCurent)
@@ -79,8 +92,8 @@ namespace LaCabana
 				myHome.Longitude = e.Location.Longitude;
 				MyPosition (myHome);
 				googleMap.MoveCamera (CameraUpdateFactory.NewLatLngZoom (new LatLng (e.Location.Latitude, e.Location.Longitude), 15));
-			};
 
+			};
 			googleMap.MapLongClick += (object sender, GoogleMap.MapLongClickEventArgs e) => {
 				var intent = new Intent (this, typeof(AddNewLocation));
 				intent.PutExtra ("latitude", e.Point.Latitude);

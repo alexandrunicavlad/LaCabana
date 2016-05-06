@@ -1036,6 +1036,7 @@ C:\Users\Nica\Documents\Projects\LaCabana\LaCabana\obj\Debug\LaCabana.csprojReso
 C:\Users\Nica\Documents\Projects\LaCabana\LaCabana\obj\Debug\res\layout\log_in_layout.xml
 C:\Users\Nica\Documents\Projects\LaCabana\LaCabana\obj\Debug\res\layout\drawer_layout.xml
 C:\Users\Nica\Documents\Projects\LaCabana\LaCabana\obj\Debug\res\layout\home.xml
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.csprojResolveAssemblyReference.cache
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.dll.config
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.pdb
@@ -1043,6 +1044,8 @@ C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\com.alexandruni
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\com.alexandrunica.lacabana-Signed.apk
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\FireSharp.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\FormsViewGroup.dll
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\NineOldAndroids.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\SQLite-net.dll
@@ -1065,7 +1068,8 @@ C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\SQLite-net.dll.
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Forms.Core.xml
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.csprojResolveAssemblyReference.cache
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.pdb
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\android\bin\com.alexandrunica.lacabana.apk
@@ -1219,12 +1223,6 @@ C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-md
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xhdpi\ic_plus_circle.png
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxhdpi\ic_plus_circle.png
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxxhdpi\ic_plus_circle.png
-C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\R.cs.flag
-C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\uploadflags.txt
-C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.dll
-C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
-C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.xml
-C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable\lacabana_text.png
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\cabin_info_layout.xml
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable\ic_round_directions.png
@@ -1234,5 +1232,8 @@ C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-md
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xhdpi\ic_heart_outline.png
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxhdpi\ic_heart_outline.png
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxxhdpi\ic_heart_outline.png
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\slider_range.xml
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\R.cs.flag
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\uploadflags.txt
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.dll.mdb
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.dll.mdb

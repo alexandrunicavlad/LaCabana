@@ -72,6 +72,9 @@ namespace LaCabana
 			drawerLayout.CloseDrawer ((int)GravityFlags.Start);
 		}
 
+ 
+
+
 		protected void SetupDrawer (DrawerLayout drawer)
 		{
 

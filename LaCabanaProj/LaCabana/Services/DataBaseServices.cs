@@ -76,7 +76,11 @@ namespace LaCabana.Services
 			values.Put ("emailtype", cabin.EmailType);
 			values.Put ("price", cabin.Price);
 			values.Put ("rating", cabin.Rating);
-			values.Put ("photo", cabin.Photo.ToString ());
+			if (cabin.Photo != null) {		
+				values.Put ("photo", cabin.Photo.ToString ());
+			} else {
+				values.Put ("photo", "");
+			}
 			db.Insert ("cabins", null, values);
 		}
 
@@ -90,7 +94,8 @@ namespace LaCabana.Services
 				var cursor = db.RawQuery (query, null);
 				if (cursor.MoveToFirst ()) {
 					do {
-						var abc = cursor.GetString (9);
+						//var abc = cursor.GetString (9);
+
 						var account = new CabinModel () {
 							Name = cursor.GetString (0),
 							Latitude = cursor.GetDouble (1),
@@ -100,7 +105,7 @@ namespace LaCabana.Services
 							Email = cursor.GetString (5),
 							EmailType = cursor.GetString (6),
 							Price = cursor.GetFloat (7),
-							Rating = cursor.GetInt (8),
+							Rating = cursor.GetInt (8)
 							// cursor.GetString (9)
 						};
 						cabins.Add (account);
@@ -115,6 +120,16 @@ namespace LaCabana.Services
 			return cabins;
 		
 		}
+
+		//		public void InsertFavorites (string fav)
+		//		{
+		//			var db = GetDatabase ();
+		//			var values = new ContentValues ();
+		//			var user = GetAllUsers ();
+		//			user.FavoritesList.Add (fav);
+		//			values.Put ("FavoritesList", user.FavoritesList);
+		//			db.Update ("user", values, "Id=" + user.Id, null);
+		//		}
 
 		public UsersModel GetAllUsers ()
 		{

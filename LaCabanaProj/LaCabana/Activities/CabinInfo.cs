@@ -12,6 +12,9 @@ using Android.Views;
 using Android.Widget;
 using Android.Support.V4.Widget;
 using Android.Gms.Maps.Model;
+using System.Net;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace LaCabana
 {
@@ -19,7 +22,9 @@ namespace LaCabana
 	public class CabinInfo : BaseDrawerActivity
 	{
 		private CabinModel cabin;
-
+		private string requestURL = "https://api.cloudinary.com/v1_1/lacabana/resources/image/upload/?prefix=";
+		private const string ApiKey = "348639768631669";
+		private const string ApiSecret = "HHeKWX7znazzS61cd7tlTxBmV7I";
 
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
@@ -46,6 +51,7 @@ namespace LaCabana
 			if (marker != null) {
 				try {
 					cabin = (baseService.Get (string.Format ("cabins/{0}", marker)));	
+					GetData ("Lora");
 				} catch (Exception e) {
 					var a = 0;
 				}
@@ -66,6 +72,30 @@ namespace LaCabana
 				Org.W3c.Dom.IDocument doc = route.GetDocument (new LatLng (latitude, longitude), new LatLng (cabin.Latitude, cabin.Longitude), RouteGenerator.Mode_driving);
 				streetText.Text = route.GetEndAddress (doc);
 				//}
+			}
+		}
+
+		private void GetData (string type)
+		{
+			var reqUrl = string.Format ("{0}{1}/&max_results=500", requestURL, type);
+			var request = (HttpWebRequest)WebRequest.Create (reqUrl);
+			request.Timeout = 10000;
+			request.Method = "GET";
+			request.ContentType = "application/json";
+			request.Credentials = CredentialCache.DefaultCredentials;
+			var encoded = System.Convert.ToBase64String (System.Text.Encoding.GetEncoding ("ISO-8859-1").GetBytes (ApiKey + ":" + ApiSecret));
+
+			request.Headers.Add ("Authorization", "Basic " + encoded);
+			try {
+				var response = (HttpWebResponse)request.GetResponse ();
+				var reader = new StreamReader (response.GetResponseStream ());
+				var streamText = reader.ReadToEnd ();
+				var deserializedStreamText = JsonConvert.DeserializeObject<Images> (streamText);
+//				images.AddRange (deserializedStreamText.resources);
+
+			} catch (Exception ex) {
+				HandleErrors (ex);
+				//retrying = true;
 			}
 		}
 	}

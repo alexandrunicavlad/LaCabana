@@ -2876,6 +2876,9 @@ namespace LaCabana
 			// aapt resource value: 0x7f0b005c
 			public const int edit_query = 2131427420;
 			
+			// aapt resource value: 0x7f0b00e4
+			public const int edit_seekBar = 2131427556;
+			
 			// aapt resource value: 0x7f0b0080
 			public const int emailEditText = 2131427456;
 			
@@ -3193,6 +3196,9 @@ namespace LaCabana
 			
 			// aapt resource value: 0x7f0b0067
 			public const int search_voice_btn = 2131427431;
+			
+			// aapt resource value: 0x7f0b00e5
+			public const int seekbar_text = 2131427557;
 			
 			// aapt resource value: 0x7f0b0068
 			public const int select_dialog_listview = 2131427432;
@@ -3551,10 +3557,13 @@ namespace LaCabana
 			public const int sign_up_layout = 2130903100;
 			
 			// aapt resource value: 0x7f03003d
-			public const int support_simple_spinner_dropdown_item = 2130903101;
+			public const int slider_range = 2130903101;
 			
 			// aapt resource value: 0x7f03003e
-			public const int tool_bar = 2130903102;
+			public const int support_simple_spinner_dropdown_item = 2130903102;
+			
+			// aapt resource value: 0x7f03003f
+			public const int tool_bar = 2130903103;
 			
 			static Layout()
 			{

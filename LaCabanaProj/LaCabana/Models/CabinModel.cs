@@ -25,6 +25,7 @@ namespace LaCabana
 		public int Rating { get; set; }
 
 		public List<string> Photo{ get; set; }
+
 	}
 }
 
