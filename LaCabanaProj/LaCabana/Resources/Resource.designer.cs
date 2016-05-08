@@ -4497,6 +4497,9 @@ namespace LaCabana
 			// aapt resource value: 0x7f090144
 			public const int MyTheme = 2131296580;
 			
+			// aapt resource value: 0x7f090146
+			public const int NoActionBar = 2131296582;
+			
 			// aapt resource value: 0x7f090016
 			public const int Platform_AppCompat = 2131296278;
 			

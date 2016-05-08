@@ -49,6 +49,33 @@ namespace LaCabana
 			var response = _client.Push ("", fav);
 		}
 
+		public void Face ()
+		{
+			
+
+
+		}
+
+		//		private void onFacebookAccessTokenChange(AccessToken token) {
+		//			ifif (token != null) {
+		//				ref.authWithOAuthToken("facebook", token.getToken(), new Firebase.AuthResultHandler() {
+		//					@Override
+		//					public void onAuthenticated(AuthData authData) {
+		//						// The Facebook user is now authenticated with your Firebase app
+		//					}
+		//					@Override
+		//					public void onAuthenticationError(FirebaseError firebaseError) {
+		//						// there was an error
+		//					}
+		//				});
+		//			} else {
+		//				/* Logged out of Facebook so do a logout from the Firebase app */
+		//				ref.unauth();
+		//			}
+		//		}
+
+
+
 
 	}
 }

@@ -3433,6 +3433,7 @@ containing a value of this type.
         public static final int CardView_Light=0x7f090006;
         public static final int MyActionBar=0x7f090145;
         public static final int MyTheme=0x7f090144;
+        public static final int NoActionBar=0x7f090146;
         public static final int Platform_AppCompat=0x7f090016;
         public static final int Platform_AppCompat_Light=0x7f090017;
         public static final int Platform_ThemeOverlay_AppCompat=0x7f090078;

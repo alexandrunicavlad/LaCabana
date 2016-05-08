@@ -9,7 +9,7 @@ using Android.Graphics;
 
 namespace LaCabana
 {
-	[Activity (MainLauncher = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
+	[Activity (MainLauncher = true, Theme = "@style/NoActionBar", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class HomeLogo : Activity
 	{
 

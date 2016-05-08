@@ -1036,7 +1036,6 @@ C:\Users\Nica\Documents\Projects\LaCabana\LaCabana\obj\Debug\LaCabana.csprojReso
 C:\Users\Nica\Documents\Projects\LaCabana\LaCabana\obj\Debug\res\layout\log_in_layout.xml
 C:\Users\Nica\Documents\Projects\LaCabana\LaCabana\obj\Debug\res\layout\drawer_layout.xml
 C:\Users\Nica\Documents\Projects\LaCabana\LaCabana\obj\Debug\res\layout\home.xml
-C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.csprojResolveAssemblyReference.cache
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.dll.config
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.pdb
@@ -1070,6 +1069,7 @@ C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Forms.C
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.xml
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.csprojResolveAssemblyReference.cache
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.dll
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.pdb
 C:\Users\Nica\Documents\LaCabana\LaCabanaProj\LaCabana\obj\Debug\android\bin\com.alexandrunica.lacabana.apk

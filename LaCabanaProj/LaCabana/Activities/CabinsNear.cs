@@ -26,6 +26,7 @@ namespace LaCabana
 		private double longitude;
 		private int numberDistance;
 		private LinearLayout cabinsLayout;
+		private IList<string> favList;
 
 		protected override void OnCreate (Bundle bundle)
 		{			
@@ -40,18 +41,19 @@ namespace LaCabana
 			latitude = Intent.GetDoubleExtra ("latitude", 0);
 			longitude = Intent.GetDoubleExtra ("longitude", 0);
 			numberDistance = Intent.GetIntExtra ("distance", 0);
+			favList = Intent.GetStringArrayListExtra ("favoriteList");
 			allCabins = new Dictionary<string,CabinModel> ();
 			SetTitleActionBar ("Cabins near");
 			ClickHandler ();
 			cabinsLayout = FindViewById<LinearLayout> (Resource.Id.FlyContent);
 			ThreadPool.QueueUserWorkItem (o => GetData ());			
-
+			MyPosition (new LatLng (latitude, longitude));
 
 
 		}
 
 		public void GetData ()
-		{			
+		{		
 			var route = new RouteGenerator ();
 			var baseService = new BaseService<Dictionary<string,CabinModel>> ();
 			try {				
@@ -61,6 +63,7 @@ namespace LaCabana
 			}
 			RunOnUiThread (() => {
 				foreach (var cabin in allCabins) {
+					
 					Org.W3c.Dom.IDocument doc = route.GetDocument (new LatLng (latitude, longitude), new LatLng (cabin.Value.Latitude, cabin.Value.Longitude), RouteGenerator.Mode_driving);
 					float distance = route.GetDistanceValue (doc) / 1000;
 					if (distance > numberDistance) {
@@ -80,6 +83,11 @@ namespace LaCabana
 						if (cabin.Value.Photo != null) {
 							var picture = Decode (cabin.Value.Photo [0]);
 							cabinPhoto.SetImageBitmap (picture);
+						}
+						if (favList != null) {
+							if (favList.Any (s => cabin.Key.Contains (s))) {
+								cabinFav.SetImageResource (Resource.Drawable.ic_heart);
+							}
 						}
 						cabinFav.Click += delegate {
 							

@@ -178,6 +178,11 @@ namespace LaCabana
 						intent.PutExtra ("latitude", myLocation.Latitude);
 						intent.PutExtra ("longitude", myLocation.Longitude);
 						intent.PutExtra ("distance", seekBar.Progress);
+						if (user.FavoriteList != null) {
+							var favlist = user.FavoriteList.Values.ToList ();
+							intent.PutStringArrayListExtra ("favoriteList", favlist);
+						
+						}
 						StartActivity (intent);
 					});
 					alert.SetNegativeButton ("Cancel", delegate {
@@ -198,11 +203,21 @@ namespace LaCabana
 					drawerLayout.CloseDrawer ((int)GravityFlags.Start);
 				} else {	
 					if (user.Id != null) {
-						drawerLayout.CloseDrawer ((int)GravityFlags.Start);
-						var intent = new Intent (this, typeof(FavoritesActivity));
-						intent.PutExtra ("latitude", myLocation.Latitude);
-						intent.PutExtra ("longitude", myLocation.Longitude);
-						StartActivity (intent);
+//						var urlUpdate = string.Format ("users/{0}", user.Id);
+//						var baseService = new BaseService<UsersModel> ();
+//						var favId = (baseService.Get (urlUpdate));
+						if (user.FavoriteList == null) {
+							Toast.MakeText (this, "Nu aveti nicio cabana favorita", ToastLength.Short).Show ();
+							drawerLayout.CloseDrawer ((int)GravityFlags.Start);
+						} else {	
+							drawerLayout.CloseDrawer ((int)GravityFlags.Start);
+							var intent = new Intent (this, typeof(FavoritesActivity));
+							var favlist = user.FavoriteList.Values.ToList ();
+							intent.PutExtra ("latitude", myLocation.Latitude);
+							intent.PutExtra ("longitude", myLocation.Longitude);
+							intent.PutStringArrayListExtra ("favoriteList", favlist);
+							StartActivity (intent);
+						}
 					} else {
 						Toast.MakeText (this, "Please login for select this page", ToastLength.Short).Show ();
 						drawerLayout.CloseDrawer ((int)GravityFlags.Start);
@@ -284,7 +299,12 @@ namespace LaCabana
 			};
 		}
 
-
+		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
+		{
+			if ((requestCode == 1) && (resultCode == Result.Ok)) {	
+				var a = 2;
+			}
+		}
 
 	}
 }

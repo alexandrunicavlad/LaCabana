@@ -3,4 +3,4 @@
       @color/blue_dark_btn
     </item><item name="android:showDividers">none</item><item name="background">
       @color/blue_dark_btn
-    </item></style></resources>
+    </item></style><style name="NoActionBar" parent="@style/Theme.AppCompat.Light.DarkActionBar"><item name="android:windowActionBar">false</item><item name="android:windowNoTitle">true</item></style></resources>

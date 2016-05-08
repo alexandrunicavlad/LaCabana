@@ -25,6 +25,8 @@ namespace LaCabana
 		private double longitude;
 		private int numberDistance;
 		private LinearLayout cabinsLayout;
+		private bool notFav = false;
+		private IList<String> favList;
 
 		protected override void OnCreate (Bundle bundle)
 		{			
@@ -39,6 +41,7 @@ namespace LaCabana
 			latitude = Intent.GetDoubleExtra ("latitude", 0);
 			longitude = Intent.GetDoubleExtra ("longitude", 0);
 			numberDistance = Intent.GetIntExtra ("distance", 0);
+			favList = Intent.GetStringArrayListExtra ("favoriteList");
 			allCabins = new Dictionary<string,CabinModel> ();
 			SetTitleActionBar ("Favorites");
 			ClickHandler ();
@@ -53,19 +56,19 @@ namespace LaCabana
 		{
 			var route = new RouteGenerator ();
 			var baseService1 = new BaseService<CabinModel> ();
-			var user = DatabaseServices.GetAllUsers ();
-			var urlUpdate = string.Format ("users/{0}", user.Id);
-			var baseService = new BaseService<UsersModel> ();
-			try {				
-				var favId = (baseService.Get (urlUpdate));
-				foreach (var favorit in favId.FavoriteList) {
-					var cabama = baseService1.Get ("cabins/" + favorit.Value);
-					allCabins.Add (favorit.Value, cabama);
+
+			try {	
+				foreach (var favorit in favList) {
+					var cabama = baseService1.Get ("cabins/" + favorit);
+					allCabins.Add (favorit, cabama);
 				}
+				
 			} catch (Exception e) {
 				Toast.MakeText (this, "A dat eroare", ToastLength.Short).Show ();
 			}
+
 			RunOnUiThread (() => {
+				
 				foreach (var cabin in allCabins) {
 					Org.W3c.Dom.IDocument doc = route.GetDocument (new LatLng (latitude, longitude), new LatLng (cabin.Value.Latitude, cabin.Value.Longitude), RouteGenerator.Mode_driving);
 					float distance = route.GetDistanceValue (doc) / 1000;							

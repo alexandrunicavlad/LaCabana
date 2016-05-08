@@ -29,6 +29,14 @@ namespace LaCabana.Services
 
 		public override void OnCreate (SQLiteDatabase db)
 		{
+			string databasecreate = "CREATE TABLE IF NOT EXISTS " + "user" + "(" +
+			                        "Id " + "text, " +
+			                        "Username " + "text, " +
+			                        "Password " + "text, " +
+			                        "Email " + "text, " +
+			                        "ProfilePhoto " + "text, " +
+			                        "FavoriteList " + "text);";   
+			db.ExecSQL (databasecreate);
 		}
 
 		public override void OnUpgrade (SQLiteDatabase db, int oldVersion, int newVersion)
@@ -44,6 +52,13 @@ namespace LaCabana.Services
 			values.Put ("Password", user.Password);
 			values.Put ("Email", user.Email);
 			values.Put ("ProfilePhoto", user.ProfilePhoto);
+			if (user.FavoriteList != null) {
+				string newFav = "";
+				foreach (var fav in user.FavoriteList.Values) {
+					newFav = string.Format ("{0}{1},", newFav, fav);
+				}
+				values.Put ("FavoriteList", newFav);
+			}
 			db.Insert ("user", null, values);			
 		}
 
@@ -121,15 +136,6 @@ namespace LaCabana.Services
 		
 		}
 
-		//		public void InsertFavorites (string fav)
-		//		{
-		//			var db = GetDatabase ();
-		//			var values = new ContentValues ();
-		//			var user = GetAllUsers ();
-		//			user.FavoritesList.Add (fav);
-		//			values.Put ("FavoritesList", user.FavoritesList);
-		//			db.Update ("user", values, "Id=" + user.Id, null);
-		//		}
 
 		public UsersModel GetAllUsers ()
 		{
@@ -141,13 +147,28 @@ namespace LaCabana.Services
 				var cursor = db.RawQuery (query, null);
 				if (cursor.MoveToFirst ()) {
 					do {
+						var ad = cursor.GetString (5);
+						var position = ad.IndexOf (",");
+						int j = 0;
+						var dict = new Dictionary<string,string> ();
+						for (int i = 0; i < ad.Length; i++) {
+							if (ad [i] == ',') {								
+								var newAd = ad.Substring (j, i - j);
+								j = i + 1;
+								dict.Add (i.ToString (), newAd);
+							}
+						}
 						var account = new UsersModel () {
 							Id = cursor.GetString (0),
 							Username = cursor.GetString (1),
 							Password = cursor.GetString (2),
 							Email = cursor.GetString (3),
-							ProfilePhoto = cursor.GetString (4)
+							ProfilePhoto = cursor.GetString (4),
+							FavoriteList = dict
+
 						};
+
+
 						users = account;
 					} while (cursor.MoveToNext ());
 				}

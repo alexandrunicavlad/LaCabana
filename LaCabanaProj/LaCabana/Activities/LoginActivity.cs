@@ -87,6 +87,7 @@ namespace LaCabana
 						model.Id = item.Key;
 						model.Password = item.Value.Password;
 						model.Username = item.Value.Username;
+						model.FavoriteList = item.Value.FavoriteList;
 						//var abc = DatabaseServices.GetAllUsers ();
 						DatabaseServices.InsertUsername (model);
 						StartActivity (typeof(BasicMapDemoActivity));
