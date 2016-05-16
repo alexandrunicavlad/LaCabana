@@ -26,7 +26,9 @@ namespace LaCabana
 		private double longitude;
 		private int numberDistance;
 		private LinearLayout cabinsLayout;
+		private RelativeLayout loading;
 		private IList<string> favList;
+		private ScrollView scrollView;
 
 		protected override void OnCreate (Bundle bundle)
 		{			
@@ -45,6 +47,10 @@ namespace LaCabana
 			allCabins = new Dictionary<string,CabinModel> ();
 			SetTitleActionBar ("Cabins near");
 			ClickHandler ();
+			loading = FindViewById<RelativeLayout> (Resource.Id.main_loading);
+			scrollView = FindViewById<ScrollView> (Resource.Id.ScrollList);
+			loading.Visibility = ViewStates.Visible;
+			scrollView.Visibility = ViewStates.Gone;
 			cabinsLayout = FindViewById<LinearLayout> (Resource.Id.FlyContent);
 			ThreadPool.QueueUserWorkItem (o => GetData ());			
 			MyPosition (new LatLng (latitude, longitude));
@@ -117,6 +123,8 @@ namespace LaCabana
 					Toast.MakeText (this, "Nu exista cabane la distanta de ...", ToastLength.Short).Show ();
 					OnBackPressed ();
 				}
+				loading.Visibility = ViewStates.Gone;
+				scrollView.Visibility = ViewStates.Visible;
 			});
 		}
 	}
