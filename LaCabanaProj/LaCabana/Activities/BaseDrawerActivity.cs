@@ -9,7 +9,6 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Support.V4.Widget;
-using Android.Support.Design.Widget;
 using Android.Support.V7.Widget;
 using Android.Graphics;
 using Android.Views.InputMethods;
@@ -24,7 +23,6 @@ namespace LaCabana
 	public class BaseDrawerActivity : BaseActivity
 	{
 		protected DrawerLayout drawerLayout;
-		protected NavigationView navigationView;
 		protected RelativeLayout loading;
 		private bool _shouldGoInvisible = true;
 		private BitmapFactory.Options _placeHolderOptions;

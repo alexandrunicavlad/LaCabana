@@ -12,7 +12,6 @@ using Android.Views;
 using Android.Widget;
 using Android.Support.V4.App;
 using Android.Support.V4.Widget;
-using Android.Support.Design.Widget;
 using Android.Graphics.Drawables;
 using Android.Graphics;
 using Android.Views.InputMethods;
@@ -30,7 +29,6 @@ namespace LaCabana
 		protected ImageButton SearchButton;
 		protected ImageButton EditButton;
 		protected DrawerLayout drawerLayout;
-		protected NavigationView navigationView;
 		protected RelativeLayout loading;
 		private bool _shouldGoInvisible = true;
 		private BitmapFactory.Options _placeHolderOptions;

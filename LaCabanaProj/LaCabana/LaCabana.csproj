@@ -123,6 +123,7 @@
     <Compile Include="Activities\FavoritesActivity.cs" />
     <Compile Include="Models\ImageModel.cs" />
     <Compile Include="Helpers\FormUpload.cs" />
+    <Compile Include="Helpers\ImageAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -292,6 +293,10 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_heart_outline.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_heart_outline.png" />
     <AndroidResource Include="Resources\layout\slider_range.axml" />
+    <AndroidResource Include="Resources\layout\favorite_layout.axml" />
+    <AndroidResource Include="Resources\layout\favorite_card.xml" />
+    <AndroidResource Include="Resources\drawable\layout_bkg.xml" />
+    <AndroidResource Include="Resources\drawable\ic_no_photo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\menu\" />

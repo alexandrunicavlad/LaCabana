@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_bkg">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:id="@+id/cabinImage"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="3dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:id="@+id/CabinLayout"
+            android:paddingBottom="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Cabana trei"
+                android:textSize="22sp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/cabinName"
+                android:layout_above="@+id/cabinPrice"
+                android:layout_marginBottom="15dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="120 Lei"
+                android:textSize="12sp"
+                android:drawableLeft="@drawable/ic_map_marker"
+                android:gravity="center_vertical"
+                android:id="@+id/cabinPrice"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 km"
+                android:textSize="12sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@drawable/ic_map_marker"
+                android:gravity="center_vertical"
+                android:id="@+id/cabinDistance"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CabinLayout"
+            android:weightSum="0.9"
+            android:padding="10dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/cabinInfo"
+                android:layout_weight="0.3"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_home_variant" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/cabinDirection"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:src="@drawable/ic_directions"
+                android:layout_centerHorizontal="true" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/cabinFavorite"
+                android:layout_weight="0.3"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_heart" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

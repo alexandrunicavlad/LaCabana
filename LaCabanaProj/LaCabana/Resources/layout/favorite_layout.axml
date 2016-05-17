@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:id="@+id/drawerLayout"
+    android:background="#ffffffff">
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/image_recycler"
+        android:layout_margin="5dp"
+        android:numColumns="2"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:verticalScrollbarPosition="right"
+        android:scrollbars="vertical"
+        android:background="@color/white"
+        android:visibility="visible" />
+    <include
+        android:id="@+id/main_loading_recycler"
+        android:visibility="gone"
+        layout="@layout/loading" />
+    <LinearLayout
+        android:id="@+id/FlyMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="100dp"
+        android:background="#000">
+        <include
+            layout="@layout/home" />
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
