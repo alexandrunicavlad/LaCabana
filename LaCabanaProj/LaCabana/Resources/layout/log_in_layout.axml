@@ -7,10 +7,15 @@
     android:gravity="center"
     android:id="@+id/drawerLayout"
     android:background="#ffffffff">
+    <include
+        layout="@layout/my_account"
+        android:visibility="gone"
+        android:id="@+id/my_account_layout" />
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:visibility="visible"
         android:id="@+id/FlyContent">
         <LinearLayout
             android:layout_width="match_parent"

@@ -314,6 +314,7 @@
     <AndroidResource Include="Resources\drawable-mdpi\ic_details.png" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_price.png" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_rating.png" />
+    <AndroidResource Include="Resources\layout\my_account.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\menu\" />

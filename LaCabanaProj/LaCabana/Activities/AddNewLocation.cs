@@ -190,7 +190,10 @@ namespace LaCabana
 
 		private void SaveLocation ()
 		{		
-			
+			if (cabin.IdAdded == null || cabin.IdAdded.Equals ("")) {
+				Toast.MakeText (this, "Enter your name or your email", ToastLength.Short).Show ();
+				return;
+			}
 			if (cabin.Name == null || cabin.Name.Equals ("")) {
 				Toast.MakeText (this, "Enter a Cabin's name", ToastLength.Short).Show ();
 				return;
@@ -223,15 +226,6 @@ namespace LaCabana
 				Finish ();
 			} catch (Exception e) {
 				var a = 0;
-			}
-			if (cabin.PhoneType.Equals ("Select")) {
-				cabin.PhoneType = stringPhone [1];
-			}
-			if (cabin.EmailType.Equals ("Select")) {
-				cabin.EmailType = stringMail [1];
-			}
-			if (cabin.EmailType.Equals ("Select")) {
-				cabin.PriceType = stringPrice [1];
 			}
 		}
 

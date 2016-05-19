@@ -48,6 +48,8 @@ namespace LaCabana
 			var priceText = FindViewById<TextView> (Resource.Id.priceText);
 			var destailsText = FindViewById<TextView> (Resource.Id.detailsText);
 			var directionText = FindViewById<ImageView> (Resource.Id.cabinDirection);
+			var phoneLayout = FindViewById<LinearLayout> (Resource.Id.phoneLayout1);
+			var emailLayout = FindViewById<LinearLayout> (Resource.Id.emailLayout);
 
 			var route = new RouteGenerator ();
 
@@ -77,6 +79,22 @@ namespace LaCabana
 				var latitude = Intent.GetDoubleExtra ("latitude", 0);
 				var longitude = Intent.GetDoubleExtra ("longitude", 0);
 
+				phoneLayout.Click += delegate {
+					var uri = Android.Net.Uri.Parse (string.Format ("tel:{0}", cabin.Phone));
+					var intent = new Intent (Intent.ActionDial, uri);
+					StartActivity (intent);
+				};
+				emailLayout.Click += delegate {
+					var email = new Intent (Android.Content.Intent.ActionSend);
+					email.PutExtra (Android.Content.Intent.ExtraEmail,
+						new string[]{ "", cabin.Email });
+
+					email.PutExtra (Android.Content.Intent.ExtraSubject, string.Format ("Hello Cabin {0}", cabin.Name));
+
+					email.PutExtra (Android.Content.Intent.ExtraText, string.Format ("Hello Cabin {0}", cabin.Name));
+					email.SetType ("message/rfc822");
+					StartActivity (email);
+				};
 				Org.W3c.Dom.IDocument doc = route.GetDocument (new LatLng (latitude, longitude), new LatLng (cabin.Latitude, cabin.Longitude), RouteGenerator.Mode_driving);
 				streetText.Text = route.GetEndAddress (doc);
 				directionText.Click += delegate {

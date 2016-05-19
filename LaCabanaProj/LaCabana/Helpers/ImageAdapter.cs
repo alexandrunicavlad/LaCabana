@@ -4,6 +4,7 @@ using Android.Content;
 using System.Collections.Generic;
 using Android.Views;
 using Android.Gms.Maps.Model;
+using Android.Graphics;
 
 namespace LaCabana
 {
@@ -13,13 +14,15 @@ namespace LaCabana
 		List<CabinModel> allCabins;
 		double _latitude;
 		double _longitude;
+		IList<String> favLists;
 
-		public ImageAdapter (Context c, List<CabinModel> cabins, double latitude, double longitude)
+		public ImageAdapter (Context c, List<CabinModel> cabins, double latitude, double longitude, IList<String> favList)
 		{
 			context = c;
 			allCabins = cabins;
 			_latitude = latitude;
 			_longitude = longitude;
+			favLists = favList;
 		}
 
 		public override int Count {
@@ -40,22 +43,46 @@ namespace LaCabana
 		{
 			var route = new RouteGenerator ();
 			var item = allCabins [position];
+			var item1 = favLists [position];
 			View itemView = LayoutInflater.From (parent.Context).Inflate (Resource.Layout.favorite_card, parent, false);
 			var cabinName = itemView.FindViewById<TextView> (Resource.Id.cabinName);
 			var cabinPrice = itemView.FindViewById<TextView> (Resource.Id.cabinPrice);
 			var cabinDistance = itemView.FindViewById<TextView> (Resource.Id.cabinDistance);
 			var cabinPhoto = itemView.FindViewById<ImageView> (Resource.Id.cabinImage);
+			var cabinInfo = itemView.FindViewById<ImageView> (Resource.Id.cabinInfo);
+			var cabinDirection = itemView.FindViewById<ImageView> (Resource.Id.cabinDirection);
+			var cabinFav = itemView.FindViewById<ImageView> (Resource.Id.cabinFavorite);
 			cabinName.Text = item.Name;
-			cabinPrice.Text = item.Price.ToString ();
+			cabinPrice.Text = item.Price.ToString () + " " + item.PriceType;
 			Org.W3c.Dom.IDocument doc = route.GetDocument (new LatLng (_latitude, _longitude), new LatLng (item.Latitude, item.Longitude), RouteGenerator.Mode_driving);
 			float distance = route.GetDistanceValue (doc) / 1000;
 			cabinDistance.Text = String.Format ("{0} Km", distance.ToString ("0.0"));
 			if (item.Photo == null) {
-				cabinPhoto.SetImageResource (Resource.Drawable.ic_no_photo);
-				cabinPhoto.SetScaleType (ImageView.ScaleType.Center);
+				cabinPhoto.SetImageResource (Resource.Drawable.cabana_photo);
+				cabinPhoto.SetScaleType (ImageView.ScaleType.CenterCrop);
 			} else {				
 
 			}
+
+			cabinInfo.Click += delegate {
+				var intent = new Intent (context, typeof(CabinInfo));				
+				intent.PutExtra ("marker", item1);
+				intent.PutExtra ("latitude", _latitude);
+				intent.PutExtra ("longitude", _longitude);
+				context.StartActivity (intent);
+			};
+			cabinDirection.Click += delegate {
+				var newuri = string.Format ("http://maps.google.com/maps?saddr={0},{1}&daddr={2},{3}", _latitude.ToString ("00.0000000", System.Globalization.CultureInfo.InvariantCulture), 
+					             _longitude.ToString ("00.0000000", System.Globalization.CultureInfo.InvariantCulture),
+					             item.Latitude.ToString ("00.0000000", System.Globalization.CultureInfo.InvariantCulture), 
+					             item.Longitude.ToString ("00.0000000", System.Globalization.CultureInfo.InvariantCulture));
+
+				Android.Net.Uri gmmIntentUri = Android.Net.Uri.Parse (newuri);
+				Intent mapIntent = new Intent (Intent.ActionView, gmmIntentUri);
+				mapIntent.SetPackage ("com.google.android.apps.maps");
+				context.StartActivity (mapIntent);
+			};
+
 			return itemView;
 		}
 

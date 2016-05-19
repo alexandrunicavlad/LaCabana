@@ -33,10 +33,15 @@ namespace LaCabana
 			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
 			SetTitleActionBar ("Sign In");
 
+			var myAccountlayout = FindViewById<RelativeLayout> (Resource.Id.my_account_layout);
+			var loginLayout = FindViewById<LinearLayout> (Resource.Id.FlyContent);
 
 			DatabaseServices = new DatabaseServices (this);
-//			var allUsers = DatabaseServices.GetAllUsers ();
-
+			var allUsers = DatabaseServices.GetAllUsers ();
+			if (allUsers.Email != null) {
+				loginLayout.Visibility = ViewStates.Gone;
+				myAccountlayout.Visibility = ViewStates.Visible;
+			}
 			var signUp = FindViewById<TextView> (Resource.Id.signUpButtonDetails);
 			signUp.Click += delegate {
 				StartActivityForResult (typeof(SignUpActivity), 0);    

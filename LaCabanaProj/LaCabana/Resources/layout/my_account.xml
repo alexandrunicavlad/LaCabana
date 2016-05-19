@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:background="#ffffffff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="40dp">
+            <ImageView
+                android:layout_width="30dp"
+                android:id="@+id/accountImage"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ic_account_circle" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/accountImage"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Account name"
+                    android:id="@+id/accountName"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/accountText"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/accountName"
+                    android:textSize="12sp"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="@color/gray_health_text"
+                    android:includeFontPadding="false"
+                    android:linksClickable="false"
+                    android:background="@drawable/edittextcustom_textfield_default_holo_light" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="40dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_account" />
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="Name"
+                android:id="@+id/CabinEditText"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_health_text"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:background="@drawable/edittextcustom_textfield_default_holo_light" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="40dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ic_camera" />
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_vertical"
+                android:background="#ededed"
+                android:src="@drawable/ic_camera"
+                android:id="@+id/addPhoto" />
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="UPLOAD"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:background="@color/gray_add_edit_layouts"
+                android:id="@+id/uploadButton" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="40dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ic_email" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:hint="Email"
+                    android:id="@+id/emailEditText"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_health_text"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:inputType="textEmailAddress"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:minWidth="100dp"
+                    android:background="@drawable/edittextcustom_textfield_default_holo_light" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/red"
+        android:text="Save"
+        android:id="@+id/add_button_location"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

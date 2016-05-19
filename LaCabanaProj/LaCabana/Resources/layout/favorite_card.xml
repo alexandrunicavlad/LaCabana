@@ -13,7 +13,8 @@
             android:id="@+id/cabinImage"
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
-            android:layout_marginTop="3dp" />
+            android:layout_marginTop="3dp"
+            android:scaleType="centerCrop" />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="170dp"
@@ -24,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="Cabana trei"
-                android:textSize="22sp"
+                android:textSize="26sp"
                 android:layout_marginLeft="10dp"
                 android:id="@+id/cabinName"
                 android:layout_above="@+id/cabinPrice"
@@ -32,10 +33,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:text="120 Lei"
                 android:textSize="12sp"
-                android:drawableLeft="@drawable/ic_map_marker"
+                android:drawableLeft="@drawable/ic_price"
                 android:gravity="center_vertical"
                 android:id="@+id/cabinPrice"
                 android:layout_marginLeft="5dp"
@@ -52,7 +53,7 @@
                 android:gravity="center_vertical"
                 android:id="@+id/cabinDistance"
                 android:layout_alignParentBottom="true"
-                android:textColor="@color/black" />
+                android:textColor="@color/white" />
         </RelativeLayout>
         <LinearLayout
             android:layout_width="match_parent"

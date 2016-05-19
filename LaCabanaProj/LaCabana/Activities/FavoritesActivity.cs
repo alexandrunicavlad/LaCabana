@@ -75,7 +75,7 @@ namespace LaCabana
 			}
 
 			RunOnUiThread (() => {
-				var adapter = new ImageAdapter (this, allCabins, latitude, longitude);
+				var adapter = new ImageAdapter (this, allCabins, latitude, longitude, favList);
 				gridView.Adapter = adapter;
 				gridView.Visibility = ViewStates.Visible;
 				loading.Visibility = ViewStates.Gone;
