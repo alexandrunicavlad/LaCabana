@@ -71,7 +71,7 @@ namespace LaCabana
 				}
 				
 			} catch (Exception e) {
-				Toast.MakeText (this, "A dat eroare", ToastLength.Short).Show ();
+				//Toast.MakeText (this, "A dat eroare", ToastLength.Short).Show ();
 			}
 
 			RunOnUiThread (() => {

@@ -64,8 +64,9 @@ namespace LaCabana
 			var baseService = new BaseService<Dictionary<string,CabinModel>> ();
 			try {				
 				allCabins = (baseService.Get ("cabins"));
+				baseService.Face ();
 			} catch (Exception e) {
-				Toast.MakeText (this, "A dat eroare", ToastLength.Short).Show ();
+				//Toast.MakeText (this, "A dat eroare", ToastLength.Short).Show ();
 			}
 			RunOnUiThread (() => {
 				PutAllMarker ();

@@ -38,6 +38,7 @@ namespace LaCabana
 		private CabinModel cabin;
 		private List<String> stringPhone;
 		private List<String> stringMail;
+		private List<String> stringPrice;
 		private GoogleMap _googleMap;
 		private string tag = "MainActivity";
 		private double _latitude;
@@ -66,7 +67,15 @@ namespace LaCabana
 			HideKeyboard (this);
 			var phoneSpinner = FindViewById<Spinner> (Resource.Id.phoneSpinner);
 			var emailSpinner = FindViewById<Spinner> (Resource.Id.emailSpinner);
+			var priceSpinner = FindViewById<Spinner> (Resource.Id.priceSpinner);
+			var detailsEdit = FindViewById<EditText> (Resource.Id.DetailsEditText);
 			var account = FindViewById<EditText> (Resource.Id.accountText);
+			var price = FindViewById<EditText> (Resource.Id.priceEditText);
+			RatingBar ratingbar = FindViewById<RatingBar> (Resource.Id.ratingbar);
+
+			ratingbar.RatingBarChange += (o, e) => {
+				cabin.Rating = ratingbar.Progress;
+			};
 			locationEdit = FindViewById<TextView> (Resource.Id.locationEditText);
 			mapLayout = FindViewById<LinearLayout> (Resource.Id.MapContent);
 
@@ -78,18 +87,23 @@ namespace LaCabana
 			photoList = new List<string> ();
 			stringPhone = new List<String> (){ "Select", "Mobile", "Home", "Work" };
 			stringMail = new List<String> (){ "Select", "Custom", "Gmail", "Work" };
+			stringPrice = new List<String> (){ "Select", "Lei", "Euro", "USD" };
 
 			var mapFragment = (SupportMapFragment)SupportFragmentManager.FindFragmentById (Resource.Id.map);
 			mapFragment.GetMapAsync (this);
 
 			var adapter = new FontArrayAdapter<string> (this, Android.Resource.Layout.SimpleSpinnerItem, stringPhone);
 			var adapter1 = new FontArrayAdapter<string> (this, Android.Resource.Layout.SimpleSpinnerItem, stringMail);
+			var adapter2 = new FontArrayAdapter<string> (this, Android.Resource.Layout.SimpleSpinnerItem, stringPrice);
 			adapter.SetDropDownViewResource (Android.Resource.Layout.SimpleSpinnerDropDownItem);
 			adapter1.SetDropDownViewResource (Android.Resource.Layout.SimpleSpinnerDropDownItem);
+			adapter2.SetDropDownViewResource (Android.Resource.Layout.SimpleSpinnerDropDownItem);
 			phoneSpinner.Adapter = adapter;
 			phoneSpinner.SetSelection (0);
 			emailSpinner.Adapter = adapter1;
 			emailSpinner.SetSelection (0);
+			priceSpinner.Adapter = adapter2;
+			priceSpinner.SetSelection (0);
 
 			photoShow = FindViewById<ImageView> (Resource.Id.addPhoto);
 			photoAdd = FindViewById<ImageView> (Resource.Id.photoShow);
@@ -98,8 +112,20 @@ namespace LaCabana
 			saveButton.Click += delegate {
 				SaveLocation ();
 			};
+			if (account.Text != "") {
+				cabin.IdAdded = account.Text;
+			}
 			account.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
-				
+				cabin.IdAdded = account.Text;
+			};
+
+			price.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
+				var floa = float.Parse (price.Text);
+				cabin.Price = floa;
+			};
+
+			detailsEdit.TextChanged += delegate {
+				cabin.Details = detailsEdit.Text;
 			};
 
 			emailSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
@@ -108,6 +134,10 @@ namespace LaCabana
 
 			phoneSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
 				cabin.PhoneType = stringPhone [e.Position];
+			};
+
+			priceSpinner.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) => {
+				cabin.PriceType = stringPrice [e.Position];
 			};
 
 			FindViewById<Button> (Resource.Id.uploadButton).Click += delegate {
@@ -148,18 +178,19 @@ namespace LaCabana
 				_uri = data.Data;
 				photoAdd.SetImageURI (_uri);
 				var bitmap = MediaStore.Images.Media.GetBitmap (this.ContentResolver, _uri);
-				MemoryStream stream = new MemoryStream ();
-				var resizebit = Bitmap.CreateScaledBitmap (bitmap, 100, 100, false);
-				resizebit.Compress (Bitmap.CompressFormat.Png, 100, stream);
-				resizebit.Recycle ();
-				byte[] byteArray = stream.ToArray ();
-				String imageFile = Base64.EncodeToString (byteArray, Base64.Default);
-				photoList.Add (imageFile);
+//				MemoryStream stream = new MemoryStream ();
+//				var resizebit = Bitmap.CreateScaledBitmap (bitmap, 100, 100, false);
+//				resizebit.Compress (Bitmap.CompressFormat.Png, 100, stream);
+//				resizebit.Recycle ();
+//				byte[] byteArray = stream.ToArray ();
+//				String imageFile = Base64.EncodeToString (byteArray, Base64.Default);
+//				photoList.Add (imageFile);
 			}
 		}
 
 		private void SaveLocation ()
-		{			
+		{		
+			
 			if (cabin.Name == null || cabin.Name.Equals ("")) {
 				Toast.MakeText (this, "Enter a Cabin's name", ToastLength.Short).Show ();
 				return;
@@ -173,9 +204,18 @@ namespace LaCabana
 				Toast.MakeText (this, "Please upload photo", ToastLength.Short).Show ();
 				return;
 			}
-
-			cabin.Price = 120f;
-			cabin.Rating = 4;
+			if (cabin.Rating == 0) {
+				cabin.Rating = 3;
+			}
+			if (cabin.PhoneType.Equals ("Select")) {
+				cabin.PhoneType = stringPhone [1];
+			}
+			if (cabin.EmailType.Equals ("Select")) {
+				cabin.EmailType = stringMail [1];
+			}
+			if (cabin.PriceType.Equals ("Select")) {
+				cabin.PriceType = stringPrice [1];
+			}
 			var baseService = new BaseService<CabinModel> ();
 			try {
 				baseService.Push (cabin, "cabins");
@@ -189,6 +229,9 @@ namespace LaCabana
 			}
 			if (cabin.EmailType.Equals ("Select")) {
 				cabin.EmailType = stringMail [1];
+			}
+			if (cabin.EmailType.Equals ("Select")) {
+				cabin.PriceType = stringPrice [1];
 			}
 		}
 

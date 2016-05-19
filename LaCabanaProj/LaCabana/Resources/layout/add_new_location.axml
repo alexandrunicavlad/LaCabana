@@ -238,6 +238,110 @@
                             android:background="@drawable/edittextcustom_textfield_default_holo_light" />
                     </LinearLayout>
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="40dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/ic_price" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:hint="Price"
+                            android:id="@+id/priceEditText"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray_health_text"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:inputType="numberDecimal"
+                            android:gravity="center_vertical"
+                            android:layout_marginRight="20dp"
+                            android:minWidth="100dp"
+                            android:background="@drawable/edittextcustom_textfield_default_holo_light" />
+                        <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/priceSpinner"
+                            android:layout_marginTop="10dp"
+                            android:minWidth="100dp"
+                            android:background="@drawable/edittextcustom_textfield_default_holo_light" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="40dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/ic_rating" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <RatingBar
+                            android:id="@+id/ratingbar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:numStars="5"
+                            android:stepSize="1.0" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="40dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/ic_details" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:hint="Details"
+                            android:id="@+id/DetailsEditText"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray_health_text"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:minHeight="100dp"
+                            android:inputType="textEmailAddress"
+                            android:gravity="center_vertical"
+                            android:layout_marginRight="20dp"
+                            android:minWidth="100dp"
+                            android:background="@drawable/edittextcustom_textfield_default_holo_light" />
+                    </LinearLayout>
+                </LinearLayout>
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="50dp"

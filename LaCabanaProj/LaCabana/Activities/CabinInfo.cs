@@ -46,12 +46,15 @@ namespace LaCabana
 			var emailType = FindViewById<TextView> (Resource.Id.emailType);
 			var streetText = FindViewById<TextView> (Resource.Id.streetText);
 			var priceText = FindViewById<TextView> (Resource.Id.priceText);
+			var destailsText = FindViewById<TextView> (Resource.Id.detailsText);
+			var directionText = FindViewById<ImageView> (Resource.Id.cabinDirection);
+
 			var route = new RouteGenerator ();
 
 			if (marker != null) {
 				try {
 					cabin = (baseService.Get (string.Format ("cabins/{0}", marker)));	
-					GetData ("Lora");
+					//GetData ("Lora");
 				} catch (Exception e) {
 					var a = 0;
 				}
@@ -62,15 +65,32 @@ namespace LaCabana
 				phoneType1.Text = cabin.PhoneType;
 				emailText.Text = cabin.Email;
 				emailType.Text = cabin.EmailType;
-				priceText.Text = cabin.Price.ToString ();
+				priceText.Text = string.Format ("{0} {1}", cabin.Price.ToString (), cabin.PriceType);
+				destailsText.Text = cabin.Details;
 				if (cabin.Photo != null) {
 					var picture = Decode (cabin.Photo [0]);
 					cabinPhoto.SetImageBitmap (picture);
+				} else {
+					cabinPhoto.SetImageResource (Resource.Drawable.cabana_photo);
+					cabinPhoto.SetScaleType (ImageView.ScaleType.CenterCrop);
 				}
 				var latitude = Intent.GetDoubleExtra ("latitude", 0);
 				var longitude = Intent.GetDoubleExtra ("longitude", 0);
+
 				Org.W3c.Dom.IDocument doc = route.GetDocument (new LatLng (latitude, longitude), new LatLng (cabin.Latitude, cabin.Longitude), RouteGenerator.Mode_driving);
 				streetText.Text = route.GetEndAddress (doc);
+				directionText.Click += delegate {
+					
+					var newuri = string.Format ("http://maps.google.com/maps?saddr={0},{1}&daddr={2},{3}", latitude.ToString ("00.0000000", System.Globalization.CultureInfo.InvariantCulture), 
+						             longitude.ToString ("00.0000000", System.Globalization.CultureInfo.InvariantCulture),
+						             cabin.Latitude.ToString ("00.0000000", System.Globalization.CultureInfo.InvariantCulture), 
+						             cabin.Longitude.ToString ("00.0000000", System.Globalization.CultureInfo.InvariantCulture));
+					
+					Android.Net.Uri gmmIntentUri = Android.Net.Uri.Parse (newuri);
+					Intent mapIntent = new Intent (Intent.ActionView, gmmIntentUri);
+					mapIntent.SetPackage ("com.google.android.apps.maps");
+					StartActivity (mapIntent);
+				};
 				//}
 			}
 		}

@@ -22,9 +22,15 @@ namespace LaCabana
 
 		public float Price{ get; set; }
 
+		public String PriceType{ get; set; }
+
 		public int Rating { get; set; }
 
 		public List<string> Photo{ get; set; }
+
+		public String Details { get; set; }
+
+		public String IdAdded{ get; set; }
 
 	}
 }

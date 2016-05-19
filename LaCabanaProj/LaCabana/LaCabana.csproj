@@ -124,6 +124,7 @@
     <Compile Include="Models\ImageModel.cs" />
     <Compile Include="Helpers\FormUpload.cs" />
     <Compile Include="Helpers\ImageAdapter.cs" />
+    <Compile Include="Helpers\CloudUpload.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -297,6 +298,22 @@
     <AndroidResource Include="Resources\layout\favorite_card.xml" />
     <AndroidResource Include="Resources\drawable\layout_bkg.xml" />
     <AndroidResource Include="Resources\drawable\ic_no_photo.png" />
+    <AndroidResource Include="Resources\drawable\cabana_photo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_rating.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_details.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_price.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_details.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_price.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_rating.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_details.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_price.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_rating.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_details.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_price.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_rating.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_details.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_price.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_rating.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\menu\" />

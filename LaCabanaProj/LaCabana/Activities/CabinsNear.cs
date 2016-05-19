@@ -65,7 +65,7 @@ namespace LaCabana
 			try {				
 				allCabins = (baseService.Get ("cabins"));
 			} catch (Exception e) {
-				Toast.MakeText (this, "A dat eroare", ToastLength.Short).Show ();
+				//Toast.MakeText (this, "A dat eroare", ToastLength.Short).Show ();
 			}
 			RunOnUiThread (() => {
 				foreach (var cabin in allCabins) {
@@ -82,21 +82,40 @@ namespace LaCabana
 						var cabinPhoto = view.FindViewById<ImageView> (Resource.Id.cabinImage);
 						var cabinDistance = view.FindViewById<TextView> (Resource.Id.cabinDistance);
 						var cabinFav = view.FindViewById<ImageView> (Resource.Id.favoriteImage);
+						var cabinDetails = view.FindViewById<TextView> (Resource.Id.cabinDetails);
+						var direction = view.FindViewById<TextView> (Resource.Id.destinationButton);
 						cabinName.Text = cabin.Value.Name;
 						cabinDistance.Text = String.Format ("{0} Km", distance.ToString ("0.0"));
 						cabinRating.Rating = cabin.Value.Rating;
-						cabinPrice.Text = cabin.Value.Price.ToString ();
+						cabinPrice.Text = string.Format ("{0} {1}", cabin.Value.Price.ToString (), cabin.Value.PriceType);
+						cabinDetails.Text = cabin.Value.Details;
 						if (cabin.Value.Photo != null) {
 							var picture = Decode (cabin.Value.Photo [0]);
 							cabinPhoto.SetImageBitmap (picture);
+						} else {
+							cabinPhoto.SetImageResource (Resource.Drawable.cabana_photo);
+							cabinPhoto.SetScaleType (ImageView.ScaleType.CenterCrop);
 						}
+						direction.Click += delegate {
+							var newuri = string.Format ("http://maps.google.com/maps?saddr={0},{1}&daddr={2},{3}", latitude.ToString ("00.0000000", System.Globalization.CultureInfo.InvariantCulture), 
+								             longitude.ToString ("00.0000000", System.Globalization.CultureInfo.InvariantCulture),
+								             cabin.Value.Latitude.ToString ("00.0000000", System.Globalization.CultureInfo.InvariantCulture), 
+								             cabin.Value.Longitude.ToString ("00.0000000", System.Globalization.CultureInfo.InvariantCulture));
+
+							Android.Net.Uri gmmIntentUri = Android.Net.Uri.Parse (newuri);
+							Intent mapIntent = new Intent (Intent.ActionView, gmmIntentUri);
+							mapIntent.SetPackage ("com.google.android.apps.maps");
+							StartActivity (mapIntent);
+						};
+
 						if (favList != null) {
 							if (favList.Any (s => cabin.Key.Contains (s))) {
 								cabinFav.SetImageResource (Resource.Drawable.ic_heart);
 							}
 						}
 						cabinFav.Click += delegate {
-							
+							if (favList.Contains (cabin.Key))
+								return;
 							if (userMod.Id != null) {
 								cabinFav.SetImageResource (Resource.Drawable.ic_heart);	
 								var baseService1 = new BaseService<UsersModel> ();
