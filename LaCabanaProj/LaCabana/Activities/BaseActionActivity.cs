@@ -74,9 +74,11 @@ namespace LaCabana
 			var imagecenter = imagecenterLayout.FindViewById<ImageView> (Resource.Id.account_info_profile_image);
 			if (user.ProfilePhoto == null) {
 				imagecenter.SetImageDrawable (new RoundedImage (BitmapFactory.DecodeResource (Resources, Resource.Drawable.avatarplaceholder), this, ""));
+				imagecenter.SetScaleType (ImageView.ScaleType.CenterInside);
 			} else {
 				var picture = Decode (user.ProfilePhoto);
 				imagecenter.SetImageDrawable (new RoundedImage (picture, this, ""));
+				imagecenter.SetScaleType (ImageView.ScaleType.FitXy);
 			}
 			var accountMail = imagecenterLayout.FindViewById<TextView> (Resource.Id.emailText);
 			if (user.Email == null) {
@@ -299,8 +301,8 @@ namespace LaCabana
 
 		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
 		{
-			if ((requestCode == 1) && (resultCode == Result.Ok)) {	
-				var a = 2;
+			if ((requestCode == 2) && (resultCode == Result.Canceled)) {	
+				SetProfilePicture ();
 			}
 		}
 

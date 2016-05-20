@@ -55,6 +55,14 @@ namespace LaCabana
 			var response = _client.Push ("", fav);
 		}
 
+		public void UpdateUser (T basemodel, string url)
+		{
+			var URL = string.Format ("{0} {1}", BasePath1, url);
+			TestFixtureSetUpCabana (URL);
+			var response = _client.Update ("", basemodel);
+		}
+
+
 		public void Face ()
 		{
 			var cloudinary = "lacabana";
