@@ -65,7 +65,7 @@
                 android:background="#ff00796b"
                 android:textColor="#ffffff"
                 android:gravity="center" />
-            <TextView
+            <TextView xmlns:tools="http://schemas.android.com/tools"
                 android:text="Fast sign-in if your social profile is connected"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
@@ -76,7 +76,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:textColor="#ff000000"
-                android:gravity="center" />
+                android:gravity="center"
+                tools:visibility="gone" />
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -84,29 +85,32 @@
                 android:minWidth="25px"
                 android:minHeight="25px"
                 android:layout_below="@+id/textView1">
-                <ImageView
+                <ImageView xmlns:tools="http://schemas.android.com/tools"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/twetterButton"
                     android:layout_toLeftOf="@+id/facebookButton"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="30dp"
-                    android:src="@drawable/twetter" />
-                <ImageView
+                    android:src="@drawable/twetter"
+                    tools:visibility="gone" />
+                <ImageView xmlns:tools="http://schemas.android.com/tools"
                     android:src="@drawable/facebook"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/facebookButton"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp" />
-                <ImageView
+                    android:layout_marginTop="10dp"
+                    tools:visibility="gone" />
+                <ImageView xmlns:tools="http://schemas.android.com/tools"
                     android:src="@drawable/googleplus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/facebookButton"
                     android:id="@+id/googlePlusButton"
                     android:layout_marginTop="10dp"
-                    android:layout_marginLeft="30dp" />
+                    android:layout_marginLeft="30dp"
+                    tools:visibility="gone" />
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
