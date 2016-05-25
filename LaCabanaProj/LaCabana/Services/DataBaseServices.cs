@@ -18,7 +18,7 @@ namespace LaCabana.Services
 		private const string DatabaseName = "LaCabanaDb";
 		private static Context _currentContext;
 		private SQLiteDatabase _db;
-
+		Dictionary<string,string> dict;
 
 		public DatabaseServices (Context context)
 			: base (context, DatabaseName, null, DatabaseVersion)
@@ -148,14 +148,16 @@ namespace LaCabana.Services
 				if (cursor.MoveToFirst ()) {
 					do {
 						var ad = cursor.GetString (5);
-						var position = ad.IndexOf (",");
-						int j = 0;
-						var dict = new Dictionary<string,string> ();
-						for (int i = 0; i < ad.Length; i++) {
-							if (ad [i] == ',') {								
-								var newAd = ad.Substring (j, i - j);
-								j = i + 1;
-								dict.Add (i.ToString (), newAd);
+						if (ad != null) {
+							var position = ad.IndexOf (",");
+							int j = 0;
+							dict = new Dictionary<string,string> ();
+							for (int i = 0; i < ad.Length; i++) {
+								if (ad [i] == ',') {								
+									var newAd = ad.Substring (j, i - j);
+									j = i + 1;
+									dict.Add (i.ToString (), newAd);
+								}
 							}
 						}
 						var account = new UsersModel () {
@@ -167,9 +169,10 @@ namespace LaCabana.Services
 							FavoriteList = dict
 
 						};
-
+						
 
 						users = account;
+						
 					} while (cursor.MoveToNext ());
 				}
 

@@ -31,7 +31,12 @@ namespace LaCabana
 		private RelativeLayout myAccountlayout;
 		private LinearLayout loginLayout;
 		private ImageView addPhoto;
+		private Button uploadButton;
 		private string imageFile;
+		private bool emailFail = false;
+		private bool passwordFail = false;
+		private EditText email;
+		private EditText account;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -42,8 +47,11 @@ namespace LaCabana
 			SetTitleActionBar ("Sign In");
 
 			myAccountlayout = FindViewById<RelativeLayout> (Resource.Id.my_account_layout);
+			email = myAccountlayout.FindViewById<EditText> (Resource.Id.emailEditText);
+			account = myAccountlayout.FindViewById<EditText> (Resource.Id.accountText);
 			loginLayout = FindViewById<LinearLayout> (Resource.Id.FlyContent);
 			addPhoto = myAccountlayout.FindViewById<ImageView> (Resource.Id.addPhoto);
+			uploadButton = myAccountlayout.FindViewById<Button> (Resource.Id.uploadButton);
 			DatabaseServices = new DatabaseServices (this);
 			var allUsers = DatabaseServices.GetAllUsers ();
 			if (allUsers.Email != null) {
@@ -70,37 +78,42 @@ namespace LaCabana
 
 
 			if (myaccountBool) {
-				myAccountlayout.FindViewById<ImageView> (Resource.Id.addPhoto).Click += PictureChangeClick;
-				var email = myAccountlayout.FindViewById<EditText> (Resource.Id.emailEditText);
-				var account = myAccountlayout.FindViewById<EditText> (Resource.Id.accountText);
+				uploadButton.Click += PictureChangeClick;
+
 				email.Text = allUsers.Email;
 				account.Text = allUsers.Username;
 				addPhoto.SetImageBitmap (Decode (allUsers.ProfilePhoto));
 				myAccountlayout.FindViewById<Button> (Resource.Id.add_button_location).Click += delegate {
-					UsersModel model = new UsersModel ();
-					model.Email = email.Text;
-					model.Id = allUsers.Id;
-					model.Password = allUsers.Password;
-					model.Username = account.Text;
-					model.FavoriteList = allUsers.FavoriteList;
-					if (imageFile != null) {
-						model.ProfilePhoto = imageFile;
-					} else {
-						model.ProfilePhoto = allUsers.ProfilePhoto;
-					}
-					DatabaseServices.DeleteUser ();
-					DatabaseServices.InsertUsername (model);
-					var baseserv = new BaseService<UsersModel> ();
-					var newUrl = string.Format ("users/{0}", allUsers.Id);
-					try {
-						baseserv.UpdateUser (model, newUrl);
-						OnBackPressed ();
-					} catch (Exception e) {
-						var a = 0;
-					}
-
+					ThreadPool.QueueUserWorkItem (o => SaveChanges (allUsers));
 				};
 			}
+
+		}
+
+		public void SaveChanges (UsersModel user)
+		{
+			CreateDialog (Resources.GetString (Resource.String.wait), false, true);
+			UsersModel model = new UsersModel ();
+			model.Email = email.Text;
+			model.Id = user.Id;
+			model.Password = user.Password;
+			model.Username = account.Text;
+			model.FavoriteList = user.FavoriteList;
+			if (imageFile != null) {
+				model.ProfilePhoto = imageFile;
+			} else {
+				model.ProfilePhoto = user.ProfilePhoto;
+			}
+			DatabaseServices.DeleteUser ();
+			DatabaseServices.InsertUsername (model);
+			var baseserv = new BaseService<UsersModel> ();
+			var newUrl = string.Format ("users/{0}", user.Id);
+			try {
+				baseserv.UpdateUser (model, newUrl);
+			} catch (Exception e) {
+				var a = 0;
+			}
+			Finish ();
 
 		}
 
@@ -142,7 +155,7 @@ namespace LaCabana
 		private void LoginVerify ()
 		{
 			var baseService = new BaseService<Dictionary<string,UsersModel>> ();
-
+			CreateDialog (Resources.GetString (Resource.String.wait), false, true);
 
 			var user = new Dictionary<string,UsersModel> ();
 			try {
@@ -154,32 +167,45 @@ namespace LaCabana
 			var password = FindViewById<EditText> (Resource.Id.login_password).Text;
 
 
-			//RunOnUiThread (() => CreateDialog (Resources.GetString (Resource.String.wait), false, true));
+			RunOnUiThread (() => {
+				
 
-			foreach (var item in user) {
-				if (email == "" || email != item.Value.Email) {
-					//CreateDialog (Resources.GetString (Resource.String.invalid_email));
+				foreach (var item in user) {
+					if (email == "" || email != item.Value.Email) {
+						emailFail = true;
+					} else if (password == "" || password != item.Value.Password) {
+						passwordFail = true;
+					} else {
+						passwordFail = false;
+						emailFail = false;
+						ThreadPool.QueueUserWorkItem (o => {
+							UsersModel model = new UsersModel ();
+							model.Email = item.Value.Email;
+							model.Id = item.Key;
+							model.Password = item.Value.Password;
+							model.Username = item.Value.Username;
+							model.FavoriteList = item.Value.FavoriteList;
+							model.ProfilePhoto = item.Value.ProfilePhoto;
+							//var abc = DatabaseServices.GetAllUsers ();
+							DatabaseServices.InsertUsername (model);
+							StartActivity (typeof(BasicMapDemoActivity));
 
-				} else if (password == "" || password != item.Value.Password) {
-					//CreateDialog (Resources.GetString (Resource.String.invalid_password));
-
-				} else {
-					ThreadPool.QueueUserWorkItem (o => {
-						UsersModel model = new UsersModel ();
-						model.Email = item.Value.Email;
-						model.Id = item.Key;
-						model.Password = item.Value.Password;
-						model.Username = item.Value.Username;
-						model.FavoriteList = item.Value.FavoriteList;
-						model.ProfilePhoto = item.Value.ProfilePhoto;
-						//var abc = DatabaseServices.GetAllUsers ();
-						DatabaseServices.InsertUsername (model);
-						StartActivity (typeof(BasicMapDemoActivity));
-
-						Finish ();
-					});
+							Finish ();
+						});
+					}
 				}
-			}
+				if (emailFail) {
+					CreateDialog (GetString (Resource.String.invalid_email), true);
+				} else if (passwordFail) {
+					CreateDialog (GetString (Resource.String.invalid_password), true);
+				}
+
+			});
+		}
+
+		public void ShowError (string text)
+		{
+			Toast.MakeText (this, text, ToastLength.Short).Show ();
 
 		}
 

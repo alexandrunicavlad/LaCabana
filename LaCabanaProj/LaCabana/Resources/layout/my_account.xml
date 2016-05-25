@@ -103,7 +103,7 @@
             <Button
                 android:layout_width="80dp"
                 android:layout_height="30dp"
-                android:text="UPLOAD"
+                android:text="Change"
                 android:textSize="12sp"
                 android:textColor="@color/black"
                 android:background="@color/gray_add_edit_layouts"

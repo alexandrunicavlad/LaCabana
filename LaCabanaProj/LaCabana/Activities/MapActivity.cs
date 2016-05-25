@@ -44,8 +44,8 @@ namespace LaCabana
 			SetContentView (Resource.Layout.Main);
 
 			SetTitleActionBar ("Map");
-			ClickHandler ();
 			SetProfilePicture ();
+			ClickHandler ();
 			var mapFragment = (SupportMapFragment)SupportFragmentManager.FindFragmentById (Resource.Id.map);
 			mapFragment.GetMapAsync (this);
 			DatabaseServices = new DatabaseServices (this);
@@ -92,7 +92,7 @@ namespace LaCabana
 				myHome.Latitude = e.Location.Latitude;
 				myHome.Longitude = e.Location.Longitude;
 				MyPosition (myHome);
-				googleMap.MoveCamera (CameraUpdateFactory.NewLatLngZoom (new LatLng (e.Location.Latitude, e.Location.Longitude), 15));
+				googleMap.MoveCamera (CameraUpdateFactory.NewLatLngZoom (new LatLng (e.Location.Latitude, e.Location.Longitude), 10));
 
 			};
 			googleMap.MapLongClick += (object sender, GoogleMap.MapLongClickEventArgs e) => {
@@ -123,6 +123,9 @@ namespace LaCabana
 
 		public void PutAllMarker ()
 		{
+			if (allCabins == null) {
+				return;
+			}
 			foreach (var cab in allCabins) {
 				var marker = (new MarkerOptions ().SetPosition (new LatLng (cab.Value.Latitude, cab.Value.Longitude)));
 				marker.SetTitle (cab.Value.Name);

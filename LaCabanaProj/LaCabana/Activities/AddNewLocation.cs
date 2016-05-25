@@ -22,6 +22,8 @@ using Android.Gms.Maps.Model;
 using Android.Util;
 using Android.Graphics;
 using System.IO;
+using Android.Graphics.Drawables;
+using System.Threading;
 
 namespace LaCabana
 {
@@ -58,8 +60,8 @@ namespace LaCabana
 			SetContentView (Resource.Layout.add_new_location);
 			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
 			SetTitleActionBar ("Add new location");
-			ClickHandler ();
 			SetProfilePicture ();
+			ClickHandler ();
 			cabin = new CabinModel ();
 			cabin.Photo = new List<string> ();
 			var latitude = Intent.GetDoubleExtra ("latitude", 0);
@@ -72,10 +74,12 @@ namespace LaCabana
 			var account = FindViewById<EditText> (Resource.Id.accountText);
 			var price = FindViewById<EditText> (Resource.Id.priceEditText);
 			RatingBar ratingbar = FindViewById<RatingBar> (Resource.Id.ratingbar);
-
+			ratingbar.Rating = 3;
 			ratingbar.RatingBarChange += (o, e) => {
 				cabin.Rating = ratingbar.Progress;
 			};
+			LayerDrawable stars = (LayerDrawable)ratingbar.ProgressDrawable;
+			stars.GetDrawable (2).SetColorFilter (Resources.GetColor (Resource.Color.green), PorterDuff.Mode.SrcAtop);
 			locationEdit = FindViewById<TextView> (Resource.Id.locationEditText);
 			mapLayout = FindViewById<LinearLayout> (Resource.Id.MapContent);
 
@@ -110,7 +114,7 @@ namespace LaCabana
 			photoShow.Click += PictureChangeClick;
 			var saveButton = FindViewById<Button> (Resource.Id.add_button_location);
 			saveButton.Click += delegate {
-				SaveLocation ();
+				ThreadPool.QueueUserWorkItem (o => SaveLocation ());	
 			};
 			if (account.Text != "") {
 				cabin.IdAdded = account.Text;
@@ -150,7 +154,8 @@ namespace LaCabana
 
 			FindViewById<EditText> (Resource.Id.phoneEditText).TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
 				var phone = e.Text.ToString ();
-				cabin.Phone = Convert.ToInt32 (phone);
+				if (!phone.Equals (""))
+					cabin.Phone = Convert.ToInt32 (phone);
 			};
 
 			FindViewById<EditText> (Resource.Id.emailEditText).TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
@@ -190,6 +195,7 @@ namespace LaCabana
 
 		private void SaveLocation ()
 		{		
+			CreateDialog ("", GetString (Resource.String.wait), false, "", false, "", true);
 			if (cabin.IdAdded == null || cabin.IdAdded.Equals ("")) {
 				Toast.MakeText (this, "Enter your name or your email", ToastLength.Short).Show ();
 				return;
@@ -210,6 +216,7 @@ namespace LaCabana
 			if (cabin.Rating == 0) {
 				cabin.Rating = 3;
 			}
+
 			if (cabin.PhoneType.Equals ("Select")) {
 				cabin.PhoneType = stringPhone [1];
 			}
@@ -221,7 +228,7 @@ namespace LaCabana
 			}
 			var baseService = new BaseService<CabinModel> ();
 			try {
-				baseService.Push (cabin, "cabins");
+				var result = baseService.Push (cabin, "cabins");
 				StartActivityForResult (typeof(BasicMapDemoActivity), 2);
 				Finish ();
 			} catch (Exception e) {
@@ -241,7 +248,7 @@ namespace LaCabana
 				isCurent = true;
 				homeMarker = googleMap.AddMarker (new MarkerOptions ().SetPosition (new LatLng (e.Location.Latitude, e.Location.Longitude)));
 				homeMarker.Title = "myLocation";
-				googleMap.MoveCamera (CameraUpdateFactory.NewLatLngZoom (new LatLng (e.Location.Latitude, e.Location.Longitude), 15));
+				googleMap.MoveCamera (CameraUpdateFactory.NewLatLngZoom (new LatLng (e.Location.Latitude, e.Location.Longitude), 10));
 			};
 
 			googleMap.MapLongClick += (object sender, GoogleMap.MapLongClickEventArgs e) => {

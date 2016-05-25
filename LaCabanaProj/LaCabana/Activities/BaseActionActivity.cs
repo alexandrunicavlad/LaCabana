@@ -114,7 +114,13 @@ namespace LaCabana
 		}
 
 		protected void ClickHandler ()
-		{		
+		{	
+		
+			if (user.Email == null) {
+				FindViewById<TextView> (Resource.Id.myaccountText).Text = GetString (Resource.String.login_btn);
+			} else {
+				FindViewById<TextView> (Resource.Id.myaccountText).Text = GetString (Resource.String.myAccount);
+			}
 
 			var mapButton = FindViewById<LinearLayout> (Resource.Id.map_item);
 			mapButton.Click += delegate {
@@ -280,6 +286,10 @@ namespace LaCabana
 
 		private void LogOut (object sender, EventArgs e)
 		{
+			if (user.Email == null) {
+				CreateDialog ("", "Please sign in for use this functionality", true, "Ok", false, "", false);
+				return;
+			}
 			var builder = new AlertDialog.Builder (this).SetTitle ("Log out").SetMessage ("Are you sure you want to log out?").SetPositiveButton ("Ok", (EventHandler<DialogClickEventArgs>)null).SetNegativeButton ("Cancel", (EventHandler<DialogClickEventArgs>)null);
 			var dialog = builder.Create ();
 			dialog.Show ();
@@ -297,6 +307,47 @@ namespace LaCabana
 			cancelBtn.Click += delegate {
 				dialog.Cancel ();	
 			};
+		}
+
+		protected  void CreateDialog (string title, string message, bool okButton, string okMessage, bool cancelButton, string cancelMessage, bool loading)
+		{
+			RunOnUiThread (() => {
+				var builder = new Android.App.AlertDialog.Builder (this);
+
+				builder.SetMessage (message);
+				if (title != "")
+					builder.SetTitle (title);
+
+				if (okButton)
+					builder.SetPositiveButton (okMessage, (EventHandler<DialogClickEventArgs>)null);
+
+				if (cancelButton)
+					builder.SetNegativeButton (cancelMessage, (EventHandler<DialogClickEventArgs>)null);
+
+				var dialog = builder.Create ();
+
+				if (loading) {
+					dialog = ProgressDialog.Show (this, null, message, false, okButton);
+				}
+
+				dialog.Show ();
+
+
+				if (!okButton)
+					return;
+
+				var okBtn = dialog.GetButton ((int)DialogButtonType.Positive);
+
+				if (okBtn == null)
+					return;
+
+				okBtn.Click += delegate {
+					if (dialog != null && dialog.IsShowing) {
+						dialog.Cancel ();
+					}
+				};
+
+			});
 		}
 
 		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)

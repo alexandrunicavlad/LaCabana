@@ -49,7 +49,7 @@ namespace LaCabana
 			var destailsText = FindViewById<TextView> (Resource.Id.detailsText);
 			var directionText = FindViewById<ImageView> (Resource.Id.cabinDirection);
 			var phoneLayout = FindViewById<LinearLayout> (Resource.Id.phoneLayout1);
-			var emailLayout = FindViewById<LinearLayout> (Resource.Id.emailLayout);
+			var emailLayout = FindViewById<RelativeLayout> (Resource.Id.emailLayout);
 
 			var route = new RouteGenerator ();
 
@@ -63,7 +63,7 @@ namespace LaCabana
 				//foreach (var cabin in allCabins) {
 				//if (cabin.Name.Equals (marker)) {
 				cabinName.Text = cabin.Name;
-				phoneText1.Text = cabin.Phone.ToString ();
+				phoneText1.Text = string.Format ("0{0}", cabin.Phone.ToString ());
 				phoneType1.Text = cabin.PhoneType;
 				emailText.Text = cabin.Email;
 				emailType.Text = cabin.EmailType;
@@ -80,7 +80,7 @@ namespace LaCabana
 				var longitude = Intent.GetDoubleExtra ("longitude", 0);
 
 				phoneLayout.Click += delegate {
-					var uri = Android.Net.Uri.Parse (string.Format ("tel:{0}", cabin.Phone));
+					var uri = Android.Net.Uri.Parse (string.Format ("tel:0{0}", cabin.Phone.ToString ()));
 					var intent = new Intent (Intent.ActionDial, uri);
 					StartActivity (intent);
 				};

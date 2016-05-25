@@ -14,12 +14,18 @@ using FireSharp.Interfaces;
 using FireSharp.Config;
 using FireSharp;
 using Newtonsoft.Json;
+using FireSharp.Response;
+using System.Threading;
 
 namespace LaCabana
 {
 	[Activity (ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, Theme = "@style/MyTheme")]			
 	public class SignUpActivity : BaseDrawerActivity
 	{
+		PushResponse response;
+		private EditText userName;
+		private EditText email;
+		private EditText password;
 
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
@@ -33,31 +39,58 @@ namespace LaCabana
 				StartActivityForResult (typeof(LoginActivity), 0);    
 			};
 			var register = FindViewById<TextView> (Resource.Id.signInButton);
-			var userName = FindViewById<EditText> (Resource.Id.login_username);
-			var email = FindViewById<EditText> (Resource.Id.login_email);
-			var password = FindViewById<EditText> (Resource.Id.login_password);
+			userName = FindViewById<EditText> (Resource.Id.login_username);
+			email = FindViewById<EditText> (Resource.Id.login_email);
+			password = FindViewById<EditText> (Resource.Id.login_password);
 
-			register.Click += delegate {				
-				UsersModel user = new UsersModel ();
-				user.Id = userName.Text;
-				user.Username = userName.Text;
-				user.Email = email.Text;
-				user.Password = password.Text;
-				var requestText = JsonConvert.SerializeObject (user);
-				Push (user);
-				Finish ();
+			register.Click += delegate {	
+				ThreadPool.QueueUserWorkItem (o => RegisterLogin ());
 			};
 		}
 
-
-		private void Push (UsersModel user)
+		private void RegisterLogin ()
 		{
-			var baseService = new BaseService<UsersModel> ();
+			if (userName.Text == "") {
+				CreateDialog ("Please enter username", true);
+				return;
+			} else if (email.Text == "") {
+				CreateDialog ("Please enter email", true);
+				return;
+			} else if (password.Text == "") {
+				CreateDialog ("Please enter password", true);
+				return;
+			}
+			UsersModel user = new UsersModel ();
+			CreateDialog (Resources.GetString (Resource.String.wait), false, true);
+			//user.Id = userName.Text;
+			user.Username = userName.Text;
+			user.Email = email.Text;
+			user.Password = password.Text;
+			var requestText = JsonConvert.SerializeObject (user);
+			var result = Push (user);
+			user.Id = result;
+			DatabaseServices.InsertUsername (user);
+			var baseserv = new BaseService<UsersModel> ();
+			var newUrl = string.Format ("users/{0}", user.Id);
 			try {
-				baseService.Push (user, "users");
+				baseserv.UpdateUser (user, newUrl);
+
 			} catch (Exception e) {
 				var a = 0;
 			}
+			StartActivity (typeof(BasicMapDemoActivity));
+			Finish ();
+		}
+
+		private string Push (UsersModel user)
+		{
+			var baseService = new BaseService<UsersModel> ();
+			try {
+				response = baseService.Push (user, "users");
+			} catch (Exception e) {
+				var a = 0;
+			}
+			return response.Result.Name;
 		}
 
 		private void Update (UsersModel user)

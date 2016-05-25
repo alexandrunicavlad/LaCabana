@@ -10,6 +10,7 @@ using System.Security.Cryptography;
 using System.Text;
 using Java.Security;
 using System.Net.Http;
+using FireSharp.Response;
 
 namespace LaCabana
 {
@@ -31,11 +32,12 @@ namespace LaCabana
 
 		}
 
-		public void Push (T baseModel, string url)
+		public PushResponse Push (T baseModel, string url)
 		{			
 			var URL = string.Format ("{0} {1}", BasePath1, url);
 			TestFixtureSetUpCabana (URL);
 			var response = _client.Push ("", baseModel);
+			return response;
 		}
 
 		public T Get (string url)

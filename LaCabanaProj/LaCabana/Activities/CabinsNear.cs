@@ -112,20 +112,32 @@ namespace LaCabana
 							if (favList.Any (s => cabin.Key.Contains (s))) {
 								cabinFav.SetImageResource (Resource.Drawable.ic_heart);
 							}
+						} else {
+							favList = new List<string> ();
 						}
-						cabinFav.Click += delegate {
+						cabinFav.Click += delegate {		
 							if (favList.Contains (cabin.Key))
 								return;
 							if (userMod.Id != null) {
 								cabinFav.SetImageResource (Resource.Drawable.ic_heart);	
 								var baseService1 = new BaseService<UsersModel> ();
+								var baseService2 = new BaseService<UsersModel> ();
 								var user = DatabaseServices.GetAllUsers ();
 								var urlUpdate = string.Format ("users/{0}/FavoriteList", user.Id);
 								baseService.Update (cabin.Key, urlUpdate);
+								var newUrl = string.Format ("users/{0}", user.Id);
+								try {
+									var ada = baseService2.Get (newUrl);
+									DatabaseServices.DeleteUser ();
+									DatabaseServices.InsertUsername (ada);
+									SetProfilePicture ();
+								} catch (Exception e) {
+									var a = 0;
+								}
 							} else {
 								Toast.MakeText (this, "Please login for select this page", ToastLength.Short).Show ();
 							}
-
+							 
 						};
 						view.FindViewById<TextView> (Resource.Id.detailsButton).Click += delegate {
 							var intent = new Intent (this, typeof(CabinInfo));				
@@ -139,7 +151,7 @@ namespace LaCabana
 				}
 				cabinsLayout.RequestLayout ();
 				if (cabinsLayout.ChildCount == 0) {
-					Toast.MakeText (this, "Nu exista cabane la distanta de ...", ToastLength.Short).Show ();
+					Toast.MakeText (this, string.Format ("Nu exista cabane la distanta de {0} km", numberDistance), ToastLength.Short).Show ();
 					OnBackPressed ();
 				}
 				loading.Visibility = ViewStates.Gone;
