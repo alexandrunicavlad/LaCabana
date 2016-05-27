@@ -27,6 +27,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -44,9 +45,6 @@
     <Reference Include="Mono.Android" />
     <Reference Include="Xamarin.Insights">
       <HintPath>..\packages\Xamarin.Insights.1.10.6\lib\MonoAndroid10\Xamarin.Insights.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.CardView">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
     </Reference>
     <Reference Include="NineOldAndroids">
       <HintPath>..\packages\Xamarin.NineOldAndroids.0.0.1\lib\MonoAndroid\NineOldAndroids.dll</HintPath>
@@ -96,6 +94,18 @@
     <Reference Include="Xamarin.Android.Support.v7.AppCompat">
       <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bolts.AppLinks">
+      <HintPath>..\packages\Bolts.1.4.0\lib\MonoAndroid403\Bolts.AppLinks.dll</HintPath>
+    </Reference>
+    <Reference Include="Bolts.Tasks">
+      <HintPath>..\packages\Bolts.1.4.0\lib\MonoAndroid403\Bolts.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Facebook">
+      <HintPath>..\packages\Xamarin.Facebook.Android.4.11.0\lib\MonoAndroid403\Xamarin.Facebook.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -125,6 +135,9 @@
     <Compile Include="Helpers\FormUpload.cs" />
     <Compile Include="Helpers\ImageAdapter.cs" />
     <Compile Include="Helpers\CloudUpload.cs" />
+    <Compile Include="Activities\ReviewActivity.cs" />
+    <Compile Include="Models\ReviewModel.cs" />
+    <Compile Include="Activities\ReviewAddActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -320,6 +333,37 @@
     <AndroidResource Include="Resources\drawable-xhdpi\ic_send.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_send.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_send.png" />
+    <AndroidResource Include="Resources\menu\near_menu.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_heart_white.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_heart_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_heart_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_heart_white.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_heart_white.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_grid.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_list.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_more.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_search.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_grid.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_list.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_more.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_search.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_grid.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_list.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_more.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_search.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_grid.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_list.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_more.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_search.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_grid.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_list.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_more.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_search.png" />
+    <AndroidResource Include="Resources\menu\cabin_menu.xml" />
+    <AndroidResource Include="Resources\layout\review_view_layout.axml" />
+    <AndroidResource Include="Resources\layout\review_layout.axml" />
+    <AndroidResource Include="Resources\layout\review_add_layout.axml" />
+    <AndroidResource Include="Resources\menu\review_menu.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\menu\" />

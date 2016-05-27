@@ -43,7 +43,8 @@ namespace LaCabana
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.Main);
 
-			SetTitleActionBar ("Map");
+			ConstructRightIcon ();
+			SetTitleActionBar1 ("Map");
 			SetProfilePicture ();
 			ClickHandler ();
 			var mapFragment = (SupportMapFragment)SupportFragmentManager.FindFragmentById (Resource.Id.map);
@@ -57,6 +58,24 @@ namespace LaCabana
 			allCabins = new Dictionary<string,CabinModel> ();
 
 			ThreadPool.QueueUserWorkItem (o => GetData ());
+		}
+
+		public void ConstructRightIcon ()
+		{
+			ActionBar actionBar = ActionBar;
+
+			actionBar.SetDisplayShowCustomEnabled (true);
+			actionBar.SetDisplayOptions (ActionBarDisplayOptions.ShowCustom, ActionBarDisplayOptions.ShowTitle);
+			LayoutInflater inflate = (LayoutInflater)this.GetSystemService (Context.LayoutInflaterService);
+			View view = inflate.Inflate (Resource.Layout.action_bar_home, null);
+			actionBar.SetCustomView (Resource.Layout.action_bar_home);
+
+			view.Click += delegate {
+				var a = 0;
+			};
+
+			SearchButton = ActionBar.CustomView.FindViewById<ImageButton> (Resource.Id.action_bar_searchBtn);
+			SearchButton.Visibility = ViewStates.Visible;
 		}
 
 		public void GetData ()

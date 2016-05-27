@@ -241,6 +241,11 @@ namespace LaCabana
 			ActionBar.Title = title;
 		}
 
+		public void SetTitleActionBar1 (string title)
+		{
+			ActionBar.CustomView.FindViewById<TextView> (Resource.Id.action_bar_title).Text = title;
+		}
+
 		protected void OpenMenu (object sender, EventArgs e)
 		{
 			drawerLayout.OpenDrawer ((int)GravityFlags.Start);

@@ -19,13 +19,13 @@ namespace LaCabana
 		private IFirebaseClient _client;
 		protected const string BasePath1 = "https://lacabana1.firebaseio.com/";
 		protected const string BasePathWithoutSlash1 = "https://mapcabana.firebaseio.com";
-
+		protected const string FirebaseSecret1 = "MmjITw3wKfuLhAuJjudCTEhVJqsxhemy9rPYTbKS";
 
 
 		public async void TestFixtureSetUpCabana (string URL)
 		{
 			IFirebaseConfig config1 = new FirebaseConfig {
-				//AuthSecret = FirebaseSecret1,
+				AuthSecret = FirebaseSecret1,
 				BasePath = URL
 			};
 			_client = new FirebaseClient (config1);

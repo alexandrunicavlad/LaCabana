@@ -19,7 +19,7 @@ using Android.Graphics.Drawables;
 
 namespace LaCabana
 {
-	[Activity (Label = "BaseDrawerActivity", Theme = "@style/MyTheme")]			
+	[Activity (Label = "BaseDrawerActivity")]			
 	public class BaseDrawerActivity : BaseActivity
 	{
 		protected DrawerLayout drawerLayout;
@@ -58,6 +58,11 @@ namespace LaCabana
 		public void SetTitleActionBar (string title)
 		{
 			SupportActionBar.Title = title;
+		}
+
+		public void SetTitleActionBar1 (string title)
+		{
+			SupportActionBar.CustomView.FindViewById<TextView> (Resource.Id.action_bar_title).Text = title;
 		}
 
 		protected void OpenMenu (object sender, EventArgs e)

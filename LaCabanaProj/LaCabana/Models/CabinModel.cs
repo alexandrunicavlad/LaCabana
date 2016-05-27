@@ -32,6 +32,10 @@ namespace LaCabana
 
 		public String IdAdded{ get; set; }
 
+		public float Distance{ get; set; }
+
+		public Dictionary<String, String> Reviews{ get; set; }
+
 	}
 }
 

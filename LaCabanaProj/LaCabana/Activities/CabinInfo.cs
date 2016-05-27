@@ -25,6 +25,7 @@ namespace LaCabana
 		private string requestURL = "https://api.cloudinary.com/v1_1/lacabana/resources/image/upload/?prefix=";
 		private const string ApiKey = "348639768631669";
 		private const string ApiSecret = "HHeKWX7znazzS61cd7tlTxBmV7I";
+		private string marker;
 
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
@@ -32,8 +33,9 @@ namespace LaCabana
 
 			SetContentView (Resource.Layout.cabin_info_layout);
 			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
-			SetTitleActionBar ("Cabin");
-			var marker = Intent.GetStringExtra ("marker");
+			ConstructRightIcon ();
+			SetTitleActionBar1 ("Cabin");
+			marker = Intent.GetStringExtra ("marker");
 			var baseService = new BaseService<CabinModel> ();
 			cabin = new CabinModel ();
 			var cabinPhoto = FindViewById<ImageView> (Resource.Id.cabinImage);
@@ -111,6 +113,40 @@ namespace LaCabana
 				};
 				//}
 			}
+		}
+
+		public void ConstructRightIcon ()
+		{
+			var actionBar = SupportActionBar;
+
+			actionBar.SetDisplayShowCustomEnabled (true);
+			LayoutInflater inflate = (LayoutInflater)this.GetSystemService (Context.LayoutInflaterService);
+			View view = inflate.Inflate (Resource.Layout.action_bar_home, null);
+			actionBar.SetCustomView (Resource.Layout.action_bar_home);
+
+			view.Click += delegate {
+				var a = 0;
+			};
+			var MenuButton = SupportActionBar.CustomView.FindViewById<ImageButton> (Resource.Id.action_bar_menuBtn);
+
+			MenuButton.Visibility = ViewStates.Visible;
+			MenuButton.Click += (object sender, EventArgs e) => {
+				PopupMenu menu = new PopupMenu (this, MenuButton);
+				menu.Inflate (Resource.Menu.cabin_menu);
+				menu.MenuItemClick += (object sender1, PopupMenu.MenuItemClickEventArgs e1) => {
+					var a = e1.Item.TitleFormatted.ToString ();
+					if (a.Equals ("Pictures")) {
+					} else if (a.Equals ("Reviews")) {
+						var intent = new Intent (this, typeof(ReviewActivity));				
+						intent.PutExtra ("marker", marker);
+						StartActivity (intent);
+					}
+				};
+				menu.DismissEvent += delegate {					
+				};
+				menu.Show ();
+			};
+
 		}
 
 		private void GetData (string type)

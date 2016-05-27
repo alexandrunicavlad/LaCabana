@@ -1,11 +1,10 @@
 ﻿<Properties StartupItem="LaCabana\LaCabana.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.06157df668b6b42e" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LaCabana\Activities\BaseActionActivity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.TA92917UH0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LaCabana\Activities\ReviewActivity.cs">
     <Files>
-      <File FileName="LaCabana\Activities\LoginActivity.cs" Line="1" Column="1" />
-      <File FileName="LaCabana\Activities\MapActivity.cs" Line="1" Column="1" />
-      <File FileName="LaCabana\Activities\AddNewLocation.cs" Line="1" Column="1" />
-      <File FileName="LaCabana\Activities\BaseActionActivity.cs" Line="170" Column="20" />
+      <File FileName="LaCabana\Activities\ReviewActivity.cs" Line="116" Column="33" />
+      <File FileName="LaCabana\Models\ReviewModel.cs" Line="17" Column="34" />
+      <File FileName="LaCabana\Activities\ReviewAddActivity.cs" Line="59" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
