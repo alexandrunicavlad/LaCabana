@@ -76,13 +76,15 @@ namespace LaCabana
 			view.Click += delegate {
 				var a = 0;
 			};
+			Search = ActionBar.CustomView.FindViewById<Android.Widget.SearchView> (Resource.Id.searchView);
+			Search.Visibility = ViewStates.Gone;
 			MenuButton = ActionBar.CustomView.FindViewById<ImageButton> (Resource.Id.action_bar_menuBtn);
 			GridButton = ActionBar.CustomView.FindViewById<ImageButton> (Resource.Id.action_bar_grid);
 			ListButton = ActionBar.CustomView.FindViewById<ImageButton> (Resource.Id.action_bar_list);
 			SearchButton = ActionBar.CustomView.FindViewById<ImageButton> (Resource.Id.action_bar_searchBtn);
 			MenuButton.Visibility = ViewStates.Visible;
 			GridButton.Visibility = ViewStates.Visible;
-			SearchButton.Visibility = ViewStates.Visible;
+			SearchButton.Visibility = ViewStates.Gone;
 			MenuButton.Click += (object sender, EventArgs e) => {
 				PopupMenu menu = new PopupMenu (this, MenuButton);
 				menu.Inflate (Resource.Menu.near_menu);

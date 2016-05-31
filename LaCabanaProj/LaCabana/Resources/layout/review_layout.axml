@@ -12,6 +12,15 @@
         android:visibility="visible"
         android:layout_centerInParent="true"
         layout="@layout/loading" />
+    <TextView
+        android:id="@+id/emptyReview"
+        android:layout_width="wrap_content"
+        android:text="Reviews not found"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:textSize="20sp" />
     <ScrollView
         android:layout_width="match_parent"
         android:visibility="gone"
@@ -24,9 +33,9 @@
             android:id="@+id/FlyContent" />
     </ScrollView>
     <ImageView
-        android:layout_width="50dp"
+        android:layout_width="60dp"
         android:src="@drawable/ic_plus_circle"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_gravity="left"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"

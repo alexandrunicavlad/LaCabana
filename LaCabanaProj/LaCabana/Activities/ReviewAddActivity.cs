@@ -38,7 +38,9 @@ namespace LaCabana
 			rating = FindViewById<RatingBar> (Resource.Id.cabinRating);
 			reviewText = FindViewById<EditText> (Resource.Id.reviewText);
 			saveButton.Click += delegate {
-				SaveReview ();
+				saveButton.Click += delegate {
+					ThreadPool.QueueUserWorkItem (o => SaveReview ());
+				};
 			};
 
 		}
@@ -46,18 +48,23 @@ namespace LaCabana
 		private void SaveReview ()
 		{			
 			if (account.Text == "") {
+				CreateDialog ("Please enter username", true);
 				return;
 			} else if (title.Text == "") {
+				CreateDialog ("Please enter title", true);
 				return;
 			} else if (rating.Progress == 0) {
+				CreateDialog ("Please enter rating", true);
 				return;
 			} else if (reviewText.Text == "") {
+				CreateDialog ("Please enter review", true);
 				return;
 			}
 			var review = new ReviewModel ();
+			CreateDialog ("", GetString (Resource.String.wait), false, "", false, "", true);
 			review.UserNameAdded = account.Text;
 			review.Title = title.Text;
-			review.DateAdd = DateTime.Now.ToString ();
+			review.DateAdd = DateTime.Now.ToString ("dd/MM/yyyy");
 			review.Rating = rating.Progress;
 			review.ReviewText = reviewText.Text;
 			if (user.ProfilePhoto != null)
@@ -68,8 +75,11 @@ namespace LaCabana
 				var result = baseService.Push (review, "reviews");
 				var urlUpdate = string.Format ("cabins/{0}/Reviews", marker);
 				baseService.Update (result.Result.Name, urlUpdate);
-				//StartActivityForResult (typeof(BasicMapDemoActivity), 2);
-				OnBackPressed ();
+				var intent = new Intent (this, typeof(ReviewActivity));				
+				intent.PutExtra ("marker", marker);
+				StartActivity (intent);
+				Finish ();
+
 			} catch (Exception e) {
 				var a = 0;
 			}

@@ -19,6 +19,8 @@ using LaCabana.Services;
 using Android.Support.V4.Widget;
 using FireSharp.Interfaces;
 using System.Threading;
+using Android.Database;
+using Android.Provider;
 
 namespace LaCabana
 {
@@ -37,6 +39,10 @@ namespace LaCabana
 		public double _clickLatitude;
 		public double _clickLongitude;
 		public LatLng myHome;
+		private ListView searchList;
+		private List<String> SUGGESTIONS;
+		private Android.Widget.SimpleCursorAdapter adaptere;
+		private MatrixCursor c;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -54,9 +60,9 @@ namespace LaCabana
 			//MenuButton.Visibility = ViewStates.Gone;
 			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
 			//allCabins = DatabaseServices.GetAllCabins ();
-
+			searchList = FindViewById<ListView> (Resource.Id.searchList);
 			allCabins = new Dictionary<string,CabinModel> ();
-
+			SUGGESTIONS = new List<string> ();
 			ThreadPool.QueueUserWorkItem (o => GetData ());
 		}
 
@@ -73,17 +79,58 @@ namespace LaCabana
 			view.Click += delegate {
 				var a = 0;
 			};
-
+			String[] fromul = new String[] { "cityName" };
+			int[] toul = new int[] { Android.Resource.Id.Text1 };
+			adaptere = new Android.Widget.SimpleCursorAdapter (this, Android.Resource.Layout.SimpleListItem1, null, fromul, toul, CursorAdapterFlags.RegisterContentObserver);
+			Search.Visibility = ViewStates.Visible;
+			Search = ActionBar.CustomView.FindViewById<Android.Widget.SearchView> (Resource.Id.searchView);
 			SearchButton = ActionBar.CustomView.FindViewById<ImageButton> (Resource.Id.action_bar_searchBtn);
-			SearchButton.Visibility = ViewStates.Visible;
+			SearchButton.Visibility = ViewStates.Gone;
+			Search.SearchClick += delegate {	
+				Search.SuggestionsAdapter = adaptere;
+			};
+			Search.QueryTextChange += (object sender, Android.Widget.SearchView.QueryTextChangeEventArgs e) => {
+				PopulateAdapter (e.NewText);
+
+			};
+			Search.QueryTextSubmit += (object sender, Android.Widget.SearchView.QueryTextSubmitEventArgs e) => {
+				var b = 0;
+			};
+			Search.SuggestionClick += (object sender, Android.Widget.SearchView.SuggestionClickEventArgs e) => {
+				var a = e.Position;
+				var abc = c.MoveToPosition (a);
+				var intent = new Intent (this, typeof(CabinInfo));	
+				intent.PutExtra ("marker", c.GetString (1));
+				intent.PutExtra ("latitude", myHome.Latitude);
+				intent.PutExtra ("longitude", myHome.Longitude);
+				StartActivity (intent);										
+
+			};
+
+
+			//Search.SetOnSuggestionListener (new );
 		}
+
+		private void PopulateAdapter (String query)
+		{
+			c = new MatrixCursor (new String[]{ BaseColumns.Id, "key", "cityName" });
+
+			foreach (var icab in allCabins) {
+				//if (icab.Value.Name.ToLower ().StartsWith (query.ToLower ())) {
+				if (icab.Value.Name.ToLower ().Contains (query.ToLower ())) {					
+					var adac = new Java.Lang.Object[] { 1, icab.Key, icab.Value.Name };						
+					c.AddRow (adac);
+				}
+			}
+			adaptere.ChangeCursor (c);
+		}
+
 
 		public void GetData ()
 		{
 			var baseService = new BaseService<Dictionary<string,CabinModel>> ();
 			try {				
 				allCabins = (baseService.Get ("cabins"));
-				baseService.Face ();
 			} catch (Exception e) {
 				//Toast.MakeText (this, "A dat eroare", ToastLength.Short).Show ();
 			}
@@ -95,6 +142,8 @@ namespace LaCabana
 //				var abc = DatabaseServices.GetAllCabins ();
 			});
 		}
+
+
 
 		public void OnMapReady (GoogleMap googleMap)
 		{
@@ -145,7 +194,7 @@ namespace LaCabana
 			if (allCabins == null) {
 				return;
 			}
-			foreach (var cab in allCabins) {
+			foreach (var cab in allCabins) {				
 				var marker = (new MarkerOptions ().SetPosition (new LatLng (cab.Value.Latitude, cab.Value.Longitude)));
 				marker.SetTitle (cab.Value.Name);
 				_googleMap.AddMarker (marker);
@@ -154,6 +203,8 @@ namespace LaCabana
 			}	
 
 		}
+
+
 
 		public void OnLocationChanged (Android.Locations.Location location)
 		{

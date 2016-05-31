@@ -13,6 +13,7 @@ using Android.Widget;
 using Android.Support.V4.Widget;
 using System.Threading;
 using Android.Graphics;
+using System.Globalization;
 
 namespace LaCabana
 {
@@ -27,6 +28,7 @@ namespace LaCabana
 		private ScrollView scrollView;
 		private String marker;
 		private Dictionary<string, ReviewModel> reviews;
+		private TextView empty;
 
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
@@ -41,6 +43,7 @@ namespace LaCabana
 			baseService1 = new BaseService<ReviewModel> ();
 			review = new Dictionary<string, string> ();
 			reviewLayout = FindViewById<LinearLayout> (Resource.Id.FlyContent);
+			empty = FindViewById<TextView> (Resource.Id.emptyReview);
 			var route = new RouteGenerator ();
 			loading = FindViewById<RelativeLayout> (Resource.Id.main_loading);
 			scrollView = FindViewById<ScrollView> (Resource.Id.ScrollList);
@@ -52,9 +55,10 @@ namespace LaCabana
 				ThreadPool.QueueUserWorkItem (o => GetData (marker));	
 			}
 			addButton.Click += delegate {
-				var intent = new Intent (this, typeof(ReviewAddActivity));				
+				var intent = new Intent (this, typeof(ReviewAddActivity));	
 				intent.PutExtra ("marker", marker);
 				StartActivity (intent);
+				Finish ();
 			};
 
 		}
@@ -89,12 +93,18 @@ namespace LaCabana
 				var titleRev = view.FindViewById<TextView> (Resource.Id.titlereview);
 				var duration = view.FindViewById<TextView> (Resource.Id.duration);
 				var revText = view.FindViewById<TextView> (Resource.Id.reviewText);
-				view.FindViewById<TextView> (Resource.Id.usefullButton).Click += delegate {
+				var report = view.FindViewById<TextView> (Resource.Id.reportButton);
+				var usefull = view.FindViewById<TextView> (Resource.Id.usefullButton);
+				usefull.Click += delegate {
 					rev.Value.Usefull = rev.Value.Usefull + 1;
-
+					baseService1.UpdateUser (rev.Value, string.Format ("reviews/{0}", rev.Key));
+					usefull.Clickable = false;
 				};
-				view.FindViewById<TextView> (Resource.Id.reportButton).Click += delegate {
+				report.Click += delegate {					
 					rev.Value.Usefull = rev.Value.Usefull - 1;
+					report.Clickable = false;
+					baseService1.UpdateUser (rev.Value, string.Format ("reviews/{0}", rev.Key));
+
 				};
 				if (rev.Value.UserPhoto != null) {
 					var picture = Decode (rev.Value.UserPhoto);
@@ -105,7 +115,7 @@ namespace LaCabana
 					userImage.SetScaleType (ImageView.ScaleType.CenterInside);
 				}
 				var now = DateTime.Now;
-				var dt = Convert.ToDateTime (rev.Value.DateAdd);
+				var dt = DateTime.ParseExact (rev.Value.DateAdd, "dd/MM/yyyy", null);
 				var diff = (now - dt).TotalDays;
 
 				if (diff <= 1) {
@@ -126,11 +136,15 @@ namespace LaCabana
 			}
 			reviewLayout.RequestLayout ();
 			if (reviewLayout.ChildCount == 0) {
-				Toast.MakeText (this, string.Format ("Nu exista cabane la distanta de  km"), ToastLength.Short).Show ();
-				OnBackPressed ();
+				Toast.MakeText (this, string.Format ("Nu exista niciun review la cabana"), ToastLength.Short).Show ();
+				empty.Visibility = ViewStates.Visible;
+				loading.Visibility = ViewStates.Gone;
+				scrollView.Visibility = ViewStates.Visible;
+			} else {
+				loading.Visibility = ViewStates.Gone;
+				empty.Visibility = ViewStates.Gone;
+				scrollView.Visibility = ViewStates.Visible;
 			}
-			loading.Visibility = ViewStates.Gone;
-			scrollView.Visibility = ViewStates.Visible;
 		}
 
 		public void ConstructRightIcon ()

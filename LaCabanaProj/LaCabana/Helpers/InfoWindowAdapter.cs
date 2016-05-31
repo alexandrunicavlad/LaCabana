@@ -34,7 +34,7 @@ namespace LaCabana
 			foreach (var cabin in _cabins)
 				if (p0.Title == cabin.Value.Name) {
 					name.Text = cabin.Value.Name;
-					price.Text = string.Format ("Price: {0}", cabin.Value.Price);
+					price.Text = string.Format ("{0} {1}", cabin.Value.Price, cabin.Value.PriceType);
 					rank.Rating = cabin.Value.Rating;
 				}
 			

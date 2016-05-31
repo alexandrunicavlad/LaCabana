@@ -28,6 +28,7 @@ namespace LaCabana
 		protected ImageButton DeleteButton;
 		protected ImageButton SearchButton;
 		protected ImageButton EditButton;
+		protected SearchView Search;
 		protected DrawerLayout drawerLayout;
 		protected RelativeLayout loading;
 		private bool _shouldGoInvisible = true;

@@ -1,48 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="wrap_content"
-    android:layout_width="wrap_content">
+    android:layout_width="match_parent">
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:id="@+id/action_bar_title"
         android:layout_centerVertical="true"
         android:textSize="22sp"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/action_bar_iconsLayout" />
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:id="@+id/action_bar_iconsLayout"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:gravity="right">
-        <ImageButton
+        android:gravity="right"
+        android:layout_marginRight="10dp">
+        <SearchView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/searchView"
+            android:closeIcon="@android:drawable/ic_menu_close_clear_cancel"
+            android:layout_alignParentRight="true" />
+        <ImageButton xmlns:tools="http://schemas.android.com/tools"
             android:layout_height="40dp"
             android:layout_width="40dp"
             android:id="@+id/action_bar_searchBtn"
+            android:layout_marginRight="15dp"
             android:visibility="gone"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/ic_search" />
-        <ImageButton
+            android:background="@drawable/ic_search"
+            android:layout_alignParentRight="true"
+            tools:visibility="gone"
+            android:layout_gravity="center_vertical" />
+        <ImageButton xmlns:tools="http://schemas.android.com/tools"
             android:layout_height="40dp"
             android:layout_width="40dp"
             android:id="@+id/action_bar_list"
             android:visibility="gone"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/ic_list" />
-        <ImageButton
-            android:layout_height="40dp"
-            android:layout_width="40dp"
+            android:background="@drawable/ic_list"
+            android:layout_toLeftOf="@+id/action_bar_grid"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical" />
+        <ImageButton xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/action_bar_grid"
             android:visibility="gone"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/ic_grid" />
-        <ImageButton
+            android:background="@drawable/ic_grid"
+            android:layout_toLeftOf="@+id/action_bar_menuBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical" />
+        <ImageButton xmlns:tools="http://schemas.android.com/tools"
             android:layout_height="40dp"
             android:layout_width="40dp"
             android:id="@+id/action_bar_menuBtn"
             android:visibility="gone"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/ic_more" />
+            android:background="@drawable/ic_more"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical" />
     </LinearLayout>
 </RelativeLayout>

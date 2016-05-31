@@ -1,15 +1,20 @@
 ﻿<Properties StartupItem="LaCabana\LaCabana.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.TA92917UH0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LaCabana\Activities\ReviewActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LaCabana\Services\BaseService.cs">
     <Files>
-      <File FileName="LaCabana\Activities\ReviewActivity.cs" Line="116" Column="33" />
-      <File FileName="LaCabana\Models\ReviewModel.cs" Line="17" Column="34" />
-      <File FileName="LaCabana\Activities\ReviewAddActivity.cs" Line="59" Column="30" />
+      <File FileName="LaCabana\Activities\ReviewActivity.cs" Line="71" Column="1" />
+      <File FileName="LaCabana\Models\ReviewModel.cs" Line="1" Column="1" />
+      <File FileName="LaCabana\Activities\ReviewAddActivity.cs" Line="1" Column="1" />
+      <File FileName="LaCabana\Activities\CabinsNear.cs" Line="226" Column="1" />
+      <File FileName="LaCabana\Activities\LoginActivity.cs" Line="162" Column="1" />
+      <File FileName="LaCabana\Services\BaseService.cs" Line="99" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="C:\Users\Nica\Documents\Projects\LaCabana\LaCabana\Activities\BaseActionActivity.cs" line="78" column="1" />
+      <Breakpoint file="C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\Activities\ReviewActivity.cs" line="71" column="1" />
+      <Breakpoint file="C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\Activities\ReviewActivity.cs" line="74" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
