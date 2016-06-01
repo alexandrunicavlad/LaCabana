@@ -138,6 +138,8 @@
     <Compile Include="Activities\ReviewActivity.cs" />
     <Compile Include="Models\ReviewModel.cs" />
     <Compile Include="Activities\ReviewAddActivity.cs" />
+    <Compile Include="Activities\PicturesActivity.cs" />
+    <Compile Include="Helpers\PictureAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -365,6 +367,8 @@
     <AndroidResource Include="Resources\layout\review_add_layout.axml" />
     <AndroidResource Include="Resources\menu\review_menu.xml" />
     <AndroidResource Include="Resources\menu\searchview_in_menu.xml" />
+    <AndroidResource Include="Resources\layout\pictures_layout.axml" />
+    <AndroidResource Include="Resources\drawable\lacabana_text_black.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\menu\" />

@@ -15,6 +15,7 @@ using Android.Gms.Maps.Model;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json;
+using Android.Graphics;
 
 namespace LaCabana
 {
@@ -71,9 +72,12 @@ namespace LaCabana
 				emailType.Text = cabin.EmailType;
 				priceText.Text = string.Format ("{0} {1}", cabin.Price.ToString (), cabin.PriceType);
 				destailsText.Text = cabin.Details;
-				if (cabin.Photo != null) {
-					var picture = Decode (cabin.Photo [0]);
-					cabinPhoto.SetImageBitmap (picture);
+				if (cabin.Pictures == null) {
+					//var picture = Decode (cabin.Pictures.Values [0]);
+//					var picture = cabin.Pictures.Values.First ();
+//					var baseService1 = new BaseService<byte[]> ();
+//					var abc = baseService1.Get (string.Format ("pictures/{0}", picture));
+//					cabinPhoto.SetImageBitmap (BitmapFactory.DecodeByteArray (abc, 0, abc.Length));
 				} else {
 					cabinPhoto.SetImageResource (Resource.Drawable.cabana_photo);
 					cabinPhoto.SetScaleType (ImageView.ScaleType.CenterCrop);
@@ -90,9 +94,7 @@ namespace LaCabana
 					var email = new Intent (Android.Content.Intent.ActionSend);
 					email.PutExtra (Android.Content.Intent.ExtraEmail,
 						new string[]{ "", cabin.Email });
-
 					email.PutExtra (Android.Content.Intent.ExtraSubject, string.Format ("Hello Cabin {0}", cabin.Name));
-
 					email.PutExtra (Android.Content.Intent.ExtraText, string.Format ("Hello Cabin {0}", cabin.Name));
 					email.SetType ("message/rfc822");
 					StartActivity (email);
@@ -136,6 +138,9 @@ namespace LaCabana
 				menu.MenuItemClick += (object sender1, PopupMenu.MenuItemClickEventArgs e1) => {
 					var a = e1.Item.TitleFormatted.ToString ();
 					if (a.Equals ("Pictures")) {
+						var intent = new Intent (this, typeof(PicturesActivity));				
+						intent.PutExtra ("marker", marker);
+						StartActivity (intent);
 					} else if (a.Equals ("Reviews")) {
 						var intent = new Intent (this, typeof(ReviewActivity));				
 						intent.PutExtra ("marker", marker);

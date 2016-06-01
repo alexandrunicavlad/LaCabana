@@ -82,8 +82,8 @@ namespace LaCabana
 			String[] fromul = new String[] { "cityName" };
 			int[] toul = new int[] { Android.Resource.Id.Text1 };
 			adaptere = new Android.Widget.SimpleCursorAdapter (this, Android.Resource.Layout.SimpleListItem1, null, fromul, toul, CursorAdapterFlags.RegisterContentObserver);
-			Search.Visibility = ViewStates.Visible;
 			Search = ActionBar.CustomView.FindViewById<Android.Widget.SearchView> (Resource.Id.searchView);
+			Search.Visibility = ViewStates.Visible;
 			SearchButton = ActionBar.CustomView.FindViewById<ImageButton> (Resource.Id.action_bar_searchBtn);
 			SearchButton.Visibility = ViewStates.Gone;
 			Search.SearchClick += delegate {	

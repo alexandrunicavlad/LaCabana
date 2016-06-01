@@ -29,7 +29,7 @@ namespace LaCabana
 		private int loginType;
 		private bool myaccountBool = false;
 		private RelativeLayout myAccountlayout;
-		private LinearLayout loginLayout;
+		private RelativeLayout loginLayout;
 		private ImageView addPhoto;
 		private Button uploadButton;
 		private string imageFile;
@@ -43,13 +43,13 @@ namespace LaCabana
 			base.OnCreate (bundle);
 
 			SetContentView (Resource.Layout.log_in_layout);
-			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
+			//SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
 			SetTitleActionBar ("Sign In");
 
 			myAccountlayout = FindViewById<RelativeLayout> (Resource.Id.my_account_layout);
 			email = myAccountlayout.FindViewById<EditText> (Resource.Id.emailEditText);
 			account = myAccountlayout.FindViewById<EditText> (Resource.Id.accountText);
-			loginLayout = FindViewById<LinearLayout> (Resource.Id.FlyContent);
+			loginLayout = FindViewById<RelativeLayout> (Resource.Id.FlyContent);
 			addPhoto = myAccountlayout.FindViewById<ImageView> (Resource.Id.addPhoto);
 			uploadButton = myAccountlayout.FindViewById<Button> (Resource.Id.uploadButton);
 			DatabaseServices = new DatabaseServices (this);

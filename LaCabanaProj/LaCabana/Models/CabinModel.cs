@@ -36,6 +36,8 @@ namespace LaCabana
 
 		public Dictionary<String, String> Reviews{ get; set; }
 
+		public Dictionary<String,String> Pictures{ get; set; }
+
 	}
 }
 

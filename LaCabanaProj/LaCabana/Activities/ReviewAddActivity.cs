@@ -64,7 +64,7 @@ namespace LaCabana
 			CreateDialog ("", GetString (Resource.String.wait), false, "", false, "", true);
 			review.UserNameAdded = account.Text;
 			review.Title = title.Text;
-			review.DateAdd = DateTime.Now.ToString ("dd/MM/yyyy");
+			review.DateAdd = DateTime.Now.ToString ("dd/MM/yyy").Replace (".", "/");
 			review.Rating = rating.Progress;
 			review.ReviewText = reviewText.Text;
 			if (user.ProfilePhoto != null)

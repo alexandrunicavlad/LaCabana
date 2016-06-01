@@ -29,6 +29,7 @@ namespace LaCabana
 		private String marker;
 		private Dictionary<string, ReviewModel> reviews;
 		private TextView empty;
+		private DateTime dt;
 
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
@@ -115,11 +116,19 @@ namespace LaCabana
 					userImage.SetScaleType (ImageView.ScaleType.CenterInside);
 				}
 				var now = DateTime.Now;
-				var dt = DateTime.ParseExact (rev.Value.DateAdd, "dd/MM/yyyy", null);
+				if (now.ToString ().Contains ("/")) {
+					dt = DateTime.ParseExact (rev.Value.DateAdd, "dd/MM/yyyy", null);
+				} else {
+					var newdate = rev.Value.DateAdd.Replace ("/", ".");
+					dt = DateTime.ParseExact (newdate, "dd.MM.yyyy", null);
+				}
+
 				var diff = (now - dt).TotalDays;
 
 				if (diff <= 1) {
 					duration.Text = "Today";
+				} else if (diff > 1 && diff < 7) {
+					duration.Text = "1 wk";
 				} else if (diff >= 7 && diff < 30) {
 					duration.Text = Convert.ToInt32 (diff / 7).ToString () + " wk";
 				} else if (diff >= 30 && diff < 365) {
