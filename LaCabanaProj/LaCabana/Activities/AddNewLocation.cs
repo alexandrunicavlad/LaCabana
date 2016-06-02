@@ -181,8 +181,7 @@ namespace LaCabana
 		{
 			if ((requestCode == 0) && (resultCode == Result.Ok) && (data != null)) {
 				_uri = data.Data;
-				photoAdd.SetImageURI (_uri);
-				var bitmap = MediaStore.Images.Media.GetBitmap (this.ContentResolver, _uri);
+				PerformCrop (_uri);
 //				MemoryStream stream = new MemoryStream ();
 //				var resizebit = Bitmap.CreateScaledBitmap (bitmap, 100, 100, false);
 //				resizebit.Compress (Bitmap.CompressFormat.Png, 100, stream);
@@ -190,6 +189,9 @@ namespace LaCabana
 //				byte[] byteArray = stream.ToArray ();
 //				String imageFile = Base64.EncodeToString (byteArray, Base64.Default);
 //				photoList.Add (imageFile);
+			} else if ((requestCode == 2) && (resultCode == Result.Ok) && (data != null)) {
+				Bundle extras = data.Extras;
+				//get the cropped bitmap
 			}
 		}
 
@@ -260,6 +262,34 @@ namespace LaCabana
 
 			locManager = GetSystemService (Context.LocationService) as LocationManager;
 			locManager.RequestLocationUpdates (LocationManager.NetworkProvider, 2000, 1, this);
+
+		}
+
+		public void PerformCrop (Android.Net.Uri selectedImage)
+		{
+			try {
+				Intent cropIntent = new Intent ("com.android.camera.action.CROP"); 
+				//indicate image type and Uri
+				cropIntent.SetDataAndType (selectedImage, "image/*");
+				//set crop properties
+				cropIntent.PutExtra ("crop", "true");
+				//indicate aspect of desired crop
+				cropIntent.PutExtra ("aspectX", 0.4);
+				cropIntent.PutExtra ("aspectY", 1);
+				//indicate output X and Y
+				cropIntent.PutExtra ("outputX", 256);
+				cropIntent.PutExtra ("outputY", 150);
+				//retrieve data on return
+				cropIntent.PutExtra ("return-data", true);
+				//start the activity - we handle returning in onActivityResult
+				StartActivityForResult (cropIntent, 2);
+			} catch (ActivityNotFoundException anfe) {
+
+				String errorMessage = "Whoops - your device doesn't support the crop action!";
+				Toast toast = Toast.MakeText (this, errorMessage, ToastLength.Short);
+				toast.Show ();
+			}
+
 
 		}
 

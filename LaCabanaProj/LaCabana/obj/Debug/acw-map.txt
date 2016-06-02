@@ -38,6 +38,10 @@ LaCabana.InfoWindowAdapter, LaCabana;md5dbce641a4b5bf99921cca81d5bb55bcc.InfoWin
 LaCabana.InfoWindowAdapter, LaCabana, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5dbce641a4b5bf99921cca81d5bb55bcc.InfoWindowAdapter
 LaCabana.InfoWindowAdapter;md5dbce641a4b5bf99921cca81d5bb55bcc.InfoWindowAdapter
 lacabana.InfoWindowAdapter;md5dbce641a4b5bf99921cca81d5bb55bcc.InfoWindowAdapter
+LaCabana.CabinInfo, LaCabana;md5dbce641a4b5bf99921cca81d5bb55bcc.CabinInfo
+LaCabana.CabinInfo, LaCabana, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5dbce641a4b5bf99921cca81d5bb55bcc.CabinInfo
+LaCabana.CabinInfo;md5dbce641a4b5bf99921cca81d5bb55bcc.CabinInfo
+lacabana.CabinInfo;md5dbce641a4b5bf99921cca81d5bb55bcc.CabinInfo
 LaCabana.AddNewLocation, LaCabana;md5dbce641a4b5bf99921cca81d5bb55bcc.AddNewLocation
 LaCabana.AddNewLocation, LaCabana, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5dbce641a4b5bf99921cca81d5bb55bcc.AddNewLocation
 LaCabana.AddNewLocation;md5dbce641a4b5bf99921cca81d5bb55bcc.AddNewLocation
@@ -46,10 +50,6 @@ LaCabana.CabinsNear, LaCabana;md5dbce641a4b5bf99921cca81d5bb55bcc.CabinsNear
 LaCabana.CabinsNear, LaCabana, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5dbce641a4b5bf99921cca81d5bb55bcc.CabinsNear
 LaCabana.CabinsNear;md5dbce641a4b5bf99921cca81d5bb55bcc.CabinsNear
 lacabana.CabinsNear;md5dbce641a4b5bf99921cca81d5bb55bcc.CabinsNear
-LaCabana.CabinInfo, LaCabana;md5dbce641a4b5bf99921cca81d5bb55bcc.CabinInfo
-LaCabana.CabinInfo, LaCabana, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5dbce641a4b5bf99921cca81d5bb55bcc.CabinInfo
-LaCabana.CabinInfo;md5dbce641a4b5bf99921cca81d5bb55bcc.CabinInfo
-lacabana.CabinInfo;md5dbce641a4b5bf99921cca81d5bb55bcc.CabinInfo
 LaCabana.FavoritesActivity, LaCabana;md5dbce641a4b5bf99921cca81d5bb55bcc.FavoritesActivity
 LaCabana.FavoritesActivity, LaCabana, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5dbce641a4b5bf99921cca81d5bb55bcc.FavoritesActivity
 LaCabana.FavoritesActivity;md5dbce641a4b5bf99921cca81d5bb55bcc.FavoritesActivity

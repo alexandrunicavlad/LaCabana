@@ -33,7 +33,7 @@ namespace LaCabana
 			base.OnCreate (savedInstanceState);
 
 			SetContentView (Resource.Layout.cabin_info_layout);
-			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
+			//SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
 			ConstructRightIcon ();
 			SetTitleActionBar1 ("Cabin");
 			marker = Intent.GetStringExtra ("marker");

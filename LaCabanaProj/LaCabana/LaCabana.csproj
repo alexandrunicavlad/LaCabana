@@ -37,6 +37,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -124,11 +125,11 @@
     <Compile Include="Models\UsersModel.cs" />
     <Compile Include="Helpers\InfoWindowAdapter.cs" />
     <Compile Include="Models\CabinModel.cs" />
+    <Compile Include="Activities\CabinInfo.cs" />
     <Compile Include="Activities\AddNewLocation.cs" />
     <Compile Include="Helpers\FontArrayAdapter.cs" />
     <Compile Include="Activities\CabinsNear.cs" />
     <Compile Include="Services\BaseService.cs" />
-    <Compile Include="Activities\CabinInfo.cs" />
     <Compile Include="Helpers\RouteGenerator.cs" />
     <Compile Include="Activities\FavoritesActivity.cs" />
     <Compile Include="Models\ImageModel.cs" />
@@ -369,6 +370,7 @@
     <AndroidResource Include="Resources\menu\searchview_in_menu.xml" />
     <AndroidResource Include="Resources\layout\pictures_layout.axml" />
     <AndroidResource Include="Resources\drawable\lacabana_text_black.png" />
+    <AndroidResource Include="Resources\layout\picture_dialog.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\menu\" />

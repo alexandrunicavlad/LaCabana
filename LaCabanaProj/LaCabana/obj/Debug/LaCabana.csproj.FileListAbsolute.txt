@@ -253,5 +253,6 @@ C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\menu\review_m
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\menu\searchview_in_menu.xml
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\pictures_layout.xml
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable\lacabana_text_black.png
+C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\picture_dialog.xml
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.dll.mdb
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.dll.mdb

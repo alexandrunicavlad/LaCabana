@@ -72,17 +72,35 @@ namespace LaCabana
 			gridview.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs args) {
 //				AlertDialog.Builder builder = new AlertDialog.Builder (this);
 //				AlertDialog dialog = builder.Create ();
-				Dialog buulde = new Dialog (this);
-				buulde.Window.RequestFeature (WindowFeatures.NoTitle);
-				ImageView imageView = new ImageView (this);			
+				Dialog dialog = new Dialog (this);
+				dialog.Window.RequestFeature (WindowFeatures.NoTitle);
+				dialog.SetContentView (Resource.Layout.picture_dialog);
+				dialog.Window.SetGravity (GravityFlags.Center);
+				dialog.Window.SetLayout (WindowManager.DefaultDisplay.Width - 100, WindowManager.DefaultDisplay.Height - 100);
+				dialog.SetCancelable (true);
+				dialog.SetCanceledOnTouchOutside (true);
+				var imageView = dialog.FindViewById<ImageView> (Resource.Id.imageCenter);
+				var leftButton = dialog.FindViewById<ImageView> (Resource.Id.leftButton);
+				var rightButton = dialog.FindViewById<ImageView> (Resource.Id.rightButton);
+				rightButton.Rotation = 180;
 				imageView.SetImageBitmap (picts [args.Position]);
-				buulde.AddContentView (imageView, new RelativeLayout.LayoutParams (
-					ViewGroup.LayoutParams.MatchParent, 
-					ViewGroup.LayoutParams.MatchParent));
-				imageView.Click += delegate {
-					buulde.Dismiss ();	
+				var pos = args.Position;
+				leftButton.Click += delegate {
+					if (pos > 0) {
+						pos = pos - 1;
+						imageView.SetImageBitmap (picts [pos]);
+					}
 				};
-				buulde.Show ();
+				rightButton.Click += delegate {
+					if (pos < picts.Count - 1) {
+						pos = pos + 1;
+						imageView.SetImageBitmap (picts [pos]);
+					}
+				};
+				imageView.Click += delegate {
+					dialog.Dismiss ();	
+				};
+				dialog.Show ();
 
 			};
 
@@ -106,6 +124,34 @@ namespace LaCabana
 				numberPhoto.Visibility = ViewStates.Visible;
 				numberPhoto.Text = string.Format ("({0}) Photos", picts.Count);
 			});
+		}
+
+		public void PerformCrop (Android.Net.Uri selectedImage)
+		{
+			try {
+				Intent cropIntent = new Intent ("com.android.camera.action.CROP"); 
+				//indicate image type and Uri
+				cropIntent.SetDataAndType (selectedImage, "image/*");
+				//set crop properties
+				cropIntent.PutExtra ("crop", "true");
+				//indicate aspect of desired crop
+				cropIntent.PutExtra ("aspectX", 0.4);
+				cropIntent.PutExtra ("aspectY", 1);
+				//indicate output X and Y
+				cropIntent.PutExtra ("outputX", 256);
+				cropIntent.PutExtra ("outputY", 150);
+				//retrieve data on return
+				cropIntent.PutExtra ("return-data", true);
+				//start the activity - we handle returning in onActivityResult
+				StartActivityForResult (cropIntent, 2);
+			} catch (ActivityNotFoundException anfe) {
+
+				String errorMessage = "Whoops - your device doesn't support the crop action!";
+				Toast toast = Toast.MakeText (this, errorMessage, ToastLength.Short);
+				toast.Show ();
+			}
+
+
 		}
 
 		public void ConstructRightIcon ()
@@ -149,7 +195,7 @@ namespace LaCabana
 				var selectedImage = data.Data;
 				try {	
 					var pathul = selectedImage.ToString ();
-
+					PerformCrop (selectedImage);
 					var bitmap = MediaStore.Images.Media.GetBitmap (this.ContentResolver, selectedImage);
 					var neda = Bitmap.CreateScaledBitmap (bitmap, 600, 800, false);
 					bitmap.Recycle ();
@@ -171,10 +217,11 @@ namespace LaCabana
 					//var toast = Toast.MakeText (this, GetString (Resource.String.Failedtoload), ToastLength.Short);
 					//toast.Show ();
 				}
+			
+			
+
 			}
 		}
-
-
 	}
 }
 
