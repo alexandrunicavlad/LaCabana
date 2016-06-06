@@ -76,7 +76,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/facebookButton"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/signuplayout">
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -111,6 +112,13 @@
                         android:layout_below="@+id/helpsign"
                         android:layout_centerHorizontal="true" />
                 </RelativeLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/facebook"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/signuplayout"
+                    android:id="@+id/facebookBtn" />
             </RelativeLayout>
         </LinearLayout>
     </RelativeLayout>

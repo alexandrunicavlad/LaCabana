@@ -1,11 +1,14 @@
 ﻿<Properties StartupItem="LaCabana\LaCabana.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.TA92917UH0" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Xamarin_Android_API_15" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LaCabana\Activities\PicturesActivity.cs">
     <Files>
-      <File FileName="LaCabana\Activities\ReviewActivity.cs" Line="183" Column="4" />
+      <File FileName="LaCabana\Activities\ReviewActivity.cs" Line="156" Column="5" />
       <File FileName="LaCabana\Models\ReviewModel.cs" Line="1" Column="1" />
-      <File FileName="LaCabana\Activities\CabinsNear.cs" Line="186" Column="61" />
-      <File FileName="LaCabana\Activities\PicturesActivity.cs" Line="35" Column="49" />
+      <File FileName="LaCabana\Activities\CabinsNear.cs" Line="1" Column="1" />
+      <File FileName="LaCabana\Activities\PicturesActivity.cs" Line="112" Column="83" />
+      <File FileName="LaCabana\Activities\AddNewLocation.cs" Line="247" Column="1" />
+      <File FileName="LaCabana\Activities\CabinInfo.cs" Line="76" Column="1" />
+      <File FileName="LaCabana\Services\BaseService.cs" Line="49" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

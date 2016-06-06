@@ -51,6 +51,9 @@ namespace LaCabana
 		private LinearLayout mapLayout;
 		private TextView locationEdit;
 		private List<String> photoList;
+		private Bitmap thePic;
+		private double latitude;
+		private double longitude;
 
 		protected override void OnCreate (Bundle bundle)
 		{			
@@ -64,8 +67,9 @@ namespace LaCabana
 			ClickHandler ();
 			cabin = new CabinModel ();
 			cabin.Photo = new List<string> ();
-			var latitude = Intent.GetDoubleExtra ("latitude", 0);
-			var longitude = Intent.GetDoubleExtra ("longitude", 0);
+			latitude = Intent.GetDoubleExtra ("latitude", 0);
+			longitude = Intent.GetDoubleExtra ("longitude", 0);
+
 			HideKeyboard (this);
 			var phoneSpinner = FindViewById<Spinner> (Resource.Id.phoneSpinner);
 			var emailSpinner = FindViewById<Spinner> (Resource.Id.emailSpinner);
@@ -124,10 +128,13 @@ namespace LaCabana
 			};
 
 			price.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
-				var floa = float.Parse (price.Text);
-				cabin.Price = floa;
+				if (price.Text != "") {
+					var floa = float.Parse (price.Text);
+					cabin.Price = floa;
+				}
+				
 			};
-
+			cabin.Pictures = new Dictionary<string, string> ();
 			detailsEdit.TextChanged += delegate {
 				cabin.Details = detailsEdit.Text;
 			};
@@ -166,20 +173,18 @@ namespace LaCabana
 				HideKeyboard (this);	
 				mapLayout.Visibility = ViewStates.Visible;
 			};
+			MyPosition (new LatLng (latitude, longitude));
 		}
 
 		private void PictureChangeClick (object sender, EventArgs e)
 		{			
-			var intent = new Intent ();
-			intent.SetType ("image/*");
-			intent.SetAction (Intent.ActionGetContent);
-			photoAdd.Visibility = ViewStates.Visible;
-			StartActivityForResult (Intent.CreateChooser (intent, "Select Picture"), 0);
+			Intent intent = new Intent (Intent.ActionPick, MediaStore.Images.Media.ExternalContentUri);
+			StartActivityForResult (intent, 1);
 		}
 
 		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
 		{
-			if ((requestCode == 0) && (resultCode == Result.Ok) && (data != null)) {
+			if ((requestCode == 1) && (resultCode == Result.Ok) && (data != null)) {
 				_uri = data.Data;
 				PerformCrop (_uri);
 //				MemoryStream stream = new MemoryStream ();
@@ -191,7 +196,11 @@ namespace LaCabana
 //				photoList.Add (imageFile);
 			} else if ((requestCode == 2) && (resultCode == Result.Ok) && (data != null)) {
 				Bundle extras = data.Extras;
-				//get the cropped bitmap
+				thePic = (Bitmap)extras.GetParcelable ("data");
+				photoAdd.Visibility = ViewStates.Visible;
+				photoAdd.SetScaleType (ImageView.ScaleType.FitXy);
+				photoAdd.SetImageBitmap (thePic);
+
 			}
 		}
 
@@ -228,14 +237,22 @@ namespace LaCabana
 			if (cabin.PriceType.Equals ("Select")) {
 				cabin.PriceType = stringPrice [1];
 			}
+
+			var bos = new MemoryStream ();
+			thePic.Compress (Android.Graphics.Bitmap.CompressFormat.Jpeg, 70, bos);
+			var asd = bos.ToArray ();
+			var baseService2 = new BaseService<byte[]> ();
 			var baseService = new BaseService<CabinModel> ();
 			try {
-				var result = baseService.Push (cabin, "cabins");
+				var result = baseService2.Push (asd, "pictures");
+				cabin.Pictures.Add ("main", result.Result.Name);
+				var result1 = baseService.Push (cabin, "cabins");
 				StartActivityForResult (typeof(BasicMapDemoActivity), 2);
 				Finish ();
 			} catch (Exception e) {
 				var a = 0;
-			}
+			}			
+
 		}
 
 		public void OnMapReady (GoogleMap googleMap)

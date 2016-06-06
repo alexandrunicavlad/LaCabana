@@ -195,7 +195,6 @@ namespace LaCabana
 				var selectedImage = data.Data;
 				try {	
 					var pathul = selectedImage.ToString ();
-					PerformCrop (selectedImage);
 					var bitmap = MediaStore.Images.Media.GetBitmap (this.ContentResolver, selectedImage);
 					var neda = Bitmap.CreateScaledBitmap (bitmap, 600, 800, false);
 					bitmap.Recycle ();

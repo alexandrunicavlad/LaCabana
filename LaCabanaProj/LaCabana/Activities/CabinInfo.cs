@@ -72,12 +72,16 @@ namespace LaCabana
 				emailType.Text = cabin.EmailType;
 				priceText.Text = string.Format ("{0} {1}", cabin.Price.ToString (), cabin.PriceType);
 				destailsText.Text = cabin.Details;
-				if (cabin.Pictures == null) {
-					//var picture = Decode (cabin.Pictures.Values [0]);
-//					var picture = cabin.Pictures.Values.First ();
-//					var baseService1 = new BaseService<byte[]> ();
-//					var abc = baseService1.Get (string.Format ("pictures/{0}", picture));
-//					cabinPhoto.SetImageBitmap (BitmapFactory.DecodeByteArray (abc, 0, abc.Length));
+				if (cabin.Pictures != null) {
+					if (cabin.Pictures.ContainsKey ("main")) {			
+						
+						var baseService1 = new BaseService<byte[]> ();
+						var abc = baseService1.Get (string.Format ("pictures/{0}", cabin.Pictures.Last ().Value));
+						cabinPhoto.SetImageBitmap (BitmapFactory.DecodeByteArray (abc, 0, abc.Length));
+						cabinPhoto.SetScaleType (ImageView.ScaleType.FitXy);
+					}
+
+
 				} else {
 					cabinPhoto.SetImageResource (Resource.Drawable.cabana_photo);
 					cabinPhoto.SetScaleType (ImageView.ScaleType.CenterCrop);

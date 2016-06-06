@@ -27,6 +27,7 @@ C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Xamari
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Xamarin.Android.Support.v7.AppCompat.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Xamarin.Android.Support.v7.CardView.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Xamarin.Android.Support.Vector.Drawable.dll
+C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Xamarin.Auth.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Xamarin.Facebook.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Xamarin.GooglePlayServices.Base.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Xamarin.GooglePlayServices.Basement.dll

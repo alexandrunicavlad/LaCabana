@@ -1,3 +1,4 @@
+C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-hdpi\edittextcustom_textfield_default_holo_light.9.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.dll.config
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.pdb
@@ -17,6 +18,7 @@ C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Android.S
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
+C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Auth.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Facebook.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.GooglePlayServices.Base.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.GooglePlayServices.Basement.dll
@@ -51,7 +53,6 @@ C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\add_ne
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable\main_picture.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\cabins_near_layout.xml
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\cabin_view_layout.xml
-C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-hdpi\edittextcustom_textfield_default_holo_light.9.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-hdpi\facebook.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-hdpi\googleplus.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-hdpi\ic_account.png
@@ -217,8 +218,6 @@ C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xhdp
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxhdpi\ic_send.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxxhdpi\ic_send.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\menu\near_menu.xml
-C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\R.cs.flag
-C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\uploadflags.txt
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-hdpi\ic_heart_white.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-mdpi\ic_heart_white.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xhdpi\ic_heart_white.png
@@ -244,7 +243,6 @@ C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-hdpi
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-hdpi\ic_list.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-hdpi\ic_more.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-hdpi\ic_search.png
-C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.csprojResolveAssemblyReference.cache
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\menu\cabin_menu.xml
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\review_view_layout.xml
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\review_layout.xml
@@ -254,5 +252,7 @@ C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\menu\searchvi
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\pictures_layout.xml
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable\lacabana_text_black.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\picture_dialog.xml
+C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\R.cs.flag
+C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\uploadflags.txt
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.dll.mdb
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.dll.mdb
