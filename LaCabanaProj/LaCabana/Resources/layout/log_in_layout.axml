@@ -77,8 +77,54 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/facebookButton"
                     android:layout_marginTop="10dp"
-                    android:id="@+id/signuplayout">
+                    android:id="@+id/socialLayout">
+                    <TextView
+                        android:text="Fast sign-in if your social profile is connected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/socialtext"
+                        android:textSize="14dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#ff000000"
+                        android:layout_centerHorizontal="true" />
                     <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/socialtext"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/socialLayout">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/facebook"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/signuplayout"
+                            android:id="@+id/facebookBtn"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/googleplus"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/googleBtn"
+                            android:layout_toRightOf="@+id/facebookBtn" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/twetter"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/tweeterBtn"
+                            android:layout_toLeftOf="@+id/facebookBtn" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/socialLayout"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/signuplayout">
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/helpsign"
@@ -95,12 +141,12 @@
                             android:text="Sign up"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/helpsign"
+                            android:layout_toRightOf="@id/socialtext"
                             android:layout_marginTop="10dp"
                             android:id="@+id/signUpButtonDetails"
                             android:textSize="14dp"
                             android:textColor="#ff00e5ff" />
-                    </RelativeLayout>
+                    </LinearLayout>
                     <TextView
                         android:text="You forgot your password?"
                         android:layout_width="wrap_content"
@@ -112,13 +158,6 @@
                         android:layout_below="@+id/helpsign"
                         android:layout_centerHorizontal="true" />
                 </RelativeLayout>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/facebook"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@+id/signuplayout"
-                    android:id="@+id/facebookBtn" />
             </RelativeLayout>
         </LinearLayout>
     </RelativeLayout>

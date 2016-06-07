@@ -32,6 +32,7 @@ C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Xamari
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Xamarin.GooglePlayServices.Base.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Xamarin.GooglePlayServices.Basement.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Xamarin.GooglePlayServices.Maps.dll
+C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Xamarin.GooglePlayServices.Plus.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\Xamarin.Insights.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\System.Collections.Concurrent.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\assemblies\System.Collections.dll

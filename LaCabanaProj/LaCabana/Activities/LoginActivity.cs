@@ -26,16 +26,20 @@ using Newtonsoft.Json;
 using Java.Net;
 using System.Net;
 using FireSharp.Response;
+using Android.Gms.Common.Apis;
+using Android.Gms.Plus;
+using Android.Gms.Common;
+using Android.Gms.Plus.Model.People;
 
 namespace LaCabana
 {
 	[Activity (ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, Theme = "@style/MyTheme")]
-	public class LoginActivity : BaseDrawerActivity,IFacebookCallback,GraphRequest.IGraphJSONObjectCallback
+	public class LoginActivity : BaseDrawerActivity,IFacebookCallback,GraphRequest.IGraphJSONObjectCallback, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
 	{
 		private const int NormalLogin = 0;
 		private const int FacebookLogin = 1;
 		private const int GoogleLogin = 2;
-		private int loginType;
+		private int loginType = NormalLogin;
 		private bool myaccountBool = false;
 		private RelativeLayout myAccountlayout;
 		private RelativeLayout loginLayout;
@@ -49,6 +53,8 @@ namespace LaCabana
 		private ICallbackManager _facebookCallBackManager;
 		private Dictionary<string,UsersModel> user;
 		private PushResponse response;
+		const int RC_SIGN_IN = 9001;
+		GoogleApiClient mGoogleApiClient;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -71,7 +77,9 @@ namespace LaCabana
 				myAccountlayout.Visibility = ViewStates.Visible;
 				myaccountBool = true;
 			}
+
 			PrepareFacebookLogin ();
+			PrepareGoogleLogin ();
 			var signUp = FindViewById<TextView> (Resource.Id.signUpButtonDetails);
 			signUp.Click += delegate {
 				StartActivityForResult (typeof(SignUpActivity), 0);    
@@ -84,23 +92,12 @@ namespace LaCabana
 				HideKeyboard (loginBtn);
 				if (email1.Text == "") {
 					CreateDialog (GetString (Resource.String.invalid_email), true);
-				} else {
+				} else {					
 					ThreadPool.QueueUserWorkItem (o => LoginVerify ());
 				}
 			};
 
 			var forgotPasswordBtn = FindViewById<TextView> (Resource.Id.forgotPassword);
-
-//				DismissViewController (true, null);
-//				if (eventArgs.IsAuthenticated) {
-//					// Use eventArgs.Account to do wonderful things
-//				}
-//			};
-//			forgotPasswordBtn.Click += delegate {
-//				LoginToFacebook (true);
-//			};
-//			PresentViewController (auth.GetUI (), true, null);
-
 			if (myaccountBool) {
 				uploadButton.Click += PictureChangeClick;
 
@@ -110,9 +107,120 @@ namespace LaCabana
 				myAccountlayout.FindViewById<Button> (Resource.Id.add_button_location).Click += delegate {
 					ThreadPool.QueueUserWorkItem (o => SaveChanges (allUsers));
 				};
+			}	
+
+		}
+
+		private void PrepareGoogleLogin ()
+		{
+			mGoogleApiClient = new GoogleApiClient.Builder (this)
+				.AddConnectionCallbacks (this)
+				.AddOnConnectionFailedListener (this)
+				.AddApi (PlusClass.API)
+				.AddScope (new Scope (Scopes.Profile))
+				.Build ();
+			FindViewById<ImageView> (Resource.Id.googleBtn).Click += delegate {	
+				mGoogleApiClient.Connect ();
+				loginType = GoogleLogin;
+			};
+			FindViewById<TextView> (Resource.Id.forgotPassword).Click += delegate {
+				if (mGoogleApiClient.IsConnected) {
+					PlusClass.AccountApi.ClearDefaultAccount (mGoogleApiClient);
+					mGoogleApiClient.Disconnect ();
+				}
+				UpdateUI (false);
+			};
+
+
+		}
+
+		void UpdateUI (bool isSignedIn)
+		{
+			if (isSignedIn) {
+				var person = PlusClass.PeopleApi.GetCurrentPerson (mGoogleApiClient);
+				UsersModel user = new UsersModel ();
+				if (person != null) {
+					user.Username = person.DisplayName;
+					user.Email = PlusClass.AccountApi.GetAccountName (mGoogleApiClient);
+					if (person.Image.Url != null) {		
+						var imageUrl = person.Image.Url;
+						using (var webClient = new WebClient ()) {
+							var imageBytes = webClient.DownloadData (imageUrl);
+							if (imageBytes != null && imageBytes.Length > 0) {
+								user.ProfilePhoto = Base64.EncodeToString (imageBytes, Base64.Default);
+							}
+						}
+					}
+					FacebookVerify (user);
+
+				}
+
 			}
 
 		}
+
+		protected override void OnStart ()
+		{
+			base.OnStart ();
+			//mGoogleApiClient.Connect ();
+		}
+
+		protected override void OnStop ()
+		{
+			base.OnStop ();
+			//mGoogleApiClient.Disconnect ();
+		}
+
+		public void OnConnected (Bundle connectionHint)
+		{			
+			UpdateUI (true);
+		}
+
+		public void OnConnectionSuspended (int cause)
+		{
+			
+		}
+
+		public void OnConnectionFailed (ConnectionResult result)
+		{		
+			if (result.HasResolution) {
+				try {
+					result.StartResolutionForResult (this, RC_SIGN_IN);
+				} catch (IntentSender.SendIntentException e) {	
+					mGoogleApiClient.Connect ();
+				}
+			} else {
+				var abc = 0;
+				//ShowErrorDialog (result);
+			}
+		}
+
+		//		public async void OnClick (View v)
+		//		{
+		//			switch (v.Id) {
+		//			case Resource.Id.sign_in_button:
+		//				mStatus.Text = GetString (Resource.String.signing_in);
+		//				mShouldResolve = true;
+		//				mGoogleApiClient.Connect ();
+		//				break;
+		//			case Resource.Id.sign_out_button:
+		//				if (mGoogleApiClient.IsConnected) {
+		//					PlusClass.AccountApi.ClearDefaultAccount (mGoogleApiClient);
+		//					mGoogleApiClient.Disconnect ();
+		//				}
+		//				UpdateUI (false);
+		//				break;
+		//			case Resource.Id.disconnect_button:
+		//				if (mGoogleApiClient.IsConnected) {
+		//					PlusClass.AccountApi.ClearDefaultAccount (mGoogleApiClient);
+		//					await PlusClass.AccountApi.RevokeAccessAndDisconnect (mGoogleApiClient);
+		//					mGoogleApiClient.Disconnect ();
+		//				}
+		//				UpdateUI (false);
+		//				break;
+		//			}
+		//		}
+
 
 		private void PrepareFacebookLogin ()
 		{
@@ -167,21 +275,8 @@ namespace LaCabana
 						}
 					}
 				}
-
-				//var requestText = JsonConvert.SerializeObject (user);
-				//var result = Push (user);
+				FacebookVerify (user);
 			}
-			FacebookVerify (user);
-//			user.Id = result;
-//			DatabaseServices.InsertUsername (user);
-//			var baseserv = new BaseService<UsersModel> ();
-//			var newUrl = string.Format ("users/{0}", user.Id);
-//			try {
-//				baseserv.UpdateUser (user, newUrl);
-//
-//			} catch (Exception e) {
-//				var a = 0;
-//			}
 		}
 
 		public void SaveChanges (UsersModel user)
@@ -232,29 +327,37 @@ namespace LaCabana
 			StartActivityForResult (Intent.CreateChooser (intent, "Select Picture"), 0);
 		}
 
+
+
 		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
 		{
-			if (resultCode == Result.Ok && loginType == FacebookLogin) {
+			if (resultCode == Result.Ok) {
 				switch (loginType) {
 				case FacebookLogin:
 					CreateDialog (Resources.GetString (Resource.String.wait), false, true);
 					_facebookCallBackManager.OnActivityResult (requestCode, (int)resultCode, data);
-					break;		
-
+					break;					
 				}
 			}
-			loginType = NormalLogin;
-			if ((requestCode == 0) && (resultCode == Result.Ok) && (data != null)) {
+			if (requestCode == RC_SIGN_IN) {	
+				mGoogleApiClient.Connect ();
+			}
+			if ((requestCode == 0) && (resultCode == Result.Ok) && (data != null) && (loginType == NormalLogin)) {
 				Android.Net.Uri uri = data.Data;
 				addPhoto.SetImageURI (uri);
 				addPhoto.SetScaleType (ImageView.ScaleType.CenterCrop);
-				var bitmap = MediaStore.Images.Media.GetBitmap (this.ContentResolver, uri);
-				MemoryStream stream = new MemoryStream ();
-				var resizebit = Bitmap.CreateScaledBitmap (bitmap, 100, 100, false);
-				resizebit.Compress (Bitmap.CompressFormat.Png, 100, stream);
-				resizebit.Recycle ();
-				byte[] byteArray = stream.ToArray ();
-				imageFile = Base64.EncodeToString (byteArray, Base64.Default);
+				try {
+					var bitmap = MediaStore.Images.Media.GetBitmap (this.ContentResolver, uri);
+					MemoryStream stream = new MemoryStream ();
+					var resizebit = Bitmap.CreateScaledBitmap (bitmap, 100, 100, false);
+					resizebit.Compress (Bitmap.CompressFormat.Png, 100, stream);
+					resizebit.Recycle ();
+					byte[] byteArray = stream.ToArray ();
+					imageFile = Base64.EncodeToString (byteArray, Base64.Default);
+				} catch (Exception e) {
+					var a = 0;
+				}
+
 			}
 		}
 
@@ -301,6 +404,12 @@ namespace LaCabana
 						StartActivity (typeof(BasicMapDemoActivity));
 						Finish ();
 					});
+				}
+				if (loginType == GoogleLogin) {
+					if (mGoogleApiClient.IsConnected) {
+						PlusClass.AccountApi.ClearDefaultAccount (mGoogleApiClient);
+						mGoogleApiClient.Disconnect ();
+					}
 				}
 			});
 		}
@@ -370,58 +479,59 @@ namespace LaCabana
 
 		}
 
-		void LoginToFacebook (bool allowCancel)
-		{		
-			
-			var auth = new OAuth2Authenticator (
-				           clientId: "196006237460777",
-				           scope: "",
-				           authorizeUrl: new Uri ("https://m.facebook.com/dialog/oauth/"),
-				           redirectUrl: new Uri ("http://www.facebook.com/connect/login_success.html"));
+		//		void LoginToFacebook (bool allowCancel)
+		//		{
+		//
+		//			var auth = new OAuth2Authenticator (
+		//				           clientId: "196006237460777",
+		//				           scope: "",
+		//				           authorizeUrl: new Uri ("https://m.facebook.com/dialog/oauth/"),
+		//				           redirectUrl: new Uri ("http://www.facebook.com/connect/login_success.html"));
+		//
+		//			auth.AllowCancel = allowCancel;
+		//
+		//			// If authorization succeeds or is canceled, .Completed will be fired.
+		//			auth.Completed += (s, ee) => {
+		//				if (!ee.IsAuthenticated) {
+		//					var builder = new AlertDialog.Builder (this);
+		//					builder.SetMessage ("Not Authenticated");
+		//					builder.SetPositiveButton ("Ok", (o, e) => {
+		//					});
+		//					builder.Create ().Show ();
+		//					return;
+		//				}
+		//
+		//				// Now that we're logged in, make a OAuth2 request to get the user's info.
+		//				var request = new OAuth2Request ("GET", new Uri ("https://graph.facebook.com/me?fields=name"), null, ee.Account);
+		//				var abc = ee.Account.Username;
+		//				request.GetResponseAsync ().ContinueWith (t => {
+		//					var builder = new AlertDialog.Builder (this);
+		//					if (t.IsFaulted) {
+		//						builder.SetTitle ("Error");
+		//						builder.SetMessage (t.Exception.Flatten ().InnerException.ToString ());
+		//					} else if (t.IsCanceled)
+		//						builder.SetTitle ("Task Canceled");
+		//					else {
+		//						var obj = JsonValue.Parse (t.Result.GetResponseText ());
+		//						var acas = t.Result.GetResponseText ();
+		//						builder.SetTitle ("Logged in");
+		//						builder.SetMessage ("Name: " + obj ["name"]);
+		//					}
+		//
+		//					builder.SetPositiveButton ("Ok", (o, e) => {
+		//					});
+		//					builder.Create ().Show ();
+		//				}, UIScheduler);
+		//			};
+		//
+		//			var intent = auth.GetUI (this);
+		//			StartActivity (intent);
+		//		}
+		//
+		//
+		//
+		//		private static readonly TaskScheduler UIScheduler = TaskScheduler.FromCurrentSynchronizationContext ();
 
-			auth.AllowCancel = allowCancel;
-
-			// If authorization succeeds or is canceled, .Completed will be fired.
-			auth.Completed += (s, ee) => {
-				if (!ee.IsAuthenticated) {
-					var builder = new AlertDialog.Builder (this);
-					builder.SetMessage ("Not Authenticated");
-					builder.SetPositiveButton ("Ok", (o, e) => {
-					});
-					builder.Create ().Show ();
-					return;
-				}
-
-				// Now that we're logged in, make a OAuth2 request to get the user's info.
-				var request = new OAuth2Request ("GET", new Uri ("https://graph.facebook.com/me?fields=name"), null, ee.Account);
-				var abc = ee.Account.Username;
-				request.GetResponseAsync ().ContinueWith (t => {
-					var builder = new AlertDialog.Builder (this);
-					if (t.IsFaulted) {
-						builder.SetTitle ("Error");
-						builder.SetMessage (t.Exception.Flatten ().InnerException.ToString ());
-					} else if (t.IsCanceled)
-						builder.SetTitle ("Task Canceled");
-					else {
-						var obj = JsonValue.Parse (t.Result.GetResponseText ());
-						var acas = t.Result.GetResponseText ();
-						builder.SetTitle ("Logged in");
-						builder.SetMessage ("Name: " + obj ["name"]);
-					}
-
-					builder.SetPositiveButton ("Ok", (o, e) => {
-					});
-					builder.Create ().Show ();
-				}, UIScheduler);
-			};
-
-			var intent = auth.GetUI (this);
-			StartActivity (intent);
-		}
-
-
-
-		private static readonly TaskScheduler UIScheduler = TaskScheduler.FromCurrentSynchronizationContext ();
 
 	}
 }

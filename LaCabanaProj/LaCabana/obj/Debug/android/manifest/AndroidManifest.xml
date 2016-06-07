@@ -19,7 +19,6 @@
     <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id" />
     <activity android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" />
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
-    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
     <activity android:name="md5dbce641a4b5bf99921cca81d5bb55bcc.MainActivity" />
     <activity android:label="BaseDrawerActivity" android:name="md5dbce641a4b5bf99921cca81d5bb55bcc.BaseDrawerActivity" />
     <activity android:label="BaseActivity" android:name="md5dbce641a4b5bf99921cca81d5bb55bcc.BaseActivity" />

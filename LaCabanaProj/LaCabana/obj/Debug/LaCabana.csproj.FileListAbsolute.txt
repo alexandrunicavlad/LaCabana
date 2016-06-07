@@ -23,12 +23,14 @@ C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Facebook.
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.GooglePlayServices.Base.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.GooglePlayServices.Basement.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.GooglePlayServices.Maps.dll
+C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.GooglePlayServices.Plus.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Insights.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Xamarin.Insights.xml
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\SQLite-net.dll.mdb
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.xml
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.csprojResolveAssemblyReference.cache
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.pdb
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\android\bin\com.alexandrunica.lacabana.apk

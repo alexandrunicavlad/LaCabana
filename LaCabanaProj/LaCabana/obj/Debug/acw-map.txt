@@ -306,6 +306,10 @@ Android.Gms.Maps.GoogleMap/IOnCameraChangeListenerImplementor, Xamarin.GooglePla
 Android.Gms.Maps.GoogleMap+IOnCameraChangeListenerImplementor, Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.maps.GoogleMap_OnCameraChangeListenerImplementor
 Android.Gms.Maps.GoogleMap.IOnCameraChangeListenerImplementor;mono.com.google.android.gms.maps.GoogleMap_OnCameraChangeListenerImplementor
 mono.com.google.android.gms.maps.GoogleMap_OnCameraChangeListenerImplementor;mono.com.google.android.gms.maps.GoogleMap_OnCameraChangeListenerImplementor
+Android.Gms.Maps.GoogleMap/IOnGroundOverlayClickListenerImplementor, Xamarin.GooglePlayServices.Maps;mono.com.google.android.gms.maps.GoogleMap_OnGroundOverlayClickListenerImplementor
+Android.Gms.Maps.GoogleMap+IOnGroundOverlayClickListenerImplementor, Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.maps.GoogleMap_OnGroundOverlayClickListenerImplementor
+Android.Gms.Maps.GoogleMap.IOnGroundOverlayClickListenerImplementor;mono.com.google.android.gms.maps.GoogleMap_OnGroundOverlayClickListenerImplementor
+mono.com.google.android.gms.maps.GoogleMap_OnGroundOverlayClickListenerImplementor;mono.com.google.android.gms.maps.GoogleMap_OnGroundOverlayClickListenerImplementor
 Android.Gms.Maps.GoogleMap/IOnIndoorStateChangeListenerImplementor, Xamarin.GooglePlayServices.Maps;mono.com.google.android.gms.maps.GoogleMap_OnIndoorStateChangeListenerImplementor
 Android.Gms.Maps.GoogleMap+IOnIndoorStateChangeListenerImplementor, Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.maps.GoogleMap_OnIndoorStateChangeListenerImplementor
 Android.Gms.Maps.GoogleMap.IOnIndoorStateChangeListenerImplementor;mono.com.google.android.gms.maps.GoogleMap_OnIndoorStateChangeListenerImplementor
@@ -314,6 +318,14 @@ Android.Gms.Maps.GoogleMap/IOnInfoWindowClickListenerImplementor, Xamarin.Google
 Android.Gms.Maps.GoogleMap+IOnInfoWindowClickListenerImplementor, Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.maps.GoogleMap_OnInfoWindowClickListenerImplementor
 Android.Gms.Maps.GoogleMap.IOnInfoWindowClickListenerImplementor;mono.com.google.android.gms.maps.GoogleMap_OnInfoWindowClickListenerImplementor
 mono.com.google.android.gms.maps.GoogleMap_OnInfoWindowClickListenerImplementor;mono.com.google.android.gms.maps.GoogleMap_OnInfoWindowClickListenerImplementor
+Android.Gms.Maps.GoogleMap/IOnInfoWindowCloseListenerImplementor, Xamarin.GooglePlayServices.Maps;mono.com.google.android.gms.maps.GoogleMap_OnInfoWindowCloseListenerImplementor
+Android.Gms.Maps.GoogleMap+IOnInfoWindowCloseListenerImplementor, Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.maps.GoogleMap_OnInfoWindowCloseListenerImplementor
+Android.Gms.Maps.GoogleMap.IOnInfoWindowCloseListenerImplementor;mono.com.google.android.gms.maps.GoogleMap_OnInfoWindowCloseListenerImplementor
+mono.com.google.android.gms.maps.GoogleMap_OnInfoWindowCloseListenerImplementor;mono.com.google.android.gms.maps.GoogleMap_OnInfoWindowCloseListenerImplementor
+Android.Gms.Maps.GoogleMap/IOnInfoWindowLongClickListenerImplementor, Xamarin.GooglePlayServices.Maps;mono.com.google.android.gms.maps.GoogleMap_OnInfoWindowLongClickListenerImplementor
+Android.Gms.Maps.GoogleMap+IOnInfoWindowLongClickListenerImplementor, Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.maps.GoogleMap_OnInfoWindowLongClickListenerImplementor
+Android.Gms.Maps.GoogleMap.IOnInfoWindowLongClickListenerImplementor;mono.com.google.android.gms.maps.GoogleMap_OnInfoWindowLongClickListenerImplementor
+mono.com.google.android.gms.maps.GoogleMap_OnInfoWindowLongClickListenerImplementor;mono.com.google.android.gms.maps.GoogleMap_OnInfoWindowLongClickListenerImplementor
 Android.Gms.Maps.GoogleMap/IOnMapClickListenerImplementor, Xamarin.GooglePlayServices.Maps;mono.com.google.android.gms.maps.GoogleMap_OnMapClickListenerImplementor
 Android.Gms.Maps.GoogleMap+IOnMapClickListenerImplementor, Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.maps.GoogleMap_OnMapClickListenerImplementor
 Android.Gms.Maps.GoogleMap.IOnMapClickListenerImplementor;mono.com.google.android.gms.maps.GoogleMap_OnMapClickListenerImplementor
@@ -338,6 +350,14 @@ Android.Gms.Maps.GoogleMap/IOnMyLocationChangeListenerImplementor, Xamarin.Googl
 Android.Gms.Maps.GoogleMap+IOnMyLocationChangeListenerImplementor, Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.maps.GoogleMap_OnMyLocationChangeListenerImplementor
 Android.Gms.Maps.GoogleMap.IOnMyLocationChangeListenerImplementor;mono.com.google.android.gms.maps.GoogleMap_OnMyLocationChangeListenerImplementor
 mono.com.google.android.gms.maps.GoogleMap_OnMyLocationChangeListenerImplementor;mono.com.google.android.gms.maps.GoogleMap_OnMyLocationChangeListenerImplementor
+Android.Gms.Maps.GoogleMap/IOnPolygonClickListenerImplementor, Xamarin.GooglePlayServices.Maps;mono.com.google.android.gms.maps.GoogleMap_OnPolygonClickListenerImplementor
+Android.Gms.Maps.GoogleMap+IOnPolygonClickListenerImplementor, Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.maps.GoogleMap_OnPolygonClickListenerImplementor
+Android.Gms.Maps.GoogleMap.IOnPolygonClickListenerImplementor;mono.com.google.android.gms.maps.GoogleMap_OnPolygonClickListenerImplementor
+mono.com.google.android.gms.maps.GoogleMap_OnPolygonClickListenerImplementor;mono.com.google.android.gms.maps.GoogleMap_OnPolygonClickListenerImplementor
+Android.Gms.Maps.GoogleMap/IOnPolylineClickListenerImplementor, Xamarin.GooglePlayServices.Maps;mono.com.google.android.gms.maps.GoogleMap_OnPolylineClickListenerImplementor
+Android.Gms.Maps.GoogleMap+IOnPolylineClickListenerImplementor, Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.maps.GoogleMap_OnPolylineClickListenerImplementor
+Android.Gms.Maps.GoogleMap.IOnPolylineClickListenerImplementor;mono.com.google.android.gms.maps.GoogleMap_OnPolylineClickListenerImplementor
+mono.com.google.android.gms.maps.GoogleMap_OnPolylineClickListenerImplementor;mono.com.google.android.gms.maps.GoogleMap_OnPolylineClickListenerImplementor
 Android.Gms.Maps.ILocationSourceOnLocationChangedListenerImplementor, Xamarin.GooglePlayServices.Maps;mono.com.google.android.gms.maps.LocationSource_OnLocationChangedListenerImplementor
 Android.Gms.Maps.ILocationSourceOnLocationChangedListenerImplementor, Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.maps.LocationSource_OnLocationChangedListenerImplementor
 Android.Gms.Maps.ILocationSourceOnLocationChangedListenerImplementor;mono.com.google.android.gms.maps.LocationSource_OnLocationChangedListenerImplementor
@@ -358,6 +378,10 @@ Android.Gms.Maps.StreetViewPanorama/IOnStreetViewPanoramaLongClickListenerImplem
 Android.Gms.Maps.StreetViewPanorama+IOnStreetViewPanoramaLongClickListenerImplementor, Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.maps.StreetViewPanorama_OnStreetViewPanoramaLongClickListenerImplementor
 Android.Gms.Maps.StreetViewPanorama.IOnStreetViewPanoramaLongClickListenerImplementor;mono.com.google.android.gms.maps.StreetViewPanorama_OnStreetViewPanoramaLongClickListenerImplementor
 mono.com.google.android.gms.maps.StreetViewPanorama_OnStreetViewPanoramaLongClickListenerImplementor;mono.com.google.android.gms.maps.StreetViewPanorama_OnStreetViewPanoramaLongClickListenerImplementor
+Android.Gms.Plus.PlusOneButton/IOnPlusOneClickListenerImplementor, Xamarin.GooglePlayServices.Plus;mono.com.google.android.gms.plus.PlusOneButton_OnPlusOneClickListenerImplementor
+Android.Gms.Plus.PlusOneButton+IOnPlusOneClickListenerImplementor, Xamarin.GooglePlayServices.Plus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.plus.PlusOneButton_OnPlusOneClickListenerImplementor
+Android.Gms.Plus.PlusOneButton.IOnPlusOneClickListenerImplementor;mono.com.google.android.gms.plus.PlusOneButton_OnPlusOneClickListenerImplementor
+mono.com.google.android.gms.plus.PlusOneButton_OnPlusOneClickListenerImplementor;mono.com.google.android.gms.plus.PlusOneButton_OnPlusOneClickListenerImplementor
 Xamarin.InsightsCore.BackgroundManager, Xamarin.Insights;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
 Xamarin.InsightsCore.BackgroundManager, Xamarin.Insights, Version=1.10.0.0, Culture=neutral, PublicKeyToken=null;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
 Xamarin.InsightsCore.BackgroundManager;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
