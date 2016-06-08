@@ -1,4 +1,3 @@
-C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-hdpi\edittextcustom_textfield_default_holo_light.9.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.dll.config
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.pdb
@@ -30,7 +29,6 @@ C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\SQLite-net.dll.md
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.xml
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
-C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.csprojResolveAssemblyReference.cache
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.pdb
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\android\bin\com.alexandrunica.lacabana.apk
@@ -55,6 +53,7 @@ C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\add_ne
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable\main_picture.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\cabins_near_layout.xml
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\cabin_view_layout.xml
+C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-hdpi\edittextcustom_textfield_default_holo_light.9.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-hdpi\facebook.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-hdpi\googleplus.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-hdpi\ic_account.png

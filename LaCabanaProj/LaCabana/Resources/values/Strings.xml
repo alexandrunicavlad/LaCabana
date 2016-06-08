@@ -102,6 +102,7 @@
 	<string name="menu_contact">Contact us</string>
 	<string name="menu_logout">Log out</string>
 	<!--	Validation message-->
+	<string name="TryAgain">Please Try again</string>
 	<string name="ValidationInternetConnection">No internet connection, please try again.</string>
 	<string name="invalid_email_or_password">Invalid email or password.</string>
 	<string name="invalid_email">Please enter a valid email address.</string>

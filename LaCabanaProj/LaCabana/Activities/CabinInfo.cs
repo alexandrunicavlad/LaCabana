@@ -79,13 +79,15 @@ namespace LaCabana
 						var abc = baseService1.Get (string.Format ("pictures/{0}", cabin.Pictures.Last ().Value));
 						cabinPhoto.SetImageBitmap (BitmapFactory.DecodeByteArray (abc, 0, abc.Length));
 						cabinPhoto.SetScaleType (ImageView.ScaleType.FitXy);
+					} else {
+						cabinPhoto.SetImageResource (Resource.Drawable.cabana_photo);
+						cabinPhoto.SetScaleType (ImageView.ScaleType.CenterCrop);
 					}
-
-
 				} else {
 					cabinPhoto.SetImageResource (Resource.Drawable.cabana_photo);
 					cabinPhoto.SetScaleType (ImageView.ScaleType.CenterCrop);
 				}
+
 				var latitude = Intent.GetDoubleExtra ("latitude", 0);
 				var longitude = Intent.GetDoubleExtra ("longitude", 0);
 

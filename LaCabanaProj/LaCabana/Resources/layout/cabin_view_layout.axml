@@ -23,10 +23,11 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:id="@+id/favoriteImage"
-                android:src="@drawable/ic_heart_outline"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="5dp" />
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_heart_outline"
+                android:background="@drawable/ic_heart_outline" />
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"

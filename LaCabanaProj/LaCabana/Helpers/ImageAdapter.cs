@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Android.Views;
 using Android.Gms.Maps.Model;
 using Android.Graphics;
+using System.Linq;
 
 namespace LaCabana
 {
@@ -57,11 +58,20 @@ namespace LaCabana
 			Org.W3c.Dom.IDocument doc = route.GetDocument (new LatLng (_latitude, _longitude), new LatLng (item.Latitude, item.Longitude), RouteGenerator.Mode_driving);
 			float distance = route.GetDistanceValue (doc) / 1000;
 			cabinDistance.Text = String.Format ("{0} Km", distance.ToString ("0.0"));
-			if (item.Photo == null) {
+			if (item.Pictures != null) {
+				if (item.Pictures.ContainsKey ("main")) {			
+
+					var baseService1 = new BaseService<byte[]> ();
+					var abc = baseService1.Get (string.Format ("pictures/{0}", item.Pictures.Last ().Value));
+					cabinPhoto.SetImageBitmap (BitmapFactory.DecodeByteArray (abc, 0, abc.Length));
+					cabinPhoto.SetScaleType (ImageView.ScaleType.FitXy);
+				} else {
+					cabinPhoto.SetImageResource (Resource.Drawable.cabana_photo);
+					cabinPhoto.SetScaleType (ImageView.ScaleType.CenterCrop);
+				}
+			} else {
 				cabinPhoto.SetImageResource (Resource.Drawable.cabana_photo);
 				cabinPhoto.SetScaleType (ImageView.ScaleType.CenterCrop);
-			} else {				
-
 			}
 
 			cabinInfo.Click += delegate {

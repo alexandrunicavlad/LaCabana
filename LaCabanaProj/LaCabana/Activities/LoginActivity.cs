@@ -236,10 +236,11 @@ namespace LaCabana
 			//use the account object and make the desired API call
 
 			var dict = new Dictionary<string, string> ();
+			dict.Add ("include_email", "include_email");
 			var request = new OAuth1Request (
 				              "GET",
 				              new Uri ("https://api.twitter.com/1.1/account/verify_credentials.json"),
-				              null,
+				              dict,
 				              loggedInAccount);
 			var response = request.GetResponseAsync ();
 			var res = response.Result;

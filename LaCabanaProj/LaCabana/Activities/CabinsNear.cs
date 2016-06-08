@@ -162,9 +162,17 @@ namespace LaCabana
 					cabinRating.Rating = cabin.Value.Rating;
 					cabinPrice.Text = string.Format ("{0} {1}", cabin.Value.Price.ToString (), cabin.Value.PriceType);
 					cabinDetails.Text = cabin.Value.Details;
-					if (cabin.Value.Photo != null) {
-						var picture = Decode (cabin.Value.Photo [0]);
-						cabinPhoto.SetImageBitmap (picture);
+					if (cabin.Value.Pictures != null) {
+						if (cabin.Value.Pictures.ContainsKey ("main")) {			
+
+							var baseService1 = new BaseService<byte[]> ();
+							var abc = baseService1.Get (string.Format ("pictures/{0}", cabin.Value.Pictures.Last ().Value));
+							cabinPhoto.SetImageBitmap (BitmapFactory.DecodeByteArray (abc, 0, abc.Length));
+							cabinPhoto.SetScaleType (ImageView.ScaleType.FitXy);
+						} else {
+							cabinPhoto.SetImageResource (Resource.Drawable.cabana_photo);
+							cabinPhoto.SetScaleType (ImageView.ScaleType.CenterCrop);
+						}
 					} else {
 						cabinPhoto.SetImageResource (Resource.Drawable.cabana_photo);
 						cabinPhoto.SetScaleType (ImageView.ScaleType.CenterCrop);
@@ -184,15 +192,20 @@ namespace LaCabana
 					if (favList != null) {
 						if (favList.Any (s => cabin.Key.Contains (s))) {
 							cabinFav.SetImageResource (Resource.Drawable.ic_heart_white);
+							cabinFav.SetBackgroundResource (Resource.Drawable.ic_heart_white);
 						}
 					} else {
 						favList = new List<string> ();
 					}
-					cabinFav.Click += delegate {		
+					cabinFav.Click += delegate {	
+						
+						//CreateDialog (Resources.GetString (Resource.String.wait), "", false, "", true, "Cancel", true);
 						if (favList.Contains (cabin.Key))
 							return;
 						if (userMod.Id != null) {
 							cabinFav.SetImageResource (Resource.Drawable.ic_heart_white);	
+							cabinFav.SetBackgroundResource (Resource.Drawable.ic_heart_white);
+
 							var baseService1 = new BaseService<UsersModel> ();
 							var baseService2 = new BaseService<UsersModel> ();
 							var user = DatabaseServices.GetAllUsers ();
@@ -208,7 +221,7 @@ namespace LaCabana
 								var a = 0;
 							}
 						} else {
-							Toast.MakeText (this, "Please login for select this page", ToastLength.Short).Show ();
+							CreateDialog (GetString (Resource.String.TryAgain), "", true, "Ok", false, "", false);
 						}
 
 					};
