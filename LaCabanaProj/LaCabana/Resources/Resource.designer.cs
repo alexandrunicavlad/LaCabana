@@ -3055,8 +3055,8 @@ namespace LaCabana
 			// aapt resource value: 0x7f0b00e7
 			public const int forgotPassword = 2131427559;
 			
-			// aapt resource value: 0x7f0b00e3
-			public const int googleBtn = 2131427555;
+			// aapt resource value: 0x7f0b00e4
+			public const int googleBtn = 2131427556;
 			
 			// aapt resource value: 0x7f0b00fe
 			public const int gridview = 2131427582;
@@ -3394,8 +3394,8 @@ namespace LaCabana
 			// aapt resource value: 0x7f0b00e6
 			public const int signUpButtonDetails = 2131427558;
 			
-			// aapt resource value: 0x7f0b00e1
-			public const int signuplayout = 2131427553;
+			// aapt resource value: 0x7f0b00e3
+			public const int signuplayout = 2131427555;
 			
 			// aapt resource value: 0x7f0b003b
 			public const int small = 2131427387;
@@ -3472,8 +3472,8 @@ namespace LaCabana
 			// aapt resource value: 0x7f0b0049
 			public const int topPanel = 2131427401;
 			
-			// aapt resource value: 0x7f0b00e4
-			public const int tweeterBtn = 2131427556;
+			// aapt resource value: 0x7f0b00e1
+			public const int twitterBtn = 2131427553;
 			
 			// aapt resource value: 0x7f0b002e
 			public const int unknown = 2131427374;

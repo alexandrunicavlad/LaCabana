@@ -80,6 +80,7 @@ namespace LaCabana
 
 			PrepareFacebookLogin ();
 			PrepareGoogleLogin ();
+			PrepareTwitter ();
 			var signUp = FindViewById<TextView> (Resource.Id.signUpButtonDetails);
 			signUp.Click += delegate {
 				StartActivityForResult (typeof(SignUpActivity), 0);    
@@ -109,6 +110,16 @@ namespace LaCabana
 				};
 			}	
 
+
+
+		}
+
+		private void PrepareTwitter ()
+		{
+			var twitterBtn = FindViewById<ImageView> (Resource.Id.twitterBtn);
+			twitterBtn.Click += delegate {
+				LoginTwitter ();
+			};
 		}
 
 		private void PrepareGoogleLogin ()
@@ -134,7 +145,80 @@ namespace LaCabana
 
 		}
 
-		void UpdateUI (bool isSignedIn)
+		private void LoginTwitter ()
+		{
+			var auth = new OAuth1Authenticator (
+				           "C63fRCNnA7N9tIGXxCg6qIGH5",
+				           "8pM3nuD2zWzNWMyfcA0nZQxsWmu5BC8qAYWhligkKFvfzaoRty",
+				           new Uri ("https://api.twitter.com/oauth/request_token"),
+				           new Uri ("https://api.twitter.com/oauth/authorize"),
+				           new Uri ("https://api.twitter.com/oauth/access_token"),
+				           new Uri ("https://mobile.twitter.com"));
+
+			auth.AllowCancel = true;
+
+			auth.BrowsingCompleted += (object sender, EventArgs e) => {
+				var a = 0;
+
+			};
+			auth.Error += (object sender, AuthenticatorErrorEventArgs e) => {
+				var b = 0;
+			};
+			auth.Completed += (sender, eventArgs) => {
+				
+				if (eventArgs.IsAuthenticated) {
+					
+					var loggedInAccount = eventArgs.Account;
+					AccountStore.Create (this).Save (loggedInAccount, "Twitter");
+					GetTwitterData (loggedInAccount);
+//					btnSearch.Enabled = true;
+//					btnTimeline.Enabled = true;
+//					btnPost.Enabled = true;
+				}
+			};
+			var intent = auth.GetUI (this);
+			StartActivity (intent);
+
+
+		}
+
+		async public void GetTwitterData (Account loggedInAccount)
+		{
+			//use the account object and make the desired API call
+
+			var dict = new Dictionary<string, string> ();
+			var request = new OAuth1Request (
+				              "GET",
+				              new Uri ("https://api.twitter.com/1.1/account/verify_credentials.json"),
+				              null,
+				              loggedInAccount);
+			var response = request.GetResponseAsync ();
+			var res = response.Result;
+			var resString = res.GetResponseText ();
+			var jo = Newtonsoft.Json.Linq.JObject.Parse (resString);
+			MakeUserTwitter (jo);
+		}
+
+		private void MakeUserTwitter (Newtonsoft.Json.Linq.JObject person)
+		{
+			UsersModel user = new UsersModel ();
+			if (person != null) {
+				user.Username = person ["name"].ToString ();
+				user.Email = person ["name"].ToString ();
+				if (person ["profile_image_url"] != null) {
+					var imageUrl = new Java.Net.URL ((string)person ["profile_image_url"]);
+					using (var webClient = new WebClient ()) {
+						var imageBytes = webClient.DownloadData (imageUrl.ToString ());
+						if (imageBytes != null && imageBytes.Length > 0) {
+							user.ProfilePhoto = Base64.EncodeToString (imageBytes, Base64.Default);
+						}
+					}
+				}
+				TwitterVerify (user);
+			}
+		}
+
+		private void UpdateUI (bool isSignedIn)
 		{
 			if (isSignedIn) {
 				var person = PlusClass.PeopleApi.GetCurrentPerson (mGoogleApiClient);
@@ -410,6 +494,53 @@ namespace LaCabana
 						PlusClass.AccountApi.ClearDefaultAccount (mGoogleApiClient);
 						mGoogleApiClient.Disconnect ();
 					}
+				}
+			});
+		}
+
+		private void TwitterVerify (UsersModel fbUser)
+		{
+			var baseService = new BaseService<Dictionary<string,UsersModel>> ();
+			CreateDialog (Resources.GetString (Resource.String.wait), false, true);
+			if (user.Count == 0) {	
+				try {
+					user = (baseService.Get ("users"));
+				} catch (Exception e) {
+					var a = 0;
+				}
+			}
+
+			RunOnUiThread (() => {				
+				var listOfUser = user.Select (kvp => kvp.Value).ToList ();
+				var userulll = listOfUser.Find (p => p.Username == fbUser.Username);
+				if (userulll == null) {			
+
+					ThreadPool.QueueUserWorkItem (o => {
+						CreateDialog (Resources.GetString (Resource.String.wait), false, true);
+						//user.Id = userName.Text;
+						var requestText = JsonConvert.SerializeObject (fbUser);
+						var result = Push (fbUser);
+						fbUser.Id = result;
+						DatabaseServices.InsertUsername (fbUser);
+						var baseserv = new BaseService<UsersModel> ();
+						var newUrl = string.Format ("users/{0}", fbUser.Id);
+						try {
+							baseserv.UpdateUser (fbUser, newUrl);
+
+						} catch (Exception e) {
+							var a = 0;
+						}
+						StartActivity (typeof(BasicMapDemoActivity));
+						Finish ();
+					});					
+
+				} else {
+					ThreadPool.QueueUserWorkItem (o => {
+						CreateDialog (Resources.GetString (Resource.String.wait), false, true);
+						DatabaseServices.InsertUsername (userulll);
+						StartActivity (typeof(BasicMapDemoActivity));
+						Finish ();
+					});
 				}
 			});
 		}

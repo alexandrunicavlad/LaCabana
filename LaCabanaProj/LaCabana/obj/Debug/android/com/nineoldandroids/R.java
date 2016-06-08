@@ -2546,7 +2546,7 @@ containing a value of this type.
         public static final int favoritesItem=0x7f0b00c5;
         public static final int favoritesText=0x7f0b00c6;
         public static final int forgotPassword=0x7f0b00e7;
-        public static final int googleBtn=0x7f0b00e3;
+        public static final int googleBtn=0x7f0b00e4;
         public static final int gridview=0x7f0b00fe;
         public static final int health_search=0x7f0b0073;
         public static final int helpsign=0x7f0b00e5;
@@ -2659,7 +2659,7 @@ containing a value of this type.
         public static final int showTitle=0x7f0b001c;
         public static final int signInButton=0x7f0b00dc;
         public static final int signUpButtonDetails=0x7f0b00e6;
-        public static final int signuplayout=0x7f0b00e1;
+        public static final int signuplayout=0x7f0b00e3;
         public static final int small=0x7f0b003b;
         public static final int socialLayout=0x7f0b00df;
         public static final int socialtext=0x7f0b00e0;
@@ -2685,7 +2685,7 @@ containing a value of this type.
         public static final int titlereview=0x7f0b0106;
         public static final int top=0x7f0b0033;
         public static final int topPanel=0x7f0b0049;
-        public static final int tweeterBtn=0x7f0b00e4;
+        public static final int twitterBtn=0x7f0b00e1;
         public static final int unknown=0x7f0b002e;
         public static final int up=0x7f0b0008;
         public static final int uploadButton=0x7f0b0081;

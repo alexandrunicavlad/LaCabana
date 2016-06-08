@@ -90,18 +90,26 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/socialtext"
                         android:layout_marginTop="10dp"
-                        android:id="@+id/socialLayout">
+                        android:id="@+id/socialLayout"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/socialtext">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/twetter"
+                            android:id="@+id/twitterBtn"
+                            android:layout_centerHorizontal="true"
+                            android:layout_toLeftOf="@+id/facebookBtn" />
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/facebook"
-                            android:layout_centerHorizontal="true"
                             android:layout_below="@+id/signuplayout"
                             android:id="@+id/facebookBtn"
                             android:layout_marginLeft="15dp"
-                            android:layout_marginRight="15dp" />
+                            android:layout_marginRight="15dp"
+                            android:layout_centerHorizontal="true" />
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -109,13 +117,6 @@
                             android:layout_centerHorizontal="true"
                             android:id="@+id/googleBtn"
                             android:layout_toRightOf="@+id/facebookBtn" />
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/twetter"
-                            android:layout_centerHorizontal="true"
-                            android:id="@+id/tweeterBtn"
-                            android:layout_toLeftOf="@+id/facebookBtn" />
                     </RelativeLayout>
                 </RelativeLayout>
                 <RelativeLayout
