@@ -16,6 +16,7 @@ using FireSharp;
 using Newtonsoft.Json;
 using FireSharp.Response;
 using System.Threading;
+using Java.Security;
 
 namespace LaCabana
 {
@@ -65,7 +66,11 @@ namespace LaCabana
 			//user.Id = userName.Text;
 			user.Username = userName.Text;
 			user.Email = email.Text;
-			user.Password = password.Text;
+			MessageDigest md = MessageDigest.GetInstance ("SHA-1");
+			md.Update (Org.Apache.Http.Util.EncodingUtils.GetBytes (password.Text, "iso-8859-1"), 0, password.Text.Length);
+			byte[] sha1hash = md.Digest ();
+			var hash = convertToHex (sha1hash);
+			user.Password = hash;
 			var requestText = JsonConvert.SerializeObject (user);
 			var result = Push (user);
 			user.Id = result;
@@ -80,6 +85,20 @@ namespace LaCabana
 			}
 			StartActivity (typeof(BasicMapDemoActivity));
 			Finish ();
+		}
+
+		private static String convertToHex (byte[] data)
+		{
+			StringBuilder buf = new StringBuilder ();
+			foreach (byte b in data) {
+				int halfbyte = (b >> 4) & 0x0F;
+				int two_halfs = 0;
+				do {
+					buf.Append ((0 <= halfbyte) && (halfbyte <= 9) ? (char)('0' + halfbyte) : (char)('a' + (halfbyte - 10)));
+					halfbyte = b & 0x0F;
+				} while (two_halfs++ < 1);
+			}
+			return buf.ToString ();
 		}
 
 		private string Push (UsersModel user)

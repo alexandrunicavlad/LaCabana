@@ -30,6 +30,7 @@ using Android.Gms.Common.Apis;
 using Android.Gms.Plus;
 using Android.Gms.Common;
 using Android.Gms.Plus.Model.People;
+using Java.Security;
 
 namespace LaCabana
 {
@@ -55,6 +56,7 @@ namespace LaCabana
 		private PushResponse response;
 		const int RC_SIGN_IN = 9001;
 		GoogleApiClient mGoogleApiClient;
+		private bool dataLoaded = false;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -77,7 +79,7 @@ namespace LaCabana
 				myAccountlayout.Visibility = ViewStates.Visible;
 				myaccountBool = true;
 			}
-
+			ThreadPool.QueueUserWorkItem (o => GetData ());
 			PrepareFacebookLogin ();
 			PrepareGoogleLogin ();
 			PrepareTwitter ();
@@ -90,11 +92,15 @@ namespace LaCabana
 			user = new Dictionary<string,UsersModel> ();
 			var loginBtn = FindViewById<TextView> (Resource.Id.signInButton);
 			loginBtn.Click += delegate {
-				HideKeyboard (loginBtn);
-				if (email1.Text == "") {
-					CreateDialog (GetString (Resource.String.invalid_email), true);
-				} else {					
-					ThreadPool.QueueUserWorkItem (o => LoginVerify ());
+				if (dataLoaded == false) {
+					CreateDialog ("Unable to login", true);
+				} else {
+					HideKeyboard (loginBtn);
+					if (email1.Text == "") {
+						CreateDialog (GetString (Resource.String.invalid_email), true);
+					} else {					
+						ThreadPool.QueueUserWorkItem (o => LoginVerify ());
+					}
 				}
 			};
 
@@ -108,17 +114,55 @@ namespace LaCabana
 				myAccountlayout.FindViewById<Button> (Resource.Id.add_button_location).Click += delegate {
 					ThreadPool.QueueUserWorkItem (o => SaveChanges (allUsers));
 				};
-			}	
+			}
+
 
 
 
 		}
 
+		private void GetData ()
+		{
+			var baseService = new BaseService<Dictionary<string,UsersModel>> ();		
+			try {
+				user = (baseService.Get ("users"));
+				dataLoaded = true;
+			} catch (Exception e) {
+				dataLoaded = false;
+			}
+		}
+
+
 		private void PrepareTwitter ()
 		{
 			var twitterBtn = FindViewById<ImageView> (Resource.Id.twitterBtn);
 			twitterBtn.Click += delegate {
-				LoginTwitter ();
+				if (dataLoaded == false) {
+					CreateDialog ("Unable to login", true);
+				} else {
+					LoginTwitter ();
+				}
+			};
+		}
+
+		private void PrepareFacebookLogin ()
+		{
+			_facebookCallBackManager = CallbackManagerFactory.Create ();
+			var facebookBtn = FindViewById<ImageView> (Resource.Id.facebookBtn);
+			LoginManager.Instance.RegisterCallback (_facebookCallBackManager, this);
+
+			facebookBtn.Click += delegate {
+				if (dataLoaded == false) {
+					CreateDialog ("Unable to login", true);
+				} else {
+					loginType = FacebookLogin;
+					LoginManager.Instance.LogInWithReadPermissions (this, new List<string> {
+						"public_profile",
+						"user_friends",
+						"user_about_me",
+						"email"
+					});
+				}
 			};
 		}
 
@@ -131,16 +175,21 @@ namespace LaCabana
 				.AddScope (new Scope (Scopes.Profile))
 				.Build ();
 			FindViewById<ImageView> (Resource.Id.googleBtn).Click += delegate {	
-				mGoogleApiClient.Connect ();
-				loginType = GoogleLogin;
-			};
-			FindViewById<TextView> (Resource.Id.forgotPassword).Click += delegate {
-				if (mGoogleApiClient.IsConnected) {
-					PlusClass.AccountApi.ClearDefaultAccount (mGoogleApiClient);
-					mGoogleApiClient.Disconnect ();
+				if (dataLoaded == false) {
+					CreateDialog ("Unable to login", true);
+				} else {
+					mGoogleApiClient.Connect ();
+					loginType = GoogleLogin;
 				}
-				UpdateUI (false);
+
 			};
+//			FindViewById<TextView> (Resource.Id.forgotPassword).Click += delegate {
+//				if (mGoogleApiClient.IsConnected) {
+//					PlusClass.AccountApi.ClearDefaultAccount (mGoogleApiClient);
+//					mGoogleApiClient.Disconnect ();
+//				}
+//				UpdateUI (false);
+//			};
 
 
 		}
@@ -306,22 +355,7 @@ namespace LaCabana
 		//		}
 
 
-		private void PrepareFacebookLogin ()
-		{
-			_facebookCallBackManager = CallbackManagerFactory.Create ();
-			var facebookBtn = FindViewById<ImageView> (Resource.Id.facebookBtn);
-			LoginManager.Instance.RegisterCallback (_facebookCallBackManager, this);
 
-			facebookBtn.Click += delegate {
-				loginType = FacebookLogin;
-				LoginManager.Instance.LogInWithReadPermissions (this, new List<string> {
-					"public_profile",
-					"user_friends",
-					"user_about_me",
-					"email"
-				});
-			};
-		}
 
 		public void OnCancel ()
 		{
@@ -447,15 +481,15 @@ namespace LaCabana
 
 		private void FacebookVerify (UsersModel fbUser)
 		{
-			var baseService = new BaseService<Dictionary<string,UsersModel>> ();
+			//var baseService = new BaseService<Dictionary<string,UsersModel>> ();
 			CreateDialog (Resources.GetString (Resource.String.wait), false, true);
-			if (user.Count == 0) {	
-				try {
-					user = (baseService.Get ("users"));
-				} catch (Exception e) {
-					var a = 0;
-				}
-			}
+//			if (user.Count == 0) {	
+//				try {
+//					user = (baseService.Get ("users"));
+//				} catch (Exception e) {
+//					var a = 0;
+//				}
+//			}
 
 			RunOnUiThread (() => {				
 				var listOfUser = user.Select (kvp => kvp.Value).ToList ();
@@ -500,15 +534,15 @@ namespace LaCabana
 
 		private void TwitterVerify (UsersModel fbUser)
 		{
-			var baseService = new BaseService<Dictionary<string,UsersModel>> ();
+			//var baseService = new BaseService<Dictionary<string,UsersModel>> ();
 			CreateDialog (Resources.GetString (Resource.String.wait), false, true);
-			if (user.Count == 0) {	
-				try {
-					user = (baseService.Get ("users"));
-				} catch (Exception e) {
-					var a = 0;
-				}
-			}
+			//if (user.Count == 0) {	
+			//	try {
+			//		user = (baseService.Get ("users"));
+			//	} catch (Exception e) {
+			//		var a = 0;
+			//	}
+			//	}
 
 			RunOnUiThread (() => {				
 				var listOfUser = user.Select (kvp => kvp.Value).ToList ();
@@ -557,30 +591,24 @@ namespace LaCabana
 		}
 
 		private void LoginVerify ()
-		{			
-			var baseService = new BaseService<Dictionary<string,UsersModel>> ();
+		{	
 			CreateDialog (Resources.GetString (Resource.String.wait), false, true);
-			if (user.Count == 0) {	
-				try {
-					user = (baseService.Get ("users"));
-				} catch (Exception e) {
-					var a = 0;
-				}
-			}
-
 
 			var email = FindViewById<EditText> (Resource.Id.login_email).Text;
 			var password = FindViewById<EditText> (Resource.Id.login_password).Text;
 
 			RunOnUiThread (() => {				
 				var listOfUser = user.Select (kvp => kvp.Value).ToList ();
-
 				var userulll = listOfUser.Find (p => p.Email == email);
 				if (userulll != null) {
 					if (password == "") {
 						CreateDialog (GetString (Resource.String.invalid_password), true);
 					} else {
-						if (password == userulll.Password) {
+						MessageDigest md = MessageDigest.GetInstance ("SHA-1");
+						md.Update (Org.Apache.Http.Util.EncodingUtils.GetBytes (password, "iso-8859-1"), 0, password.Length);
+						byte[] sha1hash = md.Digest ();
+						var hash = convertToHex (sha1hash);
+						if (hash == userulll.Password) {
 							ThreadPool.QueueUserWorkItem (o => {
 								UsersModel model = new UsersModel ();
 								model.Email = userulll.Email;
@@ -599,9 +627,25 @@ namespace LaCabana
 							CreateDialog (GetString (Resource.String.invalid_password), true);
 						}
 					}
+				} else {
+					CreateDialog (GetString (Resource.String.invalid_email), true);
 				}
 
 			});
+		}
+
+		private static String convertToHex (byte[] data)
+		{
+			StringBuilder buf = new StringBuilder ();
+			foreach (byte b in data) {
+				int halfbyte = (b >> 4) & 0x0F;
+				int two_halfs = 0;
+				do {
+					buf.Append ((0 <= halfbyte) && (halfbyte <= 9) ? (char)('0' + halfbyte) : (char)('a' + (halfbyte - 10)));
+					halfbyte = b & 0x0F;
+				} while (two_halfs++ < 1);
+			}
+			return buf.ToString ();
 		}
 
 		public void ShowError (string text)
