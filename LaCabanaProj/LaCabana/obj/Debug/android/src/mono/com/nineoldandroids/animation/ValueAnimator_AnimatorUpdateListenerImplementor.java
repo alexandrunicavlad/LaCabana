@@ -7,7 +7,8 @@ public class ValueAnimator_AnimatorUpdateListenerImplementor
 		mono.android.IGCUserPeer,
 		com.nineoldandroids.animation.ValueAnimator.AnimatorUpdateListener
 {
-	static final String __md_methods;
+/** @hide */
+	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_onAnimationUpdate:(Lcom/nineoldandroids/animation/ValueAnimator;)V:GetOnAnimationUpdate_Lcom_nineoldandroids_animation_ValueAnimator_Handler:Xamarin.NineOldAndroids.Animations.ValueAnimator/IAnimatorUpdateListenerInvoker, NineOldAndroids\n" +
@@ -31,7 +32,7 @@ public class ValueAnimator_AnimatorUpdateListenerImplementor
 
 	private native void n_onAnimationUpdate (com.nineoldandroids.animation.ValueAnimator p0);
 
-	java.util.ArrayList refList;
+	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)

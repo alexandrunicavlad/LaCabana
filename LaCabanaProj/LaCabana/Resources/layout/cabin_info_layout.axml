@@ -12,7 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/FlyContent">
+        <include
+            android:id="@+id/main_loading"
+            android:visibility="visible"
+            android:layout_centerInParent="true"
+            layout="@layout/loading" />
         <ScrollView
+            android:visibility="gone"
+            android:id="@+id/scrollViewMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout

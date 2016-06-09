@@ -7,7 +7,8 @@ public class Animator_AnimatorListenerImplementor
 		mono.android.IGCUserPeer,
 		com.nineoldandroids.animation.Animator.AnimatorListener
 {
-	static final String __md_methods;
+/** @hide */
+	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_onAnimationCancel:(Lcom/nineoldandroids/animation/Animator;)V:GetOnAnimationCancel_Lcom_nineoldandroids_animation_Animator_Handler:Xamarin.NineOldAndroids.Animations.Animator/IAnimatorListenerInvoker, NineOldAndroids\n" +
@@ -58,7 +59,7 @@ public class Animator_AnimatorListenerImplementor
 
 	private native void n_onAnimationStart (com.nineoldandroids.animation.Animator p0);
 
-	java.util.ArrayList refList;
+	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)

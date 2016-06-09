@@ -16,7 +16,7 @@ using System.Threading;
 
 namespace LaCabana
 {
-	[Activity (Label = "FavoritesActivity")]			
+	[Activity(Label = "FavoritesActivity")]
 	public class FavoritesActivity : BaseActionActivity
 	{
 		IDatabaseServices DatabaseServices;
@@ -30,56 +30,60 @@ namespace LaCabana
 		private GridView gridView;
 		private RelativeLayout loading;
 
-		protected override void OnCreate (Bundle bundle)
-		{			
+		protected override void OnCreate(Bundle bundle)
+		{
 
-			base.OnCreate (bundle);
-			SetContentView (Resource.Layout.favorite_layout);
-			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
-			DatabaseServices = new DatabaseServices (this);
-			SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
-			SetProfilePicture ();
-			var baseService = new BaseService<Dictionary<string,CabinModel>> ();
-			latitude = Intent.GetDoubleExtra ("latitude", 0);
-			longitude = Intent.GetDoubleExtra ("longitude", 0);
-			numberDistance = Intent.GetIntExtra ("distance", 0);
-			favList = Intent.GetStringArrayListExtra ("favoriteList");
+			base.OnCreate(bundle);
+			SetContentView(Resource.Layout.favorite_layout);
+			SetupDrawer(FindViewById<DrawerLayout>(Resource.Id.drawerLayout));
+			DatabaseServices = new DatabaseServices(this);
+			SetupDrawer(FindViewById<DrawerLayout>(Resource.Id.drawerLayout));
+			SetProfilePicture();
+			var baseService = new BaseService<Dictionary<string, CabinModel>>();
+			latitude = Intent.GetDoubleExtra("latitude", 0);
+			longitude = Intent.GetDoubleExtra("longitude", 0);
+			numberDistance = Intent.GetIntExtra("distance", 0);
+			favList = Intent.GetStringArrayListExtra("favoriteList");
 			//allCabins = new Dictionary<string,CabinModel> ();
-			allCabins = new List<CabinModel> ();
-			SetTitleActionBar ("Favorites");
-			ClickHandler ();
-			gridView = FindViewById<GridView> (Resource.Id.image_recycler);
-			loading = FindViewById<RelativeLayout> (Resource.Id.main_loading_recycler);
+			allCabins = new List<CabinModel>();
+			SetTitleActionBar("Favorites");
+			ClickHandler();
+			gridView = FindViewById<GridView>(Resource.Id.image_recycler);
+			loading = FindViewById<RelativeLayout>(Resource.Id.main_loading_recycler);
 			gridView.Visibility = ViewStates.Gone;
 			loading.Visibility = ViewStates.Visible;
-			cabinsLayout = FindViewById<LinearLayout> (Resource.Id.FlyContent);
-			ThreadPool.QueueUserWorkItem (o => GetData ());			
-			MyPosition (new LatLng (latitude, longitude));
+			cabinsLayout = FindViewById<LinearLayout>(Resource.Id.FlyContent);
+			ThreadPool.QueueUserWorkItem(o => GetData());
+			MyPosition(new LatLng(latitude, longitude));
 
 		}
 
-		public void GetData ()
+		public void GetData()
 		{
-			var route = new RouteGenerator ();
-			var baseService1 = new BaseService<CabinModel> ();
-			var ada = favList [0];
-			if (favList [0] == null) {
-				Toast.MakeText (this, "Nu aveti selectata nicio cabana", ToastLength.Short).Show ();
-				OnBackPressed ();
+			var route = new RouteGenerator();
+			var baseService1 = new BaseService<CabinModel>();
+			var ada = favList[0];
+			if (favList[0] == null)
+			{
+				Toast.MakeText(this, "Nu aveti selectata nicio cabana", ToastLength.Short).Show();
+				OnBackPressed();
 			}
-			try {	
-				foreach (var favorit in favList) {
-					var cabama = baseService1.Get ("cabins/" + favorit);
-					allCabins.Add (cabama);
+			try
+			{
+				foreach (var favorit in favList)
+				{
+					var cabama = baseService1.Get("cabins/" + favorit);
+					allCabins.Add(cabama);
 				}
-				
-			} catch (Exception e) {
-				//Toast.MakeText (this, "A dat eroare", ToastLength.Short).Show ();
+			}
+			catch (Exception e)
+			{
+				CreateDialog("Error", "Network connection", false, "", true, "Cancel", false);
 			}
 
-			RunOnUiThread (() => {
-				
-				var adapter = new ImageAdapter (this, allCabins, latitude, longitude, favList);
+			RunOnUiThread(() =>
+			{
+				var adapter = new ImageAdapter(this, allCabins, latitude, longitude, favList);
 				gridView.Adapter = adapter;
 				gridView.Visibility = ViewStates.Visible;
 				loading.Visibility = ViewStates.Gone;

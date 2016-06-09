@@ -7,7 +7,8 @@ public class GoogleMap_OnMyLocationButtonClickListenerImplementor
 		mono.android.IGCUserPeer,
 		com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener
 {
-	static final String __md_methods;
+/** @hide */
+	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_onMyLocationButtonClick:()Z:GetOnMyLocationButtonClickHandler:Android.Gms.Maps.GoogleMap/IOnMyLocationButtonClickListenerInvoker, Xamarin.GooglePlayServices.Maps\n" +
@@ -31,7 +32,7 @@ public class GoogleMap_OnMyLocationButtonClickListenerImplementor
 
 	private native boolean n_onMyLocationButtonClick ();
 
-	java.util.ArrayList refList;
+	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)

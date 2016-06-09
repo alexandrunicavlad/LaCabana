@@ -7,7 +7,8 @@ public class TimeAnimator_TimeListenerImplementor
 		mono.android.IGCUserPeer,
 		com.nineoldandroids.animation.TimeAnimator.TimeListener
 {
-	static final String __md_methods;
+/** @hide */
+	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_onTimeUpdate:(Lcom/nineoldandroids/animation/TimeAnimator;JJ)V:GetOnTimeUpdate_Lcom_nineoldandroids_animation_TimeAnimator_JJHandler:Xamarin.NineOldAndroids.Animations.TimeAnimator/ITimeListenerInvoker, NineOldAndroids\n" +
@@ -31,7 +32,7 @@ public class TimeAnimator_TimeListenerImplementor
 
 	private native void n_onTimeUpdate (com.nineoldandroids.animation.TimeAnimator p0, long p1, long p2);
 
-	java.util.ArrayList refList;
+	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)

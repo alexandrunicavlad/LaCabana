@@ -7,7 +7,8 @@ public class GoogleMap_OnCameraChangeListenerImplementor
 		mono.android.IGCUserPeer,
 		com.google.android.gms.maps.GoogleMap.OnCameraChangeListener
 {
-	static final String __md_methods;
+/** @hide */
+	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_onCameraChange:(Lcom/google/android/gms/maps/model/CameraPosition;)V:GetOnCameraChange_Lcom_google_android_gms_maps_model_CameraPosition_Handler:Android.Gms.Maps.GoogleMap/IOnCameraChangeListenerInvoker, Xamarin.GooglePlayServices.Maps\n" +
@@ -31,7 +32,7 @@ public class GoogleMap_OnCameraChangeListenerImplementor
 
 	private native void n_onCameraChange (com.google.android.gms.maps.model.CameraPosition p0);
 
-	java.util.ArrayList refList;
+	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)

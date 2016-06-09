@@ -29,7 +29,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="alexandrunicavlad@yahoo.com"
                     android:layout_gravity="center_vertical"
                     android:textSize="14sp"
                     android:id="@+id/emailText"
@@ -59,7 +58,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Map"
+                    android:text="@string/map"
                     android:layout_gravity="center_vertical"
                     android:textSize="16sp"
                     android:id="@+id/mapText"
@@ -86,7 +85,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cabines near"
+                    android:text="@string/cabinsNear"
                     android:layout_gravity="center_vertical"
                     android:textSize="16sp"
                     android:id="@+id/cabinesText"
@@ -112,7 +111,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Favorites"
+                    android:text="@string/favorites"
                     android:layout_gravity="center_vertical"
                     android:textSize="16sp"
                     android:id="@+id/favoritesText"
@@ -165,7 +164,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Add new location"
+                    android:text="@string/addNewLocation"
                     android:layout_gravity="center_vertical"
                     android:textSize="16sp"
                     android:id="@+id/addnewlocationText"

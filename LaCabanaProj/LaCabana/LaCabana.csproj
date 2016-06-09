@@ -120,7 +120,6 @@
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\BaseDrawerActivity.cs" />
     <Compile Include="Activities\BaseActivity.cs" />
-    <Compile Include="Activities\LoginActivity.cs" />
     <Compile Include="Activities\SignUpActivity.cs" />
     <Compile Include="Activities\HomeLogo.cs" />
     <Compile Include="Activities\MapActivity.cs" />
@@ -147,6 +146,7 @@
     <Compile Include="Activities\ReviewAddActivity.cs" />
     <Compile Include="Activities\PicturesActivity.cs" />
     <Compile Include="Helpers\PictureAdapter.cs" />
+    <Compile Include="Activities\LoginActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
