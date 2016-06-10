@@ -17,11 +17,14 @@ using System.IO;
 using Newtonsoft.Json;
 using Android.Graphics;
 using System.Threading;
+using Android.Support.V7.Widget;
+using Android.Support.V7.App;
+using Android.Graphics.Drawables;
 
 namespace LaCabana
 {
-	[Activity(ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, Theme = "@style/MyTheme")]
-	public class CabinInfo : BaseDrawerActivity
+	[Activity(ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, Theme = "@style/AppTheme")]
+	public class CabinInfo : ActionBarActivity
 	{
 		private CabinModel cabin;
 		private string requestURL = "https://api.cloudinary.com/v1_1/lacabana/resources/image/upload/?prefix=";
@@ -31,14 +34,14 @@ namespace LaCabana
 		private RelativeLayout loading;
 		private ScrollView scrollView;
 		private BaseService<CabinModel> baseService;
+		private Android.Support.V7.Widget.Toolbar toolbar;
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
-
 			SetContentView(Resource.Layout.cabin_info_layout);
 			//SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
-			ConstructRightIcon();
-			SetTitleActionBar1("Cabin");
+			ConstructActionBar();
+			//SetTitleActionBar1("Cabin");
 			marker = Intent.GetStringExtra("marker");
 			baseService = new BaseService<CabinModel>();
 			cabin = new CabinModel();
@@ -153,12 +156,55 @@ namespace LaCabana
 
 		}
 
+		private void ConstructActionBar()
+		{
+			toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.tool_bar);
 
+			SetSupportActionBar(toolbar);
+			SupportActionBar.SetDisplayShowTitleEnabled(false);
+			SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+			SupportActionBar.SetDisplayShowHomeEnabled(true);
+			toolbar.NavigationClick += delegate
+			{
+				Finish();
+			};
+
+			toolbar.NavigationIcon = Resources.GetDrawable(Resource.Drawable.ic_keyboard_backspace);
+			var MenuButton = toolbar.FindViewById<ImageView>(Resource.Id.iconRight);
+			MenuButton.Visibility = ViewStates.Visible;
+			MenuButton.Click += (object sender, EventArgs e) =>
+			{
+				Android.Support.V7.Widget.PopupMenu menu = new Android.Support.V7.Widget.PopupMenu(this, MenuButton);
+				menu.Inflate(Resource.Menu.cabin_menu);
+				menu.MenuItemClick += (object sender1, Android.Support.V7.Widget.PopupMenu.MenuItemClickEventArgs e1) =>
+				{
+					var a = e1.Item.TitleFormatted.ToString();
+					if (a.Equals("Pictures"))
+					{
+						var intent = new Intent(this, typeof(PicturesActivity));
+						intent.PutExtra("marker", marker);
+						StartActivity(intent);
+					}
+					else if (a.Equals("Reviews"))
+					{
+						var intent = new Intent(this, typeof(ReviewActivity));
+						intent.PutExtra("marker", marker);
+						StartActivity(intent);
+					}
+				};
+				menu.DismissEvent += delegate
+				{
+				};
+				menu.Show();
+			};
+
+		}
 
 		public void ConstructRightIcon()
 		{
 			var actionBar = SupportActionBar;
 
+			actionBar.SetBackgroundDrawable(new ColorDrawable(Resources.GetColor(Resource.Color.transparent)));
 			actionBar.SetDisplayShowCustomEnabled(true);
 			LayoutInflater inflate = (LayoutInflater)this.GetSystemService(Context.LayoutInflaterService);
 			View view = inflate.Inflate(Resource.Layout.action_bar_home, null);
@@ -168,14 +214,14 @@ namespace LaCabana
 			{
 				var a = 0;
 			};
-			var MenuButton = SupportActionBar.CustomView.FindViewById<ImageButton>(Resource.Id.action_bar_menuBtn);
+			var MenuButton = SupportActionBar.CustomView.FindViewById<ImageView>(Resource.Id.action_bar_menuBtn);
 
 			MenuButton.Visibility = ViewStates.Visible;
 			MenuButton.Click += (object sender, EventArgs e) =>
 			{
-				PopupMenu menu = new PopupMenu(this, MenuButton);
+				Android.Support.V7.Widget.PopupMenu menu = new Android.Support.V7.Widget.PopupMenu(this, MenuButton);
 				menu.Inflate(Resource.Menu.cabin_menu);
-				menu.MenuItemClick += (object sender1, PopupMenu.MenuItemClickEventArgs e1) =>
+				menu.MenuItemClick += (object sender1, Android.Support.V7.Widget.PopupMenu.MenuItemClickEventArgs e1) =>
 				{
 					var a = e1.Item.TitleFormatted.ToString();
 					if (a.Equals("Pictures"))

@@ -113,6 +113,12 @@
     <Reference Include="Xamarin.GooglePlayServices.Plus">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Plus.29.0.0.1\lib\MonoAndroid41\Xamarin.GooglePlayServices.Plus.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Design">
+      <HintPath>..\packages\Xamarin.Android.Support.Design.23.3.0\lib\MonoAndroid43\Xamarin.Android.Support.Design.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -377,6 +383,30 @@
     <AndroidResource Include="Resources\layout\pictures_layout.axml" />
     <AndroidResource Include="Resources\drawable\lacabana_text_black.png" />
     <AndroidResource Include="Resources\layout\picture_dialog.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_email_orange.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_map_marker_orange.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_phone_orange.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_price_orange.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_details_orange.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_details_orange.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_email_orange.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_map_marker_orange.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_phone_orange.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_price_orange.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_details_orange.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_email_orange.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_map_marker_orange.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_phone_orange.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_details_orange.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_email_orange.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_map_marker_orange.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_phone_orange.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_price_orange.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_details_orange.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_email_orange.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_map_marker_orange.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_phone_orange.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_price_orange.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\menu\" />
