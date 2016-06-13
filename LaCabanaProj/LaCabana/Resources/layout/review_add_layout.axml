@@ -31,7 +31,7 @@
                 android:layout_centerVertical="true">
                 <TextView
                     android:layout_width="match_parent"
-                    android:text="Account name"
+                    android:text="@string/Accountname"
                     android:id="@+id/accountName"
                     android:textColor="@color/black"
                     android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
                 android:background="@drawable/ic_home_variant" />
             <EditText
                 android:layout_width="match_parent"
-                android:hint="Title"
+                android:hint="@string/Title"
                 android:id="@+id/TitleText"
                 android:textColor="@color/black"
                 android:textColorHint="@color/gray_health_text"
@@ -129,7 +129,7 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:layout_width="match_parent"
-                    android:hint="Review"
+                    android:hint="@string/Reviews"
                     android:id="@+id/reviewText"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray_health_text"
@@ -147,7 +147,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/red"
-        android:text="Save"
+        android:text="@string/Save"
         android:id="@+id/add_button_location"
         android:layout_alignParentBottom="true" />
 </RelativeLayout>

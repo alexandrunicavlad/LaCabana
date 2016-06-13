@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, Click Me!</string>
+	<string name="app_name">LaCabana</string>
+	<string name="facebook_app_id">196006237460777</string>
+	<string name="app_name">GreenSwitch</string>
+	<!--Title-->
+	<string name="login">Conectare</string>
+	<string name="Signup">Inregistrare</string>
+	<string name="Pictures">Poze</string>
+	<string name="Reviews">Pareri</string>
+	<string name="AddReview">Adauga pareri</string>
+	<!--Reviewadd-->
+	<string name="enterusername">Introdu nume de utilizator</string>
+	<string name="entertitle">Introdu titlu</string>
+	<string name="enterrating">Introdu nota</string>
+	<string name="enterreview">Introdu parere</string>
+	<string name="enteremail">Introdu email</string>
+	<string name="enterpass">Introdu parola</string>
+	<string name="Reviewnotfound">Nicio parere despre aceasta cabana</string>
+	<!--Menu-->
+	<string name="map">Harta</string>
+	<string name="cabinsNear">Cabane in apropiere</string>
+	<string name="favorites">Favorite</string>
+	<string name="compare">Compara</string>
+	<string name="addNewLocation">Adauga locatie noua</string>
+	<string name="myAccount">Contul meu</string>
+	<string name="settings">Setari</string>
+	<string name="logout">Deconectare</string>
+	<!--Common-->
+	<string name="email_hint">Email</string>
+	<string name="username_hint">Nume de utilizator</string>
+	<string name="password_hint">Parola</string>
+	<string name="name_hint">Nume</string>
+	<string name="phone_hint">Telefon</string>
+	<string name="repeat_password_hint">Repeta parola</string>
+	<string name="wait">Te rog asteapta...</string>
+	<!--Login-->
+	<string name="login_btn">Conectare</string>
+	<string name="facebook_btn">FACEBOOK</string>
+	<string name="google_btn">GOOGLE +</string>
+	<string name="forgot_password">
+		<u>Ti-ai uitat parola ?</u>
+	</string>
+	<string name="register">
+		<u>Inregistreaza-te acum</u>
+	</string>
+	<string name="selectRange">Selectati raza</string>
+	<string name="please_insert">Va rugam conectati-va pentru a adauga o cabana favorita</string>
+	<!--Register-->
+	<string name="register_terms_conditions">Sunt de acord</string>
+	<string name="register_terms_conditions_link">Termene &amp; Conditii</string>
+	<string name="register_btn_Up">Inregistrare</string>
+	<string name="register_btn">Conectare</string>
+	<string name="has_account">
+		<u>Ai deja un cont</u>
+	</string>
+	<string name="selectpicture">Selecteaza poza</string>
+	<string name="register_toast_message">Inregistrare cu succes!</string>
+	<string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+	 Sed accumsan purus non condimentum condimentum. Nunc tristique cursus venenatis. 
+	 Curabitur rutrum ultrices eros ut tincidunt. Mauris tellus magna, elementum eu ullamcorper 
+	 vel, lobortis vel enim. Pellentesque id accumsan velit. Vestibulum luctus, neque et cursus
+
+	 </string>
+	<!--    Error message-->
+	<string name="Unabletologin">Imposibil de conectat</string>
+	<string name="Unabletoload">Imposibil de incarcat cabane</string>
+	<string name="Unabletosave">Imposibil de salvat, Te rog reincearca</string>
+	<string name="Error">Eroare</string>
+	<string name="Cancel">Anulare</string>
+	<string name="Ok">Ok</string>
+	<string name="Done">Terminat</string>
+	<string name="myLocation">myLocation</string>
+	<!--	Validation message-->
+	<string name="cabinnotselect">Nicio cabana selectata</string>
+	<string name="cabinnotefoundtodistance">Nu exista cabine la distanta de </string>
+	<string name="networkconnection">Conexiune de retea esuata</string>
+	<string name="areyousure">Sunteti sigur ca doriti sa va deconectati?</string>
+	<string name="cabinfavnotfound">Nu au fost gasite cabana preferate</string>
+	<string name="pleaseloginfor">Va rugam conectati-va pentru a accesa aceasta pagina</string>
+	<string name="enteremail">Introdu email </string>
+	<string name="pleasesigntouse">Va rugam conectati-va pentru a utiliza aceasta functionalitate</string>
+	<string name="Enteryourname">Introdu un email sau nume de utilizator</string>
+	<string name="Entercabinname">Introdu numele cabanei </string>
+	<string name="Enterphone">Introdu email sau telefon</string>
+	<string name="Enterlocation">Introdu locatie</string>
+	<string name="Uploadphoto">Incarca poza</string>
+	<string name="invalidte_price">Introdu pretul</string>
+	<string name="TryAgain">Te rugam reincearca</string>
+	<string name="ValidationInternetConnection">Nu exista conexiune la internet , va rugam sa incercati din nou</string>
+	<string name="invalid_email_or_password">Email sau parola gresite</string>
+	<string name="invalid_email">Introdu o adresa de email valida</string>
+	<string name="invalid_password">Introdu o parola valida</string>
+	<string name="empty_confirm_password">Te rugam confirma parola</string>
+	<string name="invalid_confirm_password">Password and cofirm password don\'t match.</string>
+	<string name="invalid_name">Introdu un nume valid</string>
+	<string name="invalid_phone">Introdu numar de telefon valid</string>
+	<string name="unchecked_terms">Confirma termenle si conditiile</string>
+	<string name="invalid_address">Introdu o adresa de email valida</string>
+	<string name="invalid_city">Introdu un oras valid</string>
+	<!--Layout-->
+	<string name="Save">Salveaza</string>
+	<string name="UPLOAD">Incarca</string>
+	<string name="Accountname">Numele contului</string>
+	<string name="Pricefrom">Pret de la</string>
+	<string name="DETAILS">Detalii</string>
+	<string name="GETDIRECTIONS">Mergi la</string>
+	<string name="fastsignin">Conectare rapida daca esti conectat la un cont de socializare</string>
+	<string name="membreplease">Nu esti membru? Va rog  </string>
+	<string name="forogtpass">Ti-ai uitat parola ?</string>
+	<string name="Change">Schimba</string>
+	<string name="Reviewsnotfound">Nu au fost gasite pareri</string>
+	<string name="Photos">Poze</string>
+	<string name="USEFULL">Util </string>
+	<string name="REPORT">Raport</string>
+	<string name="alreadymemeber">Daca sunteti deja membru, va rog </string>
+</resources>

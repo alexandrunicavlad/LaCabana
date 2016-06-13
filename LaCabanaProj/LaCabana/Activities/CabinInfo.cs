@@ -67,7 +67,7 @@ namespace LaCabana
 			}
 			catch (Exception e)
 			{
-				var a = 0;
+				//CreateDialog("Error", "Network connection", false, "", true, "Cancel", false);
 			}
 			RunOnUiThread(() =>
 			{
@@ -156,22 +156,41 @@ namespace LaCabana
 
 		}
 
+		public int GetStatusBarHeight()
+		{
+			int result = 0;
+			int resourceId = Resources.GetIdentifier("status_bar_height", "dimen", "android");
+			if (resourceId > 0)
+			{
+				result = Resources.GetDimensionPixelSize(resourceId);
+			}
+			return result;
+		}
+
 		private void ConstructActionBar()
 		{
 			toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.tool_bar);
 
 			SetSupportActionBar(toolbar);
 			SupportActionBar.SetDisplayShowTitleEnabled(false);
-			SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-			SupportActionBar.SetDisplayShowHomeEnabled(true);
-			toolbar.NavigationClick += delegate
+			SupportActionBar.SetDisplayHomeAsUpEnabled(false);
+			SupportActionBar.SetDisplayShowHomeEnabled(false);
+			SupportActionBar.SetDisplayShowCustomEnabled(true);
+			toolbar.SetContentInsetsAbsolute(0, 0);
+			//toolbar.NavigationClick += delegate
+			//{
+			//	Finish();
+			//};
+
+			//
+			//toolbar.NavigationIcon = Resources.GetDrawable(Resource.Drawable.ic_keyboard_backspace);
+			var BackButton = toolbar.FindViewById<ImageView>(Resource.Id.iconLeft);
+			var MenuButton = toolbar.FindViewById<ImageView>(Resource.Id.iconRight);
+			MenuButton.Visibility = ViewStates.Visible;
+			BackButton.Click += (object sender, EventArgs e) =>
 			{
 				Finish();
 			};
-
-			toolbar.NavigationIcon = Resources.GetDrawable(Resource.Drawable.ic_keyboard_backspace);
-			var MenuButton = toolbar.FindViewById<ImageView>(Resource.Id.iconRight);
-			MenuButton.Visibility = ViewStates.Visible;
 			MenuButton.Click += (object sender, EventArgs e) =>
 			{
 				Android.Support.V7.Widget.PopupMenu menu = new Android.Support.V7.Widget.PopupMenu(this, MenuButton);

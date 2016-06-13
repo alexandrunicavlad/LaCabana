@@ -86,7 +86,7 @@ namespace LaCabana
 			var accountMail = imagecenterLayout.FindViewById<TextView>(Resource.Id.emailText);
 			if (user.Email == null)
 			{
-				accountMail.Text = "enter mail";
+				accountMail.Text = GetString(Resource.String.enteremail);
 			}
 			else {
 				accountMail.Text = user.Email;
@@ -192,7 +192,7 @@ namespace LaCabana
 
 					drawerLayout.CloseDrawer((int)GravityFlags.Start);
 					AlertDialog.Builder alert = new AlertDialog.Builder(this);
-					alert.SetTitle("Select range");
+					alert.SetTitle(GetString(Resource.String.selectRange));
 					var infate = LayoutInflater.Inflate(Resource.Layout.slider_range, null);
 					var seekBar = infate.FindViewById<SeekBar>(Resource.Id.edit_seekBar);
 
@@ -206,7 +206,7 @@ namespace LaCabana
 							return;
 						text.Text = (seekBar.Progress).ToString() + "km";
 					};
-					alert.SetPositiveButton("Done", delegate
+					alert.SetPositiveButton(GetString(Resource.String.Done), delegate
 					{
 						var intent = new Intent(this, typeof(CabinsNear));
 						intent.PutExtra("latitude", myLocation.Latitude);
@@ -220,7 +220,7 @@ namespace LaCabana
 						}
 						StartActivity(intent);
 					});
-					alert.SetNegativeButton("Cancel", delegate
+					alert.SetNegativeButton(GetString(Resource.String.Cancel), delegate
 					{
 
 					});
@@ -248,7 +248,7 @@ namespace LaCabana
 						//						var favId = (baseService.Get (urlUpdate));
 						if (user.FavoriteList == null)
 						{
-							Toast.MakeText(this, "Nu aveti nicio cabana favorita", ToastLength.Short).Show();
+							Toast.MakeText(this, GetString(Resource.String.cabinfavnotfound), ToastLength.Short).Show();
 							drawerLayout.CloseDrawer((int)GravityFlags.Start);
 						}
 						else {
@@ -262,7 +262,7 @@ namespace LaCabana
 						}
 					}
 					else {
-						Toast.MakeText(this, "Please login for select this page", ToastLength.Short).Show();
+						Toast.MakeText(this, GetString(Resource.String.pleaseloginfor), ToastLength.Short).Show();
 						drawerLayout.CloseDrawer((int)GravityFlags.Start);
 					}
 				}
@@ -334,10 +334,10 @@ namespace LaCabana
 		{
 			if (user.Email == null)
 			{
-				CreateDialog("", "Please sign in for use this functionality", true, "Ok", false, "", false);
+				CreateDialog("", GetString(Resource.String.pleasesigntouse), true, GetString(Resource.String.Ok), false, "", false);
 				return;
 			}
-			var builder = new AlertDialog.Builder(new ContextThemeWrapper(this, Resource.Style.AlertDialogCustom)).SetTitle("Log out").SetMessage("Are you sure you want to log out?").SetPositiveButton("Ok", (EventHandler<DialogClickEventArgs>)null).SetNegativeButton("Cancel", (EventHandler<DialogClickEventArgs>)null);
+			var builder = new AlertDialog.Builder(new ContextThemeWrapper(this, Resource.Style.AlertDialogCustom)).SetTitle(GetString(Resource.String.logout)).SetMessage(GetString(Resource.String.areyousure)).SetPositiveButton(GetString(Resource.String.Ok), (EventHandler<DialogClickEventArgs>)null).SetNegativeButton(GetString(Resource.String.Cancel), (EventHandler<DialogClickEventArgs>)null);
 			var dialog = builder.Create();
 			dialog.Show();
 			dialog.CancelEvent += delegate

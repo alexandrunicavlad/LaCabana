@@ -64,7 +64,7 @@ namespace LaCabana
 
 			SetContentView(Resource.Layout.log_in_layout);
 			//SetupDrawer (FindViewById<DrawerLayout> (Resource.Id.drawerLayout));
-			SetTitleActionBar("Sign In");
+			SetTitleActionBar(GetString(Resource.String.login));
 			FacebookSdk.SdkInitialize(ApplicationContext);
 			myAccountlayout = FindViewById<RelativeLayout>(Resource.Id.my_account_layout);
 			email = myAccountlayout.FindViewById<EditText>(Resource.Id.emailEditText);
@@ -97,7 +97,7 @@ namespace LaCabana
 			{
 				if (dataLoaded == false)
 				{
-					CreateDialog("Unable to login", true);
+					CreateDialog(GetString(Resource.String.Unabletologin), true);
 				}
 				else {
 					HideKeyboard(loginBtn);
@@ -152,7 +152,7 @@ namespace LaCabana
 			{
 				if (dataLoaded == false)
 				{
-					CreateDialog("Unable to login", true);
+					CreateDialog(GetString(Resource.String.Unabletologin), true);
 				}
 				else {
 					LoginTwitter();
@@ -170,7 +170,7 @@ namespace LaCabana
 			{
 				if (dataLoaded == false)
 				{
-					CreateDialog("Unable to login", true);
+					CreateDialog(GetString(Resource.String.Unabletologin), true);
 				}
 				else {
 					loginType = FacebookLogin;
@@ -196,7 +196,7 @@ namespace LaCabana
 			{
 				if (dataLoaded == false)
 				{
-					CreateDialog("Unable to login", true);
+					CreateDialog(GetString(Resource.String.Unabletologin), true);
 				}
 				else {
 					mGoogleApiClient.Connect();
@@ -494,7 +494,7 @@ namespace LaCabana
 			var intent = new Intent();
 			intent.SetType("image/*");
 			intent.SetAction(Intent.ActionGetContent);
-			StartActivityForResult(Intent.CreateChooser(intent, "Select Picture"), 0);
+			StartActivityForResult(Intent.CreateChooser(intent, GetString(Resource.String.selectpicture)), 0);
 		}
 
 

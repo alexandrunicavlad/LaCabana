@@ -46,7 +46,7 @@ namespace LaCabana
 			favList = Intent.GetStringArrayListExtra("favoriteList");
 			//allCabins = new Dictionary<string,CabinModel> ();
 			allCabins = new List<CabinModel>();
-			SetTitleActionBar("Favorites");
+			SetTitleActionBar(GetString(Resource.String.favorites));
 			ClickHandler();
 			gridView = FindViewById<GridView>(Resource.Id.image_recycler);
 			loading = FindViewById<RelativeLayout>(Resource.Id.main_loading_recycler);
@@ -65,7 +65,7 @@ namespace LaCabana
 			var ada = favList[0];
 			if (favList[0] == null)
 			{
-				Toast.MakeText(this, "Nu aveti selectata nicio cabana", ToastLength.Short).Show();
+				Toast.MakeText(this, GetString(Resource.String.cabinnotselect), ToastLength.Short).Show();
 				OnBackPressed();
 			}
 			try
@@ -78,7 +78,7 @@ namespace LaCabana
 			}
 			catch (Exception e)
 			{
-				CreateDialog("Error", "Network connection", false, "", true, "Cancel", false);
+				CreateDialog(GetString(Resource.String.Error), GetString(Resource.String.networkconnection), false, "", true, GetString(Resource.String.Cancel), false);
 			}
 
 			RunOnUiThread(() =>

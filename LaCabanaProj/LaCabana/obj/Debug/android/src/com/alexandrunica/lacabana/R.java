@@ -3237,6 +3237,7 @@ containing a value of this type.
         public static final int home_scrollView=0x7f0900df;
         public static final int hybrid=0x7f09000b;
         public static final int icon=0x7f090058;
+        public static final int iconLeft=0x7f0900b9;
         public static final int iconRight=0x7f0900ba;
         public static final int icon_only=0x7f090012;
         public static final int ifRoom=0x7f09002b;
@@ -3375,7 +3376,6 @@ containing a value of this type.
         public static final int textView1=0x7f0900ff;
         public static final int time=0x7f090114;
         public static final int title=0x7f090059;
-        public static final int titleName=0x7f0900b9;
         public static final int title_template=0x7f09005e;
         public static final int titlereview=0x7f090128;
         public static final int tool_bar=0x7f0900b8;
@@ -3498,10 +3498,43 @@ containing a value of this type.
         public static final int searchview_in_menu=0x7f0c0003;
     }
     public static final class string {
-        /** 	Validation message
+        public static final int Accountname=0x7f05009a;
+        public static final int AddReview=0x7f05004f;
+        public static final int Cancel=0x7f050079;
+        public static final int Change=0x7f0500a1;
+        public static final int DETAILS=0x7f05009c;
+        public static final int Done=0x7f05007b;
+        public static final int Entercabinname=0x7f050085;
+        public static final int Enterlocation=0x7f050087;
+        public static final int Enterphone=0x7f050086;
+        public static final int Enteryourname=0x7f050084;
+        public static final int Error=0x7f050078;
+        public static final int GETDIRECTIONS=0x7f05009d;
+        public static final int Ok=0x7f05007a;
+        public static final int Photos=0x7f0500a3;
+        public static final int Pictures=0x7f05004d;
+        public static final int Pricefrom=0x7f05009b;
+        public static final int REPORT=0x7f0500a5;
+        public static final int Reviewnotfound=0x7f050056;
+        public static final int Reviews=0x7f05004e;
+        public static final int Reviewsnotfound=0x7f0500a2;
+        /** Layout
+Layout
          */
-        public static final int TryAgain=0x7f05007c;
-        public static final int ValidationInternetConnection=0x7f05007d;
+        public static final int Save=0x7f050098;
+        public static final int Signup=0x7f05004c;
+        public static final int Title=0x7f0500a7;
+        public static final int TryAgain=0x7f050089;
+        public static final int UPLOAD=0x7f050099;
+        public static final int USEFULL=0x7f0500a4;
+        public static final int Unabletoload=0x7f050076;
+        /**     Error message
+    Error message
+         */
+        public static final int Unabletologin=0x7f050075;
+        public static final int Unabletosave=0x7f050077;
+        public static final int Uploadphoto=0x7f050088;
+        public static final int ValidationInternetConnection=0x7f05008a;
         public static final int abc_action_bar_home_description=0x7f05001f;
         public static final int abc_action_bar_home_description_format=0x7f050020;
         public static final int abc_action_bar_home_subtitle_description_format=0x7f050021;
@@ -3521,15 +3554,11 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with=0x7f05002f;
         public static final int abc_shareactionprovider_share_with_application=0x7f050030;
         public static final int abc_toolbar_collapse_description=0x7f050031;
-        public static final int addNewLocation=0x7f05004f;
-        public static final int add_location=0x7f05009e;
-        public static final int add_location_btn=0x7f05008f;
-        public static final int add_location_name=0x7f050090;
-        /** 	Add Location
-         */
-        public static final int add_location_title=0x7f05008e;
+        public static final int addNewLocation=0x7f05005b;
+        public static final int alreadymemeber=0x7f0500a6;
         public static final int app_name=0x7f050049;
         public static final int appbar_scrolling_view_behavior=0x7f050033;
+        public static final int areyousure=0x7f050080;
         /**  Brand name for Facebook [DO NOT TRANSLATE] 
          */
         public static final int auth_google_play_services_client_facebook_display_name=0x7f050001;
@@ -3537,11 +3566,13 @@ containing a value of this type.
          */
         public static final int auth_google_play_services_client_google_display_name=0x7f050000;
         public static final int bottom_sheet_behavior=0x7f050034;
-        public static final int cabinsNear=0x7f05004c;
-        public static final int change_password_btn=0x7f050075;
-        /** Change password
+        public static final int cabinfavnotfound=0x7f050081;
+        public static final int cabinnotefoundtodistance=0x7f05007e;
+        /** 	Validation message
+	Validation message
          */
-        public static final int change_password_title=0x7f050071;
+        public static final int cabinnotselect=0x7f05007d;
+        public static final int cabinsNear=0x7f050058;
         public static final int character_counter_pattern=0x7f050035;
         public static final int com_facebook_device_auth_instructions=0x7f050036;
         public static final int com_facebook_image_download_unknown_error=0x7f050037;
@@ -3660,124 +3691,94 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f05001e;
-        public static final int compare=0x7f05004e;
-        public static final int confirm_password=0x7f050074;
-        public static final int contact_email=0x7f05009b;
-        public static final int contact_telephone=0x7f05009c;
-        /** Contact Us
-         */
-        public static final int contact_title=0x7f05009a;
-        public static final int detecting_device_btn=0x7f050092;
-        public static final int detecting_device_search_text=0x7f050094;
-        public static final int detecting_device_text=0x7f050095;
-        /** 	Detecting devices
-         */
-        public static final int detecting_device_title=0x7f050091;
-        public static final int detecting_retry_btn=0x7f050093;
-        public static final int device_not_connected=0x7f0500a0;
+        public static final int compare=0x7f05005a;
         /** Common
+Common
          */
-        public static final int email_hint=0x7f050053;
-        public static final int empty_confirm_password=0x7f050081;
+        public static final int email_hint=0x7f05005f;
+        public static final int empty_confirm_password=0x7f05008f;
+        public static final int enteremail=0x7f050054;
+        public static final int enterpass=0x7f050055;
+        public static final int enterrating=0x7f050052;
+        public static final int enterreview=0x7f050053;
+        public static final int entertitle=0x7f050051;
+        /** Reviewadd
+Reviewadd
+         */
+        public static final int enterusername=0x7f050050;
         public static final int facebook_app_id=0x7f05004a;
-        public static final int facebook_btn=0x7f05005b;
-        public static final int favorites=0x7f05004d;
-        public static final int forgot_password=0x7f05005d;
-        public static final int google_btn=0x7f05005c;
-        public static final int has_account=0x7f050063;
+        public static final int facebook_btn=0x7f050067;
+        public static final int fastsignin=0x7f05009e;
+        public static final int favorites=0x7f050059;
+        public static final int forgot_password=0x7f050069;
+        public static final int forogtpass=0x7f0500a0;
+        public static final int google_btn=0x7f050068;
+        public static final int has_account=0x7f050071;
         public static final int hello=0x7f050048;
-        /**  Dashboard
+        public static final int invalid_address=0x7f050094;
+        public static final int invalid_city=0x7f050095;
+        public static final int invalid_confirm_password=0x7f050090;
+        public static final int invalid_email=0x7f05008c;
+        public static final int invalid_email_or_password=0x7f05008b;
+        public static final int invalid_generic_message=0x7f050097;
+        public static final int invalid_location_name=0x7f050096;
+        public static final int invalid_name=0x7f050091;
+        public static final int invalid_password=0x7f05008e;
+        public static final int invalid_phone=0x7f050092;
+        public static final int invalidte_price=0x7f05008d;
+        /** Title
+Title
          */
-        public static final int humidity=0x7f05009d;
-        public static final int invalid_address=0x7f050086;
-        public static final int invalid_city=0x7f050087;
-        public static final int invalid_confirm_password=0x7f050082;
-        public static final int invalid_email=0x7f05007f;
-        public static final int invalid_email_or_password=0x7f05007e;
-        public static final int invalid_generic_message=0x7f050089;
-        public static final int invalid_location_name=0x7f050088;
-        public static final int invalid_name=0x7f050083;
-        public static final int invalid_password=0x7f050080;
-        public static final int invalid_phone=0x7f050084;
-        public static final int location_settings_btn=0x7f05008c;
-        /**    Location Settings
-         */
-        public static final int location_settings_title=0x7f05008a;
+        public static final int login=0x7f05004b;
         /** Login
+Login
          */
-        public static final int login_btn=0x7f05005a;
-        public static final int logout=0x7f050052;
-        public static final int lorem_ipsum=0x7f050066;
-        public static final int manualy_setup_btn=0x7f050097;
-        public static final int manualy_setup_hint=0x7f050099;
-        public static final int manualy_setup_text=0x7f050098;
-        /** 	Manualy setup
-         */
-        public static final int manualy_setup_title=0x7f050096;
+        public static final int login_btn=0x7f050066;
+        public static final int logout=0x7f05005e;
+        public static final int lorem_ipsum=0x7f050074;
         /** Menu
+Menu
          */
-        public static final int map=0x7f05004b;
-        public static final int menu_contact=0x7f05007a;
-        /** 	Left Menu
-         */
-        public static final int menu_device=0x7f050076;
-        public static final int menu_location=0x7f050077;
-        public static final int menu_logout=0x7f05007b;
-        public static final int menu_password=0x7f050079;
-        public static final int menu_profile=0x7f050078;
+        public static final int map=0x7f050057;
+        public static final int membreplease=0x7f05009f;
         public static final int messenger_send_button_text=0x7f050047;
-        public static final int myAccount=0x7f050050;
-        public static final int name_hint=0x7f050056;
-        public static final int new_password=0x7f050073;
-        public static final int no_location_message=0x7f05009f;
-        public static final int notification_email=0x7f05008b;
-        public static final int old_password=0x7f050072;
-        public static final int password_hint=0x7f050055;
-        public static final int phone_hint=0x7f050057;
-        public static final int profile_address=0x7f05006c;
-        public static final int profile_city=0x7f05006f;
-        public static final int profile_country=0x7f05006d;
-        public static final int profile_state=0x7f05006e;
-        /** User Profile
-         */
-        public static final int profile_title=0x7f05006b;
-        public static final int profile_toast=0x7f050070;
-        public static final int recover_btn=0x7f050069;
-        public static final int recover_message=0x7f050068;
-        public static final int recover_send_email=0x7f05006a;
-        /** 	Recover Password
-         */
-        public static final int recover_title=0x7f050067;
-        public static final int register=0x7f05005e;
-        public static final int register_btn=0x7f050062;
-        public static final int register_btn_Up=0x7f050061;
+        public static final int myAccount=0x7f05005c;
+        public static final int myLocation=0x7f05007c;
+        public static final int name_hint=0x7f050062;
+        public static final int networkconnection=0x7f05007f;
+        public static final int password_hint=0x7f050061;
+        public static final int phone_hint=0x7f050063;
+        public static final int please_insert=0x7f05006c;
+        public static final int pleaseloginfor=0x7f050082;
+        public static final int pleasesigntouse=0x7f050083;
+        public static final int register=0x7f05006a;
+        public static final int register_btn=0x7f050070;
+        public static final int register_btn_Up=0x7f05006f;
         /** Register
+Register
          */
-        public static final int register_terms_conditions=0x7f05005f;
-        public static final int register_terms_conditions_link=0x7f050060;
-        public static final int register_toast_message=0x7f050064;
-        public static final int repeat_password_hint=0x7f050058;
-        public static final int settings=0x7f050051;
-        public static final int settings_saved=0x7f05008d;
+        public static final int register_terms_conditions=0x7f05006d;
+        public static final int register_terms_conditions_link=0x7f05006e;
+        public static final int register_toast_message=0x7f050073;
+        public static final int repeat_password_hint=0x7f050064;
+        public static final int selectRange=0x7f05006b;
+        public static final int selectpicture=0x7f050072;
+        public static final int settings=0x7f05005d;
         public static final int status_bar_notification_info_overflow=0x7f050032;
-        public static final int switch_message_off=0x7f0500a1;
-        public static final int switch_message_on=0x7f0500a2;
-        /**   Terms and Conditions
-         */
-        public static final int terms_title=0x7f050065;
-        public static final int unchecked_terms=0x7f050085;
-        public static final int username_hint=0x7f050054;
-        public static final int wait=0x7f050059;
+        public static final int unchecked_terms=0x7f050093;
+        public static final int username_hint=0x7f050060;
+        public static final int wait=0x7f050065;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0a008a;
         public static final int AlertDialog_AppCompat_Light=0x7f0a008b;
-        public static final int AlertDialogCustom=0x7f0a0176;
+        public static final int AlertDialogCustom=0x7f0a0177;
         public static final int Animation_AppCompat_Dialog=0x7f0a008c;
         public static final int Animation_AppCompat_DropDownUp=0x7f0a008d;
         public static final int Animation_Design_BottomSheetDialog=0x7f0a0143;
-        public static final int AppTheme=0x7f0a0175;
+        public static final int AppTheme=0x7f0a0176;
         public static final int AudioFileInfoOverlayText=0x7f0a0174;
+        public static final int AudioFileInfoOverlayTextWhite=0x7f0a0175;
         public static final int Base_AlertDialog_AppCompat=0x7f0a008e;
         public static final int Base_AlertDialog_AppCompat_Light=0x7f0a008f;
         public static final int Base_Animation_AppCompat_Dialog=0x7f0a0090;

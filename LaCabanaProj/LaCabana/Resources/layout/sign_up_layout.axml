@@ -90,7 +90,7 @@
                         android:id="@+id/helpsign"
                         android:layout_centerHorizontal="true">
                         <TextView
-                            android:text="If you are already a member please "
+                            android:text="@string/alreadymemeber"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/helpsign"
@@ -98,7 +98,7 @@
                             android:layout_marginTop="10dp"
                             android:textColor="#ff000000" />
                         <TextView
-                            android:text="Sign in"
+                            android:text="@string/login"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/helpsign"

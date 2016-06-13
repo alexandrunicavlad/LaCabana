@@ -60,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:text="Price from"
+                android:text="@string/Pricefrom"
                 android:textSize="20sp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="5dp"
@@ -85,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:text="USEFULL "
+                android:text="@string/USEFULL"
                 android:textSize="16sp"
                 android:layout_marginLeft="15dp"
                 android:id="@+id/usefullButton" />
@@ -93,7 +93,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/red"
-                android:text="REPORT"
+                android:text="@string/REPORT"
                 android:textSize="16sp"
                 android:layout_marginLeft="30dp"
                 android:id="@+id/reportButton" />

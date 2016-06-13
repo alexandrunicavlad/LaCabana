@@ -3520,6 +3520,9 @@ namespace LaCabana
 			// aapt resource value: 0x7f090058
 			public const int icon = 2131296344;
 			
+			// aapt resource value: 0x7f0900b9
+			public const int iconLeft = 2131296441;
+			
 			// aapt resource value: 0x7f0900ba
 			public const int iconRight = 2131296442;
 			
@@ -3934,9 +3937,6 @@ namespace LaCabana
 			// aapt resource value: 0x7f090059
 			public const int title = 2131296345;
 			
-			// aapt resource value: 0x7f0900b9
-			public const int titleName = 2131296441;
-			
 			// aapt resource value: 0x7f09005e
 			public const int title_template = 2131296350;
 			
@@ -4331,11 +4331,98 @@ namespace LaCabana
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f05007c
-			public const int TryAgain = 2131034236;
+			// aapt resource value: 0x7f05009a
+			public const int Accountname = 2131034266;
 			
-			// aapt resource value: 0x7f05007d
-			public const int ValidationInternetConnection = 2131034237;
+			// aapt resource value: 0x7f05004f
+			public const int AddReview = 2131034191;
+			
+			// aapt resource value: 0x7f050079
+			public const int Cancel = 2131034233;
+			
+			// aapt resource value: 0x7f0500a1
+			public const int Change = 2131034273;
+			
+			// aapt resource value: 0x7f05009c
+			public const int DETAILS = 2131034268;
+			
+			// aapt resource value: 0x7f05007b
+			public const int Done = 2131034235;
+			
+			// aapt resource value: 0x7f050085
+			public const int Entercabinname = 2131034245;
+			
+			// aapt resource value: 0x7f050087
+			public const int Enterlocation = 2131034247;
+			
+			// aapt resource value: 0x7f050086
+			public const int Enterphone = 2131034246;
+			
+			// aapt resource value: 0x7f050084
+			public const int Enteryourname = 2131034244;
+			
+			// aapt resource value: 0x7f050078
+			public const int Error = 2131034232;
+			
+			// aapt resource value: 0x7f05009d
+			public const int GETDIRECTIONS = 2131034269;
+			
+			// aapt resource value: 0x7f05007a
+			public const int Ok = 2131034234;
+			
+			// aapt resource value: 0x7f0500a3
+			public const int Photos = 2131034275;
+			
+			// aapt resource value: 0x7f05004d
+			public const int Pictures = 2131034189;
+			
+			// aapt resource value: 0x7f05009b
+			public const int Pricefrom = 2131034267;
+			
+			// aapt resource value: 0x7f0500a5
+			public const int REPORT = 2131034277;
+			
+			// aapt resource value: 0x7f050056
+			public const int Reviewnotfound = 2131034198;
+			
+			// aapt resource value: 0x7f05004e
+			public const int Reviews = 2131034190;
+			
+			// aapt resource value: 0x7f0500a2
+			public const int Reviewsnotfound = 2131034274;
+			
+			// aapt resource value: 0x7f050098
+			public const int Save = 2131034264;
+			
+			// aapt resource value: 0x7f05004c
+			public const int Signup = 2131034188;
+			
+			// aapt resource value: 0x7f0500a7
+			public const int Title = 2131034279;
+			
+			// aapt resource value: 0x7f050089
+			public const int TryAgain = 2131034249;
+			
+			// aapt resource value: 0x7f050099
+			public const int UPLOAD = 2131034265;
+			
+			// aapt resource value: 0x7f0500a4
+			public const int USEFULL = 2131034276;
+			
+			// aapt resource value: 0x7f050076
+			public const int Unabletoload = 2131034230;
+			
+			// aapt resource value: 0x7f050075
+			public const int Unabletologin = 2131034229;
+			
+			// aapt resource value: 0x7f050077
+			public const int Unabletosave = 2131034231;
+			
+			// aapt resource value: 0x7f050088
+			public const int Uploadphoto = 2131034248;
+			
+			// aapt resource value: 0x7f05008a
+			public const int ValidationInternetConnection = 2131034250;
 			
 			// aapt resource value: 0x7f05001f
 			public const int abc_action_bar_home_description = 2131034143;
@@ -4394,26 +4481,20 @@ namespace LaCabana
 			// aapt resource value: 0x7f050031
 			public const int abc_toolbar_collapse_description = 2131034161;
 			
-			// aapt resource value: 0x7f05004f
-			public const int addNewLocation = 2131034191;
+			// aapt resource value: 0x7f05005b
+			public const int addNewLocation = 2131034203;
 			
-			// aapt resource value: 0x7f05009e
-			public const int add_location = 2131034270;
-			
-			// aapt resource value: 0x7f05008f
-			public const int add_location_btn = 2131034255;
-			
-			// aapt resource value: 0x7f050090
-			public const int add_location_name = 2131034256;
-			
-			// aapt resource value: 0x7f05008e
-			public const int add_location_title = 2131034254;
+			// aapt resource value: 0x7f0500a6
+			public const int alreadymemeber = 2131034278;
 			
 			// aapt resource value: 0x7f050049
 			public const int app_name = 2131034185;
 			
 			// aapt resource value: 0x7f050033
 			public const int appbar_scrolling_view_behavior = 2131034163;
+			
+			// aapt resource value: 0x7f050080
+			public const int areyousure = 2131034240;
 			
 			// aapt resource value: 0x7f050001
 			public const int auth_google_play_services_client_facebook_display_name = 2131034113;
@@ -4424,14 +4505,17 @@ namespace LaCabana
 			// aapt resource value: 0x7f050034
 			public const int bottom_sheet_behavior = 2131034164;
 			
-			// aapt resource value: 0x7f05004c
-			public const int cabinsNear = 2131034188;
+			// aapt resource value: 0x7f050081
+			public const int cabinfavnotfound = 2131034241;
 			
-			// aapt resource value: 0x7f050075
-			public const int change_password_btn = 2131034229;
+			// aapt resource value: 0x7f05007e
+			public const int cabinnotefoundtodistance = 2131034238;
 			
-			// aapt resource value: 0x7f050071
-			public const int change_password_title = 2131034225;
+			// aapt resource value: 0x7f05007d
+			public const int cabinnotselect = 2131034237;
+			
+			// aapt resource value: 0x7f050058
+			public const int cabinsNear = 2131034200;
 			
 			// aapt resource value: 0x7f050035
 			public const int character_counter_pattern = 2131034165;
@@ -4574,251 +4658,182 @@ namespace LaCabana
 			// aapt resource value: 0x7f05001e
 			public const int common_signin_button_text_long = 2131034142;
 			
-			// aapt resource value: 0x7f05004e
-			public const int compare = 2131034190;
+			// aapt resource value: 0x7f05005a
+			public const int compare = 2131034202;
 			
-			// aapt resource value: 0x7f050074
-			public const int confirm_password = 2131034228;
+			// aapt resource value: 0x7f05005f
+			public const int email_hint = 2131034207;
 			
-			// aapt resource value: 0x7f05009b
-			public const int contact_email = 2131034267;
+			// aapt resource value: 0x7f05008f
+			public const int empty_confirm_password = 2131034255;
 			
-			// aapt resource value: 0x7f05009c
-			public const int contact_telephone = 2131034268;
+			// aapt resource value: 0x7f050054
+			public const int enteremail = 2131034196;
 			
-			// aapt resource value: 0x7f05009a
-			public const int contact_title = 2131034266;
+			// aapt resource value: 0x7f050055
+			public const int enterpass = 2131034197;
 			
-			// aapt resource value: 0x7f050092
-			public const int detecting_device_btn = 2131034258;
-			
-			// aapt resource value: 0x7f050094
-			public const int detecting_device_search_text = 2131034260;
-			
-			// aapt resource value: 0x7f050095
-			public const int detecting_device_text = 2131034261;
-			
-			// aapt resource value: 0x7f050091
-			public const int detecting_device_title = 2131034257;
-			
-			// aapt resource value: 0x7f050093
-			public const int detecting_retry_btn = 2131034259;
-			
-			// aapt resource value: 0x7f0500a0
-			public const int device_not_connected = 2131034272;
+			// aapt resource value: 0x7f050052
+			public const int enterrating = 2131034194;
 			
 			// aapt resource value: 0x7f050053
-			public const int email_hint = 2131034195;
+			public const int enterreview = 2131034195;
 			
-			// aapt resource value: 0x7f050081
-			public const int empty_confirm_password = 2131034241;
+			// aapt resource value: 0x7f050051
+			public const int entertitle = 2131034193;
+			
+			// aapt resource value: 0x7f050050
+			public const int enterusername = 2131034192;
 			
 			// aapt resource value: 0x7f05004a
 			public const int facebook_app_id = 2131034186;
 			
-			// aapt resource value: 0x7f05005b
-			public const int facebook_btn = 2131034203;
+			// aapt resource value: 0x7f050067
+			public const int facebook_btn = 2131034215;
 			
-			// aapt resource value: 0x7f05004d
-			public const int favorites = 2131034189;
+			// aapt resource value: 0x7f05009e
+			public const int fastsignin = 2131034270;
 			
-			// aapt resource value: 0x7f05005d
-			public const int forgot_password = 2131034205;
+			// aapt resource value: 0x7f050059
+			public const int favorites = 2131034201;
 			
-			// aapt resource value: 0x7f05005c
-			public const int google_btn = 2131034204;
+			// aapt resource value: 0x7f050069
+			public const int forgot_password = 2131034217;
 			
-			// aapt resource value: 0x7f050063
-			public const int has_account = 2131034211;
+			// aapt resource value: 0x7f0500a0
+			public const int forogtpass = 2131034272;
+			
+			// aapt resource value: 0x7f050068
+			public const int google_btn = 2131034216;
+			
+			// aapt resource value: 0x7f050071
+			public const int has_account = 2131034225;
 			
 			// aapt resource value: 0x7f050048
 			public const int hello = 2131034184;
 			
-			// aapt resource value: 0x7f05009d
-			public const int humidity = 2131034269;
+			// aapt resource value: 0x7f050094
+			public const int invalid_address = 2131034260;
 			
-			// aapt resource value: 0x7f050086
-			public const int invalid_address = 2131034246;
+			// aapt resource value: 0x7f050095
+			public const int invalid_city = 2131034261;
 			
-			// aapt resource value: 0x7f050087
-			public const int invalid_city = 2131034247;
-			
-			// aapt resource value: 0x7f050082
-			public const int invalid_confirm_password = 2131034242;
-			
-			// aapt resource value: 0x7f05007f
-			public const int invalid_email = 2131034239;
-			
-			// aapt resource value: 0x7f05007e
-			public const int invalid_email_or_password = 2131034238;
-			
-			// aapt resource value: 0x7f050089
-			public const int invalid_generic_message = 2131034249;
-			
-			// aapt resource value: 0x7f050088
-			public const int invalid_location_name = 2131034248;
-			
-			// aapt resource value: 0x7f050083
-			public const int invalid_name = 2131034243;
-			
-			// aapt resource value: 0x7f050080
-			public const int invalid_password = 2131034240;
-			
-			// aapt resource value: 0x7f050084
-			public const int invalid_phone = 2131034244;
+			// aapt resource value: 0x7f050090
+			public const int invalid_confirm_password = 2131034256;
 			
 			// aapt resource value: 0x7f05008c
-			public const int location_settings_btn = 2131034252;
+			public const int invalid_email = 2131034252;
 			
-			// aapt resource value: 0x7f05008a
-			public const int location_settings_title = 2131034250;
-			
-			// aapt resource value: 0x7f05005a
-			public const int login_btn = 2131034202;
-			
-			// aapt resource value: 0x7f050052
-			public const int logout = 2131034194;
-			
-			// aapt resource value: 0x7f050066
-			public const int lorem_ipsum = 2131034214;
+			// aapt resource value: 0x7f05008b
+			public const int invalid_email_or_password = 2131034251;
 			
 			// aapt resource value: 0x7f050097
-			public const int manualy_setup_btn = 2131034263;
-			
-			// aapt resource value: 0x7f050099
-			public const int manualy_setup_hint = 2131034265;
-			
-			// aapt resource value: 0x7f050098
-			public const int manualy_setup_text = 2131034264;
+			public const int invalid_generic_message = 2131034263;
 			
 			// aapt resource value: 0x7f050096
-			public const int manualy_setup_title = 2131034262;
+			public const int invalid_location_name = 2131034262;
+			
+			// aapt resource value: 0x7f050091
+			public const int invalid_name = 2131034257;
+			
+			// aapt resource value: 0x7f05008e
+			public const int invalid_password = 2131034254;
+			
+			// aapt resource value: 0x7f050092
+			public const int invalid_phone = 2131034258;
+			
+			// aapt resource value: 0x7f05008d
+			public const int invalidte_price = 2131034253;
 			
 			// aapt resource value: 0x7f05004b
-			public const int map = 2131034187;
+			public const int login = 2131034187;
 			
-			// aapt resource value: 0x7f05007a
-			public const int menu_contact = 2131034234;
+			// aapt resource value: 0x7f050066
+			public const int login_btn = 2131034214;
 			
-			// aapt resource value: 0x7f050076
-			public const int menu_device = 2131034230;
+			// aapt resource value: 0x7f05005e
+			public const int logout = 2131034206;
 			
-			// aapt resource value: 0x7f050077
-			public const int menu_location = 2131034231;
+			// aapt resource value: 0x7f050074
+			public const int lorem_ipsum = 2131034228;
 			
-			// aapt resource value: 0x7f05007b
-			public const int menu_logout = 2131034235;
+			// aapt resource value: 0x7f050057
+			public const int map = 2131034199;
 			
-			// aapt resource value: 0x7f050079
-			public const int menu_password = 2131034233;
-			
-			// aapt resource value: 0x7f050078
-			public const int menu_profile = 2131034232;
+			// aapt resource value: 0x7f05009f
+			public const int membreplease = 2131034271;
 			
 			// aapt resource value: 0x7f050047
 			public const int messenger_send_button_text = 2131034183;
 			
-			// aapt resource value: 0x7f050050
-			public const int myAccount = 2131034192;
+			// aapt resource value: 0x7f05005c
+			public const int myAccount = 2131034204;
 			
-			// aapt resource value: 0x7f050056
-			public const int name_hint = 2131034198;
-			
-			// aapt resource value: 0x7f050073
-			public const int new_password = 2131034227;
-			
-			// aapt resource value: 0x7f05009f
-			public const int no_location_message = 2131034271;
-			
-			// aapt resource value: 0x7f05008b
-			public const int notification_email = 2131034251;
-			
-			// aapt resource value: 0x7f050072
-			public const int old_password = 2131034226;
-			
-			// aapt resource value: 0x7f050055
-			public const int password_hint = 2131034197;
-			
-			// aapt resource value: 0x7f050057
-			public const int phone_hint = 2131034199;
-			
-			// aapt resource value: 0x7f05006c
-			public const int profile_address = 2131034220;
-			
-			// aapt resource value: 0x7f05006f
-			public const int profile_city = 2131034223;
-			
-			// aapt resource value: 0x7f05006d
-			public const int profile_country = 2131034221;
-			
-			// aapt resource value: 0x7f05006e
-			public const int profile_state = 2131034222;
-			
-			// aapt resource value: 0x7f05006b
-			public const int profile_title = 2131034219;
-			
-			// aapt resource value: 0x7f050070
-			public const int profile_toast = 2131034224;
-			
-			// aapt resource value: 0x7f050069
-			public const int recover_btn = 2131034217;
-			
-			// aapt resource value: 0x7f050068
-			public const int recover_message = 2131034216;
-			
-			// aapt resource value: 0x7f05006a
-			public const int recover_send_email = 2131034218;
-			
-			// aapt resource value: 0x7f050067
-			public const int recover_title = 2131034215;
-			
-			// aapt resource value: 0x7f05005e
-			public const int register = 2131034206;
+			// aapt resource value: 0x7f05007c
+			public const int myLocation = 2131034236;
 			
 			// aapt resource value: 0x7f050062
-			public const int register_btn = 2131034210;
+			public const int name_hint = 2131034210;
+			
+			// aapt resource value: 0x7f05007f
+			public const int networkconnection = 2131034239;
 			
 			// aapt resource value: 0x7f050061
-			public const int register_btn_Up = 2131034209;
+			public const int password_hint = 2131034209;
 			
-			// aapt resource value: 0x7f05005f
-			public const int register_terms_conditions = 2131034207;
+			// aapt resource value: 0x7f050063
+			public const int phone_hint = 2131034211;
 			
-			// aapt resource value: 0x7f050060
-			public const int register_terms_conditions_link = 2131034208;
+			// aapt resource value: 0x7f05006c
+			public const int please_insert = 2131034220;
+			
+			// aapt resource value: 0x7f050082
+			public const int pleaseloginfor = 2131034242;
+			
+			// aapt resource value: 0x7f050083
+			public const int pleasesigntouse = 2131034243;
+			
+			// aapt resource value: 0x7f05006a
+			public const int register = 2131034218;
+			
+			// aapt resource value: 0x7f050070
+			public const int register_btn = 2131034224;
+			
+			// aapt resource value: 0x7f05006f
+			public const int register_btn_Up = 2131034223;
+			
+			// aapt resource value: 0x7f05006d
+			public const int register_terms_conditions = 2131034221;
+			
+			// aapt resource value: 0x7f05006e
+			public const int register_terms_conditions_link = 2131034222;
+			
+			// aapt resource value: 0x7f050073
+			public const int register_toast_message = 2131034227;
 			
 			// aapt resource value: 0x7f050064
-			public const int register_toast_message = 2131034212;
+			public const int repeat_password_hint = 2131034212;
 			
-			// aapt resource value: 0x7f050058
-			public const int repeat_password_hint = 2131034200;
+			// aapt resource value: 0x7f05006b
+			public const int selectRange = 2131034219;
 			
-			// aapt resource value: 0x7f050051
-			public const int settings = 2131034193;
+			// aapt resource value: 0x7f050072
+			public const int selectpicture = 2131034226;
 			
-			// aapt resource value: 0x7f05008d
-			public const int settings_saved = 2131034253;
+			// aapt resource value: 0x7f05005d
+			public const int settings = 2131034205;
 			
 			// aapt resource value: 0x7f050032
 			public const int status_bar_notification_info_overflow = 2131034162;
 			
-			// aapt resource value: 0x7f0500a1
-			public const int switch_message_off = 2131034273;
+			// aapt resource value: 0x7f050093
+			public const int unchecked_terms = 2131034259;
 			
-			// aapt resource value: 0x7f0500a2
-			public const int switch_message_on = 2131034274;
+			// aapt resource value: 0x7f050060
+			public const int username_hint = 2131034208;
 			
 			// aapt resource value: 0x7f050065
-			public const int terms_title = 2131034213;
-			
-			// aapt resource value: 0x7f050085
-			public const int unchecked_terms = 2131034245;
-			
-			// aapt resource value: 0x7f050054
-			public const int username_hint = 2131034196;
-			
-			// aapt resource value: 0x7f050059
-			public const int wait = 2131034201;
+			public const int wait = 2131034213;
 			
 			static String()
 			{
@@ -4839,8 +4854,8 @@ namespace LaCabana
 			// aapt resource value: 0x7f0a008b
 			public const int AlertDialog_AppCompat_Light = 2131361931;
 			
-			// aapt resource value: 0x7f0a0176
-			public const int AlertDialogCustom = 2131362166;
+			// aapt resource value: 0x7f0a0177
+			public const int AlertDialogCustom = 2131362167;
 			
 			// aapt resource value: 0x7f0a008c
 			public const int Animation_AppCompat_Dialog = 2131361932;
@@ -4851,11 +4866,14 @@ namespace LaCabana
 			// aapt resource value: 0x7f0a0143
 			public const int Animation_Design_BottomSheetDialog = 2131362115;
 			
-			// aapt resource value: 0x7f0a0175
-			public const int AppTheme = 2131362165;
+			// aapt resource value: 0x7f0a0176
+			public const int AppTheme = 2131362166;
 			
 			// aapt resource value: 0x7f0a0174
 			public const int AudioFileInfoOverlayText = 2131362164;
+			
+			// aapt resource value: 0x7f0a0175
+			public const int AudioFileInfoOverlayTextWhite = 2131362165;
 			
 			// aapt resource value: 0x7f0a008e
 			public const int Base_AlertDialog_AppCompat = 2131361934;

@@ -35,7 +35,7 @@ namespace LaCabana
 		protected ImageButton GridButton;
 		protected ImageButton ListButton;
 		protected ImageButton SearchButton;
-
+		private Org.W3c.Dom.IDocument doc;
 		protected override void OnCreate(Bundle bundle)
 		{
 
@@ -46,7 +46,7 @@ namespace LaCabana
 			SetupDrawer(FindViewById<DrawerLayout>(Resource.Id.drawerLayout));
 			SetProfilePicture();
 			ConstructRightIcon();
-			SetTitleActionBar1("Cabins near");
+			SetTitleActionBar1(GetString(Resource.String.cabinsNear));
 			var baseService = new BaseService<Dictionary<string, CabinModel>>();
 			latitude = Intent.GetDoubleExtra("latitude", 0);
 			longitude = Intent.GetDoubleExtra("longitude", 0);
@@ -146,7 +146,7 @@ namespace LaCabana
 			}
 			catch (Exception e)
 			{
-				CreateDialog("Error", "Network connection", false, "", true, "Cancel", false);
+				CreateDialog(GetString(Resource.String.Error), GetString(Resource.String.networkconnection), false, "", true, GetString(Resource.String.Cancel), false);
 			}
 
 		}
@@ -160,8 +160,15 @@ namespace LaCabana
 			}
 			foreach (var cabin in cabs)
 			{
+				try
+				{
+					doc = route.GetDocument(new LatLng(latitude, longitude), new LatLng(cabin.Value.Latitude, cabin.Value.Longitude), RouteGenerator.Mode_driving);
 
-				Org.W3c.Dom.IDocument doc = route.GetDocument(new LatLng(latitude, longitude), new LatLng(cabin.Value.Latitude, cabin.Value.Longitude), RouteGenerator.Mode_driving);
+				}
+				catch (Exception e)
+				{
+					var a = 0;
+				}
 				float distance = route.GetDistanceValue(doc) / 1000;
 				if (distance > numberDistance)
 				{
@@ -256,7 +263,7 @@ namespace LaCabana
 							}
 						}
 						else {
-							CreateDialog(GetString(Resource.String.TryAgain), "", true, "Ok", false, "", false);
+							CreateDialog(GetString(Resource.String.please_insert), "", true, "Ok", false, "", false);
 						}
 
 					};
@@ -274,7 +281,7 @@ namespace LaCabana
 			cabinsLayout.RequestLayout();
 			if (cabinsLayout.ChildCount == 0)
 			{
-				Toast.MakeText(this, string.Format("Nu exista cabane la distanta de {0} km", numberDistance), ToastLength.Short).Show();
+				Toast.MakeText(this, string.Format("{0 1} km", (GetString(Resource.String.cabinnotefoundtodistance)), numberDistance), ToastLength.Short).Show();
 				OnBackPressed();
 			}
 			RunOnUiThread(() =>

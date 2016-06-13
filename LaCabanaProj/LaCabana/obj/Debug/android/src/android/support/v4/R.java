@@ -3147,12 +3147,12 @@ containing a value of this type.
         public static int button=0x7f090049;
         public static int buttonPanel=0x7f09005a;
         public static int cabinDetails=0x7f0900bf;
-        public static int cabinDirection=0x7f0900a9;
+        public static int cabinDirection=0x7f0900a6;
         public static int cabinDistance=0x7f0900bc;
         public static int cabinFavorite=0x7f0900db;
-        public static int cabinImage=0x7f0900a7;
+        public static int cabinImage=0x7f0900a4;
         public static int cabinInfo=0x7f0900da;
-        public static int cabinName=0x7f0900a8;
+        public static int cabinName=0x7f0900a5;
         public static int cabinPrice=0x7f0900be;
         public static int cabinRating=0x7f0900bd;
         public static int cabinesItem=0x7f0900e5;
@@ -3192,8 +3192,8 @@ containing a value of this type.
         public static int design_navigation_view=0x7f0900d4;
         public static int destinationButton=0x7f0900c1;
         public static int detailsButton=0x7f0900c0;
-        public static int detailsLayout=0x7f0900b9;
-        public static int detailsText=0x7f0900ba;
+        public static int detailsLayout=0x7f0900b6;
+        public static int detailsText=0x7f0900b7;
         public static int disableHome=0x7f09001a;
         public static int display_always=0x7f09004c;
         public static int drawerLayout=0x7f09008c;
@@ -3203,11 +3203,11 @@ containing a value of this type.
         public static int edit_query=0x7f090072;
         public static int edit_seekBar=0x7f09012c;
         public static int emailEditText=0x7f090098;
-        public static int emailLayout=0x7f0900b1;
+        public static int emailLayout=0x7f0900ae;
         public static int emailSpinner=0x7f090099;
-        public static int emailText=0x7f0900b3;
-        public static int emailType=0x7f0900b4;
-        public static int emailphoto=0x7f0900b2;
+        public static int emailText=0x7f0900b0;
+        public static int emailType=0x7f0900b1;
+        public static int emailphoto=0x7f0900af;
         public static int emptyReview=0x7f09011f;
         public static int end=0x7f090027;
         public static int end_padder=0x7f09011a;
@@ -3237,7 +3237,8 @@ containing a value of this type.
         public static int home_scrollView=0x7f0900df;
         public static int hybrid=0x7f09000b;
         public static int icon=0x7f090058;
-        public static int iconRight=0x7f0900a4;
+        public static int iconLeft=0x7f0900b9;
+        public static int iconRight=0x7f0900ba;
         public static int icon_only=0x7f090012;
         public static int ifRoom=0x7f09002b;
         public static int image=0x7f090055;
@@ -3260,13 +3261,13 @@ containing a value of this type.
         public static int loading=0x7f0900f8;
         public static int loading_progress=0x7f0900f9;
         public static int locationEditText=0x7f090092;
-        public static int locationLayout=0x7f0900b5;
+        public static int locationLayout=0x7f0900b2;
         public static int login_email=0x7f0900fc;
         public static int login_password=0x7f0900fd;
         public static int login_username=0x7f09012b;
         public static int logoutItem=0x7f0900f2;
         public static int logoutText=0x7f0900f3;
-        public static int main_loading=0x7f0900a5;
+        public static int main_loading=0x7f0900a2;
         public static int main_loading_recycler=0x7f0900dd;
         public static int mainsignin=0x7f0900fb;
         public static int map=0x7f0900a0;
@@ -3294,20 +3295,20 @@ containing a value of this type.
         public static int parallax=0x7f090033;
         public static int parentPanel=0x7f09005c;
         public static int phoneEditText=0x7f090096;
-        public static int phoneLayout1=0x7f0900ab;
-        public static int phoneLayout2=0x7f0900ae;
+        public static int phoneLayout1=0x7f0900a8;
+        public static int phoneLayout2=0x7f0900ab;
         public static int phoneSpinner=0x7f090097;
-        public static int phoneText1=0x7f0900ac;
-        public static int phoneText2=0x7f0900af;
-        public static int phoneType1=0x7f0900ad;
-        public static int phoneType2=0x7f0900b0;
-        public static int phonephoto=0x7f0900aa;
+        public static int phoneText1=0x7f0900a9;
+        public static int phoneText2=0x7f0900ac;
+        public static int phoneType1=0x7f0900aa;
+        public static int phoneType2=0x7f0900ad;
+        public static int phonephoto=0x7f0900a7;
         public static int photoShow=0x7f090093;
         public static int pin=0x7f090034;
         public static int priceEditText=0x7f09009a;
-        public static int priceLayout=0x7f0900b7;
+        public static int priceLayout=0x7f0900b4;
         public static int priceSpinner=0x7f09009b;
-        public static int priceText=0x7f0900b8;
+        public static int priceText=0x7f0900b5;
         public static int priceandlocation=0x7f0900d9;
         public static int profile_layout=0x7f0900e1;
         public static int progress_bar=0x7f0900c7;
@@ -3325,7 +3326,7 @@ containing a value of this type.
         public static int scrollIndicatorDown=0x7f090064;
         public static int scrollIndicatorUp=0x7f090061;
         public static int scrollView=0x7f090062;
-        public static int scrollViewMain=0x7f0900a6;
+        public static int scrollViewMain=0x7f0900a3;
         public static int scrollable=0x7f090044;
         public static int searchList=0x7f09010a;
         public static int searchView=0x7f090089;
@@ -3341,7 +3342,6 @@ containing a value of this type.
         public static int search_voice_btn=0x7f09007d;
         public static int seekbar_text=0x7f09012d;
         public static int select_dialog_listview=0x7f09007e;
-        public static int selectedpagelayout=0x7f0900a2;
         public static int settingsItem=0x7f0900f0;
         public static int settingsText=0x7f0900f1;
         public static int shortcut=0x7f090069;
@@ -3366,7 +3366,7 @@ containing a value of this type.
         public static int standard=0x7f090013;
         public static int start=0x7f09003c;
         public static int status_bar_latest_event_content=0x7f090110;
-        public static int streetText=0x7f0900b6;
+        public static int streetText=0x7f0900b3;
         public static int submit_area=0x7f09007b;
         public static int tabMode=0x7f090019;
         public static int terrain=0x7f09000f;
@@ -3378,7 +3378,7 @@ containing a value of this type.
         public static int title=0x7f090059;
         public static int title_template=0x7f09005e;
         public static int titlereview=0x7f090128;
-        public static int tool_bar=0x7f0900a3;
+        public static int tool_bar=0x7f0900b8;
         public static int top=0x7f09003d;
         public static int topPanel=0x7f09005d;
         public static int touch_outside=0x7f0900cf;
@@ -3498,10 +3498,25 @@ containing a value of this type.
         public static int searchview_in_menu=0x7f0c0003;
     }
     public static final class string {
+        public static int Cancel=0x7f05006a;
+        public static int Entercabinname=0x7f05006e;
+        public static int Enterlocation=0x7f050070;
+        public static int Enterphone=0x7f05006f;
         /** 	Validation message
          */
-        public static int TryAgain=0x7f05007c;
-        public static int ValidationInternetConnection=0x7f05007d;
+        public static int Enteryourname=0x7f05006d;
+        public static int Error=0x7f050069;
+        public static int Ok=0x7f05006b;
+        /** 	Validation message
+         */
+        public static int TryAgain=0x7f050072;
+        /**     Error message
+    Error message
+         */
+        public static int Unabletoload=0x7f050067;
+        public static int Unabletosave=0x7f050068;
+        public static int Uploadphoto=0x7f050071;
+        public static int ValidationInternetConnection=0x7f050073;
         public static int abc_action_bar_home_description=0x7f05001f;
         public static int abc_action_bar_home_description_format=0x7f050020;
         public static int abc_action_bar_home_subtitle_description_format=0x7f050021;
@@ -3522,12 +3537,6 @@ containing a value of this type.
         public static int abc_shareactionprovider_share_with_application=0x7f050030;
         public static int abc_toolbar_collapse_description=0x7f050031;
         public static int addNewLocation=0x7f05004f;
-        public static int add_location=0x7f05009e;
-        public static int add_location_btn=0x7f05008f;
-        public static int add_location_name=0x7f050090;
-        /** 	Add Location
-         */
-        public static int add_location_title=0x7f05008e;
         public static int app_name=0x7f050049;
         public static int appbar_scrolling_view_behavior=0x7f050033;
         /**  Brand name for Facebook [DO NOT TRANSLATE] 
@@ -3538,10 +3547,6 @@ containing a value of this type.
         public static int auth_google_play_services_client_google_display_name=0x7f050000;
         public static int bottom_sheet_behavior=0x7f050034;
         public static int cabinsNear=0x7f05004c;
-        public static int change_password_btn=0x7f050075;
-        /** Change password
-         */
-        public static int change_password_title=0x7f050071;
         public static int character_counter_pattern=0x7f050035;
         public static int com_facebook_device_auth_instructions=0x7f050036;
         public static int com_facebook_image_download_unknown_error=0x7f050037;
@@ -3661,123 +3666,71 @@ containing a value of this type.
          */
         public static int common_signin_button_text_long=0x7f05001e;
         public static int compare=0x7f05004e;
-        public static int confirm_password=0x7f050074;
-        public static int contact_email=0x7f05009b;
-        public static int contact_telephone=0x7f05009c;
-        /** Contact Us
-         */
-        public static int contact_title=0x7f05009a;
-        public static int detecting_device_btn=0x7f050092;
-        public static int detecting_device_search_text=0x7f050094;
-        public static int detecting_device_text=0x7f050095;
-        /** 	Detecting devices
-         */
-        public static int detecting_device_title=0x7f050091;
-        public static int detecting_retry_btn=0x7f050093;
-        public static int device_not_connected=0x7f0500a0;
         /** Common
+Common
          */
         public static int email_hint=0x7f050053;
-        public static int empty_confirm_password=0x7f050081;
+        public static int empty_confirm_password=0x7f050077;
         public static int facebook_app_id=0x7f05004a;
         public static int facebook_btn=0x7f05005b;
         public static int favorites=0x7f05004d;
         public static int forgot_password=0x7f05005d;
         public static int google_btn=0x7f05005c;
-        public static int has_account=0x7f050063;
+        public static int has_account=0x7f050064;
         public static int hello=0x7f050048;
-        /**  Dashboard
-         */
-        public static int humidity=0x7f05009d;
-        public static int invalid_address=0x7f050086;
-        public static int invalid_city=0x7f050087;
-        public static int invalid_confirm_password=0x7f050082;
-        public static int invalid_email=0x7f05007f;
-        public static int invalid_email_or_password=0x7f05007e;
-        public static int invalid_generic_message=0x7f050089;
-        public static int invalid_location_name=0x7f050088;
-        public static int invalid_name=0x7f050083;
-        public static int invalid_password=0x7f050080;
-        public static int invalid_phone=0x7f050084;
-        public static int location_settings_btn=0x7f05008c;
-        /**    Location Settings
-         */
-        public static int location_settings_title=0x7f05008a;
+        public static int invalid_address=0x7f05007c;
+        public static int invalid_city=0x7f05007d;
+        public static int invalid_confirm_password=0x7f050078;
+        public static int invalid_email=0x7f050075;
+        public static int invalid_email_or_password=0x7f050074;
+        public static int invalid_generic_message=0x7f05007f;
+        public static int invalid_location_name=0x7f05007e;
+        public static int invalid_name=0x7f050079;
+        public static int invalid_password=0x7f050076;
+        public static int invalid_phone=0x7f05007a;
         /** Login
+Login
          */
         public static int login_btn=0x7f05005a;
         public static int logout=0x7f050052;
         public static int lorem_ipsum=0x7f050066;
-        public static int manualy_setup_btn=0x7f050097;
-        public static int manualy_setup_hint=0x7f050099;
-        public static int manualy_setup_text=0x7f050098;
-        /** 	Manualy setup
-         */
-        public static int manualy_setup_title=0x7f050096;
         /** Menu
+Menu
          */
         public static int map=0x7f05004b;
-        public static int menu_contact=0x7f05007a;
-        /** 	Left Menu
-         */
-        public static int menu_device=0x7f050076;
-        public static int menu_location=0x7f050077;
-        public static int menu_logout=0x7f05007b;
-        public static int menu_password=0x7f050079;
-        public static int menu_profile=0x7f050078;
         public static int messenger_send_button_text=0x7f050047;
         public static int myAccount=0x7f050050;
+        public static int myLocation=0x7f05006c;
         public static int name_hint=0x7f050056;
-        public static int new_password=0x7f050073;
-        public static int no_location_message=0x7f05009f;
-        public static int notification_email=0x7f05008b;
-        public static int old_password=0x7f050072;
         public static int password_hint=0x7f050055;
         public static int phone_hint=0x7f050057;
-        public static int profile_address=0x7f05006c;
-        public static int profile_city=0x7f05006f;
-        public static int profile_country=0x7f05006d;
-        public static int profile_state=0x7f05006e;
-        /** User Profile
-         */
-        public static int profile_title=0x7f05006b;
-        public static int profile_toast=0x7f050070;
-        public static int recover_btn=0x7f050069;
-        public static int recover_message=0x7f050068;
-        public static int recover_send_email=0x7f05006a;
-        /** 	Recover Password
-         */
-        public static int recover_title=0x7f050067;
+        public static int please_insert=0x7f05005f;
         public static int register=0x7f05005e;
-        public static int register_btn=0x7f050062;
-        public static int register_btn_Up=0x7f050061;
+        public static int register_btn=0x7f050063;
+        public static int register_btn_Up=0x7f050062;
         /** Register
+Register
          */
-        public static int register_terms_conditions=0x7f05005f;
-        public static int register_terms_conditions_link=0x7f050060;
-        public static int register_toast_message=0x7f050064;
+        public static int register_terms_conditions=0x7f050060;
+        public static int register_terms_conditions_link=0x7f050061;
+        public static int register_toast_message=0x7f050065;
         public static int repeat_password_hint=0x7f050058;
         public static int settings=0x7f050051;
-        public static int settings_saved=0x7f05008d;
         public static int status_bar_notification_info_overflow=0x7f050032;
-        public static int switch_message_off=0x7f0500a1;
-        public static int switch_message_on=0x7f0500a2;
-        /**   Terms and Conditions
-         */
-        public static int terms_title=0x7f050065;
-        public static int unchecked_terms=0x7f050085;
+        public static int unchecked_terms=0x7f05007b;
         public static int username_hint=0x7f050054;
         public static int wait=0x7f050059;
     }
     public static final class style {
         public static int AlertDialog_AppCompat=0x7f0a008a;
         public static int AlertDialog_AppCompat_Light=0x7f0a008b;
-        public static int AlertDialogCustom=0x7f0a0176;
+        public static int AlertDialogCustom=0x7f0a0177;
         public static int Animation_AppCompat_Dialog=0x7f0a008c;
         public static int Animation_AppCompat_DropDownUp=0x7f0a008d;
         public static int Animation_Design_BottomSheetDialog=0x7f0a0143;
-        public static int AppTheme=0x7f0a0175;
+        public static int AppTheme=0x7f0a0176;
         public static int AudioFileInfoOverlayText=0x7f0a0174;
+        public static int AudioFileInfoOverlayTextWhite=0x7f0a0175;
         public static int Base_AlertDialog_AppCompat=0x7f0a008e;
         public static int Base_AlertDialog_AppCompat_Light=0x7f0a008f;
         public static int Base_Animation_AppCompat_Dialog=0x7f0a0090;

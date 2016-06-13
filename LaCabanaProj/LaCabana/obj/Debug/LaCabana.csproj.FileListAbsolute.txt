@@ -279,6 +279,7 @@ C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxxh
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxxhdpi\ic_map_marker_orange.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxxhdpi\ic_phone_orange.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxxhdpi\ic_price_orange.png
+C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\values-ro\strings.xml
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\R.cs.flag
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\uploadflags.txt
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.dll.mdb

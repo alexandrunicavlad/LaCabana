@@ -71,7 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:text="Price from"
+                android:text="@string/Pricefrom"
                 android:textSize="16sp"
                 android:layout_marginLeft="15dp" />
             <TextView
@@ -103,7 +103,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:text="DETAILS"
+                android:text="@string/DETAILS"
                 android:textSize="16sp"
                 android:layout_marginLeft="15dp"
                 android:id="@+id/detailsButton" />
@@ -111,7 +111,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/card_blue_light"
-                android:text="GET DIRECTIONS"
+                android:text="@string/GETDIRECTIONS"
                 android:textSize="16sp"
                 android:layout_marginLeft="30dp"
                 android:id="@+id/destinationButton" />

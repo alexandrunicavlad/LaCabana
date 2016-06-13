@@ -29,7 +29,7 @@ namespace LaCabana
 			ConstructRightIcon();
 			DatabaseServices = new DatabaseServices(this);
 			user = DatabaseServices.GetAllUsers();
-			SetTitleActionBar1("Add Review");
+			SetTitleActionBar1(GetString(Resource.String.AddReview));
 			marker = Intent.GetStringExtra("marker");
 			var saveButton = FindViewById<Button>(Resource.Id.add_button_location);
 			account = FindViewById<EditText>(Resource.Id.accountText);
@@ -49,22 +49,22 @@ namespace LaCabana
 		{
 			if (account.Text == "")
 			{
-				CreateDialog("Please enter username", true);
+				CreateDialog(GetString(Resource.String.enterusername), true);
 				return;
 			}
 			else if (title.Text == "")
 			{
-				CreateDialog("Please enter title", true);
+				CreateDialog(GetString(Resource.String.entertitle), true);
 				return;
 			}
 			else if (rating.Progress == 0)
 			{
-				CreateDialog("Please enter rating", true);
+				CreateDialog(GetString(Resource.String.enterrating), true);
 				return;
 			}
 			else if (reviewText.Text == "")
 			{
-				CreateDialog("Please enter review", true);
+				CreateDialog(GetString(Resource.String.enterreview), true);
 				return;
 			}
 			var review = new ReviewModel();

@@ -27,10 +27,10 @@
                 android:orientation="vertical">
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="200dp">
+                    android:layout_height="220dp">
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="170dp"
+                        android:layout_height="190dp"
                         android:id="@+id/cabinImage"
                         android:background="@drawable/cabana_photo" />
                     <TextView
@@ -299,15 +299,16 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/transparent"
-        android:paddingRight="15dp"
+        android:layout_marginLeft="10dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="20dp"
         facebook:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:id="@+id/titleName"
-            android:textSize="20sp"
-            android:layout_gravity="center" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start"
+            android:src="@drawable/ic_keyboard_backspace"
+            android:id="@+id/iconLeft" />
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"

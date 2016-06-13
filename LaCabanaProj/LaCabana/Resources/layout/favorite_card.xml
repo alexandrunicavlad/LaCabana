@@ -25,8 +25,9 @@
                 android:textSize="26sp"
                 android:layout_marginLeft="10dp"
                 android:id="@+id/cabinName"
+                style="@style/AudioFileInfoOverlayTextWhite"
                 android:layout_above="@+id/priceandlocation"
-                android:layout_marginBottom="5dp" />
+                android:layout_marginBottom="10dp" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -41,7 +42,7 @@
                     android:text="120 Lei"
                     android:textSize="12sp"
                     android:adjustViewBounds="true"
-                    android:drawableLeft="@drawable/ic_price"
+                    android:drawableLeft="@drawable/ic_price_orange"
                     android:id="@+id/cabinPrice"
                     android:layout_weight="0.5"
                     style="@style/AudioFileInfoOverlayText"
@@ -54,7 +55,7 @@
                     android:text="12 km"
                     android:textSize="12sp"
                     android:layout_alignParentRight="true"
-                    android:drawableLeft="@drawable/ic_map_marker"
+                    android:drawableLeft="@drawable/ic_map_marker_orange"
                     android:id="@+id/cabinDistance"
                     android:textColor="@color/white"
                     style="@style/AudioFileInfoOverlayText"

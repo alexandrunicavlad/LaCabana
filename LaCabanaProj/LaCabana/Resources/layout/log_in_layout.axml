@@ -79,7 +79,7 @@
                     android:layout_marginTop="10dp"
                     android:id="@+id/socialLayout">
                     <TextView
-                        android:text="Fast sign-in if your social profile is connected"
+                        android:text="@string/fastsignin"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/socialtext"
@@ -131,7 +131,7 @@
                         android:id="@+id/helpsign"
                         android:layout_centerHorizontal="true">
                         <TextView
-                            android:text="You're not a memeber? Please "
+                            android:text="@string/membreplease"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/helpsign"
@@ -139,7 +139,7 @@
                             android:layout_marginTop="10dp"
                             android:textColor="#ff000000" />
                         <TextView
-                            android:text="Sign up"
+                            android:text="@string/Signup"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/socialtext"
@@ -149,7 +149,7 @@
                             android:textColor="#ff00e5ff" />
                     </LinearLayout>
                     <TextView
-                        android:text="You forgot your password?"
+                        android:text="@string/forogtpass"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
