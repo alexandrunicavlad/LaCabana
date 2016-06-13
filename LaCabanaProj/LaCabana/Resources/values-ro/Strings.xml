@@ -115,4 +115,12 @@
 	<string name="USEFULL">Util </string>
 	<string name="REPORT">Raport</string>
 	<string name="alreadymemeber">Daca sunteti deja membru, va rog </string>
+	<string name="Title">Titlu</string>
+	<!-- popup -->
+	<string name="Price">Pret</string>
+	<string name="Range">Distanta</string>
+	<string name="Newest">Cele mai noi</string>
+	<string name="Oldest">Cele mai vechi</string>
+	<string name="Rating">Cele mai apreciate</string>
+	<string name="Best">Cele mai bune</string>
 </resources>

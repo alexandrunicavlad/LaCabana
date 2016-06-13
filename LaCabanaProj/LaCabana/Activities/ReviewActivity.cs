@@ -205,11 +205,11 @@ namespace LaCabana
 				menu.MenuItemClick += (object sender1, PopupMenu.MenuItemClickEventArgs e1) =>
 				{
 					var a = e1.Item.TitleFormatted.ToString();
-					if (a.Equals("Newest"))
+					if (a.Equals(GetString(Resource.String.Newest)))
 					{
 						FillLayout(reviews.Reverse().ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
 					}
-					else if (a.Equals("Best"))
+					else if (a.Equals(GetString(Resource.String.Best)))
 					{
 						var ordbest = reviews.OrderBy(item => item.Value.Rating);
 						FillLayout(ordbest.Reverse().ToDictionary(kvp => kvp.Key, kvp => kvp.Value));

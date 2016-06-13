@@ -93,25 +93,25 @@ namespace LaCabana
 				menu.MenuItemClick += (object sender1, PopupMenu.MenuItemClickEventArgs e1) =>
 				{
 					var a = e1.Item.TitleFormatted.ToString();
-					if (a.Equals("Price"))
+					if (a.Equals(GetString(Resource.String.Price)))
 					{
 						var ordprice = allCabins.OrderBy(item => item.Value.Price);
 						FillLayout(route, baseServiceGeneral, ordprice.ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
 					}
-					else if (a.Equals("Oldest"))
+					else if (a.Equals(GetString(Resource.String.Oldest)))
 					{
 						FillLayout(route, baseServiceGeneral, allCabins);
 					}
-					else if (a.Equals("Newest"))
+					else if (a.Equals(GetString(Resource.String.Newest)))
 					{
 						FillLayout(route, baseServiceGeneral, allCabins.Reverse().ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
 					}
-					else if (a.Equals("Range"))
+					else if (a.Equals(GetString(Resource.String.Range)))
 					{
 						var ordrating = allCabins.OrderBy(item => item.Value.Distance);
 						FillLayout(route, baseServiceGeneral, ordrating.ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
 					}
-					else if (a.Equals("Rating"))
+					else if (a.Equals(GetString(Resource.String.Rating)))
 					{
 						var ordrating = allCabins.OrderBy(item => item.Value.Rating);
 						FillLayout(route, baseServiceGeneral, ordrating.Reverse().ToDictionary(kvp => kvp.Key, kvp => kvp.Value));

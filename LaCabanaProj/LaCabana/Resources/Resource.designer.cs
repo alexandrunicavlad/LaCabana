@@ -4337,6 +4337,9 @@ namespace LaCabana
 			// aapt resource value: 0x7f05004f
 			public const int AddReview = 2131034191;
 			
+			// aapt resource value: 0x7f0500ad
+			public const int Best = 2131034285;
+			
 			// aapt resource value: 0x7f050079
 			public const int Cancel = 2131034233;
 			
@@ -4367,8 +4370,14 @@ namespace LaCabana
 			// aapt resource value: 0x7f05009d
 			public const int GETDIRECTIONS = 2131034269;
 			
+			// aapt resource value: 0x7f0500aa
+			public const int Newest = 2131034282;
+			
 			// aapt resource value: 0x7f05007a
 			public const int Ok = 2131034234;
+			
+			// aapt resource value: 0x7f0500ab
+			public const int Oldest = 2131034283;
 			
 			// aapt resource value: 0x7f0500a3
 			public const int Photos = 2131034275;
@@ -4376,11 +4385,20 @@ namespace LaCabana
 			// aapt resource value: 0x7f05004d
 			public const int Pictures = 2131034189;
 			
+			// aapt resource value: 0x7f0500a8
+			public const int Price = 2131034280;
+			
 			// aapt resource value: 0x7f05009b
 			public const int Pricefrom = 2131034267;
 			
 			// aapt resource value: 0x7f0500a5
 			public const int REPORT = 2131034277;
+			
+			// aapt resource value: 0x7f0500a9
+			public const int Range = 2131034281;
+			
+			// aapt resource value: 0x7f0500ac
+			public const int Rating = 2131034284;
 			
 			// aapt resource value: 0x7f050056
 			public const int Reviewnotfound = 2131034198;

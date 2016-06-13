@@ -198,13 +198,13 @@ namespace LaCabana
 				menu.MenuItemClick += (object sender1, Android.Support.V7.Widget.PopupMenu.MenuItemClickEventArgs e1) =>
 				{
 					var a = e1.Item.TitleFormatted.ToString();
-					if (a.Equals("Pictures"))
+					if (a.Equals(GetString(Resource.String.Pictures)))
 					{
 						var intent = new Intent(this, typeof(PicturesActivity));
 						intent.PutExtra("marker", marker);
 						StartActivity(intent);
 					}
-					else if (a.Equals("Reviews"))
+					else if (a.Equals(GetString(Resource.String.Reviews)))
 					{
 						var intent = new Intent(this, typeof(ReviewActivity));
 						intent.PutExtra("marker", marker);

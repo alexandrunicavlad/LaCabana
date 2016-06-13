@@ -3500,6 +3500,7 @@ containing a value of this type.
     public static final class string {
         public static final int Accountname=0x7f05009a;
         public static final int AddReview=0x7f05004f;
+        public static final int Best=0x7f0500ad;
         public static final int Cancel=0x7f050079;
         public static final int Change=0x7f0500a1;
         public static final int DETAILS=0x7f05009c;
@@ -3510,11 +3511,19 @@ containing a value of this type.
         public static final int Enteryourname=0x7f050084;
         public static final int Error=0x7f050078;
         public static final int GETDIRECTIONS=0x7f05009d;
+        public static final int Newest=0x7f0500aa;
         public static final int Ok=0x7f05007a;
+        public static final int Oldest=0x7f0500ab;
         public static final int Photos=0x7f0500a3;
         public static final int Pictures=0x7f05004d;
+        /**  popup 
+ popup 
+         */
+        public static final int Price=0x7f0500a8;
         public static final int Pricefrom=0x7f05009b;
         public static final int REPORT=0x7f0500a5;
+        public static final int Range=0x7f0500a9;
+        public static final int Rating=0x7f0500ac;
         public static final int Reviewnotfound=0x7f050056;
         public static final int Reviews=0x7f05004e;
         public static final int Reviewsnotfound=0x7f0500a2;
