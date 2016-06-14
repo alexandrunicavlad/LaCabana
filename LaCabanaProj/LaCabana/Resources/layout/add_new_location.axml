@@ -77,7 +77,7 @@
                         android:background="@drawable/ic_account" />
                     <EditText
                         android:layout_width="match_parent"
-                        android:hint="Name of cabin"
+                        android:hint="@string/nameofcabin"
                         android:id="@+id/CabinEditText"
                         android:textColor="@color/black"
                         android:textColorHint="@color/gray_health_text"
@@ -103,7 +103,7 @@
                         android:background="@drawable/ic_map_marker" />
                     <TextView
                         android:layout_width="match_parent"
-                        android:hint="Location"
+                        android:hint="@string/location"
                         android:id="@+id/locationEditText"
                         android:textColor="@color/black"
                         android:textColorHint="@color/gray_health_text"
@@ -175,7 +175,7 @@
                         android:layout_height="wrap_content">
                         <EditText
                             android:layout_width="match_parent"
-                            android:hint="Phone"
+                            android:hint="@string/phone_hint"
                             android:id="@+id/phoneEditText"
                             android:inputType="phone"
                             android:textColor="@color/black"
@@ -217,7 +217,7 @@
                         android:layout_height="wrap_content">
                         <EditText
                             android:layout_width="match_parent"
-                            android:hint="Email"
+                            android:hint="@string/email_hint"
                             android:id="@+id/emailEditText"
                             android:textColor="@color/black"
                             android:textColorHint="@color/gray_health_text"
@@ -259,7 +259,7 @@
                         android:layout_height="wrap_content">
                         <EditText
                             android:layout_width="match_parent"
-                            android:hint="Price"
+                            android:hint="@string/Price"
                             android:id="@+id/priceEditText"
                             android:textColor="@color/black"
                             android:textColorHint="@color/gray_health_text"
@@ -330,7 +330,7 @@
                         android:layout_height="wrap_content">
                         <EditText
                             android:layout_width="match_parent"
-                            android:hint="Details"
+                            android:hint="@string/DETAILS"
                             android:id="@+id/DetailsEditText"
                             android:textColor="@color/black"
                             android:textColorHint="@color/gray_health_text"

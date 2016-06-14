@@ -3,7 +3,6 @@
 	<string name="hello">Hello World, Click Me!</string>
 	<string name="app_name">LaCabana</string>
 	<string name="facebook_app_id">196006237460777</string>
-	<string name="app_name">GreenSwitch</string>
 	<!--Title-->
 	<string name="login">Conectare</string>
 	<string name="Signup">Inregistrare</string>
@@ -107,7 +106,7 @@
 	<string name="DETAILS">Detalii</string>
 	<string name="GETDIRECTIONS">Mergi la</string>
 	<string name="fastsignin">Conectare rapida daca esti conectat la un cont de socializare</string>
-	<string name="membreplease">Nu esti membru? Va rog  </string>
+	<string name="membreplease">Nu esti membru? </string>
 	<string name="forogtpass">Ti-ai uitat parola ?</string>
 	<string name="Change">Schimba</string>
 	<string name="Reviewsnotfound">Nu au fost gasite pareri</string>
@@ -116,6 +115,10 @@
 	<string name="REPORT">Raport</string>
 	<string name="alreadymemeber">Daca sunteti deja membru, va rog </string>
 	<string name="Title">Titlu</string>
+	<string name="nameofcabin">Numele cabanei</string>
+	<string name="location">Locatia</string>
+	<string name="loginnew">Conectati-va</string>
+	<string name="Signupnew">Inregistreaza-te</string>
 	<!-- popup -->
 	<string name="Price">Pret</string>
 	<string name="Range">Distanta</string>

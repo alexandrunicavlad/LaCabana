@@ -281,6 +281,7 @@ namespace LaCabana
 		public void SetTitleActionBar1(string title)
 		{
 			ActionBar.CustomView.FindViewById<TextView>(Resource.Id.action_bar_title).Text = title;
+			ActionBar.CustomView.FindViewById<TextView>(Resource.Id.action_bar_title).SetTextColor(Resources.GetColor(Resource.Color.white));
 		}
 
 		protected void OpenMenu(object sender, EventArgs e)

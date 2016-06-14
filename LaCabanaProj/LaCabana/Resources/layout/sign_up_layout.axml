@@ -98,14 +98,15 @@
                             android:layout_marginTop="10dp"
                             android:textColor="#ff000000" />
                         <TextView
-                            android:text="@string/login"
+                            android:text="@string/loginnew"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/helpsign"
                             android:layout_marginTop="10dp"
                             android:id="@+id/signUpButtonDetails"
                             android:textSize="14dp"
-                            android:textColor="#ff00e5ff" />
+                            android:textColor="#ff00e5ff"
+                            android:layout_marginLeft="5dp" />
                     </RelativeLayout>
                 </RelativeLayout>
             </RelativeLayout>

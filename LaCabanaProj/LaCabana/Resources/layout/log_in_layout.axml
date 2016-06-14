@@ -139,14 +139,15 @@
                             android:layout_marginTop="10dp"
                             android:textColor="#ff000000" />
                         <TextView
-                            android:text="@string/Signup"
+                            android:text="@string/Signupnew"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/socialtext"
                             android:layout_marginTop="10dp"
                             android:id="@+id/signUpButtonDetails"
                             android:textSize="14dp"
-                            android:textColor="#ff00e5ff" />
+                            android:textColor="#ff00e5ff"
+                            android:layout_marginLeft="5dp" />
                     </LinearLayout>
                     <TextView
                         android:text="@string/forogtpass"

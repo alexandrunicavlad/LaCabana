@@ -4337,8 +4337,8 @@ namespace LaCabana
 			// aapt resource value: 0x7f05004f
 			public const int AddReview = 2131034191;
 			
-			// aapt resource value: 0x7f0500ad
-			public const int Best = 2131034285;
+			// aapt resource value: 0x7f0500b0
+			public const int Best = 2131034288;
 			
 			// aapt resource value: 0x7f050079
 			public const int Cancel = 2131034233;
@@ -4370,14 +4370,14 @@ namespace LaCabana
 			// aapt resource value: 0x7f05009d
 			public const int GETDIRECTIONS = 2131034269;
 			
-			// aapt resource value: 0x7f0500aa
-			public const int Newest = 2131034282;
+			// aapt resource value: 0x7f0500ad
+			public const int Newest = 2131034285;
 			
 			// aapt resource value: 0x7f05007a
 			public const int Ok = 2131034234;
 			
-			// aapt resource value: 0x7f0500ab
-			public const int Oldest = 2131034283;
+			// aapt resource value: 0x7f0500ae
+			public const int Oldest = 2131034286;
 			
 			// aapt resource value: 0x7f0500a3
 			public const int Photos = 2131034275;
@@ -4385,8 +4385,8 @@ namespace LaCabana
 			// aapt resource value: 0x7f05004d
 			public const int Pictures = 2131034189;
 			
-			// aapt resource value: 0x7f0500a8
-			public const int Price = 2131034280;
+			// aapt resource value: 0x7f0500ab
+			public const int Price = 2131034283;
 			
 			// aapt resource value: 0x7f05009b
 			public const int Pricefrom = 2131034267;
@@ -4394,11 +4394,11 @@ namespace LaCabana
 			// aapt resource value: 0x7f0500a5
 			public const int REPORT = 2131034277;
 			
-			// aapt resource value: 0x7f0500a9
-			public const int Range = 2131034281;
-			
 			// aapt resource value: 0x7f0500ac
-			public const int Rating = 2131034284;
+			public const int Range = 2131034284;
+			
+			// aapt resource value: 0x7f0500af
+			public const int Rating = 2131034287;
 			
 			// aapt resource value: 0x7f050056
 			public const int Reviewnotfound = 2131034198;
@@ -4415,8 +4415,11 @@ namespace LaCabana
 			// aapt resource value: 0x7f05004c
 			public const int Signup = 2131034188;
 			
-			// aapt resource value: 0x7f0500a7
-			public const int Title = 2131034279;
+			// aapt resource value: 0x7f0500aa
+			public const int Signupnew = 2131034282;
+			
+			// aapt resource value: 0x7f0500b1
+			public const int Title = 2131034289;
 			
 			// aapt resource value: 0x7f050089
 			public const int TryAgain = 2131034249;
@@ -4763,11 +4766,17 @@ namespace LaCabana
 			// aapt resource value: 0x7f05008d
 			public const int invalidte_price = 2131034253;
 			
+			// aapt resource value: 0x7f0500a8
+			public const int location = 2131034280;
+			
 			// aapt resource value: 0x7f05004b
 			public const int login = 2131034187;
 			
 			// aapt resource value: 0x7f050066
 			public const int login_btn = 2131034214;
+			
+			// aapt resource value: 0x7f0500a9
+			public const int loginnew = 2131034281;
 			
 			// aapt resource value: 0x7f05005e
 			public const int logout = 2131034206;
@@ -4792,6 +4801,9 @@ namespace LaCabana
 			
 			// aapt resource value: 0x7f050062
 			public const int name_hint = 2131034210;
+			
+			// aapt resource value: 0x7f0500a7
+			public const int nameofcabin = 2131034279;
 			
 			// aapt resource value: 0x7f05007f
 			public const int networkconnection = 2131034239;

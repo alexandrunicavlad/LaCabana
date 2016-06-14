@@ -109,7 +109,7 @@
 	<string name="DETAILS">DETAILS</string>
 	<string name="GETDIRECTIONS">GET DIRECTIONS</string>
 	<string name="fastsignin">Fast sign-in if your social profile is connected</string>
-	<string name="membreplease">You are not a memeber? Please </string>
+	<string name="membreplease">You are not a memeber? </string>
 	<string name="forogtpass">You forgot your password?</string>
 	<string name="Accountname">Account name</string>
 	<string name="Change">Change</string>
@@ -118,7 +118,10 @@
 	<string name="USEFULL">USEFULL </string>
 	<string name="REPORT">REPORT</string>
 	<string name="alreadymemeber">If you are already a member please </string>
-	<string name="Title">Title</string>
+	<string name="nameofcabin">Name of cabin</string>
+	<string name="location">Location</string>
+	<string name="loginnew">Sign in</string>
+	<string name="Signupnew">Sign up</string>
 	<!-- popup -->
 	<string name="Price">Price</string>
 	<string name="Range">Range</string>

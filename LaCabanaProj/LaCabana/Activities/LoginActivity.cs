@@ -399,12 +399,12 @@ namespace LaCabana
 
 		public void OnCancel()
 		{
-			//throw new NotImplementedException();
+			var a = 0;//thr//throw new NotImplementedException();
 		}
 
 		public void OnError(FacebookException p0)
 		{
-			//throw new NotImplementedException();
+			Finish();
 		}
 
 		public void OnSuccess(Java.Lang.Object p0)

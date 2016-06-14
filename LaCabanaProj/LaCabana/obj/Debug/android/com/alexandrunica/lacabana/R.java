@@ -3500,7 +3500,7 @@ containing a value of this type.
     public static final class string {
         public static final int Accountname=0x7f05009a;
         public static final int AddReview=0x7f05004f;
-        public static final int Best=0x7f0500ad;
+        public static final int Best=0x7f0500b0;
         public static final int Cancel=0x7f050079;
         public static final int Change=0x7f0500a1;
         public static final int DETAILS=0x7f05009c;
@@ -3511,19 +3511,19 @@ containing a value of this type.
         public static final int Enteryourname=0x7f050084;
         public static final int Error=0x7f050078;
         public static final int GETDIRECTIONS=0x7f05009d;
-        public static final int Newest=0x7f0500aa;
+        public static final int Newest=0x7f0500ad;
         public static final int Ok=0x7f05007a;
-        public static final int Oldest=0x7f0500ab;
+        public static final int Oldest=0x7f0500ae;
         public static final int Photos=0x7f0500a3;
         public static final int Pictures=0x7f05004d;
         /**  popup 
  popup 
          */
-        public static final int Price=0x7f0500a8;
+        public static final int Price=0x7f0500ab;
         public static final int Pricefrom=0x7f05009b;
         public static final int REPORT=0x7f0500a5;
-        public static final int Range=0x7f0500a9;
-        public static final int Rating=0x7f0500ac;
+        public static final int Range=0x7f0500ac;
+        public static final int Rating=0x7f0500af;
         public static final int Reviewnotfound=0x7f050056;
         public static final int Reviews=0x7f05004e;
         public static final int Reviewsnotfound=0x7f0500a2;
@@ -3532,7 +3532,8 @@ Layout
          */
         public static final int Save=0x7f050098;
         public static final int Signup=0x7f05004c;
-        public static final int Title=0x7f0500a7;
+        public static final int Signupnew=0x7f0500aa;
+        public static final int Title=0x7f0500b1;
         public static final int TryAgain=0x7f050089;
         public static final int UPLOAD=0x7f050099;
         public static final int USEFULL=0x7f0500a4;
@@ -3735,6 +3736,7 @@ Reviewadd
         public static final int invalid_password=0x7f05008e;
         public static final int invalid_phone=0x7f050092;
         public static final int invalidte_price=0x7f05008d;
+        public static final int location=0x7f0500a8;
         /** Title
 Title
          */
@@ -3743,6 +3745,7 @@ Title
 Login
          */
         public static final int login_btn=0x7f050066;
+        public static final int loginnew=0x7f0500a9;
         public static final int logout=0x7f05005e;
         public static final int lorem_ipsum=0x7f050074;
         /** Menu
@@ -3754,6 +3757,7 @@ Menu
         public static final int myAccount=0x7f05005c;
         public static final int myLocation=0x7f05007c;
         public static final int name_hint=0x7f050062;
+        public static final int nameofcabin=0x7f0500a7;
         public static final int networkconnection=0x7f05007f;
         public static final int password_hint=0x7f050061;
         public static final int phone_hint=0x7f050063;

@@ -1,30 +1,24 @@
 ﻿<Properties StartupItem="LaCabana\LaCabana.csproj">
-  <MonoDevelop.Ide.ItemProperties.LaCabana AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.TA92917UH0" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.LaCabana AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.06157df668b6b42e" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="C:\Users\Nica\Documents\Projects\LaCabana\LaCabana\Activities\BaseActionActivity.cs" line="78" column="1" />
-      <Breakpoint file="C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\Activities\LoginActivity.cs" line="197" column="1" />
-      <Breakpoint file="C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\Activities\LoginActivity.cs" line="302" column="1" />
-      <Breakpoint file="C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\Activities\LoginActivity.cs" line="344" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="LaCabana\Activities\LoginActivity.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="LaCabana\Activities\ReviewActivity.cs" Line="1" Column="1" />
-      <File FileName="LaCabana\Models\ReviewModel.cs" Line="1" Column="1" />
-      <File FileName="LaCabana\Activities\CabinsNear.cs" Line="228" Column="6" />
-      <File FileName="LaCabana\Activities\PicturesActivity.cs" Line="1" Column="1" />
-      <File FileName="LaCabana\Activities\CabinInfo.cs" Line="1" Column="1" />
-      <File FileName="LaCabana\Services\BaseService.cs" Line="1" Column="1" />
-      <File FileName="LaCabana\Activities\SignUpActivity.cs" Line="1" Column="1" />
-      <File FileName="LaCabana\Activities\BaseActionActivity.cs" Line="1" Column="1" />
-      <File FileName="LaCabana\Activities\MapActivity.cs" Line="1" Column="1" />
-      <File FileName="LaCabana\Activities\FavoritesActivity.cs" Line="1" Column="1" />
-      <File FileName="LaCabana\Helpers\ImageAdapter.cs" Line="1" Column="1" />
-      <File FileName="LaCabana\Resources\values\styles.xml" Line="1" Column="1" />
-      <File FileName="LaCabana\Activities\LoginActivity.cs" Line="305" Column="1" />
+      <File FileName="LaCabana\Resources\values-ro\Strings.xml" Line="125" Column="44" />
+      <File FileName="LaCabana\Activities\AddNewLocation.cs" Line="264" Column="52" />
+      <File FileName="LaCabana\Activities\CabinsNear.cs" Line="114" Column="56" />
+      <File FileName="LaCabana\Resources\values\Strings.xml" Line="129" Column="13" />
+      <File FileName="LaCabana\Activities\CabinInfo.cs" Line="207" Column="57" />
+      <File FileName="LaCabana\Resources\menu\cabin_menu.xml" Line="5" Column="8" />
+      <File FileName="LaCabana\Resources\menu\searchview_in_menu.xml" Line="4" Column="7" />
+      <File FileName="LaCabana\Activities\ReviewActivity.cs" Line="222" Column="17" />
+      <File FileName="LaCabana\Resources\menu\near_menu.xml" Line="10" Column="8" />
+      <File FileName="LaCabana\Properties\AndroidManifest.xml" Line="21" Column="12" />
     </Files>
   </MonoDevelop.Ide.Workbench>
 </Properties>
