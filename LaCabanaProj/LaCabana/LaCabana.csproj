@@ -153,6 +153,7 @@
     <Compile Include="Activities\PicturesActivity.cs" />
     <Compile Include="Helpers\PictureAdapter.cs" />
     <Compile Include="Activities\LoginActivity.cs" />
+    <Compile Include="Helpers\SearchItemAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -408,6 +409,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_phone_orange.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_price_orange.png" />
     <AndroidResource Include="Resources\values-ro\Strings.xml" />
+    <AndroidResource Include="Resources\layout\suggestionrow.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\menu\" />

@@ -18,6 +18,7 @@
 	<string name="enteremail">Please enter email</string>
 	<string name="enterpass">Please enter password</string>
 	<string name="Reviewnotfound">Reviews not found on this cabin</string>
+	<string name="Title">Title</string>
 	<!--Menu-->
 	<string name="map">Map</string>
 	<string name="cabinsNear">Cabins near</string>

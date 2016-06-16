@@ -399,12 +399,21 @@ namespace LaCabana
 
 		public void OnCancel()
 		{
-			var a = 0;//thr//throw new NotImplementedException();
+			if (AccessToken.CurrentAccessToken != null)
+			{
+				LoginManager.Instance.LogOut();
+			}
+			CreateDialog(GetString(Resource.String.Error), "", true, GetString(Resource.String.TryAgain));
 		}
 
 		public void OnError(FacebookException p0)
 		{
+			if (AccessToken.CurrentAccessToken != null)
+			{
+				LoginManager.Instance.LogOut();
+			}
 			Finish();
+			CreateDialog(GetString(Resource.String.Error), "", true, GetString(Resource.String.TryAgain));
 		}
 
 		public void OnSuccess(Java.Lang.Object p0)
@@ -596,6 +605,13 @@ namespace LaCabana
 					{
 						PlusClass.AccountApi.ClearDefaultAccount(mGoogleApiClient);
 						mGoogleApiClient.Disconnect();
+					}
+				}
+				if (loginType == FacebookLogin)
+				{
+					if (AccessToken.CurrentAccessToken != null)
+					{
+						LoginManager.Instance.LogOut();
 					}
 				}
 			});

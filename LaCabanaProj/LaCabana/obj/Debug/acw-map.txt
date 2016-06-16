@@ -74,6 +74,10 @@ LaCabana.LoginActivity, LaCabana;md5dbce641a4b5bf99921cca81d5bb55bcc.LoginActivi
 LaCabana.LoginActivity, LaCabana, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5dbce641a4b5bf99921cca81d5bb55bcc.LoginActivity
 LaCabana.LoginActivity;md5dbce641a4b5bf99921cca81d5bb55bcc.LoginActivity
 lacabana.LoginActivity;md5dbce641a4b5bf99921cca81d5bb55bcc.LoginActivity
+LaCabana.SearchItemAdapter, LaCabana;md5dbce641a4b5bf99921cca81d5bb55bcc.SearchItemAdapter
+LaCabana.SearchItemAdapter, LaCabana, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5dbce641a4b5bf99921cca81d5bb55bcc.SearchItemAdapter
+LaCabana.SearchItemAdapter;md5dbce641a4b5bf99921cca81d5bb55bcc.SearchItemAdapter
+lacabana.SearchItemAdapter;md5dbce641a4b5bf99921cca81d5bb55bcc.SearchItemAdapter
 LaCabana.Helpers.FontArrayAdapter`1, LaCabana;md53d440cff3890614aebd65e0edb5b9f63.FontArrayAdapter_1
 LaCabana.Helpers.FontArrayAdapter`1, LaCabana, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md53d440cff3890614aebd65e0edb5b9f63.FontArrayAdapter_1
 LaCabana.Helpers.FontArrayAdapter`1;md53d440cff3890614aebd65e0edb5b9f63.FontArrayAdapter_1

@@ -36,6 +36,7 @@ namespace LaCabana
 		protected ImageButton ListButton;
 		protected ImageButton SearchButton;
 		private Org.W3c.Dom.IDocument doc;
+		private byte[] abc;
 		protected override void OnCreate(Bundle bundle)
 		{
 
@@ -96,25 +97,54 @@ namespace LaCabana
 					if (a.Equals(GetString(Resource.String.Price)))
 					{
 						var ordprice = allCabins.OrderBy(item => item.Value.Price);
-						FillLayout(route, baseServiceGeneral, ordprice.ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
+						scrollView.Visibility = ViewStates.Gone;
+						loading.Visibility = ViewStates.Visible;
+						ThreadPool.QueueUserWorkItem(o =>
+						{
+							FillLayout(route, baseServiceGeneral, ordprice.ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
+						});
 					}
 					else if (a.Equals(GetString(Resource.String.Oldest)))
 					{
-						FillLayout(route, baseServiceGeneral, allCabins);
+						scrollView.Visibility = ViewStates.Gone;
+						loading.Visibility = ViewStates.Visible;
+						ThreadPool.QueueUserWorkItem(o =>
+						{
+							FillLayout(route, baseServiceGeneral, allCabins);
+						});
+
 					}
 					else if (a.Equals(GetString(Resource.String.Newest)))
 					{
-						FillLayout(route, baseServiceGeneral, allCabins.Reverse().ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
+						scrollView.Visibility = ViewStates.Gone;
+						loading.Visibility = ViewStates.Visible;
+						ThreadPool.QueueUserWorkItem(o =>
+						{
+							FillLayout(route, baseServiceGeneral, allCabins.Reverse().ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
+						});
+
 					}
 					else if (a.Equals(GetString(Resource.String.Range)))
 					{
 						var ordrating = allCabins.OrderBy(item => item.Value.Distance);
-						FillLayout(route, baseServiceGeneral, ordrating.ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
+						scrollView.Visibility = ViewStates.Gone;
+						loading.Visibility = ViewStates.Visible;
+						ThreadPool.QueueUserWorkItem(o =>
+						{
+							FillLayout(route, baseServiceGeneral, ordrating.ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
+						});
+
 					}
 					else if (a.Equals(GetString(Resource.String.Rating)))
 					{
 						var ordrating = allCabins.OrderBy(item => item.Value.Rating);
-						FillLayout(route, baseServiceGeneral, ordrating.Reverse().ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
+						scrollView.Visibility = ViewStates.Gone;
+						loading.Visibility = ViewStates.Visible;
+						ThreadPool.QueueUserWorkItem(o =>
+						{
+							FillLayout(route, baseServiceGeneral, ordrating.Reverse().ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
+						});
+
 					}
 				};
 				menu.DismissEvent += delegate
@@ -137,33 +167,21 @@ namespace LaCabana
 		public void GetData()
 		{
 			route = new RouteGenerator();
+			Dictionary<string, CabinModel> cabinsData = new Dictionary<string, CabinModel>();
 			baseServiceGeneral = new BaseService<Dictionary<string, CabinModel>>();
 			try
 			{
-				allCabins = (baseServiceGeneral.Get("cabins"));
-				var asc = allCabins.OrderBy(item => item.Value.Name);
-				FillLayout(route, baseServiceGeneral, asc.ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
+				cabinsData = (baseServiceGeneral.Get("cabins"));
 			}
 			catch (Exception e)
 			{
 				CreateDialog(GetString(Resource.String.Error), GetString(Resource.String.networkconnection), false, "", true, GetString(Resource.String.Cancel), false);
 			}
-
-		}
-
-		//public void FillLayout (RouteGenerator route, BaseService<Dictionary<string,CabinModel>> baseService, System.Linq.IOrderedEnumerable<System.Collections.Generic.KeyValuePair<string,LaCabana.CabinModel>> cabs)
-		public void FillLayout(RouteGenerator route, BaseService<Dictionary<string, CabinModel>> baseService, Dictionary<string, CabinModel> cabs)
-		{
-			if (cabinsLayout.ChildCount != 0)
-			{
-				cabinsLayout.RemoveAllViews();
-			}
-			foreach (var cabin in cabs)
+			foreach (var cabin in cabinsData.ToList())
 			{
 				try
 				{
 					doc = route.GetDocument(new LatLng(latitude, longitude), new LatLng(cabin.Value.Latitude, cabin.Value.Longitude), RouteGenerator.Mode_driving);
-
 				}
 				catch (Exception e)
 				{
@@ -172,117 +190,141 @@ namespace LaCabana
 				float distance = route.GetDistanceValue(doc) / 1000;
 				if (distance > numberDistance)
 				{
+					cabinsData.Remove(cabin.Key);
 				}
 				else {
 					cabin.Value.Distance = distance;
-					var view = LayoutInflater.Inflate(Resource.Layout.cabin_view_layout, null);
-					var cabinName = view.FindViewById<TextView>(Resource.Id.cabinName);
-					var cabinRating = view.FindViewById<RatingBar>(Resource.Id.cabinRating);
-					var cabinPrice = view.FindViewById<TextView>(Resource.Id.cabinPrice);
-					var cabinPhoto = view.FindViewById<ImageView>(Resource.Id.cabinImage);
-					var cabinDistance = view.FindViewById<TextView>(Resource.Id.cabinDistance);
-					var cabinFav = view.FindViewById<ImageView>(Resource.Id.favoriteImage);
-					var cabinDetails = view.FindViewById<TextView>(Resource.Id.cabinDetails);
-					var direction = view.FindViewById<TextView>(Resource.Id.destinationButton);
-					cabinName.Text = cabin.Value.Name;
-					cabinDistance.Text = String.Format("{0} Km", distance.ToString("0.0"));
-					cabinRating.Rating = cabin.Value.Rating;
-					cabinPrice.Text = string.Format("{0} {1}", cabin.Value.Price.ToString(), cabin.Value.PriceType);
-					cabinDetails.Text = cabin.Value.Details;
-					if (cabin.Value.Pictures != null)
-					{
-						if (cabin.Value.Pictures.ContainsKey("main"))
-						{
+				}
+			}
+			allCabins = cabinsData;
+			if (allCabins.Count == 0)
+			{
+				CreateDialogError();
+			}
+			else {
+				var asc = allCabins.OrderBy(item => item.Value.Name);
+				FillLayout(route, baseServiceGeneral, asc.ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
+			}
+		}
 
-							var baseService1 = new BaseService<byte[]>();
-							var abc = baseService1.Get(string.Format("pictures/{0}", cabin.Value.Pictures.Last().Value));
-							cabinPhoto.SetImageBitmap(BitmapFactory.DecodeByteArray(abc, 0, abc.Length));
-							cabinPhoto.SetScaleType(ImageView.ScaleType.FitXy);
-						}
-						else {
-							cabinPhoto.SetImageResource(Resource.Drawable.cabana_photo);
-							cabinPhoto.SetScaleType(ImageView.ScaleType.CenterCrop);
-						}
+		public void FillLayout(RouteGenerator route, BaseService<Dictionary<string, CabinModel>> baseService, Dictionary<string, CabinModel> cabs)
+		{
+			if (cabinsLayout.ChildCount != 0)
+			{
+				cabinsLayout.RemoveAllViews();
+			}
+			foreach (var cabin in cabs)
+			{
+				var view = LayoutInflater.Inflate(Resource.Layout.cabin_view_layout, null);
+				var cabinName = view.FindViewById<TextView>(Resource.Id.cabinName);
+				var cabinRating = view.FindViewById<RatingBar>(Resource.Id.cabinRating);
+				var cabinPrice = view.FindViewById<TextView>(Resource.Id.cabinPrice);
+				var cabinPhoto = view.FindViewById<ImageView>(Resource.Id.cabinImage);
+				var cabinDistance = view.FindViewById<TextView>(Resource.Id.cabinDistance);
+				var cabinFav = view.FindViewById<ImageView>(Resource.Id.favoriteImage);
+				var cabinDetails = view.FindViewById<TextView>(Resource.Id.cabinDetails);
+				var direction = view.FindViewById<TextView>(Resource.Id.destinationButton);
+				var loadImage = view.FindViewById<ProgressBar>(Resource.Id.loading_progress_image);
+
+				cabinName.Text = cabin.Value.Name;
+				cabinDistance.Text = String.Format("{0} Km", cabin.Value.Distance.ToString("0.0"));
+				cabinRating.Rating = cabin.Value.Rating;
+				cabinPrice.Text = string.Format("{0} {1}", cabin.Value.Price.ToString(), cabin.Value.PriceType);
+				cabinDetails.Text = cabin.Value.Details;
+				if (cabin.Value.Pictures != null)
+				{
+					if (cabin.Value.Pictures.ContainsKey("main"))
+					{
+						cabinPhoto.Visibility = ViewStates.Gone;
+						loadImage.Visibility = ViewStates.Visible;
+						ThreadPool.QueueUserWorkItem(o =>
+						{
+							GetImageMain(cabinPhoto, loadImage, cabin.Value.Pictures.Last().Value);
+						});
+
 					}
 					else {
 						cabinPhoto.SetImageResource(Resource.Drawable.cabana_photo);
 						cabinPhoto.SetScaleType(ImageView.ScaleType.CenterCrop);
 					}
-					direction.Click += delegate
-					{
-						var newuri = string.Format("http://maps.google.com/maps?saddr={0},{1}&daddr={2},{3}", latitude.ToString("00.0000000", System.Globalization.CultureInfo.InvariantCulture),
-										 longitude.ToString("00.0000000", System.Globalization.CultureInfo.InvariantCulture),
-										 cabin.Value.Latitude.ToString("00.0000000", System.Globalization.CultureInfo.InvariantCulture),
-										 cabin.Value.Longitude.ToString("00.0000000", System.Globalization.CultureInfo.InvariantCulture));
+				}
+				else {
+					cabinPhoto.SetImageResource(Resource.Drawable.cabana_photo);
+					cabinPhoto.SetScaleType(ImageView.ScaleType.CenterCrop);
+				}
+				direction.Click += delegate
+				{
+					var newuri = string.Format("http://maps.google.com/maps?saddr={0},{1}&daddr={2},{3}", latitude.ToString("00.0000000", System.Globalization.CultureInfo.InvariantCulture),
+									 longitude.ToString("00.0000000", System.Globalization.CultureInfo.InvariantCulture),
+									 cabin.Value.Latitude.ToString("00.0000000", System.Globalization.CultureInfo.InvariantCulture),
+									 cabin.Value.Longitude.ToString("00.0000000", System.Globalization.CultureInfo.InvariantCulture));
 
-						Android.Net.Uri gmmIntentUri = Android.Net.Uri.Parse(newuri);
-						Intent mapIntent = new Intent(Intent.ActionView, gmmIntentUri);
-						mapIntent.SetPackage("com.google.android.apps.maps");
-						StartActivity(mapIntent);
-					};
+					Android.Net.Uri gmmIntentUri = Android.Net.Uri.Parse(newuri);
+					Intent mapIntent = new Intent(Intent.ActionView, gmmIntentUri);
+					mapIntent.SetPackage("com.google.android.apps.maps");
+					StartActivity(mapIntent);
+				};
 
-					if (favList != null)
+				if (favList != null)
+				{
+					if (favList.Any(s => cabin.Key.Contains(s)))
 					{
-						if (favList.Any(s => cabin.Key.Contains(s)))
+						cabinFav.SetImageResource(Resource.Drawable.ic_heart_white);
+						cabinFav.SetBackgroundResource(Resource.Drawable.ic_heart_white);
+					}
+				}
+				else {
+					favList = new List<string>();
+				}
+				cabinFav.Click += delegate
+				{
+					//CreateDialog (Resources.GetString (Resource.String.wait), "", false, "", true, "Cancel", true);
+					if (favList.Contains(cabin.Key))
+						return;
+					if (userMod.Id != null)
+					{
+
+						cabinFav.SetImageResource(Resource.Drawable.ic_heart_white);
+
+						var baseService1 = new BaseService<UsersModel>();
+						var baseService2 = new BaseService<UsersModel>();
+						var user = DatabaseServices.GetAllUsers();
+						var urlUpdate = string.Format("users/{0}/FavoriteList", user.Id);
+						baseService.Update(cabin.Key, urlUpdate);
+						favList.Add(cabin.Key);
+						var newUrl = string.Format("users/{0}", user.Id);
+						try
 						{
-							cabinFav.SetImageResource(Resource.Drawable.ic_heart_white);
-							cabinFav.SetBackgroundResource(Resource.Drawable.ic_heart_white);
+							var ada = baseService2.Get(newUrl);
+							DatabaseServices.DeleteUser();
+							DatabaseServices.InsertUsername(ada);
+							SetProfilePicture();
+						}
+						catch (Exception e)
+						{
+							var a = 0;
 						}
 					}
 					else {
-						favList = new List<string>();
+						CreateDialog(GetString(Resource.String.please_insert), "", true, "Ok", false, "", false);
 					}
-					cabinFav.Click += delegate
-					{
 
-						//CreateDialog (Resources.GetString (Resource.String.wait), "", false, "", true, "Cancel", true);
-						if (favList.Contains(cabin.Key))
-							return;
-						if (userMod.Id != null)
-						{
+				};
+				view.FindViewById<TextView>(Resource.Id.detailsButton).Click += delegate
+				{
+					var intent = new Intent(this, typeof(CabinInfo));
+					intent.PutExtra("marker", cabin.Key);
+					intent.PutExtra("latitude", latitude);
+					intent.PutExtra("longitude", longitude);
+					StartActivity(intent);
+				};
+				cabinsLayout.AddView(view);
 
-							cabinFav.SetImageResource(Resource.Drawable.ic_heart_white);
-
-							var baseService1 = new BaseService<UsersModel>();
-							var baseService2 = new BaseService<UsersModel>();
-							var user = DatabaseServices.GetAllUsers();
-							var urlUpdate = string.Format("users/{0}/FavoriteList", user.Id);
-							baseService.Update(cabin.Key, urlUpdate);
-							favList.Add(cabin.Key);
-							var newUrl = string.Format("users/{0}", user.Id);
-							try
-							{
-								var ada = baseService2.Get(newUrl);
-								DatabaseServices.DeleteUser();
-								DatabaseServices.InsertUsername(ada);
-								SetProfilePicture();
-							}
-							catch (Exception e)
-							{
-								var a = 0;
-							}
-						}
-						else {
-							CreateDialog(GetString(Resource.String.please_insert), "", true, "Ok", false, "", false);
-						}
-
-					};
-					view.FindViewById<TextView>(Resource.Id.detailsButton).Click += delegate
-					{
-						var intent = new Intent(this, typeof(CabinInfo));
-						intent.PutExtra("marker", cabin.Key);
-						intent.PutExtra("latitude", latitude);
-						intent.PutExtra("longitude", longitude);
-						StartActivity(intent);
-					};
-					cabinsLayout.AddView(view);
-				}
 			}
 			cabinsLayout.RequestLayout();
 			if (cabinsLayout.ChildCount == 0)
 			{
-				Toast.MakeText(this, string.Format("{0 1} km", (GetString(Resource.String.cabinnotefoundtodistance)), numberDistance), ToastLength.Short).Show();
-				OnBackPressed();
+				CreateDialogError();
 			}
 			RunOnUiThread(() =>
 			{
@@ -290,6 +332,43 @@ namespace LaCabana
 				scrollView.Visibility = ViewStates.Visible;
 			});
 
+		}
+
+		private void GetImageMain(ImageView cabinPhoto, ProgressBar loadingImage, string pictName)
+		{
+			var baseService1 = new BaseService<byte[]>();
+			abc = baseService1.Get(string.Format("pictures/{0}", pictName));
+			RunOnUiThread(() =>
+			{
+				cabinPhoto.SetImageBitmap(BitmapFactory.DecodeByteArray(abc, 0, abc.Length));
+				cabinPhoto.SetScaleType(ImageView.ScaleType.FitXy);
+				loadingImage.Visibility = ViewStates.Gone;
+				cabinPhoto.Visibility = ViewStates.Visible;
+			});
+		}
+
+		private void CreateDialogError()
+		{
+			RunOnUiThread(() =>
+			{
+
+				var builder = new Android.App.AlertDialog.Builder(new ContextThemeWrapper(this, Resource.Style.AlertDialogCustom));
+
+				builder.SetMessage(string.Format("{0} {1} km", GetString(Resource.String.cabinnotefoundtodistance), numberDistance));
+				builder.SetTitle(GetString(Resource.String.Error));
+				builder.SetPositiveButton(GetString(Resource.String.Ok), (EventHandler<DialogClickEventArgs>)null);
+				var dialog = builder.Create();
+				dialog.Show();
+				var okBtn = dialog.GetButton((int)DialogButtonType.Positive);
+				okBtn.Click += delegate
+				{
+					if (dialog != null && dialog.IsShowing)
+					{
+						dialog.Cancel();
+						OnBackPressed();
+					}
+				};
+			});
 		}
 	}
 }

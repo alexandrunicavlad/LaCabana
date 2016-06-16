@@ -41,7 +41,7 @@ namespace LaCabana
 		public LatLng myHome;
 		private ListView searchList;
 		private List<String> SUGGESTIONS;
-		private Android.Widget.SimpleCursorAdapter adaptere;
+		private SearchItemAdapter adaptere;
 		private MatrixCursor c;
 
 		protected override void OnCreate(Bundle bundle)
@@ -82,7 +82,7 @@ namespace LaCabana
 			};
 			String[] fromul = new String[] { "cityName" };
 			int[] toul = new int[] { Android.Resource.Id.Text1 };
-			adaptere = new Android.Widget.SimpleCursorAdapter(this, Android.Resource.Layout.SimpleListItem1, null, fromul, toul, CursorAdapterFlags.RegisterContentObserver);
+			adaptere = new SearchItemAdapter(this, Resource.Layout.suggestionrow, null, fromul, toul, -1000);
 			Search = ActionBar.CustomView.FindViewById<Android.Widget.SearchView>(Resource.Id.searchView);
 			Search.Visibility = ViewStates.Visible;
 			SearchButton = ActionBar.CustomView.FindViewById<ImageButton>(Resource.Id.action_bar_searchBtn);
@@ -130,6 +130,7 @@ namespace LaCabana
 				}
 			}
 			adaptere.ChangeCursor(c);
+
 		}
 
 		public void GetData()

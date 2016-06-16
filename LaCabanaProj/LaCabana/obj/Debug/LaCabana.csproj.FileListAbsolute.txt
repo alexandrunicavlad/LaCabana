@@ -31,6 +31,7 @@ C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\SQLite-net.dll.md
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.xml
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.csprojResolveAssemblyReference.cache
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.dll
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.pdb
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\android\bin\com.alexandrunica.lacabana.apk
@@ -280,6 +281,7 @@ C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxxh
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxxhdpi\ic_phone_orange.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\drawable-xxxhdpi\ic_price_orange.png
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\values-ro\strings.xml
+C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\res\layout\suggestionrow.xml
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\R.cs.flag
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\uploadflags.txt
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.dll.mdb
@@ -327,6 +329,5 @@ C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\android\assets\Sy
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\android\assets\System.Web.Services.dll.mdb
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
-C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.csprojResolveAssemblyReference.cache
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\obj\Debug\LaCabana.dll.mdb
 C:\Users\Nica\Desktop\LaCabana\LaCabanaProj\LaCabana\bin\Debug\LaCabana.dll.mdb

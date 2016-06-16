@@ -3064,14 +3064,14 @@ namespace LaCabana
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f090135
-			public const int Best = 2131296565;
+			// aapt resource value: 0x7f090138
+			public const int Best = 2131296568;
 			
 			// aapt resource value: 0x7f090091
 			public const int CabinEditText = 2131296401;
 			
-			// aapt resource value: 0x7f0900d8
-			public const int CabinLayout = 2131296472;
+			// aapt resource value: 0x7f0900d9
+			public const int CabinLayout = 2131296473;
 			
 			// aapt resource value: 0x7f09009d
 			public const int DetailsEditText = 2131296413;
@@ -3085,32 +3085,32 @@ namespace LaCabana
 			// aapt resource value: 0x7f09009f
 			public const int MapContent = 2131296415;
 			
-			// aapt resource value: 0x7f090132
-			public const int Newest = 2131296562;
+			// aapt resource value: 0x7f090135
+			public const int Newest = 2131296565;
 			
-			// aapt resource value: 0x7f090133
-			public const int Oldest = 2131296563;
-			
-			// aapt resource value: 0x7f09012e
-			public const int Pictures = 2131296558;
-			
-			// aapt resource value: 0x7f090130
-			public const int Price = 2131296560;
+			// aapt resource value: 0x7f090136
+			public const int Oldest = 2131296566;
 			
 			// aapt resource value: 0x7f090131
-			public const int Range = 2131296561;
+			public const int Pictures = 2131296561;
+			
+			// aapt resource value: 0x7f090133
+			public const int Price = 2131296563;
 			
 			// aapt resource value: 0x7f090134
-			public const int Rating = 2131296564;
+			public const int Range = 2131296564;
 			
-			// aapt resource value: 0x7f09012f
-			public const int Reviews = 2131296559;
+			// aapt resource value: 0x7f090137
+			public const int Rating = 2131296567;
 			
-			// aapt resource value: 0x7f0900c2
-			public const int ScrollList = 2131296450;
+			// aapt resource value: 0x7f090132
+			public const int Reviews = 2131296562;
 			
-			// aapt resource value: 0x7f090122
-			public const int TitleText = 2131296546;
+			// aapt resource value: 0x7f0900c3
+			public const int ScrollList = 2131296451;
+			
+			// aapt resource value: 0x7f090123
+			public const int TitleText = 2131296547;
 			
 			// aapt resource value: 0x7f09008e
 			public const int accountImage = 2131296398;
@@ -3121,11 +3121,11 @@ namespace LaCabana
 			// aapt resource value: 0x7f090090
 			public const int accountText = 2131296400;
 			
-			// aapt resource value: 0x7f0900e2
-			public const int account_info_profile_image = 2131296482;
+			// aapt resource value: 0x7f0900e3
+			public const int account_info_profile_image = 2131296483;
 			
-			// aapt resource value: 0x7f09010e
-			public const int action0 = 2131296526;
+			// aapt resource value: 0x7f09010f
+			public const int action0 = 2131296527;
 			
 			// aapt resource value: 0x7f090070
 			public const int action_bar = 2131296368;
@@ -3178,8 +3178,8 @@ namespace LaCabana
 			// aapt resource value: 0x7f090071
 			public const int action_context_bar = 2131296369;
 			
-			// aapt resource value: 0x7f090112
-			public const int action_divider = 2131296530;
+			// aapt resource value: 0x7f090113
+			public const int action_divider = 2131296531;
 			
 			// aapt resource value: 0x7f090003
 			public const int action_menu_divider = 2131296259;
@@ -3202,17 +3202,17 @@ namespace LaCabana
 			// aapt resource value: 0x7f090094
 			public const int addPhoto = 2131296404;
 			
-			// aapt resource value: 0x7f090121
-			public const int addReview = 2131296545;
+			// aapt resource value: 0x7f090122
+			public const int addReview = 2131296546;
 			
 			// aapt resource value: 0x7f09009e
 			public const int add_button_location = 2131296414;
 			
-			// aapt resource value: 0x7f0900eb
-			public const int addnewlocationItem = 2131296491;
-			
 			// aapt resource value: 0x7f0900ec
-			public const int addnewlocationText = 2131296492;
+			public const int addnewlocationItem = 2131296492;
+			
+			// aapt resource value: 0x7f0900ed
+			public const int addnewlocationText = 2131296493;
 			
 			// aapt resource value: 0x7f090010
 			public const int adjust_height = 2131296272;
@@ -3247,44 +3247,44 @@ namespace LaCabana
 			// aapt resource value: 0x7f09005a
 			public const int buttonPanel = 2131296346;
 			
-			// aapt resource value: 0x7f0900bf
-			public const int cabinDetails = 2131296447;
+			// aapt resource value: 0x7f0900c0
+			public const int cabinDetails = 2131296448;
 			
 			// aapt resource value: 0x7f0900a6
 			public const int cabinDirection = 2131296422;
 			
-			// aapt resource value: 0x7f0900bc
-			public const int cabinDistance = 2131296444;
+			// aapt resource value: 0x7f0900bd
+			public const int cabinDistance = 2131296445;
 			
-			// aapt resource value: 0x7f0900db
-			public const int cabinFavorite = 2131296475;
+			// aapt resource value: 0x7f0900dc
+			public const int cabinFavorite = 2131296476;
 			
 			// aapt resource value: 0x7f0900a4
 			public const int cabinImage = 2131296420;
 			
-			// aapt resource value: 0x7f0900da
-			public const int cabinInfo = 2131296474;
+			// aapt resource value: 0x7f0900db
+			public const int cabinInfo = 2131296475;
 			
 			// aapt resource value: 0x7f0900a5
 			public const int cabinName = 2131296421;
 			
+			// aapt resource value: 0x7f0900bf
+			public const int cabinPrice = 2131296447;
+			
 			// aapt resource value: 0x7f0900be
-			public const int cabinPrice = 2131296446;
-			
-			// aapt resource value: 0x7f0900bd
-			public const int cabinRating = 2131296445;
-			
-			// aapt resource value: 0x7f0900e5
-			public const int cabinesItem = 2131296485;
+			public const int cabinRating = 2131296446;
 			
 			// aapt resource value: 0x7f0900e6
-			public const int cabinesText = 2131296486;
+			public const int cabinesItem = 2131296486;
 			
-			// aapt resource value: 0x7f09010f
-			public const int cancel_action = 2131296527;
+			// aapt resource value: 0x7f0900e7
+			public const int cabinesText = 2131296487;
 			
-			// aapt resource value: 0x7f0900c8
-			public const int cancel_button = 2131296456;
+			// aapt resource value: 0x7f090110
+			public const int cancel_action = 2131296528;
+			
+			// aapt resource value: 0x7f0900c9
+			public const int cancel_button = 2131296457;
 			
 			// aapt resource value: 0x7f090036
 			public const int center = 2131296310;
@@ -3298,8 +3298,8 @@ namespace LaCabana
 			// aapt resource value: 0x7f090068
 			public const int checkbox = 2131296360;
 			
-			// aapt resource value: 0x7f090115
-			public const int chronometer = 2131296533;
+			// aapt resource value: 0x7f090116
+			public const int chronometer = 2131296534;
 			
 			// aapt resource value: 0x7f09003e
 			public const int clip_horizontal = 2131296318;
@@ -3310,41 +3310,41 @@ namespace LaCabana
 			// aapt resource value: 0x7f09002a
 			public const int collapseActionView = 2131296298;
 			
-			// aapt resource value: 0x7f0900ca
-			public const int com_facebook_body_frame = 2131296458;
-			
-			// aapt resource value: 0x7f0900cc
-			public const int com_facebook_button_xout = 2131296460;
-			
-			// aapt resource value: 0x7f0900c5
-			public const int com_facebook_device_auth_instructions = 2131296453;
-			
-			// aapt resource value: 0x7f0900c4
-			public const int com_facebook_device_dialog_title = 2131296452;
-			
-			// aapt resource value: 0x7f0900c3
-			public const int com_facebook_fragment_container = 2131296451;
-			
-			// aapt resource value: 0x7f0900c9
-			public const int com_facebook_login_activity_progress_bar = 2131296457;
-			
-			// aapt resource value: 0x7f0900ce
-			public const int com_facebook_tooltip_bubble_view_bottom_pointer = 2131296462;
+			// aapt resource value: 0x7f0900cb
+			public const int com_facebook_body_frame = 2131296459;
 			
 			// aapt resource value: 0x7f0900cd
-			public const int com_facebook_tooltip_bubble_view_text_body = 2131296461;
-			
-			// aapt resource value: 0x7f0900cb
-			public const int com_facebook_tooltip_bubble_view_top_pointer = 2131296459;
-			
-			// aapt resource value: 0x7f0900e9
-			public const int compareItem = 2131296489;
-			
-			// aapt resource value: 0x7f0900ea
-			public const int compareText = 2131296490;
+			public const int com_facebook_button_xout = 2131296461;
 			
 			// aapt resource value: 0x7f0900c6
-			public const int confirmation_code = 2131296454;
+			public const int com_facebook_device_auth_instructions = 2131296454;
+			
+			// aapt resource value: 0x7f0900c5
+			public const int com_facebook_device_dialog_title = 2131296453;
+			
+			// aapt resource value: 0x7f0900c4
+			public const int com_facebook_fragment_container = 2131296452;
+			
+			// aapt resource value: 0x7f0900ca
+			public const int com_facebook_login_activity_progress_bar = 2131296458;
+			
+			// aapt resource value: 0x7f0900cf
+			public const int com_facebook_tooltip_bubble_view_bottom_pointer = 2131296463;
+			
+			// aapt resource value: 0x7f0900ce
+			public const int com_facebook_tooltip_bubble_view_text_body = 2131296462;
+			
+			// aapt resource value: 0x7f0900cc
+			public const int com_facebook_tooltip_bubble_view_top_pointer = 2131296460;
+			
+			// aapt resource value: 0x7f0900ea
+			public const int compareItem = 2131296490;
+			
+			// aapt resource value: 0x7f0900eb
+			public const int compareText = 2131296491;
+			
+			// aapt resource value: 0x7f0900c7
+			public const int confirmation_code = 2131296455;
 			
 			// aapt resource value: 0x7f090060
 			public const int contentPanel = 2131296352;
@@ -3364,26 +3364,26 @@ namespace LaCabana
 			// aapt resource value: 0x7f090056
 			public const int default_activity_button = 2131296342;
 			
-			// aapt resource value: 0x7f0900d0
-			public const int design_bottom_sheet = 2131296464;
+			// aapt resource value: 0x7f0900d1
+			public const int design_bottom_sheet = 2131296465;
+			
+			// aapt resource value: 0x7f0900d8
+			public const int design_menu_item_action_area = 2131296472;
 			
 			// aapt resource value: 0x7f0900d7
-			public const int design_menu_item_action_area = 2131296471;
+			public const int design_menu_item_action_area_stub = 2131296471;
 			
 			// aapt resource value: 0x7f0900d6
-			public const int design_menu_item_action_area_stub = 2131296470;
+			public const int design_menu_item_text = 2131296470;
 			
 			// aapt resource value: 0x7f0900d5
-			public const int design_menu_item_text = 2131296469;
+			public const int design_navigation_view = 2131296469;
 			
-			// aapt resource value: 0x7f0900d4
-			public const int design_navigation_view = 2131296468;
+			// aapt resource value: 0x7f0900c2
+			public const int destinationButton = 2131296450;
 			
 			// aapt resource value: 0x7f0900c1
-			public const int destinationButton = 2131296449;
-			
-			// aapt resource value: 0x7f0900c0
-			public const int detailsButton = 2131296448;
+			public const int detailsButton = 2131296449;
 			
 			// aapt resource value: 0x7f0900b6
 			public const int detailsLayout = 2131296438;
@@ -3403,17 +3403,17 @@ namespace LaCabana
 			// aapt resource value: 0x7f09007f
 			public const int drawer_layout = 2131296383;
 			
-			// aapt resource value: 0x7f0900ed
-			public const int drawer_line_between = 2131296493;
+			// aapt resource value: 0x7f0900ee
+			public const int drawer_line_between = 2131296494;
 			
-			// aapt resource value: 0x7f090127
-			public const int duration = 2131296551;
+			// aapt resource value: 0x7f090128
+			public const int duration = 2131296552;
 			
 			// aapt resource value: 0x7f090072
 			public const int edit_query = 2131296370;
 			
-			// aapt resource value: 0x7f09012c
-			public const int edit_seekBar = 2131296556;
+			// aapt resource value: 0x7f09012d
+			public const int edit_seekBar = 2131296557;
 			
 			// aapt resource value: 0x7f090098
 			public const int emailEditText = 2131296408;
@@ -3433,14 +3433,14 @@ namespace LaCabana
 			// aapt resource value: 0x7f0900af
 			public const int emailphoto = 2131296431;
 			
-			// aapt resource value: 0x7f09011f
-			public const int emptyReview = 2131296543;
+			// aapt resource value: 0x7f090120
+			public const int emptyReview = 2131296544;
 			
 			// aapt resource value: 0x7f090027
 			public const int end = 2131296295;
 			
-			// aapt resource value: 0x7f09011a
-			public const int end_padder = 2131296538;
+			// aapt resource value: 0x7f09011b
+			public const int end_padder = 2131296539;
 			
 			// aapt resource value: 0x7f09002e
 			public const int enterAlways = 2131296302;
@@ -3457,20 +3457,20 @@ namespace LaCabana
 			// aapt resource value: 0x7f090067
 			public const int expanded_menu = 2131296359;
 			
-			// aapt resource value: 0x7f090104
-			public const int facebookBtn = 2131296516;
+			// aapt resource value: 0x7f090105
+			public const int facebookBtn = 2131296517;
 			
-			// aapt resource value: 0x7f090100
-			public const int facebookButton = 2131296512;
+			// aapt resource value: 0x7f090101
+			public const int facebookButton = 2131296513;
 			
-			// aapt resource value: 0x7f0900bb
-			public const int favoriteImage = 2131296443;
-			
-			// aapt resource value: 0x7f0900e7
-			public const int favoritesItem = 2131296487;
+			// aapt resource value: 0x7f0900bc
+			public const int favoriteImage = 2131296444;
 			
 			// aapt resource value: 0x7f0900e8
-			public const int favoritesText = 2131296488;
+			public const int favoritesItem = 2131296488;
+			
+			// aapt resource value: 0x7f0900e9
+			public const int favoritesText = 2131296489;
 			
 			// aapt resource value: 0x7f090040
 			public const int fill = 2131296320;
@@ -3484,20 +3484,20 @@ namespace LaCabana
 			// aapt resource value: 0x7f090043
 			public const int @fixed = 2131296323;
 			
-			// aapt resource value: 0x7f090109
-			public const int forgotPassword = 2131296521;
+			// aapt resource value: 0x7f09010a
+			public const int forgotPassword = 2131296522;
 			
-			// aapt resource value: 0x7f090106
-			public const int googleBtn = 2131296518;
+			// aapt resource value: 0x7f090107
+			public const int googleBtn = 2131296519;
 			
-			// aapt resource value: 0x7f090120
-			public const int gridview = 2131296544;
+			// aapt resource value: 0x7f090121
+			public const int gridview = 2131296545;
 			
 			// aapt resource value: 0x7f090087
 			public const int health_search = 2131296391;
 			
-			// aapt resource value: 0x7f090107
-			public const int helpsign = 2131296519;
+			// aapt resource value: 0x7f090108
+			public const int helpsign = 2131296520;
 			
 			// aapt resource value: 0x7f090005
 			public const int home = 2131296261;
@@ -3505,20 +3505,23 @@ namespace LaCabana
 			// aapt resource value: 0x7f09001b
 			public const int homeAsUp = 2131296283;
 			
-			// aapt resource value: 0x7f0900e0
-			public const int homeMenu = 2131296480;
-			
-			// aapt resource value: 0x7f0900de
-			public const int homeView = 2131296478;
+			// aapt resource value: 0x7f0900e1
+			public const int homeMenu = 2131296481;
 			
 			// aapt resource value: 0x7f0900df
-			public const int home_scrollView = 2131296479;
+			public const int homeView = 2131296479;
+			
+			// aapt resource value: 0x7f0900e0
+			public const int home_scrollView = 2131296480;
 			
 			// aapt resource value: 0x7f09000b
 			public const int hybrid = 2131296267;
 			
 			// aapt resource value: 0x7f090058
 			public const int icon = 2131296344;
+			
+			// aapt resource value: 0x7f09012f
+			public const int iconImage = 2131296559;
 			
 			// aapt resource value: 0x7f0900b9
 			public const int iconLeft = 2131296441;
@@ -3535,23 +3538,23 @@ namespace LaCabana
 			// aapt resource value: 0x7f090055
 			public const int image = 2131296341;
 			
-			// aapt resource value: 0x7f09011b
-			public const int imageCenter = 2131296539;
+			// aapt resource value: 0x7f09011c
+			public const int imageCenter = 2131296540;
 			
-			// aapt resource value: 0x7f0900dc
-			public const int image_recycler = 2131296476;
+			// aapt resource value: 0x7f0900dd
+			public const int image_recycler = 2131296477;
 			
-			// aapt resource value: 0x7f090119
-			public const int info = 2131296537;
-			
-			// aapt resource value: 0x7f0900f5
-			public const int infoName = 2131296501;
+			// aapt resource value: 0x7f09011a
+			public const int info = 2131296538;
 			
 			// aapt resource value: 0x7f0900f6
-			public const int infoPrice = 2131296502;
+			public const int infoName = 2131296502;
 			
 			// aapt resource value: 0x7f0900f7
-			public const int infoRank = 2131296503;
+			public const int infoPrice = 2131296503;
+			
+			// aapt resource value: 0x7f0900f8
+			public const int infoRank = 2131296504;
 			
 			// aapt resource value: 0x7f09004a
 			public const int inline = 2131296330;
@@ -3565,17 +3568,17 @@ namespace LaCabana
 			// aapt resource value: 0x7f09003a
 			public const int left = 2131296314;
 			
-			// aapt resource value: 0x7f09011c
-			public const int leftButton = 2131296540;
+			// aapt resource value: 0x7f09011d
+			public const int leftButton = 2131296541;
 			
 			// aapt resource value: 0x7f090017
 			public const int light = 2131296279;
 			
-			// aapt resource value: 0x7f090113
-			public const int line1 = 2131296531;
+			// aapt resource value: 0x7f090114
+			public const int line1 = 2131296532;
 			
-			// aapt resource value: 0x7f090117
-			public const int line3 = 2131296535;
+			// aapt resource value: 0x7f090118
+			public const int line3 = 2131296536;
 			
 			// aapt resource value: 0x7f090018
 			public const int listMode = 2131296280;
@@ -3583,11 +3586,14 @@ namespace LaCabana
 			// aapt resource value: 0x7f090057
 			public const int list_item = 2131296343;
 			
-			// aapt resource value: 0x7f0900f8
-			public const int loading = 2131296504;
-			
 			// aapt resource value: 0x7f0900f9
-			public const int loading_progress = 2131296505;
+			public const int loading = 2131296505;
+			
+			// aapt resource value: 0x7f0900fa
+			public const int loading_progress = 2131296506;
+			
+			// aapt resource value: 0x7f0900bb
+			public const int loading_progress_image = 2131296443;
 			
 			// aapt resource value: 0x7f090092
 			public const int locationEditText = 2131296402;
@@ -3595,50 +3601,50 @@ namespace LaCabana
 			// aapt resource value: 0x7f0900b2
 			public const int locationLayout = 2131296434;
 			
-			// aapt resource value: 0x7f0900fc
-			public const int login_email = 2131296508;
-			
 			// aapt resource value: 0x7f0900fd
-			public const int login_password = 2131296509;
+			public const int login_email = 2131296509;
 			
-			// aapt resource value: 0x7f09012b
-			public const int login_username = 2131296555;
+			// aapt resource value: 0x7f0900fe
+			public const int login_password = 2131296510;
 			
-			// aapt resource value: 0x7f0900f2
-			public const int logoutItem = 2131296498;
+			// aapt resource value: 0x7f09012c
+			public const int login_username = 2131296556;
 			
 			// aapt resource value: 0x7f0900f3
-			public const int logoutText = 2131296499;
+			public const int logoutItem = 2131296499;
+			
+			// aapt resource value: 0x7f0900f4
+			public const int logoutText = 2131296500;
 			
 			// aapt resource value: 0x7f0900a2
 			public const int main_loading = 2131296418;
 			
-			// aapt resource value: 0x7f0900dd
-			public const int main_loading_recycler = 2131296477;
+			// aapt resource value: 0x7f0900de
+			public const int main_loading_recycler = 2131296478;
 			
-			// aapt resource value: 0x7f0900fb
-			public const int mainsignin = 2131296507;
+			// aapt resource value: 0x7f0900fc
+			public const int mainsignin = 2131296508;
 			
 			// aapt resource value: 0x7f0900a0
 			public const int map = 2131296416;
 			
+			// aapt resource value: 0x7f0900e5
+			public const int mapText = 2131296485;
+			
 			// aapt resource value: 0x7f0900e4
-			public const int mapText = 2131296484;
+			public const int map_item = 2131296484;
 			
-			// aapt resource value: 0x7f0900e3
-			public const int map_item = 2131296483;
-			
-			// aapt resource value: 0x7f090111
-			public const int media_actions = 2131296529;
-			
-			// aapt resource value: 0x7f09010b
-			public const int menu_profile_image = 2131296523;
+			// aapt resource value: 0x7f090112
+			public const int media_actions = 2131296530;
 			
 			// aapt resource value: 0x7f09010c
-			public const int menu_username = 2131296524;
+			public const int menu_profile_image = 2131296524;
 			
 			// aapt resource value: 0x7f09010d
-			public const int messenger_send_button = 2131296525;
+			public const int menu_username = 2131296525;
+			
+			// aapt resource value: 0x7f09010e
+			public const int messenger_send_button = 2131296526;
 			
 			// aapt resource value: 0x7f090028
 			public const int middle = 2131296296;
@@ -3649,17 +3655,17 @@ namespace LaCabana
 			// aapt resource value: 0x7f090021
 			public const int multiply = 2131296289;
 			
-			// aapt resource value: 0x7f0900fa
-			public const int my_account_layout = 2131296506;
-			
-			// aapt resource value: 0x7f0900ee
-			public const int myaccountItem = 2131296494;
+			// aapt resource value: 0x7f0900fb
+			public const int my_account_layout = 2131296507;
 			
 			// aapt resource value: 0x7f0900ef
-			public const int myaccountText = 2131296495;
+			public const int myaccountItem = 2131296495;
 			
-			// aapt resource value: 0x7f0900d3
-			public const int navigation_header_container = 2131296467;
+			// aapt resource value: 0x7f0900f0
+			public const int myaccountText = 2131296496;
+			
+			// aapt resource value: 0x7f0900d4
+			public const int navigation_header_container = 2131296468;
 			
 			// aapt resource value: 0x7f09002c
 			public const int never = 2131296300;
@@ -3673,8 +3679,8 @@ namespace LaCabana
 			// aapt resource value: 0x7f09000d
 			public const int normal = 2131296269;
 			
-			// aapt resource value: 0x7f09011e
-			public const int numberPhoto = 2131296542;
+			// aapt resource value: 0x7f09011f
+			public const int numberPhoto = 2131296543;
 			
 			// aapt resource value: 0x7f090045
 			public const int open_graph = 2131296325;
@@ -3736,14 +3742,14 @@ namespace LaCabana
 			// aapt resource value: 0x7f0900b5
 			public const int priceText = 2131296437;
 			
-			// aapt resource value: 0x7f0900d9
-			public const int priceandlocation = 2131296473;
+			// aapt resource value: 0x7f0900da
+			public const int priceandlocation = 2131296474;
 			
-			// aapt resource value: 0x7f0900e1
-			public const int profile_layout = 2131296481;
+			// aapt resource value: 0x7f0900e2
+			public const int profile_layout = 2131296482;
 			
-			// aapt resource value: 0x7f0900c7
-			public const int progress_bar = 2131296455;
+			// aapt resource value: 0x7f0900c8
+			public const int progress_bar = 2131296456;
 			
 			// aapt resource value: 0x7f090006
 			public const int progress_circular = 2131296262;
@@ -3757,17 +3763,17 @@ namespace LaCabana
 			// aapt resource value: 0x7f09009c
 			public const int ratingbar = 2131296412;
 			
-			// aapt resource value: 0x7f09012a
-			public const int reportButton = 2131296554;
+			// aapt resource value: 0x7f09012b
+			public const int reportButton = 2131296555;
 			
-			// aapt resource value: 0x7f090123
-			public const int reviewText = 2131296547;
+			// aapt resource value: 0x7f090124
+			public const int reviewText = 2131296548;
 			
 			// aapt resource value: 0x7f09003b
 			public const int right = 2131296315;
 			
-			// aapt resource value: 0x7f09011d
-			public const int rightButton = 2131296541;
+			// aapt resource value: 0x7f09011e
+			public const int rightButton = 2131296542;
 			
 			// aapt resource value: 0x7f09000e
 			public const int satellite = 2131296270;
@@ -3793,8 +3799,8 @@ namespace LaCabana
 			// aapt resource value: 0x7f090044
 			public const int scrollable = 2131296324;
 			
-			// aapt resource value: 0x7f09010a
-			public const int searchList = 2131296522;
+			// aapt resource value: 0x7f09010b
+			public const int searchList = 2131296523;
 			
 			// aapt resource value: 0x7f090089
 			public const int searchView = 2131296393;
@@ -3829,17 +3835,17 @@ namespace LaCabana
 			// aapt resource value: 0x7f09007d
 			public const int search_voice_btn = 2131296381;
 			
-			// aapt resource value: 0x7f09012d
-			public const int seekbar_text = 2131296557;
+			// aapt resource value: 0x7f09012e
+			public const int seekbar_text = 2131296558;
 			
 			// aapt resource value: 0x7f09007e
 			public const int select_dialog_listview = 2131296382;
 			
-			// aapt resource value: 0x7f0900f0
-			public const int settingsItem = 2131296496;
-			
 			// aapt resource value: 0x7f0900f1
-			public const int settingsText = 2131296497;
+			public const int settingsItem = 2131296497;
+			
+			// aapt resource value: 0x7f0900f2
+			public const int settingsText = 2131296498;
 			
 			// aapt resource value: 0x7f090069
 			public const int shortcut = 2131296361;
@@ -3853,38 +3859,38 @@ namespace LaCabana
 			// aapt resource value: 0x7f09001e
 			public const int showTitle = 2131296286;
 			
-			// aapt resource value: 0x7f0900fe
-			public const int signInButton = 2131296510;
+			// aapt resource value: 0x7f0900ff
+			public const int signInButton = 2131296511;
 			
-			// aapt resource value: 0x7f090108
-			public const int signUpButtonDetails = 2131296520;
+			// aapt resource value: 0x7f090109
+			public const int signUpButtonDetails = 2131296521;
 			
-			// aapt resource value: 0x7f090105
-			public const int signuplayout = 2131296517;
+			// aapt resource value: 0x7f090106
+			public const int signuplayout = 2131296518;
 			
 			// aapt resource value: 0x7f09004f
 			public const int small = 2131296335;
 			
-			// aapt resource value: 0x7f0900d2
-			public const int snackbar_action = 2131296466;
+			// aapt resource value: 0x7f0900d3
+			public const int snackbar_action = 2131296467;
 			
-			// aapt resource value: 0x7f0900d1
-			public const int snackbar_text = 2131296465;
+			// aapt resource value: 0x7f0900d2
+			public const int snackbar_text = 2131296466;
 			
 			// aapt resource value: 0x7f090032
 			public const int snap = 2131296306;
 			
-			// aapt resource value: 0x7f090101
-			public const int socialLayout = 2131296513;
-			
 			// aapt resource value: 0x7f090102
-			public const int socialtext = 2131296514;
+			public const int socialLayout = 2131296514;
+			
+			// aapt resource value: 0x7f090103
+			public const int socialtext = 2131296515;
 			
 			// aapt resource value: 0x7f09005b
 			public const int spacer = 2131296347;
 			
-			// aapt resource value: 0x7f0900f4
-			public const int splash_progressBar = 2131296500;
+			// aapt resource value: 0x7f0900f5
+			public const int splash_progressBar = 2131296501;
 			
 			// aapt resource value: 0x7f090008
 			public const int split_action_bar = 2131296264;
@@ -3904,8 +3910,8 @@ namespace LaCabana
 			// aapt resource value: 0x7f09003c
 			public const int start = 2131296316;
 			
-			// aapt resource value: 0x7f090110
-			public const int status_bar_latest_event_content = 2131296528;
+			// aapt resource value: 0x7f090111
+			public const int status_bar_latest_event_content = 2131296529;
 			
 			// aapt resource value: 0x7f0900b3
 			public const int streetText = 2131296435;
@@ -3919,20 +3925,23 @@ namespace LaCabana
 			// aapt resource value: 0x7f09000f
 			public const int terrain = 2131296271;
 			
-			// aapt resource value: 0x7f090118
-			public const int text = 2131296536;
+			// aapt resource value: 0x7f090119
+			public const int text = 2131296537;
 			
-			// aapt resource value: 0x7f090116
-			public const int text2 = 2131296534;
+			// aapt resource value: 0x7f090117
+			public const int text2 = 2131296535;
+			
+			// aapt resource value: 0x7f090130
+			public const int textItem = 2131296560;
 			
 			// aapt resource value: 0x7f090063
 			public const int textSpacerNoButtons = 2131296355;
 			
-			// aapt resource value: 0x7f0900ff
-			public const int textView1 = 2131296511;
+			// aapt resource value: 0x7f090100
+			public const int textView1 = 2131296512;
 			
-			// aapt resource value: 0x7f090114
-			public const int time = 2131296532;
+			// aapt resource value: 0x7f090115
+			public const int time = 2131296533;
 			
 			// aapt resource value: 0x7f090059
 			public const int title = 2131296345;
@@ -3940,8 +3949,8 @@ namespace LaCabana
 			// aapt resource value: 0x7f09005e
 			public const int title_template = 2131296350;
 			
-			// aapt resource value: 0x7f090128
-			public const int titlereview = 2131296552;
+			// aapt resource value: 0x7f090129
+			public const int titlereview = 2131296553;
 			
 			// aapt resource value: 0x7f0900b8
 			public const int tool_bar = 2131296440;
@@ -3952,11 +3961,11 @@ namespace LaCabana
 			// aapt resource value: 0x7f09005d
 			public const int topPanel = 2131296349;
 			
-			// aapt resource value: 0x7f0900cf
-			public const int touch_outside = 2131296463;
+			// aapt resource value: 0x7f0900d0
+			public const int touch_outside = 2131296464;
 			
-			// aapt resource value: 0x7f090103
-			public const int twitterBtn = 2131296515;
+			// aapt resource value: 0x7f090104
+			public const int twitterBtn = 2131296516;
 			
 			// aapt resource value: 0x7f090047
 			public const int unknown = 2131296327;
@@ -3970,17 +3979,17 @@ namespace LaCabana
 			// aapt resource value: 0x7f09001f
 			public const int useLogo = 2131296287;
 			
-			// aapt resource value: 0x7f090129
-			public const int usefullButton = 2131296553;
-			
-			// aapt resource value: 0x7f090124
-			public const int userImage = 2131296548;
+			// aapt resource value: 0x7f09012a
+			public const int usefullButton = 2131296554;
 			
 			// aapt resource value: 0x7f090125
-			public const int userName = 2131296549;
+			public const int userImage = 2131296549;
 			
 			// aapt resource value: 0x7f090126
-			public const int userRating = 2131296550;
+			public const int userName = 2131296550;
+			
+			// aapt resource value: 0x7f090127
+			public const int userRating = 2131296551;
 			
 			// aapt resource value: 0x7f09000a
 			public const int view_offset_helper = 2131296266;
@@ -4288,10 +4297,13 @@ namespace LaCabana
 			public const int slider_range = 2130903120;
 			
 			// aapt resource value: 0x7f030051
-			public const int support_simple_spinner_dropdown_item = 2130903121;
+			public const int suggestionrow = 2130903121;
 			
 			// aapt resource value: 0x7f030052
-			public const int tool_bar = 2130903122;
+			public const int support_simple_spinner_dropdown_item = 2130903122;
+			
+			// aapt resource value: 0x7f030053
+			public const int tool_bar = 2130903123;
 			
 			static Layout()
 			{
@@ -4331,74 +4343,74 @@ namespace LaCabana
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f05009a
-			public const int Accountname = 2131034266;
+			// aapt resource value: 0x7f05009b
+			public const int Accountname = 2131034267;
 			
 			// aapt resource value: 0x7f05004f
 			public const int AddReview = 2131034191;
 			
-			// aapt resource value: 0x7f0500b0
-			public const int Best = 2131034288;
-			
-			// aapt resource value: 0x7f050079
-			public const int Cancel = 2131034233;
-			
-			// aapt resource value: 0x7f0500a1
-			public const int Change = 2131034273;
-			
-			// aapt resource value: 0x7f05009c
-			public const int DETAILS = 2131034268;
-			
-			// aapt resource value: 0x7f05007b
-			public const int Done = 2131034235;
-			
-			// aapt resource value: 0x7f050085
-			public const int Entercabinname = 2131034245;
-			
-			// aapt resource value: 0x7f050087
-			public const int Enterlocation = 2131034247;
-			
-			// aapt resource value: 0x7f050086
-			public const int Enterphone = 2131034246;
-			
-			// aapt resource value: 0x7f050084
-			public const int Enteryourname = 2131034244;
-			
-			// aapt resource value: 0x7f050078
-			public const int Error = 2131034232;
-			
-			// aapt resource value: 0x7f05009d
-			public const int GETDIRECTIONS = 2131034269;
-			
-			// aapt resource value: 0x7f0500ad
-			public const int Newest = 2131034285;
+			// aapt resource value: 0x7f0500b1
+			public const int Best = 2131034289;
 			
 			// aapt resource value: 0x7f05007a
-			public const int Ok = 2131034234;
+			public const int Cancel = 2131034234;
+			
+			// aapt resource value: 0x7f0500a2
+			public const int Change = 2131034274;
+			
+			// aapt resource value: 0x7f05009d
+			public const int DETAILS = 2131034269;
+			
+			// aapt resource value: 0x7f05007c
+			public const int Done = 2131034236;
+			
+			// aapt resource value: 0x7f050086
+			public const int Entercabinname = 2131034246;
+			
+			// aapt resource value: 0x7f050088
+			public const int Enterlocation = 2131034248;
+			
+			// aapt resource value: 0x7f050087
+			public const int Enterphone = 2131034247;
+			
+			// aapt resource value: 0x7f050085
+			public const int Enteryourname = 2131034245;
+			
+			// aapt resource value: 0x7f050079
+			public const int Error = 2131034233;
+			
+			// aapt resource value: 0x7f05009e
+			public const int GETDIRECTIONS = 2131034270;
 			
 			// aapt resource value: 0x7f0500ae
-			public const int Oldest = 2131034286;
+			public const int Newest = 2131034286;
 			
-			// aapt resource value: 0x7f0500a3
-			public const int Photos = 2131034275;
+			// aapt resource value: 0x7f05007b
+			public const int Ok = 2131034235;
+			
+			// aapt resource value: 0x7f0500af
+			public const int Oldest = 2131034287;
+			
+			// aapt resource value: 0x7f0500a4
+			public const int Photos = 2131034276;
 			
 			// aapt resource value: 0x7f05004d
 			public const int Pictures = 2131034189;
 			
-			// aapt resource value: 0x7f0500ab
-			public const int Price = 2131034283;
-			
-			// aapt resource value: 0x7f05009b
-			public const int Pricefrom = 2131034267;
-			
-			// aapt resource value: 0x7f0500a5
-			public const int REPORT = 2131034277;
-			
 			// aapt resource value: 0x7f0500ac
-			public const int Range = 2131034284;
+			public const int Price = 2131034284;
 			
-			// aapt resource value: 0x7f0500af
-			public const int Rating = 2131034287;
+			// aapt resource value: 0x7f05009c
+			public const int Pricefrom = 2131034268;
+			
+			// aapt resource value: 0x7f0500a6
+			public const int REPORT = 2131034278;
+			
+			// aapt resource value: 0x7f0500ad
+			public const int Range = 2131034285;
+			
+			// aapt resource value: 0x7f0500b0
+			public const int Rating = 2131034288;
 			
 			// aapt resource value: 0x7f050056
 			public const int Reviewnotfound = 2131034198;
@@ -4406,44 +4418,44 @@ namespace LaCabana
 			// aapt resource value: 0x7f05004e
 			public const int Reviews = 2131034190;
 			
-			// aapt resource value: 0x7f0500a2
-			public const int Reviewsnotfound = 2131034274;
+			// aapt resource value: 0x7f0500a3
+			public const int Reviewsnotfound = 2131034275;
 			
-			// aapt resource value: 0x7f050098
-			public const int Save = 2131034264;
+			// aapt resource value: 0x7f050099
+			public const int Save = 2131034265;
 			
 			// aapt resource value: 0x7f05004c
 			public const int Signup = 2131034188;
 			
-			// aapt resource value: 0x7f0500aa
-			public const int Signupnew = 2131034282;
+			// aapt resource value: 0x7f0500ab
+			public const int Signupnew = 2131034283;
 			
-			// aapt resource value: 0x7f0500b1
-			public const int Title = 2131034289;
-			
-			// aapt resource value: 0x7f050089
-			public const int TryAgain = 2131034249;
-			
-			// aapt resource value: 0x7f050099
-			public const int UPLOAD = 2131034265;
-			
-			// aapt resource value: 0x7f0500a4
-			public const int USEFULL = 2131034276;
-			
-			// aapt resource value: 0x7f050076
-			public const int Unabletoload = 2131034230;
-			
-			// aapt resource value: 0x7f050075
-			public const int Unabletologin = 2131034229;
-			
-			// aapt resource value: 0x7f050077
-			public const int Unabletosave = 2131034231;
-			
-			// aapt resource value: 0x7f050088
-			public const int Uploadphoto = 2131034248;
+			// aapt resource value: 0x7f050057
+			public const int Title = 2131034199;
 			
 			// aapt resource value: 0x7f05008a
-			public const int ValidationInternetConnection = 2131034250;
+			public const int TryAgain = 2131034250;
+			
+			// aapt resource value: 0x7f05009a
+			public const int UPLOAD = 2131034266;
+			
+			// aapt resource value: 0x7f0500a5
+			public const int USEFULL = 2131034277;
+			
+			// aapt resource value: 0x7f050077
+			public const int Unabletoload = 2131034231;
+			
+			// aapt resource value: 0x7f050076
+			public const int Unabletologin = 2131034230;
+			
+			// aapt resource value: 0x7f050078
+			public const int Unabletosave = 2131034232;
+			
+			// aapt resource value: 0x7f050089
+			public const int Uploadphoto = 2131034249;
+			
+			// aapt resource value: 0x7f05008b
+			public const int ValidationInternetConnection = 2131034251;
 			
 			// aapt resource value: 0x7f05001f
 			public const int abc_action_bar_home_description = 2131034143;
@@ -4502,11 +4514,11 @@ namespace LaCabana
 			// aapt resource value: 0x7f050031
 			public const int abc_toolbar_collapse_description = 2131034161;
 			
-			// aapt resource value: 0x7f05005b
-			public const int addNewLocation = 2131034203;
+			// aapt resource value: 0x7f05005c
+			public const int addNewLocation = 2131034204;
 			
-			// aapt resource value: 0x7f0500a6
-			public const int alreadymemeber = 2131034278;
+			// aapt resource value: 0x7f0500a7
+			public const int alreadymemeber = 2131034279;
 			
 			// aapt resource value: 0x7f050049
 			public const int app_name = 2131034185;
@@ -4514,8 +4526,8 @@ namespace LaCabana
 			// aapt resource value: 0x7f050033
 			public const int appbar_scrolling_view_behavior = 2131034163;
 			
-			// aapt resource value: 0x7f050080
-			public const int areyousure = 2131034240;
+			// aapt resource value: 0x7f050081
+			public const int areyousure = 2131034241;
 			
 			// aapt resource value: 0x7f050001
 			public const int auth_google_play_services_client_facebook_display_name = 2131034113;
@@ -4526,17 +4538,17 @@ namespace LaCabana
 			// aapt resource value: 0x7f050034
 			public const int bottom_sheet_behavior = 2131034164;
 			
-			// aapt resource value: 0x7f050081
-			public const int cabinfavnotfound = 2131034241;
+			// aapt resource value: 0x7f050082
+			public const int cabinfavnotfound = 2131034242;
+			
+			// aapt resource value: 0x7f05007f
+			public const int cabinnotefoundtodistance = 2131034239;
 			
 			// aapt resource value: 0x7f05007e
-			public const int cabinnotefoundtodistance = 2131034238;
+			public const int cabinnotselect = 2131034238;
 			
-			// aapt resource value: 0x7f05007d
-			public const int cabinnotselect = 2131034237;
-			
-			// aapt resource value: 0x7f050058
-			public const int cabinsNear = 2131034200;
+			// aapt resource value: 0x7f050059
+			public const int cabinsNear = 2131034201;
 			
 			// aapt resource value: 0x7f050035
 			public const int character_counter_pattern = 2131034165;
@@ -4679,14 +4691,14 @@ namespace LaCabana
 			// aapt resource value: 0x7f05001e
 			public const int common_signin_button_text_long = 2131034142;
 			
-			// aapt resource value: 0x7f05005a
-			public const int compare = 2131034202;
+			// aapt resource value: 0x7f05005b
+			public const int compare = 2131034203;
 			
-			// aapt resource value: 0x7f05005f
-			public const int email_hint = 2131034207;
+			// aapt resource value: 0x7f050060
+			public const int email_hint = 2131034208;
 			
-			// aapt resource value: 0x7f05008f
-			public const int empty_confirm_password = 2131034255;
+			// aapt resource value: 0x7f050090
+			public const int empty_confirm_password = 2131034256;
 			
 			// aapt resource value: 0x7f050054
 			public const int enteremail = 2131034196;
@@ -4709,161 +4721,161 @@ namespace LaCabana
 			// aapt resource value: 0x7f05004a
 			public const int facebook_app_id = 2131034186;
 			
-			// aapt resource value: 0x7f050067
-			public const int facebook_btn = 2131034215;
+			// aapt resource value: 0x7f050068
+			public const int facebook_btn = 2131034216;
 			
-			// aapt resource value: 0x7f05009e
-			public const int fastsignin = 2131034270;
+			// aapt resource value: 0x7f05009f
+			public const int fastsignin = 2131034271;
 			
-			// aapt resource value: 0x7f050059
-			public const int favorites = 2131034201;
+			// aapt resource value: 0x7f05005a
+			public const int favorites = 2131034202;
+			
+			// aapt resource value: 0x7f05006a
+			public const int forgot_password = 2131034218;
+			
+			// aapt resource value: 0x7f0500a1
+			public const int forogtpass = 2131034273;
 			
 			// aapt resource value: 0x7f050069
-			public const int forgot_password = 2131034217;
+			public const int google_btn = 2131034217;
 			
-			// aapt resource value: 0x7f0500a0
-			public const int forogtpass = 2131034272;
-			
-			// aapt resource value: 0x7f050068
-			public const int google_btn = 2131034216;
-			
-			// aapt resource value: 0x7f050071
-			public const int has_account = 2131034225;
+			// aapt resource value: 0x7f050072
+			public const int has_account = 2131034226;
 			
 			// aapt resource value: 0x7f050048
 			public const int hello = 2131034184;
 			
-			// aapt resource value: 0x7f050094
-			public const int invalid_address = 2131034260;
-			
 			// aapt resource value: 0x7f050095
-			public const int invalid_city = 2131034261;
-			
-			// aapt resource value: 0x7f050090
-			public const int invalid_confirm_password = 2131034256;
-			
-			// aapt resource value: 0x7f05008c
-			public const int invalid_email = 2131034252;
-			
-			// aapt resource value: 0x7f05008b
-			public const int invalid_email_or_password = 2131034251;
-			
-			// aapt resource value: 0x7f050097
-			public const int invalid_generic_message = 2131034263;
+			public const int invalid_address = 2131034261;
 			
 			// aapt resource value: 0x7f050096
-			public const int invalid_location_name = 2131034262;
+			public const int invalid_city = 2131034262;
 			
 			// aapt resource value: 0x7f050091
-			public const int invalid_name = 2131034257;
-			
-			// aapt resource value: 0x7f05008e
-			public const int invalid_password = 2131034254;
-			
-			// aapt resource value: 0x7f050092
-			public const int invalid_phone = 2131034258;
+			public const int invalid_confirm_password = 2131034257;
 			
 			// aapt resource value: 0x7f05008d
-			public const int invalidte_price = 2131034253;
+			public const int invalid_email = 2131034253;
 			
-			// aapt resource value: 0x7f0500a8
-			public const int location = 2131034280;
+			// aapt resource value: 0x7f05008c
+			public const int invalid_email_or_password = 2131034252;
+			
+			// aapt resource value: 0x7f050098
+			public const int invalid_generic_message = 2131034264;
+			
+			// aapt resource value: 0x7f050097
+			public const int invalid_location_name = 2131034263;
+			
+			// aapt resource value: 0x7f050092
+			public const int invalid_name = 2131034258;
+			
+			// aapt resource value: 0x7f05008f
+			public const int invalid_password = 2131034255;
+			
+			// aapt resource value: 0x7f050093
+			public const int invalid_phone = 2131034259;
+			
+			// aapt resource value: 0x7f05008e
+			public const int invalidte_price = 2131034254;
+			
+			// aapt resource value: 0x7f0500a9
+			public const int location = 2131034281;
 			
 			// aapt resource value: 0x7f05004b
 			public const int login = 2131034187;
 			
-			// aapt resource value: 0x7f050066
-			public const int login_btn = 2131034214;
+			// aapt resource value: 0x7f050067
+			public const int login_btn = 2131034215;
 			
-			// aapt resource value: 0x7f0500a9
-			public const int loginnew = 2131034281;
+			// aapt resource value: 0x7f0500aa
+			public const int loginnew = 2131034282;
 			
-			// aapt resource value: 0x7f05005e
-			public const int logout = 2131034206;
+			// aapt resource value: 0x7f05005f
+			public const int logout = 2131034207;
 			
-			// aapt resource value: 0x7f050074
-			public const int lorem_ipsum = 2131034228;
+			// aapt resource value: 0x7f050075
+			public const int lorem_ipsum = 2131034229;
 			
-			// aapt resource value: 0x7f050057
-			public const int map = 2131034199;
+			// aapt resource value: 0x7f050058
+			public const int map = 2131034200;
 			
-			// aapt resource value: 0x7f05009f
-			public const int membreplease = 2131034271;
+			// aapt resource value: 0x7f0500a0
+			public const int membreplease = 2131034272;
 			
 			// aapt resource value: 0x7f050047
 			public const int messenger_send_button_text = 2131034183;
 			
-			// aapt resource value: 0x7f05005c
-			public const int myAccount = 2131034204;
+			// aapt resource value: 0x7f05005d
+			public const int myAccount = 2131034205;
 			
-			// aapt resource value: 0x7f05007c
-			public const int myLocation = 2131034236;
-			
-			// aapt resource value: 0x7f050062
-			public const int name_hint = 2131034210;
-			
-			// aapt resource value: 0x7f0500a7
-			public const int nameofcabin = 2131034279;
-			
-			// aapt resource value: 0x7f05007f
-			public const int networkconnection = 2131034239;
-			
-			// aapt resource value: 0x7f050061
-			public const int password_hint = 2131034209;
+			// aapt resource value: 0x7f05007d
+			public const int myLocation = 2131034237;
 			
 			// aapt resource value: 0x7f050063
-			public const int phone_hint = 2131034211;
+			public const int name_hint = 2131034211;
 			
-			// aapt resource value: 0x7f05006c
-			public const int please_insert = 2131034220;
+			// aapt resource value: 0x7f0500a8
+			public const int nameofcabin = 2131034280;
 			
-			// aapt resource value: 0x7f050082
-			public const int pleaseloginfor = 2131034242;
+			// aapt resource value: 0x7f050080
+			public const int networkconnection = 2131034240;
 			
-			// aapt resource value: 0x7f050083
-			public const int pleasesigntouse = 2131034243;
-			
-			// aapt resource value: 0x7f05006a
-			public const int register = 2131034218;
-			
-			// aapt resource value: 0x7f050070
-			public const int register_btn = 2131034224;
-			
-			// aapt resource value: 0x7f05006f
-			public const int register_btn_Up = 2131034223;
-			
-			// aapt resource value: 0x7f05006d
-			public const int register_terms_conditions = 2131034221;
-			
-			// aapt resource value: 0x7f05006e
-			public const int register_terms_conditions_link = 2131034222;
-			
-			// aapt resource value: 0x7f050073
-			public const int register_toast_message = 2131034227;
+			// aapt resource value: 0x7f050062
+			public const int password_hint = 2131034210;
 			
 			// aapt resource value: 0x7f050064
-			public const int repeat_password_hint = 2131034212;
+			public const int phone_hint = 2131034212;
+			
+			// aapt resource value: 0x7f05006d
+			public const int please_insert = 2131034221;
+			
+			// aapt resource value: 0x7f050083
+			public const int pleaseloginfor = 2131034243;
+			
+			// aapt resource value: 0x7f050084
+			public const int pleasesigntouse = 2131034244;
 			
 			// aapt resource value: 0x7f05006b
-			public const int selectRange = 2131034219;
+			public const int register = 2131034219;
 			
-			// aapt resource value: 0x7f050072
-			public const int selectpicture = 2131034226;
+			// aapt resource value: 0x7f050071
+			public const int register_btn = 2131034225;
 			
-			// aapt resource value: 0x7f05005d
-			public const int settings = 2131034205;
+			// aapt resource value: 0x7f050070
+			public const int register_btn_Up = 2131034224;
+			
+			// aapt resource value: 0x7f05006e
+			public const int register_terms_conditions = 2131034222;
+			
+			// aapt resource value: 0x7f05006f
+			public const int register_terms_conditions_link = 2131034223;
+			
+			// aapt resource value: 0x7f050074
+			public const int register_toast_message = 2131034228;
+			
+			// aapt resource value: 0x7f050065
+			public const int repeat_password_hint = 2131034213;
+			
+			// aapt resource value: 0x7f05006c
+			public const int selectRange = 2131034220;
+			
+			// aapt resource value: 0x7f050073
+			public const int selectpicture = 2131034227;
+			
+			// aapt resource value: 0x7f05005e
+			public const int settings = 2131034206;
 			
 			// aapt resource value: 0x7f050032
 			public const int status_bar_notification_info_overflow = 2131034162;
 			
-			// aapt resource value: 0x7f050093
-			public const int unchecked_terms = 2131034259;
+			// aapt resource value: 0x7f050094
+			public const int unchecked_terms = 2131034260;
 			
-			// aapt resource value: 0x7f050060
-			public const int username_hint = 2131034208;
+			// aapt resource value: 0x7f050061
+			public const int username_hint = 2131034209;
 			
-			// aapt resource value: 0x7f050065
-			public const int wait = 2131034213;
+			// aapt resource value: 0x7f050066
+			public const int wait = 2131034214;
 			
 			static String()
 			{
