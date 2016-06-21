@@ -99,29 +99,21 @@ namespace LaCabana
 						var ordprice = allCabins.OrderBy(item => item.Value.Price);
 						scrollView.Visibility = ViewStates.Gone;
 						loading.Visibility = ViewStates.Visible;
-						ThreadPool.QueueUserWorkItem(o =>
-						{
-							FillLayout(route, baseServiceGeneral, ordprice.ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
-						});
+						FillLayout(route, baseServiceGeneral, ordprice.ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
+
 					}
 					else if (a.Equals(GetString(Resource.String.Oldest)))
 					{
 						scrollView.Visibility = ViewStates.Gone;
 						loading.Visibility = ViewStates.Visible;
-						ThreadPool.QueueUserWorkItem(o =>
-						{
-							FillLayout(route, baseServiceGeneral, allCabins);
-						});
+						FillLayout(route, baseServiceGeneral, allCabins);
 
 					}
 					else if (a.Equals(GetString(Resource.String.Newest)))
 					{
 						scrollView.Visibility = ViewStates.Gone;
 						loading.Visibility = ViewStates.Visible;
-						ThreadPool.QueueUserWorkItem(o =>
-						{
-							FillLayout(route, baseServiceGeneral, allCabins.Reverse().ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
-						});
+						FillLayout(route, baseServiceGeneral, allCabins.Reverse().ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
 
 					}
 					else if (a.Equals(GetString(Resource.String.Range)))
@@ -129,10 +121,7 @@ namespace LaCabana
 						var ordrating = allCabins.OrderBy(item => item.Value.Distance);
 						scrollView.Visibility = ViewStates.Gone;
 						loading.Visibility = ViewStates.Visible;
-						ThreadPool.QueueUserWorkItem(o =>
-						{
-							FillLayout(route, baseServiceGeneral, ordrating.ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
-						});
+						FillLayout(route, baseServiceGeneral, ordrating.ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
 
 					}
 					else if (a.Equals(GetString(Resource.String.Rating)))
@@ -140,10 +129,8 @@ namespace LaCabana
 						var ordrating = allCabins.OrderBy(item => item.Value.Rating);
 						scrollView.Visibility = ViewStates.Gone;
 						loading.Visibility = ViewStates.Visible;
-						ThreadPool.QueueUserWorkItem(o =>
-						{
-							FillLayout(route, baseServiceGeneral, ordrating.Reverse().ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
-						});
+						FillLayout(route, baseServiceGeneral, ordrating.Reverse().ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
+
 
 					}
 				};
