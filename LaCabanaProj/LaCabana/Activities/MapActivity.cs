@@ -87,6 +87,7 @@ namespace LaCabana
 			Search.Visibility = ViewStates.Visible;
 			SearchButton = ActionBar.CustomView.FindViewById<ImageButton>(Resource.Id.action_bar_searchBtn);
 			SearchButton.Visibility = ViewStates.Gone;
+
 			Search.SearchClick += delegate
 			{
 				Search.SuggestionsAdapter = adaptere;
