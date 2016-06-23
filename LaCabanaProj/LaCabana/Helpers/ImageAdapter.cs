@@ -63,7 +63,6 @@ namespace LaCabana
 			{
 				if (item.Pictures.ContainsKey("main"))
 				{
-
 					var baseService1 = new BaseService<byte[]>();
 					var abc = baseService1.Get(string.Format("pictures/{0}", item.Pictures.Last().Value));
 					cabinPhoto.SetImageBitmap(BitmapFactory.DecodeByteArray(abc, 0, abc.Length));

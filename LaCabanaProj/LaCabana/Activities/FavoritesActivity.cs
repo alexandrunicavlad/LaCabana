@@ -44,6 +44,13 @@ namespace LaCabana
 			longitude = Intent.GetDoubleExtra("longitude", 0);
 			numberDistance = Intent.GetIntExtra("distance", 0);
 			favList = Intent.GetStringArrayListExtra("favoriteList");
+			var extras = Intent.Extras;
+			if (extras != null)
+			{
+				var odsa = extras.GetString("cabin200");
+				var allCabins1 = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, CabinModel>>(odsa);
+				CabinsOn200(allCabins1);
+			}
 			//allCabins = new Dictionary<string,CabinModel> ();
 			allCabins = new List<CabinModel>();
 			SetTitleActionBar(GetString(Resource.String.favorites));

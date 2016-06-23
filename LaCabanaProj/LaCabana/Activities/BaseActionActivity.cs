@@ -35,11 +35,11 @@ namespace LaCabana
 		private BitmapFactory.Options _placeHolderOptions;
 		protected static IDatabaseServices DatabaseServices;
 		public UsersModel user;
-
+		public Org.W3c.Dom.IDocument doc;
 		public LatLng myLocation { get; set; }
-
+		public Dictionary<string, CabinModel> cabinto200;
 		public UsersModel userMod { get; set; }
-
+		public string jsonCabinto200;
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
@@ -65,6 +65,12 @@ namespace LaCabana
 		public void UserData(UsersModel userul)
 		{
 			userMod = userul;
+		}
+
+		public void CabinsOn200(Dictionary<string, CabinModel> cabin2)
+		{
+			cabinto200 = cabin2;
+			jsonCabinto200 = Newtonsoft.Json.JsonConvert.SerializeObject(cabinto200);
 		}
 
 		public void SetProfilePicture()
@@ -110,6 +116,39 @@ namespace LaCabana
 			return base.OnOptionsItemSelected(item);
 		}
 
+		public void CabinTo200(Dictionary<string, CabinModel> cabinsData)
+		{
+			var route = new RouteGenerator();
+			//Dictionary<string, CabinModel> cabinsData = new Dictionary<string, CabinModel>();
+			var baseServiceGeneral = new BaseService<Dictionary<string, CabinModel>>();
+
+			if (cabinsData == null)
+			{
+				CreateDialog(GetString(Resource.String.Error), GetString(Resource.String.networkconnection), false, "", true, GetString(Resource.String.Cancel), false);
+				return;
+			}
+			foreach (var cabin in cabinsData.ToList())
+			{
+				try
+				{
+					doc = route.GetDocument(new LatLng(myLocation.Latitude, myLocation.Longitude), new LatLng(cabin.Value.Latitude, cabin.Value.Longitude), RouteGenerator.Mode_driving);
+				}
+				catch (Exception e)
+				{
+					var a = 0;
+				}
+				float distance = route.GetDistanceValue(doc) / 1000;
+				if (distance > 200)
+				{
+					cabinsData.Remove(cabin.Key);
+				}
+				else {
+					cabin.Value.Distance = distance;
+				}
+			}
+			CabinsOn200(cabinsData);
+		}
+
 		public Bitmap Decode(string imageData)
 		{
 			try
@@ -146,7 +185,13 @@ namespace LaCabana
 				}
 				else {
 					drawerLayout.CloseDrawer((int)GravityFlags.Start);
-					StartActivityForResult(typeof(BasicMapDemoActivity), 2);
+					var intent = new Intent(this, typeof(BasicMapDemoActivity));
+					if (cabinto200 != null)
+					{
+						intent.PutExtra("cabin200", jsonCabinto200);
+					}
+					StartActivity(intent);
+
 				}
 
 				mapButton.Clickable = true;
@@ -176,7 +221,20 @@ namespace LaCabana
 				}
 				else {
 					drawerLayout.CloseDrawer((int)GravityFlags.Start);
-					StartActivityForResult(typeof(AddNewLocation), 2);
+					var intent = new Intent(this, typeof(AddNewLocation));
+					intent.PutExtra("latitude", myLocation.Latitude);
+					intent.PutExtra("longitude", myLocation.Longitude);
+					if (user.FavoriteList != null)
+					{
+						var favlist = user.FavoriteList.Values.ToList();
+						intent.PutStringArrayListExtra("favoriteList", favlist);
+
+					}
+					if (cabinto200 != null)
+					{
+						intent.PutExtra("cabin200", jsonCabinto200);
+					}
+					StartActivity(intent);
 				}
 				addNewLocationButton.Clickable = true;
 			};
@@ -212,11 +270,16 @@ namespace LaCabana
 						intent.PutExtra("latitude", myLocation.Latitude);
 						intent.PutExtra("longitude", myLocation.Longitude);
 						intent.PutExtra("distance", seekBar.Progress);
+
 						if (user.FavoriteList != null)
 						{
 							var favlist = user.FavoriteList.Values.ToList();
 							intent.PutStringArrayListExtra("favoriteList", favlist);
 
+						}
+						if (cabinto200 != null)
+						{
+							intent.PutExtra("cabin200", jsonCabinto200);
 						}
 						StartActivity(intent);
 					});
@@ -258,6 +321,10 @@ namespace LaCabana
 							intent.PutExtra("latitude", myLocation.Latitude);
 							intent.PutExtra("longitude", myLocation.Longitude);
 							intent.PutStringArrayListExtra("favoriteList", favlist);
+							if (cabinto200 != null)
+							{
+								intent.PutExtra("cabin200", jsonCabinto200);
+							}
 							StartActivity(intent);
 						}
 					}

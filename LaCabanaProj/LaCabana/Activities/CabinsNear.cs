@@ -28,6 +28,7 @@ namespace LaCabana
 		private LinearLayout cabinsLayout;
 		private RelativeLayout loading;
 		private IList<string> favList;
+		private IList<string> cabinsTo200;
 		private ScrollView scrollView;
 		private RouteGenerator route;
 		private BaseService<Dictionary<string, CabinModel>> baseServiceGeneral;
@@ -53,7 +54,15 @@ namespace LaCabana
 			longitude = Intent.GetDoubleExtra("longitude", 0);
 			numberDistance = Intent.GetIntExtra("distance", 0);
 			favList = Intent.GetStringArrayListExtra("favoriteList");
-			allCabins = new Dictionary<string, CabinModel>();
+			//cabinsTo200 = Intent.GetStringArrayListExtra("cabin200");
+			var extras = Intent.Extras;
+			if (extras != null)
+			{
+				var odsa = extras.GetString("cabin200");
+				allCabins = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, CabinModel>>(odsa);
+				CabinsOn200(allCabins);
+			}
+			baseServiceGeneral = new BaseService<Dictionary<string, CabinModel>>();
 			ClickHandler();
 			loading = FindViewById<RelativeLayout>(Resource.Id.main_loading);
 			scrollView = FindViewById<ScrollView>(Resource.Id.ScrollList);
@@ -153,37 +162,16 @@ namespace LaCabana
 
 		public void GetData()
 		{
-			route = new RouteGenerator();
-			Dictionary<string, CabinModel> cabinsData = new Dictionary<string, CabinModel>();
-			baseServiceGeneral = new BaseService<Dictionary<string, CabinModel>>();
-			try
+
+			foreach (var cabin in allCabins.ToList())
 			{
-				cabinsData = (baseServiceGeneral.Get("cabins"));
-			}
-			catch (Exception e)
-			{
-				CreateDialog(GetString(Resource.String.Error), GetString(Resource.String.networkconnection), false, "", true, GetString(Resource.String.Cancel), false);
-			}
-			foreach (var cabin in cabinsData.ToList())
-			{
-				try
+
+				//float distance = route.GetDistanceValue(doc) / 1000;
+				if (cabin.Value.Distance > numberDistance)
 				{
-					doc = route.GetDocument(new LatLng(latitude, longitude), new LatLng(cabin.Value.Latitude, cabin.Value.Longitude), RouteGenerator.Mode_driving);
-				}
-				catch (Exception e)
-				{
-					var a = 0;
-				}
-				float distance = route.GetDistanceValue(doc) / 1000;
-				if (distance > numberDistance)
-				{
-					cabinsData.Remove(cabin.Key);
-				}
-				else {
-					cabin.Value.Distance = distance;
+					allCabins.Remove(cabin.Key);
 				}
 			}
-			allCabins = cabinsData;
 			if (allCabins.Count == 0)
 			{
 				CreateDialogError();
@@ -191,6 +179,7 @@ namespace LaCabana
 			else {
 				var asc = allCabins.OrderBy(item => item.Value.Name);
 				FillLayout(route, baseServiceGeneral, asc.ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
+				var a = 0;
 			}
 		}
 

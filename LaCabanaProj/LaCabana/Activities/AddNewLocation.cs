@@ -69,7 +69,13 @@ namespace LaCabana
 			cabin.Photo = new List<string>();
 			latitude = Intent.GetDoubleExtra("latitude", 0);
 			longitude = Intent.GetDoubleExtra("longitude", 0);
-
+			var extras = Intent.Extras;
+			if (extras != null)
+			{
+				var odsa = extras.GetString("cabin200");
+				var allCabins1 = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, CabinModel>>(odsa);
+				CabinsOn200(allCabins1);
+			}
 			HideKeyboard(this);
 			var phoneSpinner = FindViewById<Spinner>(Resource.Id.phoneSpinner);
 			var emailSpinner = FindViewById<Spinner>(Resource.Id.emailSpinner);

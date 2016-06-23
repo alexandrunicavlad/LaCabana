@@ -43,7 +43,7 @@ namespace LaCabana
 		private List<String> SUGGESTIONS;
 		private SearchItemAdapter adaptere;
 		private MatrixCursor c;
-
+		private bool loadCab = false;
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
@@ -63,6 +63,14 @@ namespace LaCabana
 			searchList = FindViewById<ListView>(Resource.Id.searchList);
 			allCabins = new Dictionary<string, CabinModel>();
 			SUGGESTIONS = new List<string>();
+			var extras = Intent.Extras;
+			if (extras != null)
+			{
+				var odsa = extras.GetString("cabin200");
+				var allCabins1 = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, CabinModel>>(odsa);
+				loadCab = true;
+				CabinsOn200(allCabins1);
+			}
 			ThreadPool.QueueUserWorkItem(o => GetData());
 		}
 
@@ -147,6 +155,8 @@ namespace LaCabana
 			}
 			RunOnUiThread(() =>
 			{
+				if (loadCab == false)
+					ThreadPool.QueueUserWorkItem(o => CabinTo200(allCabins));
 				PutAllMarker();
 				//				foreach (var cabin in allCabins) {
 				//					DatabaseServices.InsertCabin (cabin.Value);
