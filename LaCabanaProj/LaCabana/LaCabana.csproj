@@ -415,6 +415,17 @@
     <AndroidResource Include="Resources\drawable-xhdpi\ic_close.png" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_close.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_close.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_like.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_unlike.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_like.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_unlike.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_like.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_price_orange.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_unlike.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_like.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_like.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_unlike.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_unlike.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\menu\" />

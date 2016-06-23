@@ -72,7 +72,6 @@
             android:textColor="@color/gray_health_text"
             android:text="@string/lorem_ipsum"
             android:textSize="14sp"
-            android:maxLines="10"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="15dp"
@@ -81,22 +80,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp">
+            <ImageView
+                android:layout_width="20dp"
+                android:src="@drawable/ic_like"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/USEFULL"
                 android:textSize="16sp"
-                android:layout_marginLeft="15dp"
-                android:id="@+id/usefullButton" />
+                android:id="@+id/usefullButton"
+                android:layout_gravity="center_vertical" />
+            <ImageView
+                android:layout_width="20dp"
+                android:src="@drawable/ic_unlike"
+                android:layout_height="20dp"
+                android:layout_marginLeft="30dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/red"
                 android:text="@string/REPORT"
                 android:textSize="16sp"
-                android:layout_marginLeft="30dp"
-                android:id="@+id/reportButton" />
+                android:id="@+id/reportButton"
+                android:layout_gravity="center_vertical" />
         </LinearLayout>
         <View
             android:layout_width="match_parent"

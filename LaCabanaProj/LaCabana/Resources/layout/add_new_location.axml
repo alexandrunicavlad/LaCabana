@@ -55,8 +55,8 @@
                             android:inputType="textEmailAddress"
                             android:textColorHint="@color/gray_health_text"
                             android:includeFontPadding="false"
-                            android:linksClickable="false"
-                            android:background="@drawable/edittextcustom_textfield_default_holo_light" />
+                            android:backgroundTint="@color/main_blue_green"
+                            android:linksClickable="false" />
                     </LinearLayout>
                 </RelativeLayout>
                 <LinearLayout
@@ -83,7 +83,7 @@
                         android:textColorHint="@color/gray_health_text"
                         android:layout_height="wrap_content"
                         android:textSize="16sp"
-                        android:background="@drawable/edittextcustom_textfield_default_holo_light" />
+                        android:backgroundTint="@color/main_blue_green" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -110,7 +110,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="16sp"
                         android:layout_gravity="clip_vertical"
-                        android:background="@drawable/edittextcustom_textfield_default_holo_light" />
+                        android:backgroundTint="@color/main_blue_green" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -185,7 +185,7 @@
                             android:gravity="center_vertical"
                             android:layout_marginRight="20dp"
                             android:minWidth="100dp"
-                            android:background="@drawable/edittextcustom_textfield_default_holo_light" />
+                            android:backgroundTint="@color/main_blue_green" />
                         <Spinner
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -193,7 +193,7 @@
                             android:minWidth="100dp"
                             android:layout_gravity="center_vertical"
                             android:layout_marginTop="10dp"
-                            android:background="@drawable/edittextcustom_textfield_default_holo_light" />
+                            android:backgroundTint="@color/main_blue_green" />
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
@@ -227,7 +227,7 @@
                             android:gravity="center_vertical"
                             android:layout_marginRight="20dp"
                             android:minWidth="100dp"
-                            android:background="@drawable/edittextcustom_textfield_default_holo_light" />
+                            android:backgroundTint="@color/main_blue_green" />
                         <Spinner
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -235,7 +235,7 @@
                             android:id="@+id/emailSpinner"
                             android:layout_marginTop="10dp"
                             android:minWidth="100dp"
-                            android:background="@drawable/edittextcustom_textfield_default_holo_light" />
+                            android:backgroundTint="@color/main_blue_green" />
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
@@ -269,7 +269,7 @@
                             android:gravity="center_vertical"
                             android:layout_marginRight="20dp"
                             android:minWidth="100dp"
-                            android:background="@drawable/edittextcustom_textfield_default_holo_light" />
+                            android:backgroundTint="@color/main_blue_green" />
                         <Spinner
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -277,7 +277,7 @@
                             android:id="@+id/priceSpinner"
                             android:layout_marginTop="10dp"
                             android:minWidth="100dp"
-                            android:background="@drawable/edittextcustom_textfield_default_holo_light" />
+                            android:backgroundTint="@color/main_blue_green" />
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
@@ -341,7 +341,7 @@
                             android:gravity="top"
                             android:layout_marginRight="20dp"
                             android:minWidth="100dp"
-                            android:background="@drawable/edittextcustom_textfield_default_holo_light" />
+                            android:backgroundTint="@color/main_blue_green" />
                     </LinearLayout>
                 </LinearLayout>
                 <Button

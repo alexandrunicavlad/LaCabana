@@ -184,13 +184,13 @@ namespace LaCabana
 				googleMap.MoveCamera(CameraUpdateFactory.NewLatLngZoom(new LatLng(e.Location.Latitude, e.Location.Longitude), 10));
 
 			};
-			googleMap.MapLongClick += (object sender, GoogleMap.MapLongClickEventArgs e) =>
-			{
-				var intent = new Intent(this, typeof(AddNewLocation));
-				intent.PutExtra("latitude", e.Point.Latitude);
-				intent.PutExtra("longitude", e.Point.Longitude);
-				StartActivity(intent);
-			};
+			//googleMap.MapLongClick += (object sender, GoogleMap.MapLongClickEventArgs e) =>
+			//{
+			//	var intent = new Intent(this, typeof(AddNewLocation));
+			//	intent.PutExtra("latitude", e.Point.Latitude);
+			//	intent.PutExtra("longitude", e.Point.Longitude);
+			//	StartActivity(intent);
+			//};
 			//			googleMap.MarkerClick += (object sender, GoogleMap.MarkerClickEventArgs e) => {
 			//				WindowAdapter (e.Marker, allCabins);	//				
 			//			};

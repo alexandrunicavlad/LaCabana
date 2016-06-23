@@ -105,6 +105,17 @@ namespace LaCabana
 				var revText = view.FindViewById<TextView>(Resource.Id.reviewText);
 				var report = view.FindViewById<TextView>(Resource.Id.reportButton);
 				var usefull = view.FindViewById<TextView>(Resource.Id.usefullButton);
+				view.Click += delegate
+				{
+					Dialog dialog = new Dialog(this);
+					dialog.Window.RequestFeature(WindowFeatures.NoTitle);
+					dialog.SetContentView(Resource.Layout.review_view_layout);
+					dialog.Window.SetGravity(GravityFlags.Center);
+					dialog.Window.SetLayout(WindowManager.DefaultDisplay.Width - 100, WindowManager.DefaultDisplay.Height - 100);
+					dialog.SetCancelable(true);
+					dialog.SetCanceledOnTouchOutside(true);
+					dialog.Show();
+				};
 				usefull.Click += delegate
 				{
 					rev.Value.Usefull = rev.Value.Usefull + 1;

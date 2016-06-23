@@ -95,6 +95,7 @@ namespace LaCabana
 			mapLayout = FindViewById<LinearLayout>(Resource.Id.MapContent);
 
 			DatabaseServices = new DatabaseServices(this);
+			//account.Background.Mutate().SetColorFilter(Resources.GetColor(Resource.Color.red), PorterDuff.Mode.SrcAtop);
 			var user = DatabaseServices.GetAllUsers();
 			if (user != null)
 			{
@@ -194,6 +195,7 @@ namespace LaCabana
 			{
 				HideKeyboard(this);
 				mapLayout.Visibility = ViewStates.Visible;
+				CreateDialog("Select position", "Please long tap on map for select location", true, "OK", false, "", false);
 			};
 			MyPosition(new LatLng(latitude, longitude));
 		}

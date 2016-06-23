@@ -220,6 +220,12 @@ namespace LaCabana
 					drawerLayout.CloseDrawer((int)GravityFlags.Start);
 				}
 				else {
+					if (jsonCabinto200 == null)
+					{
+						CreateDialog(GetString(Resource.String.TryAgain), GetString(Resource.String.TryAgain), true, GetString(Resource.String.Ok), false, "", false);
+						addNewLocationButton.Clickable = true;
+						return;
+					}
 					drawerLayout.CloseDrawer((int)GravityFlags.Start);
 					var intent = new Intent(this, typeof(AddNewLocation));
 					intent.PutExtra("latitude", myLocation.Latitude);
@@ -247,7 +253,12 @@ namespace LaCabana
 					drawerLayout.CloseDrawer((int)GravityFlags.Start);
 				}
 				else {
-
+					if (jsonCabinto200 == null)
+					{
+						CreateDialog(GetString(Resource.String.TryAgain), GetString(Resource.String.TryAgain), true, GetString(Resource.String.Ok), false, "", false);
+						cabinsNear.Clickable = true;
+						return;
+					}
 					drawerLayout.CloseDrawer((int)GravityFlags.Start);
 					AlertDialog.Builder alert = new AlertDialog.Builder(this);
 					alert.SetTitle(GetString(Resource.String.selectRange));
@@ -315,6 +326,12 @@ namespace LaCabana
 							drawerLayout.CloseDrawer((int)GravityFlags.Start);
 						}
 						else {
+							if (jsonCabinto200 == null)
+							{
+								CreateDialog(GetString(Resource.String.TryAgain), GetString(Resource.String.TryAgain), true, GetString(Resource.String.Ok), false, "", false);
+								favorites.Clickable = true;
+								return;
+							}
 							drawerLayout.CloseDrawer((int)GravityFlags.Start);
 							var intent = new Intent(this, typeof(FavoritesActivity));
 							var favlist = user.FavoriteList.Values.ToList();
